@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-export const Navbar = ({
+
+type NavbarProps = {
+  baseUrl?: string;
+};
+
+export const Navbar: React.FC<NavbarProps> = ({
   baseUrl = '/'
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +15,9 @@ export const Navbar = ({
         <div className="flex justify-between h-28">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link to="/" className="flex items-center">
-                <img src="/Marentis_Labs_Full_Logo.svg" alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
-              </Link>
+                <Link to="/" className="flex items-center">
+                  <img src={/Marentis_Labs_Full_Logo.svg} alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
+                </Link>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
