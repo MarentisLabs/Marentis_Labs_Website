@@ -16,7 +16,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center">
             <div className="flex-shrink-0">
                 <Link to="/" className="flex items-center">
-                  <img src={`${process.env.PUBLIC_URL || ''}/Marentis_Labs_Full_Logo.svg`} alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
+                  <img
+                    src={require('../public/Marentis_Labs_Full_Logo.svg').default}
+                    alt="Marentis Labs Logo"
+                    className="h-24 md:h-28 w-auto"
+                  />
                 </Link>
             </div>
           </div>
