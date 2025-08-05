@@ -2,25 +2,18 @@ import React, { useState } from 'react';
 import { MenuIcon, XIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-type NavbarProps = {
-  baseUrl?: string;
-};
+type NavbarProps = {};
 
-export const Navbar: React.FC<NavbarProps> = ({
-  baseUrl = '/'
-}) => {
+export const Navbar: React.FC<NavbarProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  return <nav className="sticky top-0 z-50 bg-white shadow-sm">
+
+return <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-28">
           <div className="flex items-center">
             <div className="flex-shrink-0">
                 <Link to="/" className="flex items-center">
-                  <img
-                    src={require('../public/Marentis_Labs_Full_Logo.svg').default}
-                    alt="Marentis Labs Logo"
-                    className="h-24 md:h-28 w-auto"
-                  />
+                  <img src="../public/Marentis_Labs_Full_Logo.png" alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
                 </Link>
             </div>
           </div>
