@@ -13,7 +13,7 @@ return <nav className="sticky top-0 z-50 bg-white shadow-sm">
           <div className="flex items-center">
             <div className="flex-shrink-0">
                 <Link to="/" className="flex items-center">
-                  <img src="../public/Marentis_Labs_Full_Logo.png" alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
+                  <img src="Marentis_Labs_Website/public/Marentis Labs Full Logo.png" alt="Marentis Labs Logo" className="h-24 md:h-28 w-auto" />
                 </Link>
             </div>
           </div>
