@@ -59,7 +59,7 @@ export const Services = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-2 text-[#343a40]">
-                  Our AI Confidentiality Commitment
+                  Our Confidentiality Commitment
                 </h4>
                 <p className="text-[#4a6572] mb-3">
                   Unlike standard AI solutions that send data to external
@@ -70,7 +70,7 @@ export const Services = () => {
                 <div className="flex items-center text-sm text-[#4a6572]">
                   <ServerIcon size={16} className="mr-2 text-[#a98c5a]" />
                   <span>
-                    All AI processing happens on our secure, air-gapped systems
+                    All AI processing happens on our secure systems
                   </span>
                 </div>
               </div>
