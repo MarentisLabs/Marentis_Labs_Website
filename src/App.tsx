@@ -14,7 +14,7 @@ import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { CookiePolicyPage } from './pages/CookiePolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 export function App({
-  baseUrl = '/marentislabs.com'
+  baseUrl = 'https://marentislabs.com'
 }) {
   return <BrowserRouter basename={baseUrl}>
       <div className="w-full min-h-screen font-[Inter] bg-white text-[#343a40]">
