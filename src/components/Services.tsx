@@ -21,7 +21,7 @@ export const Services = () => {
     title: 'Risk Conscious Organisational Design & Implementation',
     description: 'Using our world class risk management and organisational design expertise, we help you build the right team and structure to deliver your strategy.',
     icon: <TrendingUpIcon size={32} className="text-[#a98c5a]" />,
-    features: ['Locally-Hosted Bespoke AI Agents', 'Advanced Scenario Generation', 'Rapid Research & Synthesis', 'Zero Data Sharing with Third Parties']
+    features: ['insightful and comprehensive business needs analysis', 'Efficient and risk conscious organisational design', 'Stress testing of organisational structures and resources', 'Zero Data Sharing with Third Parties']
   }];
   return <section id="services" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
