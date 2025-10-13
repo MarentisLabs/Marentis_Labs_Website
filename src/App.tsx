@@ -13,11 +13,11 @@ import { TermsOfServicePage } from './pages/TermsOfServicePage';
 import { CookiePolicyPage } from './pages/CookiePolicyPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 export function App({
-  baseUrl = 'https://marentislabs.com'
+  baseUrl = '/'
 }) {
   return <BrowserRouter basename={baseUrl}>
       <div className="w-full min-h-screen font-[Inter] bg-white text-[#343a40]">
-        <Navbar baseUrl={baseUrl} />
+        <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home baseUrl={baseUrl} />} />
@@ -32,7 +32,7 @@ export function App({
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
-        <Footer baseUrl={baseUrl} />
+        <Footer />
         <CookiesConsent />
       </div>
     </BrowserRouter>;
