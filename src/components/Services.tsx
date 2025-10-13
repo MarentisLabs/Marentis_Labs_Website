@@ -18,8 +18,8 @@ export const Services = () => {
     icon: <ClockIcon size={32} className="text-[#a98c5a]" />,
     features: ['Regular Strategic Reviews', 'On-demand Advisory Support', 'Continuous Risk Monitoring', 'Priority Access to Services']
   }, {
-    title: 'AI-Enhanced Delivery',
-    description: 'Our human-AI team structure leverages locally run bespoke AI models to deliver enhanced capacity and deeper insights while maintaining complete confidentiality.',
+    title: 'Risk Conscious Organisational Design & Implementation',
+    description: 'Using our world class risk management and organisational design expertise, we help you build the right team and structure to deliver your strategy.',
     icon: <TrendingUpIcon size={32} className="text-[#a98c5a]" />,
     features: ['Locally-Hosted Bespoke AI Agents', 'Advanced Scenario Generation', 'Rapid Research & Synthesis', 'Zero Data Sharing with Third Parties']
   }];
