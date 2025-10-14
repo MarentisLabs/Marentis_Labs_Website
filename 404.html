@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Marentis Labs</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensure the body takes up the full height for vertical centering */
+        .error-body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="bg-ml-light-bg text-ml-slate-grey error-body">
+
+    <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
+        
+        <a href="index.html" class="inline-block mb-8">
+            <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-10 mx-auto">
+        </a>
+        
+        <h1 class="text-6xl md:text-8xl font-black text-ml-charcoal mb-4">404</h1>
+        
+        <h2 class="text-3xl font-bold text-ml-charcoal mb-4">Strategic Error Detected</h2>
+        
+        <p class="text-lg text-ml-slate-grey mb-8">
+            The page you requested is unavailable or the link is incorrect. Like any good strategy, we must adjust our course.
+        </p>
+
+        <div class="space-y-4 md:space-y-0 md:space-x-4">
+            <a href="index.html" class="btn-primary inline-block px-6 py-3 rounded-md text-lg">
+                Return to Home Page
+            </a>
+            <a href="contact.html" class="inline-block px-6 py-3 rounded-md text-lg font-semibold text-ml-charcoal border border-ml-charcoal hover:bg-ml-light-bg transition duration-300">
+                Schedule a Confidential Call
+            </a>
+        </div>
+
+        <p class="mt-8 text-sm text-ml-slate-grey">
+            **Strategic Risk & Performance Insights**
+        </p>
+    </div>
+
+</body>
+</html>
