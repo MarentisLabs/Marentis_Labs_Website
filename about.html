@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Marentis Labs</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Home</a>
+                <a href="services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Services</a>
+                <a href="about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300 nav-link-active">About Us</a>
+                <a href="insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
+                <a href="contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-ml-charcoal focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Home</a>
+            <a href="services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Services</a>
+            <a href="about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg nav-link-active">About Us</a>
+            <a href="insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
+            <a href="contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-ml-charcoal text-white py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold">The Firm Built for Challenge.</h1>
+                <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">We are a specialized advisory firm built on a foundation of intellectual rigor, independence, and principal-led delivery.</p>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-ml-charcoal section-title text-center mb-10">Our Philosophy</h2>
+                    <div class="space-y-6 text-lg text-ml-slate-grey">
+                        <p>Marentis Labs was founded on a single premise: that the most significant threats to complex organizations are not the risks they identify, but the flawed assumptions they fail to challenge. Conventional strategic planning is often an exercise in reinforcing consensus. We provide a necessary, independent challenge function.</p>
+                        <p>Our purpose is to bring a disciplined, adversarial mindset to high-stakes decisions. By systematically stress-testing strategies, financial models, and institutional designs, we provide leaders with the foresight to act with greater confidence and build more resilient enterprises.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-ml-charcoal section-title text-center mb-10">The Boutique Advantage</h2>
+                    <p class="text-lg text-ml-slate-grey text-center mb-8 max-w-3xl mx-auto">Engaging a large, generalist consulting firm often means paying premium rates for junior teams. We offer a fundamentally different, principal-led model.</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-ml-light-bg p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-ml-charcoal text-xl mb-2">Principal-Led Delivery</h3>
+                            <p class="text-ml-slate-grey">The team that pitches the work is the team that delivers the work. You receive direct, undiluted access to senior expertise, ensuring accountability and higher quality of insight.</p>
+                        </div>
+                        <div class="bg-ml-light-bg p-6 rounded-lg shadow-sm">
+                            <h3 class="font-bold text-ml-charcoal text-xl mb-2">Focused on Value</h3>
+                            <p class="text-ml-slate-grey">Our lean structure means that client fees are invested in high-impact expertise, not expensive corporate overhead. We provide a higher concentration of senior talent for the investment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 pt-8">
+                    <h2 class="text-3xl font-bold text-ml-charcoal section-title text-center mb-10">The Founder</h2>
+                    <div class="bg-ml-charcoal text-white p-10 rounded-lg shadow-xl max-w-3xl mx-auto">
+                        <h3 class="text-3xl font-bold text-ml-gold mb-3">Owen Vallis</h3>
+                        <p class="text-lg text-gray-300 font-semibold mb-6">Strategic Risk Executive & Founder</p>
+                        <p class="text-gray-300 text-lg mb-4">Owen Vallis is a highly accomplished strategic risk executive with **two decades of experience** advising global financial institutions. His expertise lies in translating disciplined stress-testing and governance frameworks from global banking (Credit Suisse, JP Morgan, Morgan Stanley) into a source of competitive advantage for non-financial enterprises and institutional clients.</p>
+                        <p class="text-gray-300 text-lg">His mission is to equip Boards and C-suite teams with the foresight, challenge, and frameworks to navigate complex risk and drive performance.</p>
+                        <a href="contact.html" class="text-ml-gold font-semibold hover:text-white mt-4 inline-block">Schedule a Confidential Discussion &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center text-sm text-ml-slate-grey">
+            <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved.</p>
+            <p class="mt-2 text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

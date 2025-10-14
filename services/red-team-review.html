@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team Review | Marentis Labs</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-3">
+                <img src="../Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="../index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Home</a>
+                <a href="../services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300 nav-link-active">Services</a>
+                <a href="../about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">About Us</a>
+                <a href="../insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
+                <a href="../contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-ml-charcoal focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
+            <a href="../index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Home</a>
+            <a href="../services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg nav-link-active">Services</a>
+            <a href="../about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">About Us</a>
+            <a href="../insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
+            <a href="../contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-ml-light-bg py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <nav class="text-sm mb-4" aria-label="Breadcrumb">
+                    <ol class="list-none p-0 inline-flex text-ml-slate-grey">
+                        <li class="flex items-center"><a href="../services.html" class="text-ml-slate-blue hover:underline">Services</a></li>
+                        <li class="flex items-center mx-2">/</li>
+                        <li aria-current="page">Red Team Review</li>
+                    </ol>
+                </nav>
+                <h1 class="text-4xl md:text-5xl font-bold text-ml-charcoal">Red Team Review: Stress-Testing the Unseen</h1>
+                <p class="mt-4 text-xl text-ml-slate-grey max-w-3xl">
+                    A rapid, confidential, and adversarial assessment of a strategic plan, investment thesis, or M&A rationale. We act as a professional, independent devil's advocate to identify critical weaknesses others have missed.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="md:col-span-2 space-y-8 service-page-prose">
+                        
+                        <h2>The Challenge Function</h2>
+                        <p>Conventional planning is prone to optimism bias. Our Red Team Review acts as a professional, independent devil's advocate, systematically searching for disconfirming evidence and unexamined assumptions that represent the plan's single points of failure. It is an insurance policy against catastrophic error.</p>
+                        
+                        <h2>Our Accelerated Methodology (4 Weeks)</h2>
+                        <ol class="list-decimal list-outside space-y-5 pl-5">
+                            <li>**Phase I: Scoping & Confidential Briefing:** We define the precise scope, understand the plan's objectives, and receive confidential documentation to establish strict protocols.</li>
+                            <li>**Phase II: Assumption Deconstruction & Analysis:** We map all stated and unstated assumptions. We then challenge each one through focused research, looking for contradictory data and logical inconsistencies in the plan's core logic.</li>
+                            <li>**Phase III: Stress Testing & Scenario Application:** We apply targeted stress scenarios (e.g., competitor reaction, macroeconomic shock) to test the resilience of the plan under adverse conditions.</li>
+                            <li>**Phase IV: Reporting & Executive Debrief:** We deliver a concise, confidential **Critique Memorandum** outlining critical vulnerabilities and actionable recommendations, followed by a closed-door working session.</li>
+                        </ol>
+
+                        <div class="pt-8">
+                            <h2>Core Outcomes</h2>
+                            <ul class="list-disc list-outside space-y-2 pl-5">
+                                <li>Systematic identification of hidden weaknesses and unexamined risks.</li>
+                                <li>A clear, evidence-based critique to strengthen the plan before execution.</li>
+                                <li>Objective, third-party assurance for Investment or Strategy Committees.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-1">
+                        <div class="bg-ml-charcoal text-white p-8 rounded-lg shadow-lg sticky top-20">
+                            <h3 class="text-2xl font-bold mb-4 text-ml-gold">Engagement Profile</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">Best For:</h4>
+                                    <p class="text-sm">M&A due diligence, major corporate strategy, high-value Private Equity pre-transaction due diligence.</p>
+                                </div>
+                                <div class="separator opacity-30"></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">Typical Duration:</h4>
+                                    <p class="text-sm">Rapid Execution: **4 Weeks**</p>
+                                </div>
+                                <div class="separator opacity-30"></div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-300">Pricing Tier:</h4>
+                                    <p class="text-sm">£40,000 to £85,000 (+ VAT & Expenses)</p>
+                                </div>
+                                <div class="mt-8">
+                                    <a href="../contact.html" class="btn-primary w-full text-center block px-6 py-3 rounded-md">
+                                        Request Critique Proposal
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-6 text-center text-sm text-ml-slate-grey">
+            <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved.</p>
+            <p class="mt-2 text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Custom styles for Marentis Labs to complement Tailwind */
+
+/* Color Variables (based on provided palette) */
+:root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #a98c5a;
+    --ml-slate-blue: #4a6572;
+    --ml-light-bg: #f8f9fa;
+    --ml-white: #ffffff;
+}
+
+/* Global Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ml-slate-grey);
+    scroll-behavior: smooth;
+}
+
+/* Custom Styles for Professional Look */
+.section-title {
+    color: var(--ml-charcoal);
+    position: relative;
+    padding-bottom: 1rem; /* Space for the underline */
+    font-weight: 700;
+}
+
+/* Gold Accent Underline for Section Titles */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--ml-gold);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+}
+
+/* Custom Button Styles (Primary CTA) */
+.btn-primary {
+    background-color: var(--ml-gold);
+    color: var(--ml-white);
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #92754c; /* Slightly darker gold */
+}
+
+/* Navigation Active State */
+.nav-link-active { 
+    color: var(--ml-gold); 
+    font-weight: 600; 
+    border-bottom: 2px solid var(--ml-gold);
+}
+
+/* Hero Section with abstract image overlay to project sophistication and stability */
+.hero-section {
+    background-color: var(--ml-charcoal);
+    /* Using a background image would go here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Card Hover Effects for Services Hub */
+.service-card {
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid var(--ml-charcoal);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-left-color: var(--ml-gold);
+}
+
+/* Separator Line */
+.separator {
+    height: 1px;
+    background-color: var(--ml-slate-grey);
+    opacity: 0.2;
+}
+
+/* Utility Class: Black text with Gold Accent (for use on light backgrounds) */
+.text-ml-charcoal-gold {
+    color: var(--ml-charcoal);
+    font-weight: 700;
+    position: relative;
+}
+
+.text-ml-charcoal-gold::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--ml-gold);
+    margin-top: 0.5rem;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.service-page-prose h2 {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    color: var(--ml-charcoal);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-page-prose p, .service-page-prose li {
+    font-size: 1.125rem; /* lg */
+    line-height: 1.75rem;
+    color: var(--ml-slate-grey);
+}
