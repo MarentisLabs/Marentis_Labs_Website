@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title | Marentis Labs Insights</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Article-specific styles for optimal readability */
+        .article-content {
+            font-size: 1.125rem; /* lg */
+            line-height: 1.8;
+            color: var(--ml-slate-grey);
+            max-width: 768px; /* Max width of md:max-w-4xl for comfortable reading */
+        }
+        .article-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--ml-charcoal);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content strong {
+            color: var(--ml-charcoal);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300 nav-link-active">Home</a>
+                <a href="services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Services</a>
+                <a href="about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">About Us</a>
+                <a href="insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
+                <a href="contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-ml-charcoal focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg nav-link-active">Home</a>
+            <a href="services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Services</a>
+            <a href="about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">About Us</a>
+            <a href="insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
+            <a href="contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-ml-light-bg py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <p class="text-sm text-ml-slate-blue mb-2">OCTOBER 2025</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-ml-charcoal leading-tight">
+                    Lorem Ipsum: The Unexamined Assumption that Crushes Capital Ambition
+                </h1>
+                <p class="mt-4 text-lg text-ml-slate-grey max-w-3xl mx-auto font-light italic">
+                    A brief, critical perspective on the necessity of adversarial analysis in high-stakes strategic planning.
+                </p>
+                <div class="mt-8 text-sm text-ml-slate-grey">
+                    By <b>Owen Vallis</b>, Founder, Marentis Labs
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6 flex justify-center">
+                
+                <div class="article-content space-y-6">
+                    
+                    <p class="text-2xl font-semibold text-ml-charcoal mb-8">
+                        The single greatest risk facing any profitable enterprise is not the risk it has meticulously identified, but the risk it has implicitly assumed away.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. 
+                    </p>
+
+                    <h2>The Illusion of Consensus</h2>
+                    
+                    <p>
+                        **Nunc ut sem vitae turpis posuere egestas.** Suspendisse id massa non elit mattis commodo a nec est. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus in erat eu urna scelerisque molestie. Vestibulum auctor ante quis enim. Nulla eget sem vitae turpis posuere egestas. Nulla facilisi.
+                    </p>
+
+                    <p>
+                        Aliquam in bibendum mauris. Sed et quam. Nunc ante odio, interdum a, tincidunt in, placerat et, massa. Phasellus dictum a, blandit at, velit. Praesent id libero id metus tempus auctor. Integer vitae turpis. Curabitur et lectus. Morbi vel lectus sit amet turpis posuere egestas. 
+                    </p>
+
+                    <h2>The Cost of Unchallenged Assumptions</h2>
+
+                    <p>
+                        Nam dictum. In scelerisque, odio in pretium feugiat, justo urna sollicitudin lectus, eget posuere tellus nulla et est. Donec posuere egestas arcu. Vestibulum euismod. Vestibulum interdum, libero vitae posuere eleifend, justo magna luctus elit, ac convallis velit nisl eget urna. Proin interdum, libero vitae. Curabitur nec tellus sed augue semper porta. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst.
+                    </p>
+
+                    <ul class="list-disc list-outside ml-6 space-y-2">
+                        <li>**Risk 1:** Optimism Bias in Synergy Forecasts.</li>
+                        <li>**Risk 2:** Over-reliance on Market Stability.</li>
+                        <li>**Risk 3:** Failure to Model a Coordinated Competitor Response.</li>
+                        <li>**Risk 4:** Inadequate Governance Structure for Rapid Escalation.</li>
+                    </ul>
+
+                    <p>
+                        **Fusce nec tellus sed augue semper porta.** Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus in erat eu urna scelerisque molestie. 
+                    </p>
+
+                    <p class="pt-8 italic border-t border-gray-200">
+                        *Marentis Labs specializes in applying adversarial analysis and simulation-based challenge to strengthen strategic resilience for FTSE 350 and institutional leaders. To discuss how our Red Team Reviews can de-risk your next major decision, please contact us.*
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-6 text-sm text-ml-slate-grey">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                
+                <div class="text-center md:text-left order-2 md:order-1 space-y-1">
+                    <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved.</p>
+                    <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
+                </div>
+
+                <div class="order-1 md:order-2 mb-4 md:mb-0">
+                    <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10 opacity-75" />
+                </div>
+                
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
