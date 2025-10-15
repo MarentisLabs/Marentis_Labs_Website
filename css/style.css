@@ -67,7 +67,7 @@ body {
 }
 
 .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    background-color: var(--ml-charcoal); /* Dark overlay for contrast */
     position: absolute;
     top: 0;
     left: 0;
