@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy | Marentis Labs</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VB6Q21MBY5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Note: This page will also be subject to the cookie consent logic
+  // We'll add the logic to check sessionStorage here as well.
+  function runAnalytics() {
+    gtag('config', 'G-VB6Q21MBY5');
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    const consent = sessionStorage.getItem('cookieConsent');
+    if (consent === 'accepted') {
+        runAnalytics();
+    }
+  });
+</script>
+
+<body class="bg-white">
+
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Home</a>
+                <a href="services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Services</a>
+                <a href="about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">About Us</a>
+                <a href="insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
+                <a href="contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-ml-charcoal focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Home</a>
+            <a href="services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Services</a>
+            <a href="about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">About Us</a>
+            <a href="insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
+            <a href="contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h1 class="text-4xl font-black text-ml-charcoal mb-4">Cookies Policy</h1>
+                <p class="text-ml-slate-grey mb-10 italic">Last updated: October 25, 2025</p>
+
+                <div class="space-y-6 text-ml-slate-grey leading-relaxed">
+                    <p>At Marentis Labs, we value your privacy and are committed to being transparent about how we use cookies and similar technologies to improve your browsing experience. This Cookies Policy explains what cookies are, how we use them, and how you can manage your preferences.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">What Are Cookies?</h2>
+                    <p>Cookies are small text files stored on your device (computer, smartphone, tablet) when you visit a website. They help websites function effectively, enhance user experience, and provide analytics data to website owners.</p>
+                    <p>Cookies can be:</p>
+                    <ul class="list-disc list-outside ml-8 space-y-2">
+                        <li><strong>Session Cookies</strong>: Temporary cookies that expire when you close your browser.</li>
+                        <li><strong>Persistent Cookies</strong>: Cookies that remain on your device until they expire or are deleted.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">How We Use Cookies</h2>
+                    <p><strong>Marentis Labs</strong> uses cookies to:</p>
+                    <ul class="list-disc list-outside ml-8 space-y-2">
+                        <li><strong>Enhance Website Functionality</strong>: Ensure our website works efficiently and is accessible.</li>
+                        <li><strong>Analyze Website Traffic</strong>: Use Google Analytics to understand how visitors interact with our website and improve its performance (only with your consent).</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Cookies We Use</h2>
+                    <h3 class="text-xl font-semibold text-ml-charcoal pt-2 pb-1">Essential Cookies</h3>
+                    <p>These cookies are necessary for the website to function properly. Without these, some parts of the website may not work as intended. Our site uses essential cookies for basic session management.</p>
+
+                    <h3 class="text-xl font-semibold text-ml-charcoal pt-2 pb-1">Analytics Cookies</h3>
+                    <p>We use Google Analytics to collect information about how visitors use marentislabs.com. This includes:</p>
+                    <ul class="list-disc list-outside ml-8 space-y-2">
+                        <li>Pages visited</li>
+                        <li>Time spent on the site</li>
+                        <li>Traffic sources</li>
+                    </ul>
+                    <p>Google Analytics helps us understand visitor behavior, allowing us to optimize our content and improve user experience. The data collected is aggregated and does not personally identify you. This cookie is only placed if you accept cookies.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Third-Party Cookies</h2>
+                    <p>Our website may also include cookies from third-party services such as embedded content providers (e.g., for videos or presentations). These third parties may use cookies in accordance with their own privacy policies.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Managing Your Cookie Preferences</h2>
+                    <p>You have control over how cookies are used on your device. You can adjust your browser settings to block or delete cookies. You can also manage your consent for our website via the cookie banner.</p>
+                    <p><strong>Please note</strong>: Disabling certain cookies may affect your ability to use some features on our website.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Google Analytics Opt-Out</h2>
+                    <p>If you wish to prevent your data from being used by Google Analytics across all websites, you can use the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-ml-slate-blue hover:text-ml-gold font-medium">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Changes to This Policy</h2>
+                    <p>We may update this Cookies Policy from time to time. When we do, we will revise the “Last updated” date at the top of this page. We encourage you to review this policy periodically to stay informed about how we use cookies.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">Contact Us</h2>
+                    <p>If you have any questions about this Cookies Policy, please contact us:</p>
+                    <p>
+                        <strong>Email</strong>: <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold font-medium">info@marentislabs.com</a><br>
+                        <strong>Website</strong>: <a href="https://marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold font-medium">https://marentislabs.com</a>
+                    </p>
+                    <hr class="mt-8 border-gray-200">
+                    <p>By using marentislabs.com, you acknowledge our use of cookies as outlined in this policy and in your consent preferences.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+     <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-6 text-sm text-ml-slate-grey">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                
+                <div class="text-center md:text-left order-2 md:order-1 space-y-1">
+                    <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved. | <a href="cookies.html" class="text-ml-slate-blue hover:text-ml-gold font-medium">Cookies Policy</a></p>
+                    <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
+                </div>
+
+                <div class="order-1 md:order-2 mb-4 md:mb-0">
+                    <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10 opacity-75" />
+                </div>
+                
+            </div>
+            
+        </div>
+    </footer>
+
+    </body>
+</html>

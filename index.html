@@ -171,7 +171,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 
                 <div class="text-center md:text-left order-2 md:order-1 space-y-1">
-                    <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved.</p>
+                    <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved. | <a href="cookies.html" class="text-ml-slate-blue hover:text-ml-gold font-medium">Cookies Policy</a></p>
                     <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
                 </div>
 
@@ -183,6 +183,49 @@
             
         </div>
     </footer>
+<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-ml-charcoal text-white p-6 shadow-2xl z-50" style="display: none;">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+            <h4 class="font-semibold text-lg mb-1">This website uses cookies</h4>
+            <p class="text-sm text-gray-300">We use cookies to analyze website traffic and improve your experience. By clicking "Accept," you consent to our use of analytics cookies. <a href="cookies.html" class="text-ml-gold hover:text-white underline font-medium">Learn more</a>.</p>
+        </div>
+        <div class="flex-shrink-0 flex items-center gap-4">
+            <button id="cookie-reject-btn" class="text-gray-300 hover:text-white transition duration-300 px-6 py-2 rounded-md text-sm font-medium">
+                Reject
+            </button>
+            <button id="cookie-accept-btn" class="btn-primary px-6 py-2 rounded-md text-sm">
+                Accept
+            </button>
+        </div>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const rejectBtn = document.getElementById('cookie-reject-btn');
 
+    // Check if consent has already been given *this session*
+    const consent = sessionStorage.getItem('cookieConsent');
+    
+    if (!consent) {
+        // If no consent given, show the banner
+        banner.style.display = 'block';
+    }
+
+    // Handle "Accept" click
+    acceptBtn.addEventListener('click', () => {
+        sessionStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+        runAnalytics(); // <-- This runs the GA function from the <head>
+    });
+
+    // Handle "Reject" click
+    rejectBtn.addEventListener('click', () => {
+        sessionStorage.setItem('cookieConsent', 'rejected');
+        banner.style.display = 'none';
+    });
+});
+</script>
 </body>
 </html>
