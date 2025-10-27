@@ -78,6 +78,28 @@
             <b>Strategic Risk & Performance Insights</b>
         </p>
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Find all links with the 'email-link' class
+    const emailLinks = document.querySelectorAll('.email-link');
+    
+    emailLinks.forEach(link => {
+        // Get the email parts from the data attributes
+        const user = link.dataset.user;
+        const domain = link.dataset.domain;
 
+        if (user && domain) {
+            const email = user + '@' + domain;
+            
+            // 1. Set the href to the real mailto link
+            link.href = 'mailto:' + email;
+            
+            // 2. Set the visible text to the real email address
+            // This replaces the "[email protected]" placeholder
+            link.textContent = email;
+        }
+    });
+});
+</script>
 </body>
 </html>

@@ -192,7 +192,7 @@
                 
                 <div class="text-center md:text-left order-2 md:order-1 space-y-1">
                     <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved.</p>
-                    <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a href="mailto:info@marentislabs.com" class="text-ml-slate-blue hover:text-ml-gold">info@marentislabs.com</a></p>
+                    <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a class="email-link text-ml-slate-blue hover:text-ml-gold" data-user="info" data-domain="marentislabs.com">[email protected]</a></p>
                 </div>
 
                 <div class="order-1 md:order-2 mb-4 md:mb-0">
@@ -203,6 +203,28 @@
             
         </div>
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Find all links with the 'email-link' class
+    const emailLinks = document.querySelectorAll('.email-link');
+    
+    emailLinks.forEach(link => {
+        // Get the email parts from the data attributes
+        const user = link.dataset.user;
+        const domain = link.dataset.domain;
 
+        if (user && domain) {
+            const email = user + '@' + domain;
+            
+            // 1. Set the href to the real mailto link
+            link.href = 'mailto:' + email;
+            
+            // 2. Set the visible text to the real email address
+            // This replaces the "[email protected]" placeholder
+            link.textContent = email;
+        }
+    });
+});
+</script>
 </body>
 </html>
