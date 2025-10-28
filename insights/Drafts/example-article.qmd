@@ -5,7 +5,6 @@ author: "Owen Vallis"
 date: "2025-10-15"
 date-format: "MMMM YYYY"
 categories: [Risk Management, Portfolio Strategy]
-
 ---
 
 ::: {.article-metadata}

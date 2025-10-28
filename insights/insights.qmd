@@ -1,14 +1,15 @@
 ---
 title: "Insights" # Used for browser tab
 page-layout: full # Attempt to force wider layout
+
 listing:
   contents: posts # Point to posts subdir
   sort: "date desc"
-  type: default
+  type: table
   categories: true # Or true if using categories
-  fields: [date, title, description] # Match SCSS styling
+  fields: [date, title, description, reading-time] # Match SCSS styling
   date-format: "MMMM YYYY" # Preferred date format
-  template: _partials/listing-item.ejs
+  # template: _partials/listing-item.ejs
 ---
 
 <div class="insights-intro" style="max-width: 1200px; margin: 0 auto 4rem auto; padding: 2rem; background: #f8f9fa; border-left: 3px solid #a98c5a; position: relative; z-index: 2;">

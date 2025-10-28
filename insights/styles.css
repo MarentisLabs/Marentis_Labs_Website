@@ -155,7 +155,7 @@ main#quarto-document-content blockquote {
 /* --- Listings Page Specific Styles --- */
 /* Style Quarto's default listing elements */
 .quarto-listing {
-  /* container styling applied via main#quarto-document-content > div */
+  background: transparent;/* container styling applied via main#quarto-document-content > div */
 }
 
 .quarto-listing-default .list-entry { /* Updated selector */
@@ -195,7 +195,7 @@ main#quarto-document-content blockquote {
 .quarto-listing-default .listing-item-metadata {
     display: flex;
     gap: 1rem; /* Space between date and author */
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 .quarto-listing-default .quarto-listing-date, /* Updated selector */
@@ -204,7 +204,46 @@ main#quarto-document-content blockquote {
   color: #495057 !important; /* ml-slate-grey */
   font-size: 0.9rem !important;
 }
+    /* --- Transparent Table Listing Background --- */
 
+    /* Target the container Quarto might wrap the table in */
+    .quarto-listing-table,
+    .quarto-listing-container .table-responsive { /* Add .table-responsive if Quarto uses it */
+        background-color: transparent !important;
+    }
+
+    /* Target the table itself */
+    .quarto-listing-table table {
+        background-color: transparent !important;
+        width: 1200px; /* Ensure table takes available width */
+        border-collapse: collapse; /* Optional: adjust borders */
+    }
+
+    /* Target table header, body, rows, and cells */
+    .quarto-listing-table thead,
+    .quarto-listing-table tbody,
+    .quarto-listing-table tr,
+    .quarto-listing-table th,
+    .quarto-listing-table td {
+        background-color: transparent !important;
+        border-color: #dee2e6 !important; /* Optional: Set border color if needed, e.g., light grey */
+    }
+
+    /* Override hover/striped styles if they add color */
+    .quarto-listing-table tbody tr:hover,
+    .quarto-listing-table .table-striped tbody tr:nth-of-type(odd) {
+        background-color: transparent !important;
+    }
+
+    /* Ensure text color is readable */
+    .quarto-listing-table th,
+    .quarto-listing-table td {
+        color: #495057 !important; /* ml-slate-grey */
+    }
+    .quarto-listing-table th {
+        color: #212529 !important; /* ml-charcoal for header */
+        font-weight: 700 !important;
+    }
 /* --- Article Pagination --- */
 .article-navi { 
   max-width: 768px; /* Match article width */

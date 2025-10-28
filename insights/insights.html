@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -187,6 +187,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UG9ydGZvbGlvJTIwU3RyYXRlZ3k=">Portfolio Strategy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzaWxpZW5jZQ==">Resilience <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyME1hbmFnZW1lbnQ=">Risk Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3RyYXRlZ3k=">Strategy <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
@@ -219,7 +220,7 @@ window.Quarto = {
     </nav>
 
 </header>
-<div class="watermark" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60vw; max-width: 1200px; /* Adjusted max-width */ opacity: 0.2; /* Adjusted opacity */ z-index: 0; pointer-events: none;">
+<div class="watermark" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1700px; max-width: 1700px; /* Adjusted max-width */ opacity: 0.2; /* Adjusted opacity */ z-index: 0; pointer-events: none;">
 
   <img src="./Marentis Mini LogoBackground.png" alt="" style="width: 100%; height: auto; display: block;">
 
@@ -256,43 +257,87 @@ Analysis and perspectives on strategic risk, institutional design, and performan
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNTdHJhdGVneSUyQ1Jlc2lsaWVuY2U=" data-listing-date-sort="1757890800000" data-listing-file-modified-sort="1761649045079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/strategic-cost-resilience.html" class="no-external">Strategic Cost Resilience:</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/strategic-cost-resilience.html" class="no-external">
-<p>A Risk-First Approach to Profitability</p>
-</a></div>
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="metadata">
-<a href="./posts/strategic-cost-resilience.html" class="no-external">
-<div class="listing-date">
-September 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNQb3J0Zm9saW8lMjBTdHJhdGVneQ==" data-listing-date-sort="1755212400000" data-listing-file-modified-sort="1761648227153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/navigating-the-polycrisis.html" class="no-external">Navigating the Polycrisis:</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/navigating-the-polycrisis.html" class="no-external">
-<p>A C-Suite Framework for Geopolitical Risk Strategy</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/navigating-the-polycrisis.html" class="no-external">
-<div class="listing-date">
-August 2025
-</div>
-</a>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+Description
+</th>
+
+<th>
+Reading Time
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNTdHJhdGVneSUyQ1Jlc2lsaWVuY2U=" data-listing-date-sort="1757890800000" data-listing-file-modified-sort="1761649045079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514" data-listing-title-sort="Strategic Cost Resilience:" data-listing-filename-sort="strategic-cost-resilience.qmd">
+<td>
+<span class="listing-date">September 2025</span>
+</td>
+<td>
+<a href="./posts/strategic-cost-resilience.html" class="title listing-title">Strategic Cost Resilience:</a>
+</td>
+<td>
+<span class="listing-description">A Risk-First Approach to Profitability</span>
+</td>
+<td>
+<span class="listing-reading-time">8 min</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNQb3J0Zm9saW8lMjBTdHJhdGVneQ==" data-listing-date-sort="1755212400000" data-listing-file-modified-sort="1761648227153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406" data-listing-title-sort="Navigating the Polycrisis:" data-listing-filename-sort="navigating-the-polycrisis.qmd">
+<td>
+<span class="listing-date">August 2025</span>
+</td>
+<td>
+<a href="./posts/navigating-the-polycrisis.html" class="title listing-title">Navigating the Polycrisis:</a>
+</td>
+<td>
+<span class="listing-description">A C-Suite Framework for Geopolitical Risk Strategy</span>
+</td>
+<td>
+<span class="listing-reading-time">8 min</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <footer class="site-footer" style="background-color: #ffffff; color: #ffffff; margin-top: 4rem; position: relative; z-index: 10;">
