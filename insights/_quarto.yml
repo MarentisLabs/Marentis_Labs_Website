@@ -4,7 +4,7 @@ project:
 
 website:
   title: "Marentis Labs Insights" # Optional: Sets browser title prefix
-  site-url: "https://marentislabs.com/insights" # Your site URL
+  site-url: "https://marentislabs.com" # Your site URL
 
 format:
   html:
