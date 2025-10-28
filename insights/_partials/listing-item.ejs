@@ -1,0 +1,23 @@
+<div class="list-entry mb-8 pb-6 border-b border-gray-200">
+  <h3 class="quarto-listing-title text-2xl font-bold text-ml-charcoal mb-2">
+    <a href="<%- item.path %>" class="listing-title-link hover:text-ml-gold transition duration-200">
+      <%- item.title %>
+    </a>
+  </h3>
+  <div class="listing-item-metadata text-sm text-ml-slate-blue mb-3">
+    <% if (item.author) { %>
+      <span class="listing-author mr-4">By <%- item.author %></span>
+    <% } %>
+    <% if (item.date) { %>
+      <span class="listing-date">Published <%- item.date %></span>
+    <% } %>
+  </div>
+  <% if (item.description) { %>
+    <div class="quarto-listing-description text-ml-slate-grey mb-4">
+      <%- item.description %>
+    </div>
+  <% } %>
+  <a href="<%- item.path %>" class="text-ml-slate-blue hover:text-ml-gold font-semibold text-sm read-more-link">
+    Read More &rarr;
+  </a>
+</div>
