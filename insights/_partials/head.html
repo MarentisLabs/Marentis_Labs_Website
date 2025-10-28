@@ -10,6 +10,13 @@
         theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { /* Your colors */ 'ml-charcoal': '#212529', 'ml-slate-grey': '#495057', 'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572', 'ml-light-bg': '#f8f9fa', } } }
     }
 </script>
+<style>
+    html, body {
+  width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+</style>
 
 <style>
   /* --- Base Resets & Font --- */
@@ -40,12 +47,12 @@
   #title-block-header.quarto-title-block > * { margin: 0 !important; }
   #title-block-header.quarto-title-block h1.title { font-family: 'Inter', sans-serif !important; font-size: 2.25rem !important; font-weight: 800 !important; color: #212529 !important; line-height: 1.25 !important; max-width: 42rem !important; margin: 0 auto 1rem auto !important; padding: 0 !important; }
   @media (min-width: 768px) { #title-block-header.quarto-title-block h1.title { font-size: 3rem !important; line-height: 1 !important; } }
-  #title-block-header.quarto-title-block .quarto-title-meta { padding: 1rem 0 4rem 0 !important; max-width: 56rem !important; margin: 0 auto !important; font-size: 1.125rem !important; color: #495057 !important; border: none !important; }
+  #title-block-header.quarto-title-block .quarto-title-meta { padding: 1rem 0 4rem 0 !important; max-width: 1200px !important; margin: 0 auto !important; font-size: 1.125rem !important; color: #495057 !important; border: none !important; }
   #title-block-header.quarto-title-block .quarto-title-meta>div { margin-bottom: 0 !important; display: block !important; /* Ensure block display */}
   /* Target description specifically if Quarto wraps it */
   #title-block-header.quarto-title-block .quarto-title-meta .description p, 
   #title-block-header.quarto-title-block .quarto-title-meta > div:has(p:only-child) p { /* Heuristic for description */
-      font-style: italic !important; font-weight: 300 !important; margin: 0 auto 2rem auto !important; padding: 0 !important; max-width: 56rem !important; 
+      font-style: italic !important; font-weight: 300 !important; margin: 0 auto 2rem auto !important; padding: 0 !important; max-width: 1200px !important; 
   } 
   #title-block-header.quarto-title-block .quarto-title-meta-contents { font-size: 0.875rem !important; color: #495057 !important; line-height: 1.5 !important; }
   #title-block-header.quarto-title-block .quarto-title-meta-contents .date { color: #4a6572 !important; margin-bottom: 0.5rem !important; display: block !important; }
@@ -54,7 +61,7 @@
 
   /* --- Listing Page Styles --- */
   /* Target Quarto's container for listing */
-  main#quarto-document-content .quarto-listing-container.container-fluid { max-width: 56rem !important; margin: 0 auto !important; padding: 5rem 1rem 6rem 1rem !important; background-color: transparent !important; position: relative !important; z-index: 2 !important; width: 100% !important; }
+  main#quarto-document-content .quarto-listing-container.container-fluid {max-width: 1200px !important; width: 1200px !important; margin: 0 auto !important; background-color: transparent !important; position: relative !important; z-index: 2 !important; width: 100% !important; }
   /* Style listing items */
   .quarto-listing-default .list-entry { margin-bottom: 2rem !important; border-bottom: 1px solid #eee !important; padding-bottom: 1.5rem !important; background: none !important; }
   .quarto-listing-default .quarto-listing-description { color: #495057 !important; font-size: 1rem !important; } 
@@ -66,11 +73,11 @@
 
   /* --- Article Body Styles --- */
    /* Target Quarto's main content area after title block, excluding listing */
-  main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) { 
+  main#quarto-document-content > div:not(#title-block-header):not([class*="quarto-listing-container-"]) { 
       font-size: 1.125rem !important; 
       line-height: 1.8 !important;
       color: #495057 !important; 
-      max-width: 768px !important; 
+      max-width: 1200px !important; 
       margin: 0 auto !important; 
       position: relative !important; 
       z-index: 10 !important; 
@@ -85,7 +92,7 @@
    main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) p { margin-bottom: 1.5rem; } /* Add paragraph spacing */
   
    /* Style Quarto's article navigation */
-    .article-navi { max-width: 768px; /* Match article width */ margin: 0 auto; padding: 3rem 1rem; border-top: 1px solid #dee2e6; background: transparent; position: relative; z-index: 2; display: flex; justify-content: space-between; }
+    .article-navi { max-width: 1200px; /* Match article width */ margin: 0 auto; padding: 3rem 1rem; border-top: 1px solid #dee2e6; background: transparent; position: relative; z-index: 2; display: flex; justify-content: space-between; }
     .article-navi a { color: #4a6572; } .article-navi a:hover { color: #a98c5a; }
     .article-navi .prev { text-align: left;} .article-navi .next { text-align: right;}
     .article-navi .article-navi-label { font-size: 0.875rem; }

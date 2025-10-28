@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
@@ -187,7 +187,6 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UG9ydGZvbGlvJTIwU3RyYXRlZ3k=">Portfolio Strategy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzaWxpZW5jZQ==">Resilience <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyME1hbmFnZW1lbnQ=">Risk Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3RyYXRlZ3k=">Strategy <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
@@ -297,6 +296,10 @@ Description
 </th>
 
 <th>
+Categories
+</th>
+
+<th>
 Reading Time
 </th>
 
@@ -315,6 +318,9 @@ Reading Time
 <span class="listing-description">A Risk-First Approach to Profitability</span>
 </td>
 <td>
+<span class="listing-categories">Risk Management, Strategy, Resilience</span>
+</td>
+<td>
 <span class="listing-reading-time">8 min</span>
 </td>
 
@@ -329,6 +335,9 @@ Reading Time
 </td>
 <td>
 <span class="listing-description">A C-Suite Framework for Geopolitical Risk Strategy</span>
+</td>
+<td>
+<span class="listing-categories">Risk Management, Portfolio Strategy</span>
 </td>
 <td>
 <span class="listing-reading-time">8 min</span>
