@@ -27,7 +27,14 @@ format:
       - _partials/watermark.html # Include watermark here
     include-after-body:
       - _partials/site-footer.html
+      
 listing:
+  contents: posts # Point to posts subdir
+  sort: "date desc"
+  type: default
+  categories: true # Or true if using categories
+  fields: [date, title, description] # Match SCSS styling
+  date-format: "MMMM YYYY" # Preferred date format
   template: _partials/listing-item.ejs
 
 # Optional: Configuration for code execution if needed later
