@@ -1,0 +1,33 @@
+project:
+  type: website
+  output-dir: .
+
+website:
+  title: "Marentis Labs Insights" # Optional: Sets browser title prefix
+  site-url: "https://marentislabs.com/insights" # Your site URL
+
+format:
+  html:
+    theme: 
+      - cosmo          # Base theme for structure
+      - custom.scss    # Your SCSS variable overrides
+    css: 
+      - styles.css     # Additional CSS overrides/rules
+    toc: false         # Disable Table of Contents globally
+    # Grid settings might be less effective if overridden by CSS, but included per suggestion
+    grid:
+      sidebar-width: 0px
+      body-width: 1200px 
+      margin-width: 0px
+    # Includes - Inject custom HTML into Quarto's structure
+    include-in-header:
+      - _partials/head-includes.html
+    include-before-body:
+      - _partials/site-header.html
+      - _partials/watermark.html # Include watermark here
+    include-after-body:
+      - _partials/site-footer.html
+
+# Optional: Configuration for code execution if needed later
+# execute:
+#   freeze: auto

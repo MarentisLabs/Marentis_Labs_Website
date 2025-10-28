@@ -1,0 +1,102 @@
+---
+title: "Strategic Risk Assessment in Portfolio Management"
+description: "A practical framework for integrating adversarial analysis into investment decision-making processes."
+author: "Owen Vallis"
+date: "2025-10-15"
+date-format: "MMMM YYYY"
+categories: [Risk Management, Portfolio Strategy]
+
+---
+
+::: {.article-metadata}
+::: {.article-title}
+{{< meta title >}}
+:::
+
+::: {.article-description}
+{{< meta description >}}
+:::
+
+::: {.article-meta-info}
+::: {.meta-item}
+<strong>Date:</strong> {{< meta date >}}
+:::
+
+::: {.meta-item}
+<strong>Author:</strong> {{< meta author >}}
+:::
+:::
+:::
+
+## Introduction
+
+Traditional risk assessment often relies on historical data and optimistic assumptions. This creates blind spots that become apparent only during market stress. Our approach subjects every assumption to rigorous challenge before capital is deployed.
+
+## The Framework
+
+The strategic risk assessment framework consists of three core components:
+
+### 1. Assumption Mapping
+
+Begin by explicitly documenting every assumption underlying the investment thesis. This includes:
+
+- Market conditions and their expected persistence
+- Competitive dynamics and barriers to entry
+- Operational capabilities of portfolio companies
+- Exit environment and timing assumptions
+
+### 2. Adversarial Challenge
+
+Each assumption is then subjected to a structured challenge process:
+
+```python
+def challenge_assumption(assumption, context):
+    """
+    Apply adversarial analysis to an investment assumption
+    """
+    scenarios = generate_stress_scenarios(assumption)
+    vulnerabilities = identify_weak_points(assumption, context)
+    
+    return {
+        'stress_scenarios': scenarios,
+        'vulnerabilities': vulnerabilities,
+        'mitigations': propose_mitigations(vulnerabilities)
+    }
+```    
+### 3. Mitigation Design
+For each identified vulnerability, develop specific mitigations:
+
+Portfolio-level hedging strategies
+
+Due diligence deepening in high-risk areas
+
+Governance structures to monitor key indicators
+
+Exit optionality and downside protection
+
+## Case Application
+Consider a growth equity investment in a SaaS company. Standard analysis focuses on growth metrics and unit economics. Adversarial analysis asks:
+
+What if customer concentration proves more brittle than assumed?
+
+How does the model perform if churn accelerates by 50%?
+
+What competitive responses might we be underestimating?
+
+This process revealed that three investments in our client's pipeline had critical dependencies on sustained low interest rates. When rates rose sharply in 2022, two of these positions underperformed significantly. The third, where we had insisted on downside protection, delivered positive returns despite market volatility.
+
+## Implementation
+Integrating this framework requires:
+
+Timing: Begin adversarial analysis before term sheets, not after
+
+Independence: Challenge must come from outside the deal team
+
+Documentation: Record assumptions and challenges for post-investment review
+
+Iteration: Refresh analysis at key milestones
+
+### Conclusion
+Markets reward those who prepare for what others ignore. Strategic risk assessment transforms abstract concerns into concrete decision criteria. The cost of analysis is measured in hours. The cost of unexamined assumptions is measured in portfolio returns.
+
+Marentis Labs provides independent strategic risk advisory to FTSE 350 companies and private equity firms. to discuss your risk assessment needs.

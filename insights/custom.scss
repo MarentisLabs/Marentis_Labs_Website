@@ -1,0 +1,88 @@
+/*-- scss:defaults --*/
+
+// Marentis Labs Color Palette
+$ml-charcoal: #212529;
+$ml-slate-grey: #495057;
+$ml-gold: #a98c5a;
+$ml-slate-blue: #4a6572;
+$ml-light-bg: #f8f9fa;
+
+// Override Quarto/Bootstrap default variables
+$body-bg: #ffffff;
+$body-color: $ml-slate-grey;
+$headings-color: $ml-charcoal;
+$link-color: $ml-slate-blue;
+$link-hover-color: $ml-gold;
+
+// Typography
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: 'Courier New', monospace;
+$font-size-base: 1rem; // Base font size (approx 16px)
+$line-height-base: 1.6;
+
+// Headings (adjust sizes if needed)
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.5rem;
+$headings-font-weight: 700;
+
+/*-- scss:rules --*/
+
+// Basic resets (may duplicate some from styles.css but ensures override)
+body {
+  font-family: $font-family-sans-serif;
+  background: $body-bg;
+  margin: 0;
+  padding: 0;
+}
+
+// Hide Quarto's default title block globally
+#title-block-header {
+  display: none !important;
+}
+
+// Ensure main content container has no Quarto padding/margins initially
+// We will apply padding/margins via custom CSS or utility classes
+#quarto-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+}
+.quarto-container { // Quarto adds this wrapper
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+// Basic link styling reset (rely on Marentis styles)
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Basic code styling (adjust as needed)
+code {
+  background-color: $ml-light-bg;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 90%;
+  color: $ml-charcoal;
+}
+
+pre {
+  background-color: $ml-light-bg;
+  padding: 1em;
+  border-radius: 4px;
+  border-left: 3px solid $ml-gold;
+  overflow-x: auto;
+}
+
+// Hide Quarto's default footer (we include our own)
+body > .mt-auto.nav-footer { // Selector for Quarto's standard footer
+  display: none !important;
+}

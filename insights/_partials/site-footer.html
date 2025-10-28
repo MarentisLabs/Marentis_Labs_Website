@@ -1,0 +1,81 @@
+<footer class="site-footer" style="background-color: #ffffff; color: #ffffff; margin-top: 4rem; position: relative; z-index: 10;">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 3rem 2rem 2rem 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+      <div>
+        <img src="../Marentis Labs NoTag Logo.png" alt="Marentis Labs" style="height: 35px; width: auto; margin-bottom: 1rem;">
+        <p style="color: #adb5bd; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+          Strategic Risk & Performance Insights
+        </p>
+      </div>
+      
+      <div>
+        <h4 style="color: #a98c5a; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 1rem 0;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          <li style="margin-bottom: 0.5rem;"><a href="../services.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Services</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="/insights/insights.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Insights</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="../about.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">About</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="../contact.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 style="color: #a98c5a; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 1rem 0;">Contact</h4>
+        <p style="color: #adb5bd; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+          <a class="email-link" data-user="info" data-domain="marentislabs.com" href="mailto:info@marentislabs.com" style="color: #adb5bd; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">info@marentislabs.com</a>
+        </p>
+      </div>
+    </div>
+    
+    <div style="border-top: 1px solid #495057; padding-top: 2rem; text-align: center;">
+      <p style="color: #6c757d; font-family: 'Inter', sans-serif; font-size: 0.85rem; margin: 0;">
+        © <span id="current-year"></span> Marentis Labs. All rights reserved. | <a href="/cookies.html" style="color: #6c757d; text-decoration: underline;">Cookies Policy</a>
+      </p>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', () => {
+      /* Email Obfuscation */ 
+      const emailLinks = document.querySelectorAll('.email-link'); 
+      emailLinks.forEach(link => { 
+        const user = link.dataset.user; 
+        const domain = link.dataset.domain; 
+        if (user && domain) { 
+          const email = user + '@' + domain; 
+          link.href = 'mailto:' + email; 
+          // Keep placeholder or set text dynamically if preferred
+          // link.textContent = email; 
+        } 
+      });
+      
+    });
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const banner = document.getElementById('cookie-consent-banner');
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+    const rejectBtn = document.getElementById('cookie-reject-btn');
+
+    // Check if consent has already been given *this session*
+    const consent = sessionStorage.getItem('cookieConsent');
+    
+    if (!consent) {
+        // If no consent given, show the banner
+        banner.style.display = 'block';
+    }
+
+    // Handle "Accept" click
+    acceptBtn.addEventListener('click', () => {
+        sessionStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+        runAnalytics(); // <-- This runs the GA function from the <head>
+    });
+
+    // Handle "Reject" click
+    rejectBtn.addEventListener('click', () => {
+        sessionStorage.setItem('cookieConsent', 'rejected');
+        banner.style.display = 'none';
+    });
+});
+</script>
+</footer>

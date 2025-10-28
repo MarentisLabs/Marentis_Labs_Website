@@ -1,0 +1,99 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { 
+        theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] }, colors: { /* Your colors */ 'ml-charcoal': '#212529', 'ml-slate-grey': '#495057', 'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572', 'ml-light-bg': '#f8f9fa', } } }
+    }
+</script>
+
+<style>
+  /* --- Base Resets & Font --- */
+  html { scroll-padding-top: 4rem; /* Adjust if header height changes */ }
+  body { 
+    font-family: 'Inter', sans-serif !important; 
+    background-color: white !important; 
+    color: #212529 !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important; 
+    z-index: 1 !important; 
+  }
+  main { display: block !important; }
+  a { color: inherit !important; text-decoration: none !important; } 
+  a:hover { text-decoration: none !important; } /* Consider adding hover styles */
+
+  /* --- Watermark --- */
+  body::after { content: ""; position: fixed; inset: 0; background-image: url('../Marentis Mini LogoBackground.png'); background-repeat: no-repeat; background-position: center 20vh; background-attachment: fixed; background-size: 1200px; opacity: 0.8; z-index: -1; pointer-events: none; }
+
+  /* --- Hide Quarto Defaults --- */
+  .navbar, #quarto-sidebar, .quarto-sidebar-toggle, body > .quarto-navigation { display: none !important; }
+  /* Hide default footer if Quarto adds one */
+  body > footer.footer.mt-auto { display: none !important; } 
+
+  /* --- Title Block Styling (Override Quarto Defaults) --- */
+  #title-block-header.quarto-title-block { background-color: #f8f9fa !important; padding: 4rem 1rem 1rem 1rem !important; text-align: center !important; position: relative !important; z-index: 2 !important; margin-block-end: 0 !important; border-bottom: none !important; width: 100% !important; max-width: none !important; /* Ensure full width */}
+  #title-block-header.quarto-title-block > * { margin: 0 !important; }
+  #title-block-header.quarto-title-block h1.title { font-family: 'Inter', sans-serif !important; font-size: 2.25rem !important; font-weight: 800 !important; color: #212529 !important; line-height: 1.25 !important; max-width: 42rem !important; margin: 0 auto 1rem auto !important; padding: 0 !important; }
+  @media (min-width: 768px) { #title-block-header.quarto-title-block h1.title { font-size: 3rem !important; line-height: 1 !important; } }
+  #title-block-header.quarto-title-block .quarto-title-meta { padding: 1rem 0 4rem 0 !important; max-width: 56rem !important; margin: 0 auto !important; font-size: 1.125rem !important; color: #495057 !important; border: none !important; }
+  #title-block-header.quarto-title-block .quarto-title-meta>div { margin-bottom: 0 !important; display: block !important; /* Ensure block display */}
+  /* Target description specifically if Quarto wraps it */
+  #title-block-header.quarto-title-block .quarto-title-meta .description p, 
+  #title-block-header.quarto-title-block .quarto-title-meta > div:has(p:only-child) p { /* Heuristic for description */
+      font-style: italic !important; font-weight: 300 !important; margin: 0 auto 2rem auto !important; padding: 0 !important; max-width: 56rem !important; 
+  } 
+  #title-block-header.quarto-title-block .quarto-title-meta-contents { font-size: 0.875rem !important; color: #495057 !important; line-height: 1.5 !important; }
+  #title-block-header.quarto-title-block .quarto-title-meta-contents .date { color: #4a6572 !important; margin-bottom: 0.5rem !important; display: block !important; }
+  #title-block-header.quarto-title-block .quarto-title-meta-contents .author span:first-child { font-weight: 700 !important; }
+  #title-block-header.quarto-title-block .quarto-title-meta-contents .author::after { content: ", Founder, Marentis Labs"; font-weight: 400 !important; }
+
+  /* --- Listing Page Styles --- */
+  /* Target Quarto's container for listing */
+  main#quarto-document-content .quarto-listing-container.container-fluid { max-width: 56rem !important; margin: 0 auto !important; padding: 5rem 1rem 6rem 1rem !important; background-color: transparent !important; position: relative !important; z-index: 2 !important; width: 100% !important; }
+  /* Style listing items */
+  .quarto-listing-default .list-entry { margin-bottom: 2rem !important; border-bottom: 1px solid #eee !important; padding-bottom: 1.5rem !important; background: none !important; }
+  .quarto-listing-default .quarto-listing-description { color: #495057 !important; font-size: 1rem !important; } 
+  .quarto-listing-default .quarto-listing-author { font-size: 0.875rem !important; color: #4a6572 !important;} 
+  .quarto-listing-default .quarto-listing-date { font-size: 0.875rem !important; color: #4a6572 !important;} 
+  .quarto-listing-default h3.quarto-listing-title { margin-bottom: 0.5rem !important; font-size: 1.5rem !important; color: #212529 !important; font-weight: 700 !important;} 
+  .quarto-listing-default a { text-decoration: none !important; }
+  .quarto-listing-default a:hover h3.quarto-listing-title { color: #a98c5a !important; } 
+
+  /* --- Article Body Styles --- */
+   /* Target Quarto's main content area after title block, excluding listing */
+  main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) { 
+      font-size: 1.125rem !important; 
+      line-height: 1.8 !important;
+      color: #495057 !important; 
+      max-width: 768px !important; 
+      margin: 0 auto !important; 
+      position: relative !important; 
+      z-index: 10 !important; 
+      padding: 5rem 1rem 6rem 1rem !important; 
+      background-color: transparent !important; 
+      font-family: 'Inter', sans-serif !important; 
+  }
+   /* Style elements *within* the article body */
+  main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) h2 { font-size: 1.875rem !important; color: #212529 !important; font-weight: 700 !important; margin-top: 2.5rem !important; margin-bottom: 1rem !important;}
+  main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) strong { font-weight: 600 !important; color: #212529 !important;}
+  main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) ul { list-style-type: disc !important; list-style-position: outside !important; margin-left: 1.5rem !important; margin-top: 1.5rem !important; margin-bottom: 1.5rem !important; }
+   main#quarto-document-content > div:not(#title-block-header):not(.quarto-listing-container) p { margin-bottom: 1.5rem; } /* Add paragraph spacing */
+  
+   /* Style Quarto's article navigation */
+    .article-navi { max-width: 768px; /* Match article width */ margin: 0 auto; padding: 3rem 1rem; border-top: 1px solid #dee2e6; background: transparent; position: relative; z-index: 2; display: flex; justify-content: space-between; }
+    .article-navi a { color: #4a6572; } .article-navi a:hover { color: #a98c5a; }
+    .article-navi .prev { text-align: left;} .article-navi .next { text-align: right;}
+    .article-navi .article-navi-label { font-size: 0.875rem; }
+    .article-navi .article-navi-title { font-size: 1.25rem; font-weight: 600; color: #212529; }
+
+   /* Footer needs z-index and transparency */
+    body > footer.site-footer { position: relative !important; z-index: 2 !important; background-color: transparent !important; border-top: 1px solid #dee2e6 !important; padding: 2rem 0; /* Match original footer padding */}
+   /* Header needs z-index */
+    body > header.site-header { position: sticky !important; top: 0 !important; z-index: 50 !important; background: white !important; }
+
+</style>

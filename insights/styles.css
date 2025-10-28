@@ -1,0 +1,266 @@
+/* Additional custom styles for Marentis Labs integration */
+
+/* Ensure Inter font is loaded */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+/* Global resets (redundant with SCSS but safe) */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif; /* Ensure font is applied */
+}
+
+/* Ensure main content has proper stacking context for watermark */
+main#quarto-document-content {
+  position: relative;
+  z-index: 2; /* Content above watermark */
+  background-color: transparent; /* Allows watermark to show through */
+}
+
+/* Hide any remaining unwanted Quarto elements */
+.quarto-title-banner, /* Quarto's banner element */
+.page-navigation, /* Quarto's default prev/next links */
+.sidebar, /* Quarto sidebars */
+#quarto-sidebar,
+.quarto-sidebar-toggle,
+.quarto-other-formats /* Dropdown for other formats */
+{
+  display: none !important;
+}
+
+/* --- Manually Created Article Metadata Block Styling --- */
+.article-metadata {
+  max-width: 1200px; /* Match desired body width */
+  margin: 0 auto 3rem auto;
+  padding: 2rem;
+  background: #f8f9fa; /* ml-light-bg */
+  border-left: 3px solid #a98c5a; /* ml-gold */
+  position: relative; /* Stacking */
+  z-index: 2;
+}
+  
+.article-metadata .article-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #212529; /* ml-charcoal */
+  margin: 0 0 0.75rem 0;
+}
+  
+.article-metadata .article-description {
+  font-size: 1.25rem;
+  color: #495057; /* ml-slate-grey */
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+  
+.article-metadata .article-meta-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #495057; /* ml-slate-grey */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+  
+.article-metadata .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.article-metadata .meta-item strong {
+    color: #4a6572; /* ml-slate-blue */
+    font-weight: 700;
+}
+
+
+/* --- Main Content Area Styling (Applies to both articles and listing container) --- */
+/* Target the div Quarto creates inside main */
+main#quarto-document-content > div {
+  max-width: 1200px; /* Match desired body width */
+  margin: 0 auto;
+  padding: 60px 40px 100px 40px; /* Top, LR, Bottom padding */
+  position: relative;
+  z-index: 2; /* Above watermark */
+  background-color: transparent; /* Allow watermark to show through */
+}
+
+/* Specific styling for article content within the main div */
+main#quarto-document-content > div:not(.quarto-listing-container) { 
+    max-width: 768px; /* Narrower width for article text */
+}
+
+/* Article Typography Overrides (within the main content div) */
+main#quarto-document-content h1, 
+main#quarto-document-content h2, 
+main#quarto-document-content h3, 
+main#quarto-document-content h4, 
+main#quarto-document-content h5, 
+main#quarto-document-content h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #212529; /* ml-charcoal */
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+main#quarto-document-content h1 {
+  /* H1 is usually the manual title block, style h2+ for content */
+}
+
+main#quarto-document-content h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #212529; /* ml-charcoal */
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.4rem;
+}
+
+main#quarto-document-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #495057; /* ml-slate-grey */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main#quarto-document-content p {
+  margin-bottom: 1em;
+  line-height: 1.6;
+  color: #495057; /* ml-slate-grey */
+}
+
+/* Lists */
+main#quarto-document-content ul, 
+main#quarto-document-content ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+  
+main#quarto-document-content li {
+  margin-bottom: 0.5em;
+  color: #495057; /* ml-slate-grey */
+}
+
+/* Blockquotes */
+main#quarto-document-content blockquote {
+  border-left: 3px solid #a98c5a; /* ml-gold */
+  padding-left: 1.5em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  color: #495057; /* ml-slate-grey */
+  font-style: italic;
+}
+
+/* --- Listings Page Specific Styles --- */
+/* Style Quarto's default listing elements */
+.quarto-listing {
+  /* container styling applied via main#quarto-document-content > div */
+}
+
+.quarto-listing-default .list-entry { /* Updated selector */
+  border-bottom: 1px solid #dee2e6;
+  padding: 2rem 0;
+  margin: 0; /* Reset margins if needed */
+}
+  
+.quarto-listing-default .list-entry:last-child {
+  border-bottom: none;
+}
+
+.quarto-listing-default .quarto-listing-title { /* Updated selector */
+  font-size: 1.8rem !important; /* Override theme */
+  font-weight: 700 !important;
+  color: #212529 !important; /* ml-charcoal */
+  margin-bottom: 0.5rem !important;
+}
+
+.quarto-listing-default a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.quarto-listing-default a:hover .quarto-listing-title {
+  color: #4a6572 !important; /* ml-slate-blue */
+}
+
+.quarto-listing-default .quarto-listing-description { /* Updated selector */
+  color: #495057 !important; /* ml-slate-grey */
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Style Quarto's metadata div within listing */
+.quarto-listing-default .listing-item-metadata {
+    display: flex;
+    gap: 1rem; /* Space between date and author */
+    margin-top: 0.5rem;
+}
+
+.quarto-listing-default .quarto-listing-date, /* Updated selector */
+.quarto-listing-default .quarto-listing-author /* Updated selector */
+{
+  color: #495057 !important; /* ml-slate-grey */
+  font-size: 0.9rem !important;
+}
+
+/* --- Article Pagination --- */
+.article-navi { 
+  max-width: 768px; /* Match article width */
+  margin: 0 auto; 
+  padding: 3rem 1rem; 
+  border-top: 1px solid #dee2e6; 
+  background: transparent; 
+  position: relative; 
+  z-index: 2; 
+  display: flex; 
+  justify-content: space-between; 
+}
+.article-navi a { color: #4a6572; } 
+.article-navi a:hover { color: #a98c5a; }
+.article-navi .prev { text-align: left;} .article-navi .next { text-align: right;}
+.article-navi .article-navi-label { font-size: 0.875rem; }
+.article-navi .article-navi-title { font-size: 1.25rem; font-weight: 600; color: #212529; }
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  main#quarto-document-content > div {
+    padding: 40px 20px 80px 20px;
+  }
+  
+  .article-metadata {
+    padding: 1.5rem;
+    margin-left: -20px; /* Adjust if padding causes overflow */
+    margin-right: -20px;
+  }
+  
+  .article-metadata .article-title {
+    font-size: 2rem;
+  }
+  
+  .article-metadata .article-description {
+    font-size: 1.1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .site-header,
+  .site-footer,
+  .watermark,
+  body::after /* Ensure watermark hidden */
+  {
+    display: none !important;
+  }
+  
+  main#quarto-document-content > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  body {
+      background-color: white !important; /* Ensure white background for print */
+  }
+}
