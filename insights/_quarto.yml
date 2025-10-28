@@ -27,6 +27,8 @@ format:
       - _partials/watermark.html # Include watermark here
     include-after-body:
       - _partials/site-footer.html
+listing:
+  template: _partials/listing-item.ejs
 
 # Optional: Configuration for code execution if needed later
 # execute:

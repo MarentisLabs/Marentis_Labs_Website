@@ -1,23 +1,34 @@
 <div class="list-entry mb-8 pb-6 border-b border-gray-200">
-  <h3 class="quarto-listing-title text-2xl font-bold text-ml-charcoal mb-2">
-    <a href="<%- item.path %>" class="listing-title-link hover:text-ml-gold transition duration-200">
+  
+  <%# Title: Use Tailwind for size, weight, color, margin %>
+  <h3 class="text-2xl font-bold text-ml-charcoal mb-2">
+    <%# Link: Apply hover color and transition %>
+    <a href="<%- item.path %>" class="hover:text-ml-gold transition duration-200">
       <%- item.title %>
     </a>
   </h3>
-  <div class="listing-item-metadata text-sm text-ml-slate-blue mb-3">
+  
+  <%# Metadata container: Use flex for layout, set text size/color, margin %>
+  <div class="listing-item-metadata text-sm text-ml-slate-blue mb-3 flex flex-wrap gap-x-4 items-center">
     <% if (item.author) { %>
-      <span class="listing-author mr-4">By <%- item.author %></span>
+      <%# Author: Add margin if needed, specific styling possible %>
+      <span class="listing-author">By <%- item.author %></span>
     <% } %>
     <% if (item.date) { %>
+      <%# Date: Add prefix %>
       <span class="listing-date">Published <%- item.date %></span>
     <% } %>
   </div>
+  
   <% if (item.description) { %>
-    <div class="quarto-listing-description text-ml-slate-grey mb-4">
+    <%# Description (Excerpt): Use Tailwind for color, margin, base font size, leading %>
+    <div class="quarto-listing-description text-ml-slate-grey mb-4 text-base leading-relaxed">
       <%- item.description %>
     </div>
   <% } %>
-  <a href="<%- item.path %>" class="text-ml-slate-blue hover:text-ml-gold font-semibold text-sm read-more-link">
+  
+  <%# Read More link: Use Tailwind for color, hover, weight, size %>
+  <a href="<%- item.path %>" class="read-more-link text-ml-slate-blue hover:text-ml-gold font-semibold text-sm">
     Read More &rarr;
   </a>
 </div>
