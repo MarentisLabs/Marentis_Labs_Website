@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Owen Vallis">
+<meta name="description" content="A practical framework for integrating adversarial analysis into investment decision-making processes.">
 
-<title>Insights – Marentis Labs Insights</title>
+<title>Strategic Risk Assessment in Portfolio Management – Marentis Labs Insights</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-768c135172f32a44277a7ca6ed00a94d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58ef5de1842441747b442e9c242288ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-768c135172f32a44277a7ca6ed00a94d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-58ef5de1842441747b442e9c242288ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,38 +104,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/png" href="./Marentis Mini Logo.png"> 
+<link rel="icon" type="image/png" href="../Marentis Mini Logo.png"> 
 
 
 
@@ -146,57 +152,27 @@ ul.task-list li input[type="checkbox"] {
 
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UG9ydGZvbGlvJTIwU3RyYXRlZ3k=">Portfolio Strategy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVzaWxpZW5jZQ==">Resilience <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmlzayUyME1hbmFnZW1lbnQ=">Risk Management <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3RyYXRlZ3k=">Strategy <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 <header class="site-header" style="background-color: #ffffff; position: sticky; /* Changed from fixed */ top: 0; left: 0; right: 0; z-index: 1000;">
 
   <nav style="max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;">
 
-    <a href="./" style="display: flex; align-items: center; text-decoration: none;">
+    <a href="../" style="display: flex; align-items: center; text-decoration: none;">
 
-      <img src="./Marentis Labs NoTag Logo.png" alt="Marentis Labs" style="height: 64px; width: auto;">
+      <img src="../Marentis Labs NoTag Logo.png" alt="Marentis Labs" style="height: 64px; width: auto;">
 
     </a>
 
@@ -204,7 +180,7 @@ window.Quarto = {
 
     <div style="display: flex; gap: 2rem; align-items: center;">
 
-      <a href="./" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">Home</a>
+      <a href="../" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">Home</a>
 
       <a href="../services.html" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">Services</a>
 
@@ -221,20 +197,41 @@ window.Quarto = {
 </header>
 <div class="watermark" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60vw; max-width: 1200px; /* Adjusted max-width */ opacity: 0.2; /* Adjusted opacity */ z-index: 0; pointer-events: none;">
 
-  <img src="./Marentis Mini LogoBackground.png" alt="" style="width: 100%; height: auto; display: block;">
+  <img src="../Marentis Mini LogoBackground.png" alt="" style="width: 100%; height: auto; display: block;">
 
 </div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Insights</h1>
+<h1 class="title">Strategic Risk Assessment in Portfolio Management</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Risk Management</div>
+    <div class="quarto-category">Portfolio Strategy</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A practical framework for integrating adversarial analysis into investment decision-making processes.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Owen Vallis </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -244,57 +241,89 @@ window.Quarto = {
 </header>
 
 
-<div class="insights-intro" style="max-width: 1200px; margin: 0 auto 4rem auto; padding: 2rem; background: #f8f9fa; border-left: 3px solid #a98c5a; position: relative; z-index: 2;">
-<h1 style="font-size: 2.5rem; font-weight: 900; color: #212529; margin: 0 0 1rem 0;">
-Strategic Insights
-</h1>
-<p style="font-size: 1.1rem; color: #495057; line-height: 1.6; margin: 0;">
-Analysis and perspectives on strategic risk, institutional design, and performance management from the Marentis Labs team.
-</p>
+<div class="article-metadata">
+<div class="article-title">
+<p>Strategic Risk Assessment in Portfolio Management</p>
 </div>
+<div class="article-description">
+<p>A practical framework for integrating adversarial analysis into investment decision-making processes.</p>
+</div>
+<div class="article-meta-info">
+<div class="meta-item">
+<p><strong>Date:</strong> October 2025</p>
+</div>
+<div class="meta-item">
+<p><strong>Author:</strong> Owen Vallis</p>
+</div>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Traditional risk assessment often relies on historical data and optimistic assumptions. This creates blind spots that become apparent only during market stress. Our approach subjects every assumption to rigorous challenge before capital is deployed.</p>
+</section>
+<section id="the-framework" class="level2">
+<h2 class="anchored" data-anchor-id="the-framework">The Framework</h2>
+<p>The strategic risk assessment framework consists of three core components:</p>
+<section id="assumption-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="assumption-mapping">1. Assumption Mapping</h3>
+<p>Begin by explicitly documenting every assumption underlying the investment thesis. This includes:</p>
+<ul>
+<li>Market conditions and their expected persistence</li>
+<li>Competitive dynamics and barriers to entry</li>
+<li>Operational capabilities of portfolio companies</li>
+<li>Exit environment and timing assumptions</li>
+</ul>
+</section>
+<section id="adversarial-challenge" class="level3">
+<h3 class="anchored" data-anchor-id="adversarial-challenge">2. Adversarial Challenge</h3>
+<p>Each assumption is then subjected to a structured challenge process:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> challenge_assumption(assumption, context):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Apply adversarial analysis to an investment assumption</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    scenarios <span class="op">=</span> generate_stress_scenarios(assumption)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    vulnerabilities <span class="op">=</span> identify_weak_points(assumption, context)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">'stress_scenarios'</span>: scenarios,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">'vulnerabilities'</span>: vulnerabilities,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">'mitigations'</span>: propose_mitigations(vulnerabilities)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    }</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="mitigation-design" class="level3">
+<h3 class="anchored" data-anchor-id="mitigation-design">3. Mitigation Design</h3>
+<p>For each identified vulnerability, develop specific mitigations:</p>
+<p>Portfolio-level hedging strategies</p>
+<p>Due diligence deepening in high-risk areas</p>
+<p>Governance structures to monitor key indicators</p>
+<p>Exit optionality and downside protection</p>
+</section>
+</section>
+<section id="case-application" class="level2">
+<h2 class="anchored" data-anchor-id="case-application">Case Application</h2>
+<p>Consider a growth equity investment in a SaaS company. Standard analysis focuses on growth metrics and unit economics. Adversarial analysis asks:</p>
+<p>What if customer concentration proves more brittle than assumed?</p>
+<p>How does the model perform if churn accelerates by 50%?</p>
+<p>What competitive responses might we be underestimating?</p>
+<p>This process revealed that three investments in our client’s pipeline had critical dependencies on sustained low interest rates. When rates rose sharply in 2022, two of these positions underperformed significantly. The third, where we had insisted on downside protection, delivered positive returns despite market volatility.</p>
+</section>
+<section id="implementation" class="level2">
+<h2 class="anchored" data-anchor-id="implementation">Implementation</h2>
+<p>Integrating this framework requires:</p>
+<p>Timing: Begin adversarial analysis before term sheets, not after</p>
+<p>Independence: Challenge must come from outside the deal team</p>
+<p>Documentation: Record assumptions and challenges for post-investment review</p>
+<p>Iteration: Refresh analysis at key milestones</p>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Markets reward those who prepare for what others ignore. Strategic risk assessment transforms abstract concerns into concrete decision criteria. The cost of analysis is measured in hours. The cost of unexamined assumptions is measured in portfolio returns.</p>
+<p>Marentis Labs provides independent strategic risk advisory to FTSE 350 companies and private equity firms. to discuss your risk assessment needs.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNTdHJhdGVneSUyQ1Jlc2lsaWVuY2U=" data-listing-date-sort="1757890800000" data-listing-file-modified-sort="1761649045079" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1514">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/strategic-cost-resilience.html" class="no-external">Strategic Cost Resilience:</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/strategic-cost-resilience.html" class="no-external">
-<p>A Risk-First Approach to Profitability</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/strategic-cost-resilience.html" class="no-external">
-<div class="listing-date">
-September 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UmlzayUyME1hbmFnZW1lbnQlMkNQb3J0Zm9saW8lMjBTdHJhdGVneQ==" data-listing-date-sort="1755212400000" data-listing-file-modified-sort="1761648227153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1406">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/navigating-the-polycrisis.html" class="no-external">Navigating the Polycrisis:</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/navigating-the-polycrisis.html" class="no-external">
-<p>A C-Suite Framework for Geopolitical Risk Strategy</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/navigating-the-polycrisis.html" class="no-external">
-<div class="listing-date">
-August 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <footer class="site-footer" style="background-color: #ffffff; color: #ffffff; margin-top: 4rem; position: relative; z-index: 10;">
 
   <div style="max-width: 1400px; margin: 0 auto; padding: 3rem 2rem 2rem 2rem;">
@@ -323,7 +352,7 @@ August 2025
 
           <li style="margin-bottom: 0.5rem;"><a href="../services.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Services</a></li>
 
-          <li style="margin-bottom: 0.5rem;"><a href="./insights/insights.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Insights</a></li>
+          <li style="margin-bottom: 0.5rem;"><a href="../insights/insights.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Insights</a></li>
 
           <li style="margin-bottom: 0.5rem;"><a href="../about.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">About</a></li>
 
@@ -355,7 +384,7 @@ August 2025
 
       <p style="color: #6c757d; font-family: 'Inter', sans-serif; font-size: 0.85rem; margin: 0;">
 
-        © <span id="current-year"></span> Marentis Labs. All rights reserved. | <a href="./cookies.html" style="color: #6c757d; text-decoration: underline;">Cookies Policy</a>
+        © <span id="current-year"></span> Marentis Labs. All rights reserved. | <a href="../cookies.html" style="color: #6c757d; text-decoration: underline;">Cookies Policy</a>
 
       </p>
 
