@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Owen Vallis">
+<meta name="description" content="In boardrooms worldwide, the KRI dashboard is a ritual of assurance. Green lights signal safety. Stable metrics suggest control. But it is an illusion, and a dangerous one. This insight briefing deconstructs the modern obsession with Key Risk Indicators, arguing that these backward-looking metrics institutionalize complacency and create the very blind spots they are meant to expose. Drawing on cautionary tales from corporate history, it reveals how optimizing for the metrics you can measure leaves your organization critically vulnerable to the threats you cannot. The solution is not to abandon measurement, but to subordinate it to a more powerful methodology. This briefing introduces Adversarial Analysis, a forward-looking framework designed to move beyond passive monitoring. Learn how tools like Red Teaming, Pre-Mortems, and strategic wargaming can help your leadership team actively hunt for vulnerabilities and build true organizational resilience. Stop driving into the future by looking in the rearview mirror. It is time to see what is really ahead.">
+
+<title>The Complacency Trap: How Key Risk Indicators Create Blind Spots – Marentis Labs Insights</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-768c135172f32a44277a7ca6ed00a94d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-58ef5de1842441747b442e9c242288ff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="../Marentis Mini Logo.png"> 
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<script>
+
+  tailwind.config = {
+
+    theme: {
+
+      extend: {
+
+        colors: {
+
+          'ml-charcoal': '#212529',
+
+          'ml-slate-grey': '#495057',
+
+          'ml-gold': '#a98c5a',
+
+          'ml-slate-blue': '#4a6572',
+
+          'ml-light-bg': '#f8f9fa',
+
+        },
+
+        fontFamily: {
+
+          // Ensure 'Inter' matches font-family used in CSS/SCSS
+
+          sans: ['Inter', 'sans-serif'], 
+
+        }
+
+      }
+
+    }
+
+  }
+
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header class="site-header" style="background-color: #ffffff; position: sticky; /* Changed from fixed */ top: 0; left: 0; right: 0; z-index: 1000;">
+
+  <nav style="max-width: 1400px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between;">
+
+    <a href="../../index.html" style="display: flex; align-items: center; text-decoration: none;">
+
+      <img src="../Marentis Labs NoTag Logo.png" alt="Marentis Labs" style="height: 64px; width: auto;">
+
+    </a>
+
+    
+
+    <div style="display: flex; gap: 2rem; align-items: center;">
+
+      <a href="../../index.html" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">Home</a>
+
+      <a href="../../services.html" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">Services</a>
+
+      <a href="../insights.html" style="color: #a98c5a; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 700; transition: color 0.2s ease;">Insights</a>
+
+      <a href="../../about.html" style="color: #212529; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#212529'">About</a>
+
+      <a href="../../contact.html" style="color: #ffffff; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; padding: 0.5rem 1.25rem; background-color: #a98c5a; border-radius: 4px; transition: all 0.2s ease;" onmouseover="this.style.backgroundColor='#92754c'; this.style.color='#ffffff'" onmouseout="this.style.backgroundColor='#a98c5a'; this.style.color='#ffffff'">Contact</a>
+
+    </div>
+
+    </nav>
+
+</header>
+<div class="watermark" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1700px; max-width: 1700px; /* Adjusted max-width */ opacity: 0.2; /* Adjusted opacity */ z-index: 0; pointer-events: none;">
+
+  <img src="../Marentis Mini LogoBackground.png" alt="" style="width: 100%; height: auto; display: block;">
+
+</div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Complacency Trap: How Key Risk Indicators Create Blind Spots</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Risk Management</div>
+    <div class="quarto-category">Portfolio Strategy</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In boardrooms worldwide, the KRI dashboard is a ritual of assurance. Green lights signal safety. Stable metrics suggest control. But it is an illusion, and a dangerous one. This insight briefing deconstructs the modern obsession with Key Risk Indicators, arguing that these backward-looking metrics institutionalize complacency and create the very blind spots they are meant to expose. Drawing on cautionary tales from corporate history, it reveals how optimizing for the metrics you can measure leaves your organization critically vulnerable to the threats you cannot. The solution is not to abandon measurement, but to subordinate it to a more powerful methodology. This briefing introduces Adversarial Analysis, a forward-looking framework designed to move beyond passive monitoring. Learn how tools like Red Teaming, Pre-Mortems, and strategic wargaming can help your leadership team actively hunt for vulnerabilities and build true organizational resilience. Stop driving into the future by looking in the rearview mirror. It is time to see what is really ahead.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Owen Vallis </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="article-metadata">
+<div class="article-title">
+<p>The Complacency Trap: How Key Risk Indicators Create Blind Spots</p>
+</div>
+<div class="article-description">
+<p>In boardrooms worldwide, the KRI dashboard is a ritual of assurance. Green lights signal safety. Stable metrics suggest control. But it is an illusion, and a dangerous one. This insight briefing deconstructs the modern obsession with Key Risk Indicators, arguing that these backward-looking metrics institutionalize complacency and create the very blind spots they are meant to expose. Drawing on cautionary tales from corporate history, it reveals how optimizing for the metrics you can measure leaves your organization critically vulnerable to the threats you cannot. The solution is not to abandon measurement, but to subordinate it to a more powerful methodology. This briefing introduces Adversarial Analysis, a forward-looking framework designed to move beyond passive monitoring. Learn how tools like Red Teaming, Pre-Mortems, and strategic wargaming can help your leadership team actively hunt for vulnerabilities and build true organizational resilience. Stop driving into the future by looking in the rearview mirror. It is time to see what is really ahead.</p>
+</div>
+<div class="article-meta-info">
+<div class="meta-item">
+<p><strong>Date:</strong> October 2025</p>
+</div>
+<div class="meta-item">
+<p><strong>Author:</strong> Owen Vallis</p>
+</div>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In boardrooms around the world, a familiar ritual unfolds. The risk committee reviews a dashboard of Key Risk Indicators, or KRIs. The metrics glow green. Credit risk is within tolerance. Supply chain delivery times are normal. Employee turnover is stable. The committee, assured that risk is managed, moves to the next agenda item. This scene is meant to provide comfort. It provides the opposite. The KRI dashboard, the bedrock of modern corporate risk management, is a source of profound vulnerability. It measures the past to control the present, but in doing so, it blinds the organization to the future. It builds an illusion of control that leaves the enterprise fragile, optimized for a world that no longer exists, and unprepared for the shock that will inevitably arrive.</p>
+</section>
+<section id="the-allure-of-the-measurable" class="level2">
+<h2 class="anchored" data-anchor-id="the-allure-of-the-measurable">The Allure of the Measurable</h2>
+<p>The appeal of the KRI is obvious. It translates the ambiguous, threatening idea of risk into a clear, objective, and manageable number. A KRI is a backward-looking metric, derived from historical data, that tracks a known risk against a predefined tolerance.1 For a bank, a KRI might be the percentage of loans more than 90 days overdue. For a logistics firm, it might be the average fleet maintenance cost. The indicators are essential for managing predictable, operational risks in a stable environment.2 They answer the question, “Are we operating within the bounds of our past experience?” In the ordered domains of decision-making, where cause and effect are clear, KRIs are effective tools.3 They provide a systematic way to monitor known variables and ensure compliance with established procedures. They fit neatly into reports and give boards a quantifiable basis for oversight.4 The practice creates a powerful sense of assurance. The problem is that the greatest threats to the enterprise do not live in the ordered world. They are born in chaos and complexity, where historical data is not a guide but a trap.</p>
+</section>
+<section id="the-expert-consensus-a-known-flaw" class="level2">
+<h2 class="anchored" data-anchor-id="the-expert-consensus-a-known-flaw">The Expert Consensus: A Known Flaw</h2>
+<p>The critique of backward-looking metrics is not a new observation. Experts in finance and cognitive psychology have long warned of the “illusion of control,” a well-documented bias where we overestimate our ability to influence events. The KRI dashboard is a manifestation of the bias. It creates a false sense of mastery over an uncertain future. Financial theorist Jón Daníelsson argues that the current paradigm of risk management, which relies on quantifying risk from past data, is fundamentally flawed. It works only when the past is a reliable predictor of the future. When a true crisis hits, the models break. Worse, the regulations and internal controls built around these metrics create uniformity. When every organization uses similar models to manage risk, they become exposed to the same blind spots. The very measures intended to prevent a crisis can make one more likely by creating a fragile, homogenous system. When the financial system falls, it falls hard.</p>
+</section>
+<section id="the-rearview-mirror-how-kris-institutionalize-blindness" class="level2">
+<h2 class="anchored" data-anchor-id="the-rearview-mirror-how-kris-institutionalize-blindness">The Rearview Mirror: How KRIs Institutionalize Blindness</h2>
+<p>A KRI is a rearview mirror. It offers a perfect, data-rich view of the road already traveled. It is by its nature incapable of seeing the sharp curve ahead. This failure is rooted in Goodhart’s Law: “When a measure becomes a target, it ceases to be a good measure.” Organizations begin to manage the metric, not the underlying risk. They focus resources on keeping the indicators green, neglecting unmeasured, emergent threats. The organization becomes exquisitely adapted to a world defined by its old risks, making it dangerously vulnerable to new ones. History is filled with the wreckage of companies that learned this lesson too late.</p>
+<section id="case-study-1-wells-fargo-and-the-cross-sell-metric" class="level3">
+<h3 class="anchored" data-anchor-id="case-study-1-wells-fargo-and-the-cross-sell-metric">Case Study 1: Wells Fargo and the Cross-Sell Metric</h3>
+<p>For years, Wells Fargo’s leadership drove its community banking division with a simple, powerful metric: the cross-sell ratio, or the number of products per household. The internal goal was “Eight is Great,” a push to have every customer use eight different Wells Fargo products. This metric was the central measure of success, tied to employee compensation and relentlessly tracked in daily reports that ranked every branch and employee. The result was a catastrophe. Under intense pressure to meet unreachable quotas, thousands of employees resorted to fraud. They opened more than 3.5 million unauthorized bank and credit card accounts, forged customer signatures, and enrolled people in services without their consent. The KRI for cross-selling looked excellent, but it masked a colossal operational and ethical failure. The direct financial impact of the fake accounts was minimal, totaling a few million dollars in improper fees. The real damage was to the unmeasured factor: reputation. The scandal cost the bank billions in fines, destroyed customer trust, and led to the resignation of its CEO. Wells Fargo successfully managed its chosen metric, but in doing so, it incentivized behavior that destroyed billions in shareholder value.</p>
+</section>
+<section id="case-study-2-dick-smith-and-the-rebate-metric" class="level3">
+<h3 class="anchored" data-anchor-id="case-study-2-dick-smith-and-the-rebate-metric">Case Study 2: Dick Smith and the Rebate Metric</h3>
+<p>The 2016 collapse of Australian electronics retailer Dick Smith is a perfect example of a business destroyed by its own metrics. In the years following a private equity buyout, management became fixated on two key indicators: rapid store expansion and the maximization of supplier rebates.5 These “over and above” rebates were payments from suppliers for hitting certain purchasing volume targets. On the surface, the KRIs painted a picture of success. The company was growing its footprint, and the rebates were booked in a way that artificially boosted reported profits.7 The board pursued this “rebate maximising” strategy aggressively.6 The problem was that the strategy incentivized purchasing decisions based on the size of the rebate, not on what customers actually wanted to buy.8 The company began buying massive quantities of private-label inventory that would never sell, just to hit the volume targets needed to secure the rebate cash.10 This created a fatal blind spot. While the rebate metric looked healthy, the true leading indicator of risk, inventory quality and age, was decaying catastrophically. By late 2015, the company was sitting on a mountain of obsolete stock that required a $60 million writedown, wiping out its profits.7 The subsequent fire sales failed to generate enough cash, and the company collapsed with a creditor shortfall of over $260 million.8 The focus on a flawed KRI created a perverse incentive that drove the company directly into insolvency.</p>
+</section>
+<section id="case-study-3-bp-texas-city-and-process-safety" class="level3">
+<h3 class="anchored" data-anchor-id="case-study-3-bp-texas-city-and-process-safety">Case Study 3: BP Texas City and Process Safety</h3>
+<p>On March 23, 2005, an explosion at the BP Texas City refinery killed 15 workers and injured 180. The U.S. Chemical Safety Board investigation found that BP had focused overwhelmingly on personal safety metrics, such as slips, trips, and falls. By these measures, the refinery’s safety record appeared to be improving. This focus on lagging, personal safety KRIs obscured a catastrophic decay in process safety: the integrity of the equipment and procedures designed to prevent major disasters. The investigation revealed a history of cost-cutting that compromised critical systems, inadequate training, and a culture that normalized hazardous conditions. Warning signs of a potential disaster had been present for years, but they were not captured by the metrics the board was watching. BP was measuring lost-time injuries while ignoring the much greater risk of a systemic failure. The result was one of the worst industrial accidents in U.S. history, costing BP billions in fines and settlements and causing irreparable reputational damage.</p>
+</section>
+</section>
+<section id="the-marentis-labs-solution-adversarial-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="the-marentis-labs-solution-adversarial-analysis">The Marentis Labs Solution: Adversarial Analysis</h2>
+<p>The solution is not to abandon measurement, but to subordinate it to a more powerful methodology: adversarial analysis. A resilient organization must shift its guiding question from “Are our KRIs within tolerance?” to “How could we fail even if all our KRIs are green?” The shift requires a deliberate, imaginative, and confrontational search for the vulnerabilities that the current system does not see. It means moving from a passive, compliance-based posture to an active, adversarial one. Marentis Labs provides the framework and tools for this essential work.</p>
+<section id="methodology-1-red-teaming" class="level3">
+<h3 class="anchored" data-anchor-id="methodology-1-red-teaming">Methodology 1: Red Teaming</h3>
+<p>Red Teaming is a simulated attack designed to challenge an organization’s plans, systems, and assumptions from an adversarial perspective. A red team, acting as a competitor or malicious actor, uses real-world techniques to find and exploit vulnerabilities before an actual adversary does. The goal is not just to test defenses but to expose the blind spots created by internal biases and conventional thinking. In a business context, this can involve anything from simulated cyberattacks to physical breaches and social engineering tests. A red team exercise at Wells Fargo, for instance, might not have tested firewalls, but instead simulated an internal audit team tasked with fraudulently opening accounts to see if the system could detect it. At Dick Smith, a red team could have been tasked to argue why the rebate-driven purchasing strategy was unsustainable, using inventory aging data to build a case for imminent failure. The process uncovers not just technical flaws but also weaknesses in culture, procedures, and decision-making.</p>
+</section>
+<section id="methodology-2-the-pre-mortem" class="level3">
+<h3 class="anchored" data-anchor-id="methodology-2-the-pre-mortem">Methodology 2: The Pre-Mortem</h3>
+<p>Developed by psychologist Gary Klein, the pre-mortem is a powerful exercise in “prospective hindsight.” At the beginning of a project, the team is asked to imagine that the plan has already been implemented and has failed spectacularly. Each member then works backward to generate plausible reasons for the failure. Research has shown this technique can increase the ability to correctly identify reasons for future outcomes by 30 percent.14 The pre-mortem is effective because it legitimizes dissent and bypasses the groupthink that often plagues strategic planning. By assuming failure from the outset, it creates a safe environment for team members to voice concerns they might otherwise suppress for fear of appearing negative or disloyal. A pre-mortem on Wells Fargo’s “Eight is Great” strategy would almost certainly have raised the risk of employees cheating to meet impossible goals. A pre-mortem at BP might have identified that years of budget cuts to maintenance had made a major accident not just possible, but probable. It is a simple, low-cost tool for identifying critical risks before they become sunk costs.</p>
+</section>
+<section id="methodology-3-corporate-stress-testing" class="level3">
+<h3 class="anchored" data-anchor-id="methodology-3-corporate-stress-testing">Methodology 3: Corporate Stress Testing</h3>
+<p>To complement the qualitative insights from wargaming and pre-mortems, Marentis Labs employs rigorous stress-testing methodologies adapted from the banking sector for non-financial corporations. Unlike simple sensitivity analysis, which tweaks one variable at a time, our stress tests model the comprehensive impact of extreme, one-off events across the entire business. We work with leadership to construct plausible but severe scenarios, such as a catastrophic supply chain failure, a major cyberattack, or a sudden geopolitical crisis. By using historical analogues from other firms to quantify the potential impact on the P&amp;L, balance sheet, and cash flow, the method provides a data-driven understanding of the organization’s specific vulnerabilities. It allows for the quantitative modeling of different mitigation strategies, giving management and the board genuine confidence in their crisis plans.</p>
+</section>
+</section>
+<section id="conclusion-beyond-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-beyond-the-dashboard">Conclusion: Beyond the Dashboard</h2>
+<p>Key Risk Indicators provide a comforting but dangerous illusion of control. They are necessary for managing the known and the predictable, but they are useless for navigating the unknown. An organization that relies solely on its dashboard is driving into the future by looking in the rearview mirror. The cases of Wells Fargo, Dick Smith, and BP are not outliers; they are warnings. They show how a fixation on metrics can blind an organization to its greatest threats. The new imperative for leadership is to embrace uncertainty. It requires moving beyond the passive monitoring of historical data to the active, adversarial search for hidden vulnerabilities. It demands that we supplement our backward-looking metrics with forward-looking exercises in imagination and preparation. Marentis Labs provides the tools and expertise to make this shift. True risk management is not about keeping a dashboard green. It is about building an organization that has the resilience, adaptability, and leadership to survive when the dashboard inevitably breaks.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<footer class="site-footer" style="background-color: #ffffff; color: #ffffff; margin-top: 4rem; position: relative; z-index: 10;">
+
+  <div style="max-width: 1400px; margin: 0 auto; padding: 3rem 2rem 2rem 2rem;">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem;">
+
+      <div>
+
+        <img src="../Marentis Labs NoTag Logo.png" alt="Marentis Labs" style="height: 35px; width: auto; margin-bottom: 1rem;">
+
+        <p style="color: #adb5bd; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+
+          Strategic Risk &amp; Performance Insights
+
+        </p>
+
+      </div>
+
+      
+
+      <div>
+
+        <h4 style="color: #a98c5a; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 1rem 0;">Quick Links</h4>
+
+        <ul style="list-style: none; padding: 0; margin: 0;">
+
+          <li style="margin-bottom: 0.5rem;"><a href="../../services.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Services</a></li>
+
+          <li style="margin-bottom: 0.5rem;"><a href="../insights.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Insights</a></li>
+
+          <li style="margin-bottom: 0.5rem;"><a href="../../about.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">About</a></li>
+
+          <li style="margin-bottom: 0.5rem;"><a href="../../contact.html" style="color: #adb5bd; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 0.9rem; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">Contact</a></li>
+
+        </ul>
+
+      </div>
+
+      
+
+      <div>
+
+        <h4 style="color: #a98c5a; font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 1rem 0;">Contact</h4>
+
+        <p style="color: #adb5bd; font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+
+          <a class="email-link" data-user="info" data-domain="marentislabs.com" href="mailto:info@marentislabs.com" style="color: #adb5bd; text-decoration: none; transition: color 0.2s ease;" onmouseover="this.style.color='#a98c5a'" onmouseout="this.style.color='#adb5bd'">info@marentislabs.com</a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+    
+
+    <div style="border-top: 1px solid #495057; padding-top: 2rem; text-align: center;">
+
+      <p style="color: #6c757d; font-family: 'Inter', sans-serif; font-size: 0.85rem; margin: 0;">
+
+        © <span id="current-year"></span> Marentis Labs. All rights reserved. | <a href="../cookies.html" style="color: #6c757d; text-decoration: underline;">Cookies Policy</a>
+
+      </p>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* Email Obfuscation */ 
+
+      const emailLinks = document.querySelectorAll('.email-link'); 
+
+      emailLinks.forEach(link => { 
+
+        const user = link.dataset.user; 
+
+        const domain = link.dataset.domain; 
+
+        if (user && domain) { 
+
+          const email = user + '@' + domain; 
+
+          link.href = 'mailto:' + email; 
+
+          // Keep placeholder or set text dynamically if preferred
+
+          // link.textContent = email; 
+
+        } 
+
+      });
+
+      
+
+    });
+
+  </script>
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const banner = document.getElementById('cookie-consent-banner');
+
+    const acceptBtn = document.getElementById('cookie-accept-btn');
+
+    const rejectBtn = document.getElementById('cookie-reject-btn');
+
+
+
+    // Check if consent has already been given *this session*
+
+    const consent = sessionStorage.getItem('cookieConsent');
+
+    
+
+    if (!consent) {
+
+        // If no consent given, show the banner
+
+        banner.style.display = 'block';
+
+    }
+
+
+
+    // Handle "Accept" click
+
+    acceptBtn.addEventListener('click', () => {
+
+        sessionStorage.setItem('cookieConsent', 'accepted');
+
+        banner.style.display = 'none';
+
+        runAnalytics(); // <-- This runs the GA function from the <head>
+
+    });
+
+
+
+    // Handle "Reject" click
+
+    rejectBtn.addEventListener('click', () => {
+
+        sessionStorage.setItem('cookieConsent', 'rejected');
+
+        banner.style.display = 'none';
+
+    });
+
+});
+
+</script>
+
+</footer>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/marentislabs\.com");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
