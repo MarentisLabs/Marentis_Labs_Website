@@ -183,6 +183,7 @@ main#quarto-document-content > .quarto-listing-container.container-fluid {
   font-weight: 700 !important;
   color: #212529 !important; /* ml-charcoal */
   margin-bottom: 0.5rem !important;
+  background-color: transparent !important;
 }
 
 .quarto-listing-default a {
@@ -213,6 +214,7 @@ main#quarto-document-content > .quarto-listing-container.container-fluid {
 {
   color: #495057 !important; /* ml-slate-grey */
   font-size: 0.9rem !important;
+  background-color: transparent !important;
 }
     /* --- Transparent Table Listing Background --- */
 
