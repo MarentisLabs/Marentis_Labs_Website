@@ -222,6 +222,7 @@ main#quarto-document-content > .quarto-listing-container.container-fluid {
         padding-left: 0 !important; /* Remove side padding */
         padding-right: 0 !important;
         width: 100% !important; /* Ensure it tries to fill */
+        background-color: transparent !important;
     }
     .quarto-listing-container .table-responsive { /* Add .table-responsive if Quarto uses it */
         background-color: transparent !important;
