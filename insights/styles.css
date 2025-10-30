@@ -37,7 +37,7 @@ main#quarto-document-content {
   background: #f8f9fa; /* ml-light-bg */
   border-left: 3px solid #a98c5a; /* ml-gold */
   position: relative; /* Stacking */
-  z-index: 3;
+  z-index: 2;
 }
   
 .article-metadata .article-title {
