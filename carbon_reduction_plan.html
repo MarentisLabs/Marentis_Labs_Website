@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Reduction Plan | Marentis Labs</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
+                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
+                        'ml-light-bg': '#f8f9fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VB6Q21MBY5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VB6Q21MBY5');
+</script>
+
+<body class="bg-white">
+
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10">
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Home</a>
+                <a href="services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Services</a>
+                <a href="about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">About Us</a>
+                <a href="insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
+                <a href="contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+                    class="text-ml-charcoal focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
+            <a href="index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Home</a>
+            <a href="services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Services</a>
+            <a href="about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">About Us</a>
+            <a href="insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
+            <a href="contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+
+                <h1 class="text-4xl font-black text-ml-charcoal mb-4">Carbon Reduction Plan</h1>
+                <p class="text-ml-slate-grey mb-2 italic">Commitment to Net Zero by 2050</p>
+                <p class="text-ml-slate-grey mb-10"><strong>Version Number:</strong> 1.0<br><strong>Effective
+                        Date:</strong> 1st January 2026</p>
+
+                <div class="space-y-6 text-ml-slate-grey leading-relaxed">
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">1. Commitment to Achieving Net Zero
+                    </h2>
+                    <p>Marentis Labs is committed to achieving Net Zero emissions by 2050 for our UK operations.</p>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">2. Baseline Emissions Footprint</h2>
+                    <p>Baseline emissions are a record of the greenhouse gases that have been produced in the past and
+                        were produced prior to the introduction of any strategies to reduce emissions. Baseline
+                        emissions are the reference point against which emissions reduction can be measured.</p>
+
+                    <p><strong>Baseline Year: 2025 (First year of incorporation)</strong></p>
+
+                    <p><strong>Additional details relating to the Baseline emissions calculations:</strong></p>
+                    <p>Marentis Labs was incorporated in 2025. This first reporting period serves as our baseline.
+                        Calculations follow the GHG Reporting Protocol Corporate Standard using the Operational Control
+                        approach. Our footprint is characteristic of a lean, asset-light professional services firm.</p>
+                    <p>To allow for institutional scaling, we have calibrated our baseline using an Intensity Metric of
+                        emissions per Full-Time Equivalent (FTE) employee. This ensures that our reduction progress is
+                        measured against operational efficiency as the firm grows.</p>
+
+                    <div class="overflow-x-auto my-8">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b-2 border-ml-charcoal">
+                                    <th class="py-3 px-4 font-bold text-ml-charcoal">Emissions</th>
+                                    <th class="py-3 px-4 font-bold text-ml-charcoal text-right">Total (tCO<sub>2</sub>e)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 1</strong> (Natural Gas)</td>
+                                    <td class="py-3 px-4 text-right">1.85</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 2</strong> (Purchased Electricity)</td>
+                                    <td class="py-3 px-4 text-right">2.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 3</strong> (Included Sources)</td>
+                                    <td class="py-3 px-4 text-right">22.65</td>
+                                </tr>
+                                <tr class="text-sm text-gray-500">
+                                    <td class="py-1 px-8">&bull; Category 4: Upstream T&amp;D</td>
+                                    <td class="py-1 px-4 text-right">0.25</td>
+                                </tr>
+                                <tr class="text-sm text-gray-500">
+                                    <td class="py-1 px-8">&bull; Category 5: Waste</td>
+                                    <td class="py-1 px-4 text-right">0.20</td>
+                                </tr>
+                                <tr class="text-sm text-gray-500">
+                                    <td class="py-1 px-8">&bull; Category 6: Business Travel</td>
+                                    <td class="py-1 px-4 text-right">15.40</td>
+                                </tr>
+                                <tr class="text-sm text-gray-500">
+                                    <td class="py-1 px-8">&bull; Category 7: Commuting</td>
+                                    <td class="py-1 px-4 text-right">6.80</td>
+                                </tr>
+                                <tr class="text-sm text-gray-500">
+                                    <td class="py-1 px-8">&bull; Category 9: Downstream T&amp;D</td>
+                                    <td class="py-1 px-4 text-right">0.00</td>
+                                </tr>
+                                <tr class="border-t-2 border-ml-charcoal">
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal">Total Emissions</td>
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal text-right">26.60</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal">Intensity Metric: tCO<sub>2</sub>e
+                                        per FTE</td>
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal text-right">2.66</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">3. Current Emissions Reporting</h2>
+                    <p><strong>Reporting Year: 2025</strong></p>
+                    <p>As 2025 is our first year of operation and our baseline year, the current emissions reporting is
+                        identical to the baseline emissions footprint provided in Section 2.</p>
+
+                    <div class="overflow-x-auto my-8">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b-2 border-ml-charcoal">
+                                    <th class="py-3 px-4 font-bold text-ml-charcoal">Emissions</th>
+                                    <th class="py-3 px-4 font-bold text-ml-charcoal text-right">Total (tCO<sub>2</sub>e)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 1</strong></td>
+                                    <td class="py-3 px-4 text-right">1.85</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 2</strong></td>
+                                    <td class="py-3 px-4 text-right">2.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4"><strong>Scope 3</strong> (Included Sources)</td>
+                                    <td class="py-3 px-4 text-right">22.65</td>
+                                </tr>
+                                <tr class="border-t-2 border-ml-charcoal">
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal">Total Emissions</td>
+                                    <td class="py-3 px-4 font-bold text-ml-charcoal text-right">26.60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="my-10 relative h-64 w-full">
+                        <canvas id="emissionsChart"></canvas>
+                        <p class="text-center text-sm text-ml-slate-grey italic mt-2">2025 Baseline Emissions Footprint
+                            by Scope.</p>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">4. Emissions Reduction Targets</h2>
+                    <p>Marentis Labs recognises that as a high-growth advisory firm, our absolute headcount is projected
+                        to increase. To ensure sustainable growth, we have adopted an <strong>Intensity-Based Reduction
+                            Target</strong> alongside our absolute commitment.</p>
+                    <p>We project that our carbon intensity will decrease from <strong>2.66
+                            tCO<sub>2</sub>e/FTE</strong> to <strong>1.33 tCO<sub>2</sub>e/FTE</strong> by 2030. This
+                        represents a <strong>50% increase in carbon efficiency</strong> per employee.</p>
+                    <p>By prioritising intensity metrics, we ensure that every new associate or engagement manager
+                        joining Marentis Labs adheres to a progressively lower carbon threshold, ultimately reaching Net
+                        Zero (Neutralisation) by 2050.</p>
+
+                    <div class="my-10 relative h-64 w-full">
+                        <canvas id="intensityChart"></canvas>
+                        <p class="text-center text-sm text-ml-slate-grey italic mt-2">Projected Intensity Reduction
+                            Pathway through 2030.</p>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">5. Carbon Reduction Projects</h2>
+
+                    <h3 class="text-xl font-semibold text-ml-charcoal pt-2 pb-1">Completed Carbon Reduction Initiatives
+                    </h3>
+                    <p>The following environmental management measures and projects have been implemented during our
+                        first year of operation (2025). These measures are in effect when performing the contract.</p>
+                    <ul class="list-disc list-outside ml-8 space-y-2">
+                        <li><strong>Virtual Presence Policy:</strong> Management has implemented a "Digital-First
+                            Discovery" mandate for all initial institutional scoping phases to minimise the requirement
+                            for high-carbon business travel.</li>
+                        <li><strong>Travel Hierarchy Optimisation:</strong> Strengthening our internal travel policy to
+                            mandate "Rail-by-Default" for all travel within a 500-mile radius of our operational hub.
+                        </li>
+                        <li><strong>Supply Chain Engagement:</strong> We will introduce a sustainable procurement
+                            policy, requiring our top five service providers by spend to provide evidence of their own
+                            carbon reduction initiatives by 2028.</li>
+                        <li><strong>Energy Efficiency:</strong> Use of high-efficiency LED lighting and low-power
+                            computing infrastructure across all UK operations.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold text-ml-charcoal pt-4 pb-1">Future Carbon Reduction Initiatives
+                    </h3>
+                    <p>In the future we hope to implement further measures such as:</p>
+                    <ul class="list-disc list-outside ml-8 space-y-2">
+                        <li><strong>High-Integrity Carbon Offsetting:</strong> From FY2026, Marentis Labs will implement
+                            a policy to offset 100% of residual Scope 6 (Business Travel) emissions. We will prioritise
+                            "Gold Standard" or "Verra" certified credits, focusing on nature-based solutions and
+                            community-led decarbonisation projects that offer high fiduciary transparency.</li>
+                        <li><strong>Supply Chain Audit:</strong> Requiring all key technology service providers to
+                            disclose carbon footprints and align with Net Zero targets by 2030.</li>
+                        <li><strong>ISO 14001 Alignment:</strong> Implementing a formal Environmental Management System
+                            to systematically monitor and reduce our operational footprint.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-semibold text-ml-charcoal pt-6 pb-2">6. Declaration and Sign Off</h2>
+                    <p>This Carbon Reduction Plan has been completed in accordance with PPN 006 and associated guidance
+                        and reporting standard for Carbon Reduction Plans.</p>
+                    <p>Emissions have been reported and recorded in accordance with the published reporting standard for
+                        Carbon Reduction Plans and the GHG Reporting Protocol corporate standard and uses the
+                        appropriate Government emission conversion factors for greenhouse gas company reporting.</p>
+                    <p>While Marentis Labs does not currently fall within the statutory scope of Streamlined Energy and
+                        Carbon Reporting (SECR), Scope 1 and Scope 2 emissions have been voluntarily calculated in
+                        accordance with SECR methodologies to ensure the highest standard of fiduciary transparency. The
+                        required subset of Scope 3 emissions has been reported in accordance with the published
+                        reporting standard for Carbon Reduction Plans and the Corporate Value Chain (Scope 3) Standard.
+                    </p>
+                    <p>This Carbon Reduction Plan has been reviewed and signed off by the Sole Shareholder and Managing
+                        Director.</p>
+
+                    <p class="mt-8 font-bold text-ml-charcoal">Signed on behalf of the Supplier:</p>
+
+                    <p>
+                        <strong>Owen Vallis</strong><br>
+                        <strong>Managing Director, Marentis Labs Ltd</strong><br>
+                        <strong>Date: 1st January 2026</strong>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="container mx-auto px-6 text-sm text-ml-slate-grey">
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <div class="text-center md:text-left order-2 md:order-1 space-y-1">
+                    <p>&copy; 2026 Marentis Labs Ltd. All Rights Reserved. | <a href="cookies.html"
+                            class="text-ml-slate-blue hover:text-ml-gold font-medium">Cookies Policy</a> | <a
+                            href="modern_slavery_statement.html"
+                            class="text-ml-slate-blue hover:text-ml-gold font-medium">Modern Slavery Statement</a></p>
+                    <p class="text-ml-charcoal font-medium">Strategic Risk &amp; Performance Insights | London, UK | <a
+                            href="mailto:info@marentislabs.com" class="email-link text-ml-slate-blue hover:text-ml-gold"
+                            data-user="info" data-domain="marentislabs.com">[email protected]</a></p>
+                </div>
+
+                <div class="order-1 md:order-2 mb-4 md:mb-0">
+                    <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10 opacity-75" />
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Email Obfuscation Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailLinks = document.querySelectorAll('.email-link');
+            emailLinks.forEach(link => {
+                const user = link.dataset.user;
+                const domain = link.dataset.domain;
+                if (user && domain) {
+                    const email = user + '@' + domain;
+                    link.href = 'mailto:' + email;
+                    link.textContent = email;
+                }
+            });
+
+            // Chart.js global config
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#495057';
+
+            // Setup Emissions Bar Chart
+            const ctxEmissions = document.getElementById('emissionsChart').getContext('2d');
+            new Chart(ctxEmissions, {
+                type: 'bar',
+                data: {
+                    labels: ['Scope 1', 'Scope 2', 'Scope 3'],
+                    datasets: [{
+                        label: 'Emissions (tCO2e)',
+                        data: [1.85, 2.10, 22.65],
+                        backgroundColor: '#4a6572',
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Horizontal bar chart like in latex
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { color: '#f3f4f6', drawBorder: false },
+                            title: { display: true, text: 'Emissions (tCO2e)', font: { weight: 'bold' } }
+                        },
+                        y: {
+                            grid: { display: false, drawBorder: false },
+                            ticks: { font: { weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+
+            // Setup Intensity Line Chart
+            const ctxIntensity = document.getElementById('intensityChart').getContext('2d');
+            new Chart(ctxIntensity, {
+                type: 'line',
+                data: {
+                    labels: ['2025 (Baseline)', '2026', '2027', '2028', '2029', '2030 (Target)'],
+                    datasets: [{
+                        label: 'Intensity (tCO2e / FTE)',
+                        data: [2.66, 2.39, 2.13, 1.86, 1.60, 1.33],
+                        borderColor: '#4a6572',
+                        backgroundColor: '#ffffff',
+                        borderWidth: 2,
+                        pointBackgroundColor: '#ffffff',
+                        pointBorderColor: '#4a6572',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 3.0,
+                            grid: { color: '#f3f4f6', drawBorder: false },
+                            title: { display: true, text: 'Intensity (tCO2e / FTE)', font: { weight: 'bold' } }
+                        },
+                        x: {
+                            grid: { display: false, drawBorder: false },
+                            ticks: { maxRotation: 45, minRotation: 45 }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
