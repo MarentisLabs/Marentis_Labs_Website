@@ -3,29 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Title | Marentis Labs Insights</title>
+    <title>$if(title)$$title$$else$Article Title$endif$ | Marentis Labs Insights</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        'ml-charcoal': '#212529', 'ml-slate-grey': '#495057',
-                        'ml-gold': '#a98c5a', 'ml-slate-blue': '#4a6572',
-                        'ml-light-bg': '#f8f9fa',
-                    }
-                }
-            }
-        }
-    </script>
+    
     <style>
         /* Article-specific styles for optimal readability */
         .article-content {
@@ -93,15 +80,15 @@
     <main>
         <section class="bg-ml-light-bg py-16 md:py-24">
             <div class="container mx-auto px-6 max-w-4xl text-center">
-                <p class="text-sm text-ml-slate-blue mb-2">OCTOBER 2025</p>
+                <p class="text-sm text-ml-slate-blue mb-2">$if(date)$$date$$else$OCTOBER 2025$endif$</p>
                 <h1 class="text-4xl md:text-5xl font-extrabold text-ml-charcoal leading-tight">
-                    Lorem Ipsum: The Unexamined Assumption that Crushes Capital Ambition
+                    $if(title)$$title$$else$Lorem Ipsum: The Unexamined Assumption that Crushes Capital Ambition$endif$
                 </h1>
                 <p class="mt-4 text-lg text-ml-slate-grey max-w-3xl mx-auto font-light italic">
-                    A brief, critical perspective on the necessity of adversarial analysis in high-stakes strategic planning.
+                    $if(description)$$description$$else$A brief, critical perspective on the necessity of adversarial analysis in high-stakes strategic planning.$endif$
                 </p>
                 <div class="mt-8 text-sm text-ml-slate-grey">
-                    By <b>Owen Vallis</b>, Founder, Marentis Labs
+                    By <b>$if(author)$$author$$else$Owen Vallis$endif$</b>, Founder, Marentis Labs
                 </div>
             </div>
         </section>
@@ -111,41 +98,8 @@
                 
                 <div class="article-content space-y-6 text-justify">
                     
-                    <p class="text-2xl font-semibold text-ml-charcoal mb-8">
-                        The single greatest risk facing any profitable enterprise is not the risk it has meticulously identified, but the risk it has implicitly assumed away.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. 
-                    </p>
-
-                    <h2>The Illusion of Consensus</h2>
+                    $body$
                     
-                    <p>
-                        **Nunc ut sem vitae turpis posuere egestas.** Suspendisse id massa non elit mattis commodo a nec est. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus in erat eu urna scelerisque molestie. Vestibulum auctor ante quis enim. Nulla eget sem vitae turpis posuere egestas. Nulla facilisi.
-                    </p>
-
-                    <p>
-                        Aliquam in bibendum mauris. Sed et quam. Nunc ante odio, interdum a, tincidunt in, placerat et, massa. Phasellus dictum a, blandit at, velit. Praesent id libero id metus tempus auctor. Integer vitae turpis. Curabitur et lectus. Morbi vel lectus sit amet turpis posuere egestas. 
-                    </p>
-
-                    <h2>The Cost of Unchallenged Assumptions</h2>
-
-                    <p>
-                        Nam dictum. In scelerisque, odio in pretium feugiat, justo urna sollicitudin lectus, eget posuere tellus nulla et est. Donec posuere egestas arcu. Vestibulum euismod. Vestibulum interdum, libero vitae posuere eleifend, justo magna luctus elit, ac convallis velit nisl eget urna. Proin interdum, libero vitae. Curabitur nec tellus sed augue semper porta. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst.
-                    </p>
-
-                    <ul class="list-disc list-outside ml-6 space-y-2">
-                        <li>**Risk 1:** Optimism Bias in Synergy Forecasts.</li>
-                        <li>**Risk 2:** Over-reliance on Market Stability.</li>
-                        <li>**Risk 3:** Failure to Model a Coordinated Competitor Response.</li>
-                        <li>**Risk 4:** Inadequate Governance Structure for Rapid Escalation.</li>
-                    </ul>
-
-                    <p>
-                        **Fusce nec tellus sed augue semper porta.** Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Maecenas non leo a velit euismod pretium. In hac habitasse platea dictumst. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus in erat eu urna scelerisque molestie. 
-                    </p>
-
                     <p class="pt-8 italic border-t border-gray-200">
                         *Marentis Labs specializes in applying adversarial analysis and simulation-based challenge to strengthen strategic resilience for FTSE 350 and institutional leaders. To discuss how our Red Team Reviews can de-risk your next major decision, please contact us.*
                     </p>
