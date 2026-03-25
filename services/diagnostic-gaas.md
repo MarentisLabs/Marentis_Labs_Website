@@ -11,7 +11,7 @@ tier: "Tier 1: Diagnostic GaaS"
 
 cta_label: "Request Diagnostic Proposal"
 cta_heading: "Commission a Governance Health Check"
-cta_body: "Fixed scope, board-ready output. 30–50% of diagnostics convert to a retained relationship."
+cta_body: "Fixed scope, board-ready output, with the option to continue with a retained relationship."
 permalink: /services/diagnostic-gaas/
 ---
 
