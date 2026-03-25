@@ -1,241 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marentis Labs | Strategic Risk & Performance Insights</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+---
+layout: default
+title: "Strategic Governance as a Service"
+description: "Marentis Labs provides Strategic Governance as a Service to FTSE 350 companies and PE-backed organisations. Principal-led, continuous, adversarial by design."
+---
 
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="css/style.css">
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════ -->
+<section id="hero" class="hero-section text-white py-24 md:py-40">
+  <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 items-center gap-x-16 gap-y-10">
 
-    
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VB6Q21MBY5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VB6Q21MBY5');
-</script>
-
-<body class="bg-white">
-
-    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center space-x-3">
-                <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-12 md:h-16">
-            </a>
-
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300 nav-link-active">Home</a>
-                <a href="services.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Services</a>
-                <a href="about.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">About Us</a>
-                <a href="insights/insights.html" class="text-ml-charcoal hover:text-ml-gold transition duration-300">Insights</a>
-                <a href="contact.html" class="btn-primary px-5 py-2 rounded-md text-sm">Schedule Call</a>
-            </nav>
-
-            <div class="md:hidden">
-                <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-ml-charcoal focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
-                </button>
-            </div>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-lg">
-            <a href="index.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg nav-link-active">Home</a>
-            <a href="services.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Services</a>
-            <a href="about.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">About Us</a>
-            <a href="insights.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Insights</a>
-            <a href="contact.html" class="block py-2 px-6 text-ml-charcoal hover:bg-ml-light-bg">Schedule Call</a>
-        </div>
-    </header>
-
-    <main>
-        <section id="hero" class="hero-section text-white py-24 md:py-40 relative">
-            <div class="hero-overlay"></div>
-            <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 items-start gap-x-12">
-                
-                <div class="order-1 md:col-span-1 md:justify-self-start mb-6">
-                    <img src="Marentis Labs Full Logo Light Monochrome.png" alt="Marentis Labs Logo" class="h-24 md:h-36 lg:h-48 object-contain mx-auto md:mx-0" />
-                </div>
-
-                <div class="order-2 md:col-span-1 text-center md:text-right">
-                    <h1 class="text-4xl md:text-5xl font-black leading-tight max-w-4xl mx-auto md:mx-0">
-                        We Simulate Failure So Leaders Don’t Have to Experience It.
-                    </h1>
-                    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto md:mx-0 font-light">
-                        Strategic Risk & Performance Insights for FTSE 350, Private Equity, and Global Institutions. We stress-test assumptions before reality does.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center md:justify-end space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
-                        <a href="contact.html" class="btn-primary inline-block px-10 py-4 rounded-md text-lg shadow-xl">
-                            Schedule a Confidential Call
-                        </a>
-                        <a href="services.html" class="inline-block text-white hover:text-ml-gold transition duration-300 px-10 py-4 rounded-md text-lg font-semibold border border-white hover:border-ml-gold">
-                            Our Services &rarr;
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="capabilities" class="py-20 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl section-title inline-block">The Marentis Labs Difference</h2>
-                </div>
-
-                <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
-                    <div class="p-4">
-                        <div class="text-4xl text-ml-gold mb-3">⇆</div> <h3 class="text-xl font-semibold text-ml-charcoal mb-2">Adversarial Analysis</h3>
-                        <p class="text-ml-slate-grey text-base">Our Red Teaming approach subjects every assumption to rigorous, dispassionate challenge to reveal hidden fragilities in strategic plans.</p>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-4xl text-ml-gold mb-3">ↂ</div> <h3 class="text-xl font-semibold text-ml-charcoal mb-2">Financial Services Rigour</h3>
-                        <p class="text-ml-slate-grey text-base">We apply state of the art stress-testing techniques and proven governance frameworks refined at global banking and asset management to clients across all industries.</p>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-4xl text-ml-gold mb-3">☖</div> <h3 class="text-xl font-semibold text-ml-charcoal mb-2">Principal-Led Engagement</h3>
-                        <p class="text-ml-slate-grey text-base">Clients work directly with the founder and senior specialists, ensuring direct access to deep, undiluted expertise, not a leveraged junior team.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services-preview" class="py-20 md:py-24 bg-ml-light-bg">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl section-title inline-block">Our Core Practices</h2>
-                    <p class="mt-4 text-lg text-ml-slate-grey max-w-3xl mx-auto">Core competency practices focused on driving strategic resilience and performance for high-stakes environments.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <a href="services.html" class="service-card bg-white p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col justify-between">
-                        <div>
-                            <span class="text-ml-slate-blue font-semibold text-sm uppercase">Private Sector</span>
-                            <h3 class="text-3xl font-bold text-ml-charcoal mt-2 mb-4">Strategic Decision Advisory</h3>
-                            <p class="text-ml-slate-grey mb-4">A rigorous, independent challenge function to de-risk major capital allocation decisions for FTSE 350 companies and Private Equity firms.</p>
-                        </div>
-                        <div class="text-ml-gold font-semibold mt-4 flex items-center">
-                            Explore Red Team & Simulation Lab &rarr;
-                        </div>
-                    </a>
-                    <a href="services/institutional-strategy.html" class="service-card bg-white p-8 rounded-lg shadow-lg hover:shadow-xl flex flex-col justify-between">
-                        <div>
-                            <span class="text-ml-slate-blue font-semibold text-sm uppercase">Institutional Sector</span>
-                            <h3 class="text-3xl font-bold text-ml-charcoal mt-2 mb-4">Strategy & Design</h3>
-                            <p class="text-ml-slate-grey mb-4">Partnering with multilateral organisations, foundations, and governments to build resilient, financially sustainable blueprints for new public-good institutions.</p>
-                        </div>
-                        <div class="text-ml-gold font-semibold mt-4 flex items-center">
-                            Explore Institutional Design &rarr;
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="cta-trust" class="bg-ml-charcoal text-white py-16">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-semibold">Ready to challenge your most critical assumptions?</h2>
-                <p class="mt-4 text-lg text-gray-300 max-w-4xl mx-auto">Our work delivers strategic clarity and resilience for leaders operating in the most complex, high-stakes environments.</p>
-                <a href="contact.html" class="btn-primary mt-8 inline-block px-10 py-4 rounded-md text-lg">
-                    Request a Proposal
-                </a>
-            </div>
-        </section>
-    </main>
-
-     <footer class="bg-white border-t border-gray-200 py-8">
-        <div class="container mx-auto px-6 text-sm text-ml-slate-grey">
-            
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                
-                <div class="text-center md:text-left order-2 md:order-1 space-y-1">
-                    <p>&copy; 2025 Marentis Labs Ltd. All Rights Reserved. | <a href="cookies.html" class="text-ml-slate-blue hover:text-ml-gold font-medium">Cookies Policy</a> | <a href="website_terms.html" class="text-ml-slate-blue hover:text-ml-gold font-medium">Website Terms</a></p>
-                    <p class="text-ml-charcoal font-medium">Strategic Risk & Performance Insights | London, UK | <a class="email-link text-ml-slate-blue hover:text-ml-gold" data-user="info" data-domain="marentislabs.com">[email protected]</a></p>
-                </div>
-
-                <div class="order-1 md:order-2 mb-4 md:mb-0">
-                    <img src="Marentis Labs NoTag Logo.png" alt="Marentis Labs Logo" class="h-8 md:h-10 opacity-75" />
-                </div>
-                
-            </div>
-            
-        </div>
-    </footer>
-<div id="cookie-consent-banner" class="fixed bottom-0 left-0 right-0 bg-ml-charcoal text-white p-6 shadow-2xl z-50" style="display: none;">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="text-center md:text-left">
-            <h4 class="font-semibold text-lg mb-1">This website uses cookies</h4>
-            <p class="text-sm text-gray-300">We use cookies to analyze website traffic and improve your experience. By clicking "Accept," you consent to our use of analytics cookies. <a href="cookies.html" class="text-ml-gold hover:text-white underline font-medium">Learn more</a>.</p>
-        </div>
-        <div class="flex-shrink-0 flex items-center gap-4">
-            <button id="cookie-reject-btn" class="text-gray-300 hover:text-white transition duration-300 px-6 py-2 rounded-md text-sm font-medium">
-                Reject
-            </button>
-            <button id="cookie-accept-btn" class="btn-primary px-6 py-2 rounded-md text-sm">
-                Accept
-            </button>
-        </div>
+    <!-- Logo -->
+    <div class="order-1 md:col-span-1 flex md:justify-start justify-center">
+      <img src="/assets/images/Marentis_Labs_NoTag_Logo_Inverted_Mono.png"
+          alt="Marentis Labs"
+          class="h-20 md:h-32 lg:h-40 object-contain" />
     </div>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const banner = document.getElementById('cookie-consent-banner');
-    const acceptBtn = document.getElementById('cookie-accept-btn');
-    const rejectBtn = document.getElementById('cookie-reject-btn');
 
-    // Check if consent has already been given *this session*
-    const consent = sessionStorage.getItem('cookieConsent');
-    
-    if (!consent) {
-        // If no consent given, show the banner
-        banner.style.display = 'block';
-    }
+    <!-- Headline block -->
+    <div class="order-2 text-center md:text-right">
+      <p class="text-ml-gold text-xl font-semibold uppercase tracking-widest mb-4">
+        Strategic Governance as a Service
+      </p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+        We Simulate Failure So Leaders Don't Have to Experience&nbsp;It.
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 font-light max-w-xl ml-auto mb-10">
+        Principal-led governance advisory helping organisations achieve their objectives through constructive challenge.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
+        <a href="/contact/" class="btn-primary px-9 py-3 rounded-md font-semibold shadow-xl">
+          Schedule a Confidential Call
+        </a>
+        <a href="/services/" class="btn-outline px-9 py-3 rounded-md font-semibold">
+          Our Services &rarr;
+        </a>
+      </div>
+    </div>
 
-    // Handle "Accept" click
-    acceptBtn.addEventListener('click', () => {
-        sessionStorage.setItem('cookieConsent', 'accepted');
-        banner.style.display = 'none';
-        runAnalytics(); // <-- This runs the GA function from the <head>
-    });
+  </div>
+</section>
 
-    // Handle "Reject" click
-    rejectBtn.addEventListener('click', () => {
-        sessionStorage.setItem('cookieConsent', 'rejected');
-        banner.style.display = 'none';
-    });
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Find all links with the 'email-link' class
-    const emailLinks = document.querySelectorAll('.email-link');
-    
-    emailLinks.forEach(link => {
-        // Get the email parts from the data attributes
-        const user = link.dataset.user;
-        const domain = link.dataset.domain;
+<!-- ══════════════════════════════════════════════════════════
+     THE MARENTIS DIFFERENCE — three pillars
+     ══════════════════════════════════════════════════════════ -->
+<section id="difference" class="py-20 md:py-24 bg-white">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <h2 class="section-title text-3xl md:text-4xl text-center mb-16 reveal">
+      The Marentis Labs Difference
+    </h2>
+    <div class="grid md:grid-cols-3 gap-10">
 
-        if (user && domain) {
-            const email = user + '@' + domain;
-            
-            // 1. Set the href to the real mailto link
-            link.href = 'mailto:' + email;
-            
-            // 2. Set the visible text to the real email address
-            // This replaces the "[email protected]" placeholder
-            link.textContent = email;
-        }
-    });
-});
-</script>
-</body>
-</html>
+      <div class="text-center reveal">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <!-- Adversarial icon -->
+          <svg viewBox="0 0 48 48" fill="none" class="w-10 h-10">
+            <path d="M8 24 L24 8 L40 24 L24 40 Z" stroke="#a98c5a" stroke-width="2" fill="none"/>
+            <path d="M16 24 L24 16 L32 24 L24 32 Z" fill="#a98c5a" fill-opacity="0.2"/>
+            <line x1="24" y1="4" x2="24" y2="44" stroke="#a98c5a" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="4" y1="24" x2="44" y2="24" stroke="#a98c5a" stroke-width="1.5" stroke-dasharray="3 3"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-ml-charcoal mb-3">Adversarial Analysis</h3>
+        <p class="text-ml-slate-grey leading-relaxed">
+          Our Red Team approach subjects every governance assumption
+          to rigorous, dispassionate challenge, revealing hidden
+          fragilities before they surface in a boardroom or
+          regulator examination.
+        </p>
+      </div>
+
+      <div class="text-center reveal">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg viewBox="0 0 48 48" fill="none" class="w-10 h-10">
+            <rect x="8" y="14" width="32" height="20" rx="2" stroke="#a98c5a" stroke-width="2" fill="none"/>
+            <path d="M16 14V10a8 8 0 0116 0v4" stroke="#a98c5a" stroke-width="2"/>
+            <circle cx="24" cy="24" r="3" fill="#a98c5a"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-ml-charcoal mb-3">Financial Services Rigour</h3>
+        <p class="text-ml-slate-grey leading-relaxed">
+          Governance frameworks refined by Tier 1 Global Investment Banks now available to boards across every
+          sector. Twenty years of world-class delivery, not generic
+          consulting methodology.
+        </p>
+      </div>
+
+      <div class="text-center reveal">
+        <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+          <svg viewBox="0 0 48 48" fill="none" class="w-10 h-10">
+            <circle cx="24" cy="16" r="7" stroke="#a98c5a" stroke-width="2" fill="none"/>
+            <path d="M10 40c0-7.73 6.27-14 14-14s14 6.27 14 14" stroke="#a98c5a" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-ml-charcoal mb-3">Principal-Led Engagement</h3>
+        <p class="text-ml-slate-grey leading-relaxed">
+          Clients receive board-level CRO expertise directly, with no handoff to
+          junior teams. Our approach is not a traditional leveraged consulting model.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     STRATEGIC GaaS — four tier architecture
+     ══════════════════════════════════════════════════════════ -->
+<section id="gaas-tiers" class="py-20 md:py-24 bg-ml-light-bg">
+  <div class="container mx-auto px-6 max-w-6xl">
+
+    <div class="text-center mb-4 reveal">
+      <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">
+        Service Architecture
+      </p>
+      <h2 class="section-title text-3xl md:text-4xl mb-4">
+        Strategic Governance as a Service
+      </h2>
+      <p class="text-ml-slate-grey max-w-2xl mx-auto mt-6">
+        Four engagement configurations designed around the depth of governance
+        challenge your organisation faces. Every tier embeds our
+        adversarial methodology as standard.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-14">
+
+      <!-- T1: Diagnostic -->
+      <a href="/services/diagnostic-gaas/" class="tier-card bg-white p-7 rounded-lg shadow-sm block reveal">
+        <div class="flex items-start gap-4">
+          <span class="step-number mt-0.5 flex-shrink-0">T1</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-slate-blue uppercase tracking-wide mb-1">Diagnostic GaaS</p>
+            <h3 class="text-lg font-bold text-ml-charcoal mb-2">Governance Health Check</h3>
+            <p class="text-sm text-ml-slate-grey leading-relaxed mb-3">
+              Point-in-time assessment of governance and risk maturity.
+              The entry point to the Strategic GaaS model: structured,
+              adversarial, board-ready.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- T2: Retained -->
+      <a href="/services/retained-gaas/" class="tier-card bg-white p-7 rounded-lg shadow-sm block reveal">
+        <div class="flex items-start gap-4">
+          <span class="step-number mt-0.5 flex-shrink-0">T2</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-gold uppercase tracking-wide mb-1">Retained GaaS</p>
+            <h3 class="text-lg font-bold text-ml-charcoal mb-2">Continuous Fractional CRO</h3>
+            <p class="text-sm text-ml-slate-grey leading-relaxed mb-3">
+              Ongoing principal-level governance counsel. 15–30 hours
+              per month of continuous oversight, regulatory intelligence,
+              and adversarial challenge. The core revenue relationship.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- T3: Embedded -->
+      <a href="/services/embedded-gaas/" class="tier-card bg-white p-7 rounded-lg shadow-sm block reveal">
+        <div class="flex items-start gap-4">
+          <span class="step-number mt-0.5 flex-shrink-0">T3</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-slate-blue uppercase tracking-wide mb-1">Embedded GaaS</p>
+            <h3 class="text-lg font-bold text-ml-charcoal mb-2">Principal-Level Governance Ownership</h3>
+            <p class="text-sm text-ml-slate-grey leading-relaxed mb-3">
+              Board seat or risk committee chair. Owen owns the governance
+              framework, manages regulatory liaison, and chairs the
+              challenge function as a permanent embedded resource.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- T4: Pre-Exit -->
+      <a href="/services/pre-exit-gaas/" class="tier-card bg-white p-7 rounded-lg shadow-sm block reveal">
+        <div class="flex items-start gap-4">
+          <span class="step-number mt-0.5 flex-shrink-0">T4</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Pre-Exit GaaS</p>
+            <h3 class="text-lg font-bold text-ml-charcoal mb-2">Exit-Aligned Governance</h3>
+            <p class="text-sm text-ml-slate-grey leading-relaxed mb-3">
+              Specialised governance uplift for PE portfolio companies
+              within 12–18 months of exit. Structured to make governance
+              a positive exit narrative, not a diligence liability.
+            </p>
+
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="/services/" class="footer-link text-sm font-semibold hover:text-ml-gold">
+        View full service architecture &rarr;
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOUNDER CREDENTIALS — brief strip
+     ══════════════════════════════════════════════════════════ -->
+<section id="credentials" class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Headshot -->
+      <div class="flex justify-center md:justify-end reveal">
+        <div class="relative">
+          <div class="w-64 h-64 md:w-72 md:h-72 rounded-lg overflow-hidden shadow-xl border-2 border-ml-gold">
+            <img src="/assets/images/owen-vallis-headshot.jpg"
+                alt="Owen Vallis, Founder of Marentis Labs"
+                class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="absolute -bottom-4 -right-4 bg-ml-gold text-white px-4 py-2 rounded text-xs font-bold uppercase tracking-wide shadow-lg">
+            Founder &amp; Principal
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio summary -->
+      <div class="reveal">
+        <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">The Founder</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal mb-4">Owen Vallis</h2>
+        <p class="text-ml-slate-grey leading-relaxed mb-6">
+          Over twenty years governance experience across Credit Suisse,
+          JP Morgan, Morgan Stanley and as the first Group Chief Risk Officer for SICO Bank. Simultaneously
+          active as a Board Chair and Non-Executive Director across public and private sector organisations, a valuable combination
+          that few governance advisors can claim.
+        </p>
+        <div class="space-y-3 mb-7">
+          <div class="credential-badge">
+            <p class="text-sm font-semibold text-ml-charcoal">Credit Suisse · JP Morgan · Morgan Stanley · SICO Bank</p>
+            <p class="text-xs text-ml-slate-grey">Group Chief Risk Officer, £50bn+ AUM mandates</p>
+          </div>
+          <div class="credential-badge">
+            <p class="text-sm font-semibold text-ml-charcoal">Active Prospects · Children's Commissioner</p>
+            <p class="text-xs text-ml-slate-grey">Board Chair and NED on a parliamentary statutory body</p>
+          </div>
+          <div class="credential-badge">
+            <p class="text-sm font-semibold text-ml-charcoal">FCA · PRA · CBB · SCA · FINMA · CSSF</p>
+            <p class="text-xs text-ml-slate-grey">Multi-jurisdictional regulatory experience across the UK, Europe, Switzerland and the GCC</p>
+          </div>
+        </div>
+        <a href="/about/" class="footer-link text-sm font-semibold hover:text-ml-gold">
+          Full credentials &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CASE STUDIES
+     ══════════════════════════════════════════════════════════ -->
+<section id="case-studies" class="py-16 md:py-20 bg-ml-light-bg">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-2 reveal">In Practice</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal reveal">Case Studies</h2>
+        <p class="text-ml-slate-grey mt-2 max-w-xl reveal">Principal-led governance delivered: anonymised engagements, real outcomes.</p>
+      </div>
+      <a href="/case-studies/" class="text-ml-gold text-sm font-semibold hover:text-ml-gold-dark transition-colors flex-shrink-0 reveal">
+        View all case studies &rarr;
+      </a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="/case-studies/risk-governance-overhaul-fca-regulated-insurer/"
+         class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tool-tag">Retained GaaS</span>
+          <span class="tool-tag">Financial Services</span>
+        </div>
+        <h3 class="text-lg font-bold text-ml-charcoal mb-2 leading-snug group-hover:text-ml-gold transition-colors">
+          Risk Governance Overhaul at an FCA-Regulated Insurer
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
+          Supervisory pressure triggered a full restructure of the risk committee architecture and rebuild of the risk appetite framework, from the board down.
+        </p>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study &rarr;</span>
+      </a>
+
+      <a href="/case-studies/pe-exit-governance-preparation-business-services/"
+         class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tool-tag">Pre-Exit GaaS</span>
+          <span class="tool-tag">Private Equity</span>
+        </div>
+        <h3 class="text-lg font-bold text-ml-charcoal mb-2 leading-snug group-hover:text-ml-gold transition-colors">
+          Exit Governance Preparation for a PE-Backed Business Services Group
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
+          With a strategic sale 18 months out, governance gaps were identified and remediated before the buyer's due diligence team arrived.
+        </p>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CTA FOOTER STRIP
+     ══════════════════════════════════════════════════════════ -->
+<section id="cta" class="bg-ml-charcoal text-white py-16">
+  <div class="container mx-auto px-6 text-center max-w-2xl">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Ready to Begin?</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">
+      Challenge your most critical governance assumptions.
+    </h2>
+    <p class="text-gray-400 mb-8 leading-relaxed">
+      Our work delivers strategic clarity and resilience for leaders
+      operating in high-stakes environments. Principal response
+      within 24 hours.
+    </p>
+    <a href="/contact/" class="btn-primary px-10 py-3 rounded-md font-semibold shadow-xl inline-block">
+      Request a Proposal
+    </a>
+  </div>
+</section>

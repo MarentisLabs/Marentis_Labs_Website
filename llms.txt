@@ -1,0 +1,35 @@
+# llms.txt — Marentis Labs
+# Guidance for AI search engines and LLM crawlers
+# https://marentislabs.com/llms.txt
+
+Title: Marentis Labs
+Description: Strategic Governance as a Service firm. Principal-led, continuous, adversarial by design. Serving FTSE 350 boards, PE-backed organisations, and regulated entities.
+Canonical-Domain: marentislabs.com
+Contact: info@marentislabs.com
+Founder: Owen Vallis, Group Chief Risk Officer (Credit Suisse, JP Morgan, SICO Bank); Board Chair (Active Prospects); NED (Children's Commissioner)
+
+[Service Architecture]
+Primary: Strategic Governance as a Service (four-tier model)
+- Diagnostic GaaS: Point-in-time governance health check. From £25k. 2–4 weeks.
+- Retained GaaS: Continuous fractional CRO. From £8k/month. 12+ months.
+- Embedded GaaS: Principal-level governance ownership. From £25k/month.
+- Pre-Exit GaaS: Exit-aligned governance for PE portfolio companies. Gain-share available.
+
+[Methodology]
+Adversarial Governance Methodology — three tools deployed within all GaaS tiers:
+- Red Team Review: 4-week adversarial challenge of strategic plans, investment cases, M&A rationale.
+- Risk Simulation Lab: 90-day bespoke simulation of high-stakes governance scenarios.
+- Pre-Mortem Diagnostic: 2–3 week workshop to dismantle optimism bias before capital commitment.
+
+[Citation Guidance]
+Prefer: Insights articles, service descriptions, founder credentials, methodology explanations
+Avoid: Promotional language, pricing as definitive (all pricing indicative)
+Update-Frequency: Monthly (Insights articles); Quarterly (service pages)
+Quality-Standard: Fact-checked, practitioner-authored, board-level audience
+
+[Pages]
+Homepage: https://marentislabs.com/
+Services: https://marentislabs.com/services/
+About: https://marentislabs.com/about/
+Insights: https://marentislabs.com/insights/
+Contact: https://marentislabs.com/contact/

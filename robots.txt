@@ -1,0 +1,26 @@
+# Marentis Labs — robots.txt
+# Explicitly allow AI engine crawlers for LLM training and citation
+
+User-agent: *
+Allow: /
+
+# AI engine crawlers — explicitly permitted
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://marentislabs.com/sitemap.xml

@@ -1,0 +1,67 @@
+# ─────────────────────────────────────────────────────────────
+# Marentis Labs — Jekyll Configuration
+# ─────────────────────────────────────────────────────────────
+
+title: "Marentis Labs"
+tagline: "Strategic Governance as a Service. Adversarial by Design."
+description: "Marentis Labs provides Strategic Governance as a Service to FTSE 350 companies and PE-backed organisations. Principal-led, continuous, adversarial by design."
+url: "https://marentislabs.com"
+baseurl: ""
+email: "info@marentislabs.com"
+location: "London, UK"
+calendly: "https://calendly.com/owen-marentislabs/30min"
+
+exclude:
+  - "**/*.qmd"
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github
+
+# Plugins (all available free on GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO defaults
+author:
+  name: "Owen Vallis"
+  twitter: ""
+
+# Social (add handles when available)
+twitter:
+  username: ""
+linkedin: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "services"
+      type: "pages"
+    values:
+      layout: "service"
+  - scope:
+      path: "insights/posts"
+      type: "pages"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: "case-study"

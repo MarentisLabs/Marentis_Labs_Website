@@ -1,0 +1,60 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marentislabs.com/#organization",
+      "name": "Marentis Labs",
+      "legalName": "Marentis Labs Ltd",
+      "url": "https://marentislabs.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://marentislabs.com/assets/images/Marentis_Labs_Full_Logo.png"
+      },
+      "description": "Strategic Governance as a Service for FTSE 350 companies and PE-backed organisations. Principal-led, continuous, adversarial by design.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@marentislabs.com",
+        "contactType": "business enquiries"
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "Person",
+      "@id": "https://marentislabs.com/#owen-vallis",
+      "name": "Owen Vallis",
+      "jobTitle": "Managing Director & Founder",
+      "description": "Strategic risk executive with 20 years as Group Chief Risk Officer across Credit Suisse, JP Morgan, SICO Bank and Morgan Stanley. Active board Chair and Non-Executive Director.",
+      "worksFor": { "@id": "https://marentislabs.com/#organization" },
+      "url": "https://marentislabs.com/about/"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://marentislabs.com/#strategic-gaas",
+      "name": "Strategic Governance as a Service",
+      "provider": { "@id": "https://marentislabs.com/#organization" },
+      "description": "Continuous, principal-level governance advisory for FTSE 350 boards and PE-backed organisations. Four-tier model: Diagnostic, Retained, Embedded, and Pre-Exit GaaS.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": "Governance Advisory"
+    }
+    {% if page.layout == 'service' %},
+    {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "provider": { "@id": "https://marentislabs.com/#organization" },
+      "description": "{{ page.description | default: page.strapline }}",
+      "url": "https://marentislabs.com{{ page.url }}"
+    }
+    {% endif %}
+  ]
+}
+</script>

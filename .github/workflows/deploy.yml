@@ -1,0 +1,85 @@
+# ─────────────────────────────────────────────────────────────
+# Marentis Labs — GitHub Actions Deployment Workflow
+#
+# On push to main:
+#   1. Build the Jekyll marketing site
+#   2. Merge pre-built Quarto Insights output (committed to repo)
+#   3. Deploy to GitHub Pages
+#
+# Quarto articles are rendered locally with `quarto render` inside
+# insights/ before committing. insights/_site/ is committed to git.
+# No Quarto runtime is required in CI.
+# ─────────────────────────────────────────────────────────────
+
+name: Build & Deploy Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:   # allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      # 1. Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Set up Ruby for Jekyll
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      # 3. Set up Node for Tailwind CSS compilation
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 4. Compile Tailwind CSS (replaces CDN, produces ~12KB instead of 3MB)
+      - name: Compile Tailwind CSS
+        run: |
+          npm install -D tailwindcss@3
+          npx tailwindcss \
+            -i ./assets/css/input.css \
+            -o ./assets/css/style.css \
+            --minify
+          echo "Tailwind compiled: $(wc -c < assets/css/style.css) bytes"
+
+      # 5. Build Jekyll site
+      # insights/articles/ (pre-rendered Quarto output, committed to repo) is
+      # copied by Jekyll natively — no separate merge step required.
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --destination _site
+        env:
+          JEKYLL_ENV: production
+
+      # 6. Upload to GitHub Pages artifact
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

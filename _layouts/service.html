@@ -1,0 +1,122 @@
+---
+layout: default
+---
+
+<!-- ── Service page header ──────────────────────────────────── -->
+<section class="bg-ml-light-bg py-10 md:py-14 border-b border-gray-200">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="breadcrumb mb-4">
+      <a href="/services/">Services</a>
+      <span class="mx-2 text-gray-400">/</span>
+      <span>{{ page.title }}</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-black text-ml-charcoal leading-tight mb-3">
+      {{ page.headline | default: page.title }}
+    </h1>
+    {% if page.strapline %}
+    <p class="text-lg text-ml-slate-grey max-w-2xl">{{ page.strapline }}</p>
+    {% endif %}
+    <!-- Adversarial tool tags -->
+    {% if page.tools %}
+    <div class="mt-4 flex flex-wrap gap-2">
+      {% for tool in page.tools %}
+      <span class="tool-tag">{{ tool }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- ── Service page body ─────────────────────────────────────── -->
+<section class="py-16 md:py-20">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- Main content -->
+      <div class="md:col-span-2 service-page-prose">
+        {{ content }}
+      </div>
+
+      <!-- Engagement profile sidebar -->
+      <div class="md:col-span-1">
+        <div class="engagement-profile p-6 rounded-lg sticky top-24">
+          <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-4">Engagement Profile</p>
+
+          {% if page.best_for %}
+          <div class="mb-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Best For</p>
+            <p class="text-sm text-white">{{ page.best_for }}</p>
+          </div>
+          {% endif %}
+
+          {% if page.duration %}
+          <div class="mb-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">Typical Duration</p>
+            <p class="text-sm text-white">{{ page.duration }}</p>
+          </div>
+          {% endif %}
+
+          {% if page.tier %}
+          <div class="mb-4">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-1">GaaS Tier</p>
+            <p class="text-sm font-semibold text-ml-gold">{{ page.tier }}</p>
+          </div>
+          {% endif %}
+
+          <div class="separator mb-6 opacity-20"></div>
+
+          <a href="/contact/" class="btn-primary px-5 py-3 rounded-md text-sm text-center block w-full">
+            {{ page.cta_label | default: "Request Proposal" }}
+          </a>
+          <p class="text-xs text-gray-500 mt-3 text-center">
+            Principal response within 24 hours
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Related case study ────────────────────────────────────── -->
+{% if page.case_study_url %}
+<section class="bg-ml-light-bg py-12 border-t border-gray-200">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-5">In Practice</p>
+    <a href="{{ page.case_study_url }}" class="block bg-white border border-gray-200 rounded-lg p-7 service-card group">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="tool-tag">{{ page.tier }}</span>
+        {% if page.case_study_sector %}<span class="tool-tag">{{ page.case_study_sector }}</span>{% endif %}
+      </div>
+      <h3 class="text-xl font-bold text-ml-charcoal mb-3 leading-snug group-hover:text-ml-gold transition-colors">
+        {{ page.case_study_title }}
+      </h3>
+      {% if page.case_study_org %}
+      <p class="text-xs text-ml-slate-grey uppercase tracking-wide mb-3">{{ page.case_study_org }}</p>
+      {% endif %}
+      {% if page.case_study_outcome %}
+      <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
+        <span class="font-semibold text-ml-charcoal">Outcome:</span> {{ page.case_study_outcome }}
+      </p>
+      {% endif %}
+      <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study &rarr;</span>
+    </a>
+    <p class="mt-5 text-sm">
+      <a href="/case-studies/" class="text-ml-slate-grey hover:text-ml-gold transition-colors font-semibold">View all case studies &rarr;</a>
+    </p>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── Next step CTA ─────────────────────────────────────────── -->
+<section class="bg-ml-charcoal text-white py-14">
+  <div class="container mx-auto px-6 text-center max-w-2xl">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Ready to Proceed?</p>
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">{{ page.cta_heading | default: "Initiate a Confidential Discussion" }}</h2>
+    <p class="text-gray-400 mb-8">{{ page.cta_body | default: "Principal-led engagement. Direct access to board-level expertise. No junior teams." }}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/contact/" class="btn-primary px-8 py-3 rounded-md font-semibold">Schedule a Call</a>
+      <a href="/services/" class="btn-outline px-8 py-3 rounded-md font-semibold">View All Services</a>
+    </div>
+  </div>
+</section>
