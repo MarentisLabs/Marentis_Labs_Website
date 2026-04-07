@@ -20,11 +20,6 @@ case_study_outcome: "No material governance findings in the buyer's due diligenc
 permalink: /services/pre-exit-gaas/
 ---
 
-<div class="gaas-intro">
-<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered personally by Owen Vallis across the 12–18 months prior to a planned transaction.</div>
-</div>
-
 ## The Pre-Exit Governance Gap
 
 Most PE exit preparation focuses on financial, tax, and operational due diligence. Governance is historically an afterthought, until it surfaces in buyer diligence as a risk, a negotiation point, or a valuation reduction.

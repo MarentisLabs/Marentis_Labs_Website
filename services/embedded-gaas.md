@@ -15,17 +15,6 @@ cta_body: "Board-seated. Framework-owning. Adversarial by design. No employment 
 permalink: /services/embedded-gaas/
 ---
 
-<div class="gaas-intro">
-<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: Owen takes a named governance role inside your organisation for 12–18 months.</div>
-</div>
-
-<div class="why-ml-block" style="margin-bottom: 1.5rem;">
-<div class="why-ml-kicker">Why Marentis Labs</div>
-<div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
-<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs — continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
-</div>
-
 ## What Embedded GaaS Provides
 
 The deepest engagement tier in the Strategic GaaS model. Owen takes a named governance role (a standing seat on the board, the risk committee, or an audit committee) and acts as the organisation's permanent internal challenge function.
