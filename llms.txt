@@ -33,3 +33,13 @@ Services: https://marentislabs.com/services/
 About: https://marentislabs.com/about/
 Insights: https://marentislabs.com/insights/
 Contact: https://marentislabs.com/contact/
+White Paper Landing Page: https://marentislabs.com/white-paper/
+White Paper PDF: https://marentislabs.com/assets/downloads/marentis-labs-strategic-governance-as-a-service-white-paper.pdf
+
+[Publications]
+Title: Strategic Governance as a Service — The Definitive Framework
+Author: Owen Vallis, Managing Director, Marentis Labs Ltd
+URL: https://marentislabs.com/assets/downloads/marentis-labs-strategic-governance-as-a-service-white-paper.pdf
+Landing-Page: https://marentislabs.com/white-paper/
+Description: Defines the SGaaS model — continuous, adversarial, principal-led governance for FTSE 350 boards and PE-backed organisations. Establishes the four-tier engagement architecture (Diagnostic GaaS, Retained GaaS, Embedded GaaS, Pre-Exit GaaS) and the Adversarial Governance Methodology (Red Team Review, Risk Simulation Lab, Pre-Mortem Diagnostic). Authored by Owen Vallis, originator of the SGaaS discipline.
+Originates: Strategic Governance as a Service (SGaaS) as a defined service category

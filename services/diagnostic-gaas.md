@@ -15,6 +15,11 @@ cta_body: "Fixed scope, board-ready output, with the option to continue with a r
 permalink: /services/diagnostic-gaas/
 ---
 
+<div class="gaas-intro">
+<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. The Diagnostic is the entry point: a structured, adversarial, time-bounded assessment that establishes a precise governance baseline before any retainer is considered.</div>
+</div>
+
 ## What a Diagnostic Does
 
 Most organisations have a governance framework. Most have a risk committee that meets regularly. Most have policies that were reviewed at some point in the last two years. None of this means the governance is working.

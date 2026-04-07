@@ -20,6 +20,17 @@ case_study_outcome: "Consolidated committee architecture approved by the board; 
 permalink: /services/retained-gaas/
 ---
 
+<div class="gaas-intro">
+<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Retained GaaS is the core engagement: the primary principal-led governance relationship.</div>
+</div>
+
+<div class="why-ml-block" style="margin-bottom: 1.5rem;">
+<div class="why-ml-kicker">Why Marentis Labs</div>
+<div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
+<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs — continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
+</div>
+
 ## Independent Leadership Support
 
 Leadership is often a solitary role. The most significant risks to an organisation are rarely the ones already in the risk register. They are the assumptions the board has stopped examining and the emerging threats no internal function has been assigned to watch.
