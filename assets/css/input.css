@@ -480,6 +480,7 @@ h3 {
 /* ── Logo marquee carousel ────────────────────────────────── */
 .logo-marquee-outer {
   overflow: hidden;
+  padding: 12px 0;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
