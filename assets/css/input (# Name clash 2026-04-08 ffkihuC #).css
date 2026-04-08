@@ -545,7 +545,7 @@ h3 {
 
 .logo-marquee-divider {
   width: 1px;
-  height: 1.25rem;
+  height: 3rem;
   background: #e5e7eb;
   flex-shrink: 0;
 }
