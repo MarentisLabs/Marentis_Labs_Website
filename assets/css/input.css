@@ -497,25 +497,21 @@ h3 {
   to   { transform: translateX(-50%); }
 }
 
-/* Image logo wrapper — max-width constrains each logo; height follows natural aspect ratio.
-   488px = the natural width of the widest logo (Morgan Stanley wordmark) at 70px height.
-   margin: 0 25px gives 50px total gap between adjacent logo boxes. */
+/* Logo wrapper — sized by its content (the image); no fixed box dimensions */
 .logo-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  max-width: 488px;
-  padding: 0;
   margin: 0 25px;
   flex-shrink: 0;
 }
 
-/* Monochrome grey: grayscale + restrained opacity → neutral mid-grey on white bg */
-/* width/height are set via inline styles on each <img> to avoid CSS minifier deduplication */
+/* Fixed height on the image; width follows the logo's own aspect ratio.
+   This is the correct approach for a mixed-format logo strip. */
 .logo-img {
   display: block;
-  height: auto;
-  max-width: 488px;
+  height: 40px;
+  width: auto;
   filter: grayscale(100%) opacity(0.38);
   transition: filter 0.3s ease;
   user-select: none;
