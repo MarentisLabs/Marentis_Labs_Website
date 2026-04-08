@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "Our Services"
-description: "Strategic Governance as a Service: four engagement tiers for FTSE 350 and PE-backed organisations. Diagnostic, Retained, Embedded, and Pre-Exit GaaS."
+description: "Strategic Governance as a Service: four engagement tiers for FTSE 350 and PE-backed organisations.
+Diagnostic, Retained, Embedded, and Pre-Exit GaaS."
 permalink: /services/
 ---
 
@@ -25,7 +26,7 @@ permalink: /services/
   <div class="container mx-auto px-6 max-w-5xl">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-2xl font-bold text-ml-charcoal mb-4">Not episodic consulting. Continuous governance.</h2>
+        <h2 class="text-3xl font-bold text-ml-charcoal mb-4">Building Continuous governance Relationships.</h2>
         <p class="text-ml-slate-grey leading-relaxed mb-4">
           Traditional governance advisory is project-based: a firm engages a consultant,
           receives a report, and then manages governance internally until the next
@@ -43,12 +44,16 @@ permalink: /services/
         </p>
       </div>
       <div class="space-y-3">
-        {% assign comparison = "Episodic project|Continuous retainer,Generic methodology|Adversarial by design,Project team delivery|Principal-led always,Knowledge lost between engagements|Institutional memory retained,Board engages then disengages|Permanent challenge function" | split: "," %}
+        {% assign comparison = "Episodic project|Continuous retainer,Generic methodology|Adversarial by design,Project
+        team delivery|Principal-led always,Knowledge lost between engagements|Institutional memory retained,Board
+        engages then disengages|Permanent challenge function" | split: "," %}
         {% for item in comparison %}
         {% assign parts = item | split: "|" %}
         <div class="flex items-center gap-4 text-sm">
           <span class="text-gray-400 line-through flex-1">{{ parts[0] }}</span>
-          <svg class="w-4 h-4 text-ml-gold flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="w-4 h-4 text-ml-gold flex-shrink-0" fill="none" viewBox="0 0 16 16">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
           <span class="text-ml-charcoal font-semibold flex-1">{{ parts[1] }}</span>
         </div>
         {% endfor %}
@@ -82,7 +87,7 @@ permalink: /services/
 
     <!-- T1 Diagnostic -->
     <a href="/services/diagnostic-gaas/"
-       class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
       <div class="md:col-span-3">
         <div class="flex items-center gap-3 mb-3">
           <span class="step-number">T1</span>
@@ -111,7 +116,7 @@ permalink: /services/
 
     <!-- T2 Retained -->
     <a href="/services/retained-gaas/"
-       class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
       <div class="md:col-span-3">
         <div class="flex items-center gap-3 mb-3">
           <span class="step-number">T2</span>
@@ -141,7 +146,7 @@ permalink: /services/
 
     <!-- T3 Embedded -->
     <a href="/services/embedded-gaas/"
-       class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
       <div class="md:col-span-3">
         <div class="flex items-center gap-3 mb-3">
           <span class="step-number">T3</span>
@@ -171,7 +176,7 @@ permalink: /services/
 
     <!-- T4 Pre-Exit -->
     <a href="/services/pre-exit-gaas/"
-       class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
       <div class="md:col-span-3">
         <div class="flex items-center gap-3 mb-3">
           <span class="step-number">T4</span>
@@ -208,17 +213,19 @@ permalink: /services/
     <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
       <div>
         <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-2">In Practice</p>
-        <h2 class="text-2xl font-bold text-ml-charcoal">Case Studies</h2>
-        <p class="text-ml-slate-grey mt-2 max-w-xl">Anonymised engagements illustrating how each tier delivers in practice.</p>
+        <h2 class="text-3xl font-bold text-ml-charcoal">Case Studies</h2>
+        <p class="text-ml-slate-grey mt-2 max-w-xl">Anonymised engagements illustrating how each tier delivers in
+          practice.</p>
       </div>
-      <a href="/case-studies/" class="text-ml-gold text-sm font-semibold hover:text-ml-gold-dark transition-colors flex-shrink-0">
+      <a href="/case-studies/"
+        class="text-ml-gold text-sm font-semibold hover:text-ml-gold-dark transition-colors flex-shrink-0">
         View all &rarr;
       </a>
     </div>
     <div class="grid md:grid-cols-2 gap-6">
 
       <a href="/case-studies/risk-governance-overhaul-fca-regulated-insurer/"
-         class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
         <div class="flex flex-wrap gap-2 mb-4">
           <span class="tool-tag">Retained GaaS</span>
           <span class="tool-tag">Financial Services</span>
@@ -227,13 +234,15 @@ permalink: /services/
           Risk Governance Overhaul at an FCA-Regulated Insurer
         </h3>
         <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
-          Supervisory pressure triggered a full restructure of the risk committee architecture and rebuild of the risk appetite framework from the board down.
+          Supervisory pressure triggered a full restructure of the risk committee architecture and rebuild of the risk
+          appetite framework from the board down.
         </p>
-        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study &rarr;</span>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study
+          &rarr;</span>
       </a>
 
       <a href="/case-studies/pe-exit-governance-preparation-business-services/"
-         class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
         <div class="flex flex-wrap gap-2 mb-4">
           <span class="tool-tag">Pre-Exit GaaS</span>
           <span class="tool-tag">Private Equity</span>
@@ -242,9 +251,11 @@ permalink: /services/
           Exit Governance Preparation for a PE-Backed Business Services Group
         </h3>
         <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
-          With a strategic sale 18 months out, governance gaps were identified and remediated before the buyer's due diligence team arrived.
+          With a strategic sale 18 months out, governance gaps were identified and remediated before the buyer's due
+          diligence team arrived.
         </p>
-        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study &rarr;</span>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study
+          &rarr;</span>
       </a>
 
     </div>
