@@ -22,18 +22,18 @@ permalink: /services/retained-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Retained GaaS is the core engagement: the primary principal-led governance relationship.</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Retained GaaS is the core engagement: the primary principal-led governance relationship.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
 <div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
-<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs — continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
+<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs: continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
 </div>
 
-## Independent Leadership Support
+## The Risks That Matter Most Are Not in Your Risk Register
 
-Leadership is often a solitary role. The most significant risks to an organisation are rarely the ones already in the risk register. They are the assumptions the board has stopped examining and the emerging threats no internal function has been assigned to watch.
+The most significant risks to an organisation are rarely the ones already recorded. They are the assumptions the board has stopped examining and the emerging threats no internal function has been assigned to watch.
 
 A Retained GaaS relationship provides a continuous, confidential, and independent governance function. Not a consultant called in for a project. A permanent challenge function inside your governance framework.
 
@@ -55,7 +55,7 @@ Immediate principal-level support for urgent governance, compliance, or risk que
 
 A retained engagement delivers continuous CRO-level expertise with no fixed employment obligation: no pension liability, no severance risk, no recruitment cost.
 
-Unlike a standard fractional CRO placement, Retained GaaS includes the adversarial methodology that makes governance work: assumptions are challenged, frameworks are stress-tested, and the board receives independent challenge, not additional consensus.
+Unlike a standard fractional CRO placement, Retained GaaS includes the adversarial methodology that makes governance work: we challenge assumptions, stress-test frameworks, and deliver independent challenge rather than additional consensus.
 
 ## The Upgrade Path
 

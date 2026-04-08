@@ -19,7 +19,7 @@ permalink: /services/red-team-review/
 
 Conventional planning is prone to optimism bias. Teams develop strategic plans, investment cases, and M&A rationales with genuine conviction, and that conviction systematically blinds them to the assumptions they have stopped questioning.
 
-Our Red Team Review acts as a professional, independent devil's advocate: systematically searching for disconfirming evidence, testing the logic of core assumptions, and identifying the single points of failure that represent the most material risk to the plan.
+We systematically search for disconfirming evidence, test the logic of core assumptions, and identify the single points of failure that represent the most material risk to the plan.
 
 It is an insurance policy against catastrophic error. Not a critique of the team. A challenge to the plan.
 

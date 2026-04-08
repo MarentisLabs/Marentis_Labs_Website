@@ -18,7 +18,7 @@ permalink: /services/adversarial-methodology/
 
 Most governance advisory tells boards what good practice looks like. It benchmarks, it documents, it recommends. This is useful. It is not sufficient.
 
-The governance failures that cause real damage (regulatory action, reputational harm, deal collapse, strategic error) are rarely the result of absent frameworks. They are the result of frameworks that look robust on paper but have never been seriously challenged, assumptions that seemed reasonable at the time but were never stress-tested, and risk committees that have learned to receive management's view of risk rather than question it.
+The governance failures that cause real damage (regulatory action, reputational harm, deal collapse, strategic error) are rarely the result of absent frameworks. They are the result of frameworks that look sound on paper but have never been seriously challenged, assumptions that seemed reasonable at the time but were never stress-tested, and risk committees that have learned to receive management's view of risk rather than challenge it.
 
 Adversarial governance does something different. It starts from the hypothesis of failure and works backwards. It asks: if this framework were designed to look good rather than work, what would that look like? If this strategic plan is wrong, where exactly does it fail? If this exit process hits a governance problem, what is it?
 
@@ -37,7 +37,7 @@ A 90-day bespoke engagement that subjects leadership decision-making and governa
 The output is not just a report. It is an experience. Boards that have been through a Risk Simulation Lab think about governance differently afterwards.
 
 ### Pre-Mortem Diagnostic
-A structured, short-duration workshop applied before major capital commitments, strategic decisions, or governance changes. The team imagines the project has already failed catastrophically, then works backwards to identify every plausible cause.
+A brief structured workshop applied before major capital commitments, strategic decisions, or governance changes. The team imagines the project has already failed catastrophically, then works backwards to identify every plausible cause.
 
 Faster and cheaper than a full Red Team Review. Most effective for single decisions rather than systemic governance assessment. Typical duration 2–3 weeks.
 

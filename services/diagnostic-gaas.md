@@ -2,7 +2,7 @@
 layout: service
 title: "Diagnostic GaaS"
 headline: "Diagnostic GaaS: Governance Health Check"
-strapline: "A structured, time-bounded assessment of your governance and risk maturity. The entry point to the Strategic GaaS model: adversarial, board-ready, and built to surface what internal reviews miss."
+strapline: "A structured, fixed-scope assessment of your governance and risk maturity. The entry point to the Strategic GaaS model: adversarial, board-ready, and built to surface what internal reviews miss."
 description: "Diagnostic Strategic GaaS from Marentis Labs: a structured governance health check for FTSE 350 and PE-backed organisations."
 tools: ["Pre-Mortem Diagnostic", "Risk Framework Assessment", "Governance Maturity Benchmarking", "Red Team Review (Initial)"]
 best_for: "Boards exploring governance capability, organisations pre-engagement scoping, PE transactions requiring governance due diligence, companies preparing for regulatory examination or major transition."
@@ -17,7 +17,7 @@ permalink: /services/diagnostic-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. The Diagnostic is the entry point: a structured, adversarial, time-bounded assessment that establishes a precise governance baseline before any retainer is considered.</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. The Diagnostic is the entry point: a structured, adversarial, fixed-scope assessment that establishes a precise governance baseline before any retainer is considered.</div>
 </div>
 
 ## What a Diagnostic Does
@@ -52,9 +52,9 @@ A 2–3 hour closed-door session with the board or governance committee presenti
 **90-Day Action Plan**
 Specific, prioritised remediation actions with ownership assignments, resource requirements, and success metrics. Not a long-term strategy document: a concrete next step for each material finding.
 
-## The Conversion Path
+## From Diagnostic to Retained
 
-30–50% of Diagnostic engagements convert to a retained relationship. This is by design, not by sales pressure. The Diagnostic surfaces specific governance gaps. The most efficient way to close those gaps is a Retained GaaS engagement where Owen maintains continuous oversight of the remediation programme.
+30–50% of Diagnostic engagements lead directly to a retained relationship. This is by design, not by sales pressure. The Diagnostic surfaces specific governance gaps. The most efficient way to close those gaps is a Retained GaaS engagement where Owen maintains continuous oversight of the remediation programme.
 
 If a retained relationship is not the right fit, the Diagnostic stands alone as a complete, credible deliverable.
 

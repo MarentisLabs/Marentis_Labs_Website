@@ -3,9 +3,9 @@ layout: service
 title: "Embedded GaaS"
 headline: "Embedded GaaS: Principal-Level Governance Ownership"
 strapline: "A named governance role: board seat, risk committee chair, or equivalent. Owen owns the framework, manages regulatory liaison, and chairs the internal challenge function as a permanent resource."
-description: "Embedded Strategic GaaS from Marentis Labs: principal-level governance ownership for regulated, high-risk, and transformation-intensive organisations."
+description: "Embedded Strategic GaaS from Marentis Labs: principal-level governance ownership for regulated, high-risk, and actively restructuring organisations."
 tools: ["Quarterly Red Team Protocol", "Risk Simulation Lab", "Continuous Pre-Mortem Framing", "Regulatory Red Team"]
-best_for: "Regulated entities, high-risk businesses, organisations undergoing governance transformation, post-acquisition integration, compliance remediation following regulatory findings."
+best_for: "Regulated entities, high-risk businesses, organisations undergoing active governance restructuring, post-acquisition integration, compliance remediation following regulatory findings."
 duration: "12–18 months typical. Many embedded clients transition to Retained GaaS post-engagement."
 tier: "Tier 3: Embedded GaaS"
 
@@ -17,13 +17,13 @@ permalink: /services/embedded-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: Owen takes a named governance role inside your organisation for 12–18 months.</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: Owen takes a named governance role inside your organisation for 12–18 months.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
 <div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
-<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs — continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
+<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs: continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
 </div>
 
 ## What Embedded GaaS Provides
@@ -49,7 +49,7 @@ Structured quarterly challenge of governance effectiveness, decision-making auth
 **Risk Simulation Lab**
 Annual deployment of the Risk Simulation Lab: a bespoke 90-day scenario designed to test leadership decision-making and governance processes under a realistic high-stakes shock. Boards that have been through a simulation think about governance differently afterwards.
 
-## The Economic Case
+## The Economics Versus a Full-Time CRO Hire
 
 Embedded GaaS delivers equivalent or superior governance capability to a full-time hire, with no fixed employment obligation: no pension liability, no severance risk, no recruitment cost.
 

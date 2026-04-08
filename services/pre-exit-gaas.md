@@ -22,7 +22,7 @@ permalink: /services/pre-exit-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel — replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered personally by Owen Vallis across the 12–18 months prior to a planned transaction.</div>
+<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered personally by Owen Vallis across the 12–18 months prior to a planned transaction.</div>
 </div>
 
 ## The Pre-Exit Governance Gap
@@ -49,14 +49,14 @@ Due diligence data room organised and populated. Governance narrative developmen
 
 ## Gain-Sharing
 
-Pre-Exit GaaS includes an optional gain-sharing arrangement on exit value uplift attributable to governance improvements. Governance maturity is increasingly recognised by buyers as a direct value driver: better governance reduces integration risk, supports premium pricing, and accelerates deal close.
+Pre-Exit GaaS includes an optional gain-sharing arrangement on exit value uplift attributable to governance improvements. Buyers increasingly recognise governance maturity as a direct value driver: better governance reduces integration risk, supports premium pricing, and accelerates deal close.
 
 The gain-share is capped, structured at engagement kick-off, and paid post-close. It aligns our incentives directly with yours: we only participate in the upside if the exit delivers.
 
-## Owen's Credential Match
+## Owen's Direct Experience
 
-Every element of Pre-Exit GaaS draws directly on Owen's experience:
-exit process navigation across 8+ PE-backed governance initiatives,
-governance framework design tested under FCA and regulatory scrutiny,
-board-level stakeholder management across 100+ board engagements,
-and due diligence data room experience from both buy-side and sell-side processes.
+Every element of Pre-Exit GaaS draws directly on Owen's track record:
+governance preparation across 8+ PE-backed exit processes;
+risk framework design that has passed FCA and multi-jurisdictional regulatory scrutiny;
+board stakeholder engagement across 100+ board sessions;
+and due diligence data room experience from both buy-side and sell-side transactions.
