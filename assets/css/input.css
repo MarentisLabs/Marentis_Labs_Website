@@ -497,15 +497,14 @@ h3 {
   to   { transform: translateX(-50%); }
 }
 
-/* Image logo wrapper — fixed bounding box so all logos appear equal in size.
+/* Image logo wrapper — max-width constrains each logo; height follows natural aspect ratio.
+   488px = the natural width of the widest logo (Morgan Stanley wordmark) at 70px height.
    margin: 0 25px gives 50px total gap between adjacent logo boxes. */
 .logo-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* Fixed frame — logos scale within this box via object-fit: contain */
-  width: 230px;
-  height: 70px;
+  max-width: 488px;
   padding: 0;
   margin: 0 25px;
   flex-shrink: 0;
@@ -514,12 +513,12 @@ h3 {
 /* Monochrome grey: grayscale + restrained opacity → neutral mid-grey on white bg */
 /* width/height are set via inline styles on each <img> to avoid CSS minifier deduplication */
 .logo-img {
-  object-fit: contain;
+  display: block;
+  height: auto;
+  max-width: 488px;
   filter: grayscale(100%) opacity(0.38);
   transition: filter 0.3s ease;
   user-select: none;
-  display: block;
-  flex-shrink: 0;
 }
 .logo-marquee-track:hover .logo-img {
   filter: grayscale(100%) opacity(0.62);
@@ -529,7 +528,6 @@ h3 {
 .logo-wordmark {
   display: inline-flex;
   align-items: center;
-  height: 70px;
   margin: 0 25px;
   white-space: nowrap;
   font-family: var(--font-sub);
@@ -795,3 +793,4 @@ h3 {
   line-height: 1.8;
   max-width: 36rem;
 }
+  max-width: 36rem;
