@@ -497,20 +497,24 @@ h3 {
   to   { transform: translateX(-50%); }
 }
 
-/* Image logo wrapper — consistent padding each side */
+/* Image logo wrapper — fixed bounding box so all logos appear equal in size.
+   padding: 0 25px gives ~50px total gap between adjacent logo boxes. */
 .logo-item {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2.75rem;
+  /* Fixed frame — logos scale within this box via object-fit: contain */
+  width: 96px;
+  height: 22px;
+  padding: 0;
+  margin: 0 25px;
   flex-shrink: 0;
 }
 
-/* Monochrome grey treatment: grayscale + restrained opacity renders as neutral mid-grey */
+/* Monochrome grey: grayscale + restrained opacity → neutral mid-grey on white bg */
 .logo-img {
-  height: 36px;
-  width: auto;
-  max-width: 180px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.38);
   transition: filter 0.3s ease;
@@ -518,17 +522,18 @@ h3 {
   display: block;
 }
 .logo-marquee-track:hover .logo-img {
-  filter: grayscale(100%) opacity(0.6);
+  filter: grayscale(100%) opacity(0.62);
 }
 
 /* Text wordmark fallback — retained for organisations without a logo file (e.g. EdAct Trust) */
 .logo-wordmark {
   display: inline-flex;
   align-items: center;
-  padding: 0 2.75rem;
+  height: 22px;
+  margin: 0 25px;
   white-space: nowrap;
   font-family: var(--font-sub);
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -540,7 +545,7 @@ h3 {
 
 .logo-marquee-divider {
   width: 1px;
-  height: 1.5rem;
+  height: 1.25rem;
   background: #e5e7eb;
   flex-shrink: 0;
 }
