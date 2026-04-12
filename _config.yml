@@ -33,7 +33,9 @@ author:
 # Social (add handles when available)
 twitter:
   username: ""
+  card: "summary_large_image"
 linkedin: ""
+image: "/assets/images/Marentis_Labs_Full_Logo.png"
 
 # Build settings
 markdown: kramdown
