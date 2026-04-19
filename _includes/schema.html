@@ -8,6 +8,7 @@
       "name": "Marentis Labs",
       "legalName": "Marentis Labs Ltd",
       "url": "https://marentislabs.com",
+      "foundingDate": "2025-07",
       "logo": {
         "@type": "ImageObject",
         "url": "https://marentislabs.com/assets/images/Marentis_Labs_Full_Logo.png"
@@ -23,16 +24,37 @@
         "email": "info@marentislabs.com",
         "contactType": "business enquiries"
       },
-      "sameAs": []
+      "sameAs": [
+        "https://www.linkedin.com/company/marentislabs",
+        "https://find-and-update.company-information.service.gov.uk/company/16600357"
+      ]
     },
     {
       "@type": "Person",
       "@id": "https://marentislabs.com/#owen-vallis",
       "name": "Owen Vallis",
-      "jobTitle": "Managing Director & Founder",
+      "jobTitle": "Managing Director",
       "description": "Strategic risk executive with 20 years as Group Chief Risk Officer across Credit Suisse, JP Morgan, SICO Bank and Morgan Stanley. Active board Chair and Non-Executive Director.",
       "worksFor": { "@id": "https://marentislabs.com/#organization" },
-      "url": "https://marentislabs.com/about/"
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Marentis Labs Ltd"
+      },
+      "url": "https://marentislabs.com/about/",
+      "knowsAbout": [
+        "corporate governance",
+        "risk management",
+        "board advisory",
+        "Basel III",
+        "DORA",
+        "FCA regulation",
+        "PE exit governance"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/owen-vallis/",
+        "https://find-and-update.company-information.service.gov.uk/search?q=Owen+Vallis",
+        "https://www.wikidata.org/wiki/Q_PLACEHOLDER"
+      ]
     },
     {
       "@type": "Service",
@@ -53,6 +75,25 @@
       "provider": { "@id": "https://marentislabs.com/#organization" },
       "description": "{{ page.description | default: page.strapline }}",
       "url": "https://marentislabs.com{{ page.url }}"
+    }
+    {% endif %}
+    {% if page.layout == 'article' %},
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://marentislabs.com{{ page.url }}"
+      },
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description | default: page.excerpt | strip_html | truncatewords: 30 }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {
+        "@id": "https://marentislabs.com/#owen-vallis"
+      },
+      "publisher": {
+        "@id": "https://marentislabs.com/#organization"
+      }
     }
     {% endif %}
   ]
