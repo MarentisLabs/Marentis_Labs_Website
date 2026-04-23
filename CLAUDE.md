@@ -38,7 +38,7 @@ Every editorial and design decision should serve that audience. Copy should be p
 
 ```
 marentis-site/
-├── _config.yml                  # Site-wide settings: title, email, Calendly URL, baseurl
+├── _config.yml                  # Site-wide settings: title, email, Proton Meet URL, baseurl
 ├── _layouts/
 │   ├── default.html             # Master layout — nav, head, footer, analytics
 │   └── service.html             # Service page layout — breadcrumb, sidebar, CTA
@@ -57,7 +57,7 @@ marentis-site/
 │   └── images/                  # Logo and headshot files (filenames use spaces)
 ├── index.html                   # Homepage
 ├── about.html                   # Owen's credentials page
-├── contact.html                 # Contact form + Calendly
+├── contact.html                 # Contact form + Proton Meet
 ├── contact-thank-you.html       # Post-form redirect page
 ├── services/
 │   ├── index.html               # Services hub — four-tier GaaS architecture
@@ -297,6 +297,6 @@ These were planned but not yet implemented:
 
 **Owen Vallis** — Managing Director, Marentis Labs Ltd  
 Contact: info@marentislabs.com  
-Calendly: configured in `_config.yml` under `calendly:`
+Proton Meet: configured in `_config.yml` under `calendly:`
 
 Background: 20-year Group Chief Risk Officer career (Credit Suisse, JP Morgan, SICO Bank, Morgan Stanley). Active board Chair (Active Prospects — 338% turnaround) and NED (Children's Commissioner, EdAct Trust). Multi-jurisdictional regulatory experience: FCA, CBB, CMA, SCA.

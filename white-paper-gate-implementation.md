@@ -129,7 +129,7 @@ This is the email HubSpot sends automatically the moment someone submits the for
 >
 > **[Download: Strategic Governance as a Service — Marentis Labs](https://marentislabs.com/assets/downloads/marentis-labs-strategic-governance-as-a-service-white-paper.pdf)**
 >
-> If you would like to discuss how the SGaaS model applies to your organisation, you can book a confidential introductory call directly: [calendly link]
+> If you would like to discuss how the SGaaS model applies to your organisation, you can book a confidential introductory call directly: https://calendar.proton.me/bookings#2KEJqTjEvueYTPNxCKo_4TTEKS8XtY9lNHMTqXlpPK0=
 >
 > Owen Vallis
 > Managing Director, Marentis Labs

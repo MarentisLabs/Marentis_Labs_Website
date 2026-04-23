@@ -9,7 +9,7 @@ url: "https://marentislabs.com"
 baseurl: ""
 email: "info@marentislabs.com"
 location: "London, UK"
-calendly: "https://calendly.com/owen-marentislabs/30min"
+calendly: "https://calendar.proton.me/bookings#2KEJqTjEvueYTPNxCKo_4TTEKS8XtY9lNHMTqXlpPK0="
 
 exclude:
   - "**/*.qmd"
