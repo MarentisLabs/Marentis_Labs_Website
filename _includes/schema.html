@@ -77,6 +77,42 @@
       "url": "https://marentislabs.com{{ page.url }}"
     }
     {% endif %}
+    {% if page.schema_white_paper %},
+    {
+      "@type": "Report",
+      "@id": "https://marentislabs.com/white-paper/#report",
+      "name": "Strategic Governance as a Service — The Definitive Framework",
+      "headline": "The Definitive Framework for Strategic Governance as a Service",
+      "description": "90+ pages of practitioner-authored governance frameworks for FTSE 350 boards, PE-backed organisations, and FCA-regulated entities. Defines the Adversarial Governance Methodology and originates SGaaS as a defined service category.",
+      "url": "https://marentislabs.com/white-paper/",
+      "datePublished": "2025",
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://marentislabs.com/#owen-vallis"
+      },
+      "publisher": {
+        "@id": "https://marentislabs.com/#organization"
+      },
+      "about": [
+        { "@type": "Thing", "name": "corporate governance" },
+        { "@type": "Thing", "name": "Strategic Governance as a Service" },
+        { "@type": "Thing", "name": "risk management" },
+        { "@type": "Thing", "name": "FTSE 350 board governance" },
+        { "@type": "Thing", "name": "PE exit governance" },
+        { "@type": "Thing", "name": "Basel 3.1" },
+        { "@type": "Thing", "name": "FCA regulatory compliance" }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "FTSE 350 CFOs, Chairs, Governance Committees, PE Operating Partners"
+      },
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://marentislabs.com/assets/downloads/marentis-labs-strategic-governance-as-a-service-white-paper.pdf",
+      "isPartOf": {
+        "@id": "https://marentislabs.com/#strategic-gaas"
+      }
+    }
+    {% endif %}
     {% if page.layout == 'article' %},
     {
       "@type": "BlogPosting",
