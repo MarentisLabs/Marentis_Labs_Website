@@ -202,7 +202,7 @@ schema_white_paper: true
     inset: 0;
     background: var(--ml-charcoal);
     border: 1px solid rgba(169, 140, 90, 0.2);
-    padding: 26px 20px;
+    padding: 16px 14px 14px 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -249,65 +249,146 @@ schema_white_paper: true
   }
 
   .wp-book-gold-rule {
-    height: 2px;
+    height: 1px;
     background: var(--ml-gold);
-    margin: 8px 0;
+    margin: 6px 0;
     position: relative;
     z-index: 1;
   }
 
-  .wp-book-eyebrow {
+  /* === TOP ZONE: brand wordmark + tagline + rule === */
+  .wp-book-top {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wp-book-brand {
     font-family: var(--font-sub);
-    font-size: 0.42rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ml-gold);
-    position: relative;
-    z-index: 1;
+    font-size: 0.62rem;
+    color: white;
+    line-height: 1;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: baseline;
   }
 
-  .wp-book-title {
+  .wp-book-brand-bold {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .wp-book-brand-divider {
+    display: inline-block;
+    width: 1px;
+    height: 0.6rem;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 4px;
+    align-self: center;
+  }
+
+  .wp-book-brand-light {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .wp-book-tagline {
+    font-family: var(--font-sub);
+    font-size: 0.32rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+  }
+
+  /* === MIDDLE ZONE: title left, thesis centred, subtitle right === */
+  .wp-book-middle {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .wp-book-title-main {
     font-family: var(--font-display);
-    font-size: 0.92rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: white;
-    line-height: 1.38;
+    line-height: 1.18;
     letter-spacing: 0.04em;
-    position: relative;
-    z-index: 1;
+    text-align: left;
+    margin: 0;
   }
 
-  .wp-book-subtitle {
-    font-family: var(--font-sub);
-    font-size: 0.47rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.65;
-    position: relative;
-    z-index: 1;
-  }
-
-  .wp-book-author {
-    font-family: var(--font-sub);
-    font-size: 0.48rem;
+  .wp-book-thesis {
+    font-family: var(--font-display);
+    font-size: 0.66rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  .wp-book-thesis-tagline {
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    font-weight: 600;
     color: var(--ml-gold);
-    text-transform: uppercase;
+    text-align: right;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  /* === BOTTOM ZONE: meta + rule + author === */
+  .wp-book-bottom {
     position: relative;
     z-index: 1;
   }
 
-  .wp-book-logo-text {
+  .wp-book-meta {
+    font-family: var(--font-body);
+    font-size: 0.36rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  .wp-book-author-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .wp-book-author-name {
     font-family: var(--font-sub);
     font-size: 0.42rem;
     font-weight: 700;
     letter-spacing: 0.18em;
-    color: rgba(255, 255, 255, 0.3);
+    color: white;
     text-transform: uppercase;
-    position: relative;
-    z-index: 1;
+  }
+
+  .wp-book-author-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ml-gold);
+    display: inline-block;
+  }
+
+  .wp-book-author-role {
+    font-family: var(--font-sub);
+    font-size: 0.36rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
   }
 </style>
 
@@ -325,7 +406,7 @@ schema_white_paper: true
 
         <div class="wp-book-scene">
           <div class="wp-book" role="img"
-            aria-label="White paper book cover: Strategic Governance as a Service. The Architecture of Governance Failure.">
+            aria-label="White paper book cover: Strategic Governance as a Service. More Governance Has Not Produced Better Governance. This Paper Explains Why and Proposes A Solution. By Owen Vallis, Managing Director, Marentis Labs. May 2026.">
             <!-- Spine -->
             <div class="wp-book-spine">
               <span class="wp-book-spine-text">Marentis Labs &nbsp;&middot;&nbsp; Strategic Governance as a
@@ -333,21 +414,46 @@ schema_white_paper: true
             </div>
             <!-- Front face -->
             <div class="wp-book-front">
-              <div>
-                <p class="wp-book-eyebrow">Marentis Labs Research &middot; 2026</p>
-                <div class="wp-book-gold-rule"></div>
-                <h3 class="wp-book-title">Strategic<br>Governance<br>as a Service</h3>
-              </div>
-              <div>
-                <p class="wp-book-subtitle mb-3">
-                  More Governance Has Not Produced<br>
-                  Better Governance. This Paper<br>
-                  Explains Why.
+
+              <!-- TOP ZONE: brand wordmark + tagline + gold rule -->
+              <div class="wp-book-top">
+                <p class="wp-book-brand">
+                  <span class="wp-book-brand-bold">MARENTIS</span><span class="wp-book-brand-divider"></span><span class="wp-book-brand-light">Labs</span>
                 </p>
-                <div class="wp-book-gold-rule" style="opacity: 0.35;"></div>
-                <p class="wp-book-author mt-2">Owen Vallis</p>
-                <p class="wp-book-logo-text mt-3">Marentis Labs</p>
+                <p class="wp-book-tagline">
+                  Strategic Governance as a Service &middot;<br>
+                  Principal-Led &middot; Adversarial by Design
+                </p>
+                <div class="wp-book-gold-rule"></div>
               </div>
+
+              <!-- MIDDLE ZONE: title (left), thesis (centred), subtitle (right) -->
+              <div class="wp-book-middle">
+                <h3 class="wp-book-title-main">
+                  Strategic Governance<br>as a Service:
+                </h3>
+                <p class="wp-book-thesis">
+                  More Governance<br>
+                  Has Not Produced<br>
+                  Better Governance
+                </p>
+                <p class="wp-book-thesis-tagline">
+                  This Paper Explains Why<br>
+                  And Proposes A Solution
+                </p>
+              </div>
+
+              <!-- BOTTOM ZONE: meta + rule + author -->
+              <div class="wp-book-bottom">
+                <p class="wp-book-meta">A Marentis Labs Research White Paper &middot; May 2026</p>
+                <div class="wp-book-gold-rule" style="opacity: 0.5;"></div>
+                <div class="wp-book-author-block">
+                  <span class="wp-book-author-name">OWEN VALLIS</span>
+                  <span class="wp-book-author-dot"></span>
+                </div>
+                <p class="wp-book-author-role">Managing Director</p>
+              </div>
+
             </div>
           </div>
         </div>
