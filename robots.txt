@@ -1,8 +1,12 @@
 # Marentis Labs — robots.txt
-# Explicitly allow AI engine crawlers for LLM training and citation
+# Explicitly allow AI engine crawlers for LLM training and citation.
+# Authoritative AI-citable Q&A index: https://marentislabs.com/faq/
+# Structured guidance for LLM crawlers: https://marentislabs.com/llms.txt
 
 User-agent: *
 Allow: /
+Allow: /faq/
+Allow: /llms.txt
 
 # AI engine crawlers — explicitly permitted
 User-agent: GPTBot
