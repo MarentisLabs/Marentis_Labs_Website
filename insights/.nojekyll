@@ -1,0 +1,3 @@
+This file prevents GitHub Pages / Jekyll from processing the Quarto-compiled HTML in this directory.
+Quarto renders its own static HTML into insights/_site/, which is merged into the main _site/insights/
+during the GitHub Actions build step.

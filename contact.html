@@ -1,0 +1,153 @@
+---
+layout: default
+title: "Initiate a Confidential Enquiry"
+description: "Schedule a confidential call with Owen Vallis, Founder of Marentis Labs. Principal response within 24
+hours."
+permalink: /contact/
+---
+
+<section class="hero-section text-white py-14 md:py-20">
+  <div class="container mx-auto px-6 max-w-3xl text-center">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Confidential Enquiry</p>
+    <h1 class="text-3xl md:text-4xl mb-4 leading-tight"
+      style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.05em;">
+      Initiate a Confidential Enquiry
+    </h1>
+    <p class="text-gray-400 text-lg max-w-xl mx-auto">
+      All discussions are strictly confidential. We respond to C-suite
+      and Governance Committee enquiries personally, within 24 hours.
+    </p>
+    <p class="mt-5 text-sm text-gray-400">
+      Quick questions first? Read the
+      <a href="/faq/" class="text-ml-gold hover:text-ml-gold-dark font-semibold underline">Frequently Asked Questions</a>.
+    </p>
+  </div>
+</section>
+
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <div class="grid md:grid-cols-2 gap-16">
+
+      <!-- Schedule via Proton Meet -->
+      <div>
+        <h2 class="text-xl text-ml-charcoal mb-4"
+          style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.04em;">Schedule Your Consultation
+        </h2>
+        <!-- Capacity copy (v3.0 mandatory on Contact page) -->
+        <div class="gaas-intro mb-5">
+          <div class="gaas-intro-def" style="font-size: 0.875rem;">Marentis Labs maintains a small number of concurrent
+            retained engagements to ensure principal-level delivery on each. If you are considering a governance
+            mandate, an early conversation is advisable.</div>
+        </div>
+        <p class="text-ml-slate-grey leading-relaxed mb-6">
+          View Owen's availability below and book a focused introductory
+          call directly. All bookings are treated in strict confidence.
+        </p>
+        <a href="{{ site.calendly }}" target="_blank" rel="noopener" class="btn-primary px-8 py-3 inline-block mb-8">
+          Book Introductory Call via Proton Meet &rarr;
+        </a>
+
+        <div class="separator my-6"></div>
+
+        <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-2">Alternative Contact</p>
+        <a href="mailto:{{ site.email }}" class="text-ml-gold font-semibold hover:underline">
+          {{ site.email }}
+        </a>
+        <p class="text-xs text-ml-slate-grey mt-1">Strictly Confidential</p>
+
+        <div class="mt-10">
+          <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-3">What to Expect on the Call</p>
+          <ul class="space-y-3">
+            <li class="flex gap-3 text-sm text-ml-slate-grey">
+              <span class="text-ml-gold font-bold flex-shrink-0">01</span>
+              We listen to your strategic challenge. Owen does not pitch; he diagnoses.
+            </li>
+            <li class="flex gap-3 text-sm text-ml-slate-grey">
+              <span class="text-ml-gold font-bold flex-shrink-0">02</span>
+              A discussion to identify your team's unexamined assumptions and specific pressure points.
+            </li>
+            <li class="flex gap-3 text-sm text-ml-slate-grey">
+              <span class="text-ml-gold font-bold flex-shrink-0">03</span>
+              No high-pressure sales pitch. The goal is to determine the right next step.
+            </li>
+            <li class="flex gap-3 text-sm text-ml-slate-grey">
+              <span class="text-ml-gold font-bold flex-shrink-0">04</span>
+              The option to receive a brief, one-page proposal following the call.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Web3Forms contact form -->
+      <div>
+        <h2 class="text-xl font-bold text-ml-charcoal mb-4">Send a Direct Message</h2>
+        <p class="text-ml-slate-grey text-sm mb-6">
+          Prefer to write first? Use the form below.
+          Owen responds personally within 24 hours.
+        </p>
+
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+
+          <!-- Web3Forms access key — replace YOUR_ACCESS_KEY with key from web3forms.com (free) -->
+          <input type="hidden" name="access_key" value="aa5011de-b672-438e-a7fe-ea12c4f693ec" />
+          <input type="hidden" name="subject" value="New Enquiry via Marentis Labs" />
+          <input type="hidden" name="from_name" value="Marentis Labs Website" />
+          <!-- Redirect after submission -->
+          <input type="hidden" name="redirect" value="https://marentislabs.com/contact/thank-you/" />
+          <!-- Honeypot spam prevention -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+          <div>
+            <label for="name" class="block text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">
+              Full Name <span class="text-ml-gold">*</span>
+            </label>
+            <input type="text" id="name" name="name" required placeholder="Your name"
+              class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm text-ml-charcoal focus:outline-none focus:border-ml-gold focus:ring-1 focus:ring-ml-gold transition" />
+          </div>
+
+          <div>
+            <label for="company" class="block text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">
+              Company / Organisation
+            </label>
+            <input type="text" id="company" name="company" placeholder="Company or organisation name"
+              class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm text-ml-charcoal focus:outline-none focus:border-ml-gold focus:ring-1 focus:ring-ml-gold transition" />
+          </div>
+
+          <div>
+            <label for="role" class="block text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">
+              Your Role
+            </label>
+            <input type="text" id="role" name="role" placeholder="e.g. CFO, Chair, PE Operating Partner"
+              class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm text-ml-charcoal focus:outline-none focus:border-ml-gold focus:ring-1 focus:ring-ml-gold transition" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">
+              Email Address <span class="text-ml-gold">*</span>
+            </label>
+            <input type="email" id="email" name="email" required placeholder="Your business email"
+              class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm text-ml-charcoal focus:outline-none focus:border-ml-gold focus:ring-1 focus:ring-ml-gold transition" />
+          </div>
+
+          <div>
+            <label for="challenge" class="block text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">
+              Your Challenge <span class="text-ml-gold">*</span>
+            </label>
+            <textarea id="challenge" name="challenge" rows="4" required
+              placeholder="Briefly describe the governance or strategic challenge you're facing."
+              class="w-full border border-gray-300 rounded-md px-4 py-2.5 text-sm text-ml-charcoal focus:outline-none focus:border-ml-gold focus:ring-1 focus:ring-ml-gold transition resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full py-3 rounded-md font-semibold text-sm">
+            Send Message
+          </button>
+
+          <p class="text-xs text-gray-400 text-center">
+            All enquiries treated in strict confidence.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
