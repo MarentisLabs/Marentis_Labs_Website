@@ -67,10 +67,12 @@ organisations. Principal-led, continuous, adversarial by design."
       font-family: 'Inter', sans-serif;
       overflow: hidden;
     }
+
     .wp-cover:hover {
       transform: translateY(-4px);
       box-shadow: 0 30px 54px rgba(33, 37, 41, 0.38), 0 12px 22px rgba(33, 37, 41, 0.24);
     }
+
     .wp-cover .wp-logo {
       /* matches cover.tex spec: 3.25cm on A4 = ~10.9% of paper height,
          which equates to ~15.5% of paper width on the 1:1.414 ratio */
@@ -78,9 +80,12 @@ organisations. Principal-led, continuous, adversarial by design."
       width: auto;
       max-width: 100%;
       display: block;
-      align-self: flex-start;   /* prevent flex stretch on the cross axis */
-      object-fit: contain;       /* belt-and-braces: never distort */
+      align-self: flex-start;
+      /* prevent flex stretch on the cross axis */
+      object-fit: contain;
+      /* belt-and-braces: never distort */
     }
+
     .wp-cover .wp-eye {
       color: #a98c5a;
       font-family: 'DM Sans', sans-serif;
@@ -91,12 +96,17 @@ organisations. Principal-led, continuous, adversarial by design."
       line-height: 1.6;
       margin: 12px 0 6px;
     }
+
     .wp-cover .wp-rule {
       height: 1.5px;
       background: #a98c5a;
       margin: 6px 0;
     }
-    .wp-cover .wp-spacer { flex: 1 1 auto; }
+
+    .wp-cover .wp-spacer {
+      flex: 1 1 auto;
+    }
+
     .wp-cover .wp-suptitle {
       font-family: 'Cormorant SC', serif;
       font-weight: 700;
@@ -106,6 +116,7 @@ organisations. Principal-led, continuous, adversarial by design."
       line-height: 1.25;
       margin: 0;
     }
+
     .wp-cover .wp-title {
       font-family: 'Cormorant SC', serif;
       font-weight: 700;
@@ -116,6 +127,7 @@ organisations. Principal-led, continuous, adversarial by design."
       text-align: center;
       margin: 10px 0 14px;
     }
+
     .wp-cover .wp-tagline {
       font-family: 'Cormorant SC', serif;
       font-weight: 700;
@@ -126,6 +138,7 @@ organisations. Principal-led, continuous, adversarial by design."
       text-align: right;
       margin: 0;
     }
+
     .wp-cover .wp-meta {
       color: #8c9196;
       font-family: 'DM Sans', sans-serif;
@@ -133,6 +146,7 @@ organisations. Principal-led, continuous, adversarial by design."
       line-height: 1.5;
       margin: 0;
     }
+
     .wp-cover .wp-author {
       color: #a98c5a;
       font-family: 'DM Sans', sans-serif;
@@ -143,6 +157,7 @@ organisations. Principal-led, continuous, adversarial by design."
       line-height: 1.6;
       margin: 0;
     }
+
     .wp-cover .wp-role {
       display: block;
       font-weight: 400;
@@ -151,16 +166,19 @@ organisations. Principal-led, continuous, adversarial by design."
       font-size: 7.5px;
       margin-top: 2px;
     }
+
     .wp-cover .wp-foot {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
+
     .wp-cover .wp-url {
       color: #ffffff;
       font-family: 'DM Sans', sans-serif;
       font-size: 7.5px;
     }
+
     .wp-cover .wp-mini-logo {
       /* matches cover.tex spec: 1cm on A4 = ~3.4% of paper height,
          equates to ~4.8% of cover width on the 1:1.414 ratio */
@@ -168,12 +186,14 @@ organisations. Principal-led, continuous, adversarial by design."
       width: auto;
       display: block;
     }
+
     .wp-section-grid {
       display: grid;
       gap: 2.5rem;
       align-items: center;
       justify-items: center;
     }
+
     @media (min-width: 768px) {
       .wp-section-grid {
         grid-template-columns: auto 1fr;
@@ -190,8 +210,7 @@ organisations. Principal-led, continuous, adversarial by design."
       <div class="flex justify-center md:justify-start">
         <a href="/white-paper/" class="wp-cover"
           aria-label="Read the Marentis Labs white paper: More Governance Has Not Produced Better Governance">
-          <img src="/assets/images/Marentis_Labs_NoTag_Logo_Inverted_Mono.png"
-            class="wp-logo" alt="Marentis Labs" />
+          <img src="/assets/images/Marentis_Labs_NoTag_Logo_Inverted_Mono.png" class="wp-logo" alt="Marentis Labs" />
           <p class="wp-eye">Strategic Governance as a Service &middot; Principal-Led &middot; Adversarial by Design</p>
           <div class="wp-rule"></div>
 
@@ -213,7 +232,8 @@ organisations. Principal-led, continuous, adversarial by design."
 
           <div class="wp-foot">
             <span class="wp-url">marentislabs.com</span>
-            <img src="/assets/images/Marentis%20Labs%20Mini%20Logo%20Inverted%20Mono.png" class="wp-mini-logo" alt="" aria-hidden="true" />
+            <img src="/assets/images/Marentis%20Labs%20Mini%20Logo%20Inverted%20Mono.png" class="wp-mini-logo" alt=""
+              aria-hidden="true" />
           </div>
         </a>
       </div>
@@ -230,9 +250,12 @@ organisations. Principal-led, continuous, adversarial by design."
           More governance has not produced better governance
         </h2>
         <p class="text-ml-slate-grey leading-relaxed max-w-2xl mb-8 text-lg font-light">
-          Boeing, Wirecard, the Post Office, Silicon Valley Bank, Credit Suisse: every
-          governance layer was present, and every layer failed. The 90-page paper diagnoses
-          the three structural defects shared by all five, and presents the response.
+          Governance spending has never been higher; failure rates have not fallen. Between
+          2018 and 2024, 32% of listed companies suffered a severe corporate crisis,
+          four-fifths driven by strategy and risk rather than compliance. The 90-page paper
+          identifies the three structural defects responsible, evidenced through case
+          studies, decision-theory research, and regulatory mapping across three
+          jurisdictions, and presents the structural response: Strategic Governance as a Service.
         </p>
         <a href="/white-paper/" class="btn-gold px-9 py-3 inline-block">
           Read the white paper &rarr;
@@ -543,7 +566,8 @@ organisations. Principal-led, continuous, adversarial by design."
     </a>
     <p class="mt-6 text-sm text-gray-400">
       Have a question first? See the
-      <a href="/faq/" class="text-ml-gold hover:text-ml-gold-dark font-semibold underline">Frequently Asked Questions</a>.
+      <a href="/faq/" class="text-ml-gold hover:text-ml-gold-dark font-semibold underline">Frequently Asked
+        Questions</a>.
     </p>
   </div>
 </section>
