@@ -43,43 +43,280 @@ schema_white_paper: true
 
 
 <!-- ══════════════════════════════════════════════════════════
-     PROOF STRIP — stat blocks
+     PROOF STRIP — stat blocks (clickable → expands interactive)
      ══════════════════════════════════════════════════════════ -->
+<style>
+  .wp-stat-trigger {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 18px 12px 16px;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    position: relative;
+  }
+  .wp-stat-trigger:hover {
+    border-color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.04);
+    transform: translateY(-2px);
+  }
+  .wp-stat-trigger.active {
+    border-color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.08);
+  }
+  .wp-stat-trigger .wp-stat-affordance {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  .wp-stat-trigger:hover .wp-stat-affordance,
+  .wp-stat-trigger.active .wp-stat-affordance { opacity: 1; }
+  .wp-stat-affordance svg {
+    transition: transform 0.25s ease;
+  }
+  .wp-stat-trigger.active .wp-stat-affordance svg { transform: rotate(180deg); }
+
+  #wp-stat-expand {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: var(--ml-light-bg, #F8F9FA);
+    border-top: 1px solid #DEE2E6;
+  }
+  #wp-stat-expand.open { max-height: 6000px; }
+  .wp-expand-inner {
+    padding: 20px 0 8px;
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .wp-expand-header {
+    max-width: 100%;
+    margin: 0 0 4px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .wp-expand-meta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+  }
+  .wp-expand-close {
+    background: transparent;
+    border: 1px solid #DEE2E6;
+    color: var(--ml-slate-grey);
+    font-family: inherit;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .wp-expand-close:hover { border-color: var(--ml-gold); color: var(--ml-charcoal); }
+  .wp-expand-iframe-wrap {
+    background: var(--ml-light-bg, #F8F9FA);
+    padding: 0 24px 12px;
+  }
+  @media (max-width: 720px) {
+    .wp-expand-inner { padding: 14px 0 6px; }
+    .wp-expand-header { padding: 0 16px; }
+    .wp-expand-iframe-wrap { padding: 0 12px 8px; }
+  }
+  .wp-expand-iframe-wrap iframe {
+    width: 100%;
+    height: 320px;          /* loading placeholder; overridden inline once content reports its height */
+    border: 0;
+    display: block;
+    background: var(--ml-light-bg, #F8F9FA);
+    transition: height 0.25s ease;
+  }
+</style>
+
 <section class="bg-white border-b border-gray-100 py-10">
   <div class="container mx-auto px-6 max-w-5xl">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
-      <div class="stat-block pt-4 px-2">
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="cost-ratio"
+              data-label="Cost Ratio — what £200K of governance buys vs $20B of failure"
+              aria-expanded="false" aria-controls="wp-stat-expand">
         <p class="text-3xl font-black mb-1"
           style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">$135B</p>
         <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
           style="font-family: var(--font-sub);">Projected Global GRC Spend, 2032</p>
-      </div>
+        <span class="wp-stat-affordance">
+          See the cost ratio
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
 
-      <div class="stat-block pt-4 px-2">
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="reporting-cycle"
+              data-label="Reporting Cycle — when DACH severe events cluster"
+              aria-expanded="false" aria-controls="wp-stat-expand">
         <p class="text-3xl font-black mb-1"
           style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">234</p>
         <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
           style="font-family: var(--font-sub);">Regulatory Alerts per Working Day</p>
-      </div>
+        <span class="wp-stat-affordance">
+          See the cycle
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
 
-      <div class="stat-block pt-4 px-2">
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="recovery-gap"
+              data-label="Recovery Gap — the years after a crisis"
+              aria-expanded="false" aria-controls="wp-stat-expand">
         <p class="text-3xl font-black mb-1"
           style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">32%</p>
         <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
           style="font-family: var(--font-sub);">Of Listed Firms Hit by Severe Crisis, 2018&ndash;24</p>
-      </div>
+        <span class="wp-stat-affordance">
+          See the recovery gap
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
 
-      <div class="stat-block pt-4 px-2">
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="three-structural-defects"
+              data-label="Three Structural Defects — why 80% goes unmonitored"
+              aria-expanded="false" aria-controls="wp-stat-expand">
         <p class="text-3xl font-black mb-1"
           style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">80%</p>
         <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
           style="font-family: var(--font-sub);">Of Crises Driven by Strategy, Not Compliance</p>
-      </div>
+        <span class="wp-stat-affordance">
+          See the defects
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
 
     </div>
   </div>
+
+  <!-- Expand panel: one shared section, iframe swaps on click -->
+  <div id="wp-stat-expand" aria-live="polite">
+    <div class="wp-expand-inner">
+      <div class="wp-expand-header">
+        <span class="wp-expand-meta" id="wp-expand-meta">&nbsp;</span>
+        <button type="button" class="wp-expand-close" id="wp-expand-close" aria-label="Close interactive">Close &times;</button>
+      </div>
+      <div class="wp-expand-iframe-wrap">
+        <iframe id="wp-expand-iframe"
+                src="about:blank"
+                title="Marentis Labs interactive"
+                loading="lazy"
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      </div>
+    </div>
+  </div>
 </section>
+
+<script>
+(function(){
+  var triggers = document.querySelectorAll('.wp-stat-trigger');
+  var expand = document.getElementById('wp-stat-expand');
+  var iframe = document.getElementById('wp-expand-iframe');
+  var metaEl = document.getElementById('wp-expand-meta');
+  var closeBtn = document.getElementById('wp-expand-close');
+  var activeSlug = null;
+
+  function deactivateAll() {
+    triggers.forEach(function(t){
+      t.classList.remove('active');
+      t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function closePanel() {
+    deactivateAll();
+    expand.classList.remove('open');
+    activeSlug = null;
+    // Small delay to let the collapse animation finish before clearing
+    setTimeout(function(){
+      if (!activeSlug) {
+        iframe.src = 'about:blank';
+        iframe.style.height = '';   // reset to CSS placeholder height
+        lastAppliedHeight = 0;
+      }
+    }, 450);
+  }
+
+  function openPanel(slug, label, trigger) {
+    deactivateAll();
+    trigger.classList.add('active');
+    trigger.setAttribute('aria-expanded', 'true');
+    metaEl.textContent = label;
+    if (activeSlug !== slug) {
+      iframe.style.height = '';     // reset so the new interactive starts from the placeholder
+      lastAppliedHeight = 0;
+      iframe.src = '/assets/interactives/' + slug + '.html?embed=1';
+      activeSlug = slug;
+    }
+    expand.classList.add('open');
+    // Smooth-scroll the expand panel into comfortable view
+    setTimeout(function(){
+      expand.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+
+  triggers.forEach(function(t){
+    t.addEventListener('click', function(){
+      var slug = t.dataset.interactive;
+      var label = t.dataset.label || '';
+      if (activeSlug === slug) {
+        closePanel();
+      } else {
+        openPanel(slug, label, t);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closePanel);
+
+  // Auto-resize iframe based on postMessage from the embedded interactive.
+  // Setting `height` (not `minHeight`) lets the frame shrink as well as grow.
+  // We dedup on the last applied height (with a small tolerance) so that
+  // the iframe's own resize event — which fires every time we change its
+  // height — cannot drive an unbounded growth feedback loop.
+  var lastAppliedHeight = 0;
+  window.addEventListener('message', function(e){
+    if (!e.data || e.data.type !== 'mlInteractiveHeight' || typeof e.data.height !== 'number') return;
+    if (e.source !== iframe.contentWindow) return;
+    var h = Math.round(e.data.height);
+    if (Math.abs(h - lastAppliedHeight) < 2) return;   // ignore sub-pixel jitter
+    lastAppliedHeight = h;
+    iframe.style.height = h + 'px';
+  });
+})();
+</script>
 
 
 <!-- ══════════════════════════════════════════════════════════

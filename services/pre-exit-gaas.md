@@ -2,16 +2,16 @@
 layout: service
 title: "Pre-Exit GaaS"
 headline: "Pre-Exit GaaS: Exit-Aligned Governance"
-strapline: "Specialised governance uplift for PE portfolio companies within 12–18 months of planned exit. We turn governance gaps into exit value, and we only win when you do."
-description: "Pre-Exit Strategic GaaS from Marentis Labs: governance preparation for PE portfolio company exits. Four-phase delivery with optional gain-sharing on exit value uplift."
-tools: ["Buyer-Perspective Red Team", "Governance Due Diligence Data Room", "Board Composition Review", "Exit Scenario Stress-Testing"]
-best_for: "PE portfolio companies 12–18 months from planned exit (sale, IPO, or secondary). Particularly suited to companies with governance gaps that could affect buyer confidence or exit multiple."
-duration: "12–18 months pre-exit"
+strapline: "Governance uplift and exit-readiness assessment for PE portfolio companies in the 12–24 months before a sale, IPO, or other liquidity event. Governance as a direct input to the exit multiple, grounded in the same analytical framework buyers use to price the transaction."
+description: "Pre-Exit SGaaS from Marentis Labs: governance maturity uplift, exit-readiness opinion, and CAP/DCF input for PE portfolio company exits."
+tools: ["Governance Maturity Scorecard", "Independent Exit-Readiness Opinion", "Buyer-Perspective Red Team Protocol", "CAP / DCF Sustainability Assessment"]
+best_for: "PE sponsors and portfolio company boards seeking to maximise governance-driven exit value, particularly where governance gaps could create diligence friction or affect the buyer's competitive advantage period assumption."
+duration: "12–24 months before the anticipated exit event"
 tier: "Tier 4: Pre-Exit GaaS"
 
 cta_label: "Discuss Exit Preparation"
-cta_heading: "Make Governance a Positive Exit Narrative"
-cta_body: "We only win if you do. Gain-sharing available on exit value uplift."
+cta_heading: "Convert Governance Maturity into Exit Value"
+cta_body: "An independent governance opinion the seller can present to prospective buyers as evidence of governance quality."
 case_study_url: /case-studies/pe-exit-governance-preparation-business-services/
 case_study_title: "Exit Governance Preparation for a PE-Backed Business Services Group"
 case_study_org: "PE-Backed Business Services Group"
@@ -21,42 +21,50 @@ permalink: /services/pre-exit-gaas/
 ---
 
 <div class="gaas-intro">
-<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered personally by Owen Vallis across the 12–18 months prior to a planned transaction.</div>
+<div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered across the 12–24 months prior to a planned transaction.</div>
 </div>
 
-## The Pre-Exit Governance Gap
+## Why Governance Is an Exit Variable
 
-Most PE exit preparation focuses on financial, tax, and operational due diligence. Governance is historically an afterthought, until it surfaces in buyer diligence as a risk, a negotiation point, or a valuation reduction.
+Governance quality is a recognised factor in M&A diligence. Buyers assess financial performance alongside the maturity, resilience, and independence of the governance architecture that produced it. A portfolio company with demonstrably strong governance — one that can show continuous, independent, adversarial challenge at board level — presents a lower-risk acquisition target and a smoother diligence process.
 
-Pre-Exit GaaS addresses this directly. We work with the portfolio company 12–18 months before the planned exit date to harden governance, build the evidence base, and ensure the buyer sees a framework that inspires confidence rather than questions.
+The Pre-Exit tier combines the Diagnostic's assessment capability with the Retained tier's continuous challenge, focused specifically on exit readiness.
 
-We run a buyer's due diligence before the buyer does. Then we fix what we find.
+## What Pre-Exit GaaS Delivers
 
-## Four-Phase Delivery
+The principal conducts a **governance maturity assessment benchmarked against buyer expectations**, identifies and remediates governance gaps that could create diligence friction, and provides an **independent governance opinion** that the seller can present to prospective buyers as evidence of governance quality.
 
-**Phase 1: Rapid Diagnostic (Weeks 1–4)**
-Governance maturity assessment benchmarked against buyer expectations. Board composition review. Risk framework gap analysis against post-exit regulatory obligations. Delivered as a confidential executive report.
+Key deliverables include:
 
-**Phase 2: Framework Design (Weeks 5–12)**
-Risk framework uplift. Board reporting suite development. Governance operating manual. Policy and control matrix redesign to buyer-ready standard.
+- A **governance maturity scorecard** benchmarked against comparable transaction standards.
+- Identification and prioritised remediation of governance weaknesses.
+- An **exit-readiness opinion** summarising the governance architecture's strengths, residual risks, and the work completed.
+- Where appropriate, **transition support** during post-acquisition governance integration.
 
-**Phase 3: Implementation & Testing (Weeks 13–24)**
-Framework deployment. Control testing. Regulatory readiness verification. Board and management governance rehearsal.
+## Governance as a CAP / DCF Input
 
-**Phase 4: Buyer Preparation & Data Room (Weeks 25–36+)**
-Due diligence data room organised and populated. Governance narrative development. Exit-readiness certification. Buyer question anticipation and response preparation.
+The Pre-Exit tier also provides the PE sponsor with an assessment of how the portfolio company's governance architecture affects the sustainability assumptions embedded in buyer valuation models — specifically whether the evidence base supports a longer **competitive advantage period** in the buyer's **discounted cash flow analysis**.
 
-## Gain-Sharing
+This positions governance uplift as a direct input to the exit multiple, grounded in the same analytical framework buyers use to price the transaction. The implication is operational, not rhetorical: governance maturity translates into a defensible component of the valuation case, not a soft narrative supplementing it.
 
-Pre-Exit GaaS includes an optional gain-sharing arrangement on exit value uplift attributable to governance improvements. Buyers increasingly recognise governance maturity as a direct value driver: better governance reduces integration risk, supports premium pricing, and accelerates deal close.
+## How Pre-Exit GaaS Integrates
 
-The gain-share is capped, structured at engagement kick-off, and paid post-close. It aligns our incentives directly with yours: we only participate in the upside if the exit delivers.
+The Pre-Exit principal works alongside the portfolio company's management team, the PE sponsor's value creation team, and any other advisors involved in exit preparation. The function is specifically designed to be **independent of the management team** preparing the business for sale — providing the buyer with confidence that the governance assessment was not self-serving.
 
-## Owen's Direct Experience
+## Commercial Structure
 
-Every element of Pre-Exit GaaS draws directly on Owen's track record:
-governance preparation across 8+ PE-backed exit processes;
-risk framework design that has passed FCA and multi-jurisdictional regulatory scrutiny;
-board stakeholder engagement across 100+ board sessions;
-and due diligence data room experience from both buy-side and sell-side transactions.
+Pre-Exit GaaS is delivered on a **structured retainer basis** across the 12–24 month engagement period. Commercial terms reflect the defined scope of governance assessment, remediation, and exit-readiness work, and are agreed in detail during the initial scoping conversation.
+
+An optional **gain-sharing arrangement** on exit value uplift attributable to governance improvements is available. The gain-share is capped, structured at engagement kick-off, and paid post-close. It aligns the SGaaS commercial incentive directly with exit outcomes.
+
+## When Pre-Exit Applies
+
+- PE portfolio companies 12–24 months from a planned exit (sale, IPO, or secondary).
+- Where governance gaps risk creating diligence friction, negotiation drag, or valuation reduction.
+- Where governance quality can plausibly support a longer competitive advantage period assumption in the buyer's DCF analysis.
+- Where the buyer is expected to apply a rigorous governance diligence standard — strategic acquirer with a regulated parent, sovereign or pension capital, or a sponsor with institutional governance requirements.
+
+## The Entry Path
+
+For PE portfolio companies, the typical path is **Diagnostic → Pre-Exit**, or **Retained → Pre-Exit** where the retained relationship pre-dates the exit timeline. Where Retained or Embedded engagement is already in place, the transition to Pre-Exit preserves continuity rather than requiring a cold start.

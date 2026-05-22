@@ -1,51 +1,62 @@
 ---
 layout: service
 title: "Red Team Review"
-headline: "Red Team Review: Stress-Testing the Unseen"
-strapline: "A rapid, confidential, adversarial assessment of a strategic plan, investment thesis, or M&A rationale. We act as a professional, independent devil's advocate to identify critical weaknesses others have missed."
-description: "Red Team Review from Marentis Labs: a rapid 4-week adversarial challenge of strategic plans, investment cases, and M&A rationale for FTSE 350 and PE firms."
-tools: ["Adversarial Governance Methodology", "Assumption Deconstruction", "Scenario Stress-Testing"]
-best_for: "M&A due diligence, major corporate strategy decisions, high-value PE pre-transaction diligence."
-duration: "Rapid Execution: 4 weeks"
-tier: "Adversarial Tool: deployed within all GaaS tiers or standalone"
-pricing: "Available standalone or embedded within a GaaS engagement"
-cta_label: "Request Critique Proposal"
-cta_heading: "Challenge Your Strategic Assumptions"
-cta_body: "An insurance policy against catastrophic error. Principal response within 24 hours."
+headline: "Red Team Review: Standalone Application of the Red Team Protocol"
+strapline: "A rapid, confidential, adversarial assessment of a single strategic plan, investment thesis, or M&A rationale. The Red Team Protocol — the core SGaaS tool — applied as a discrete standalone engagement."
+description: "Red Team Review from Marentis Labs: a focused adversarial challenge of a single strategic decision, drawing on the same Red Team Protocol deployed continuously within Retained and Embedded SGaaS engagements."
+tools: ["Red Team Protocol", "Assumption Mapping", "Adversarial Scenario Construction", "Forced Independent Deliberation"]
+best_for: "Major capital commitments, M&A diligence, market-entry theses, technology investment cases, and other discrete board-level decisions where the cost of an unexamined assumption is high."
+duration: "Rapid execution: 4 weeks"
+tier: "Standalone application of the Red Team Protocol — available within all SGaaS tiers or as a discrete engagement"
+pricing: "Available standalone or embedded within an SGaaS engagement"
+cta_label: "Request Red Team Proposal"
+cta_heading: "Subject a Decision to Structured Adversarial Challenge"
+cta_body: "An insurance policy against catastrophic error. Principal-led, four-week turnaround."
 permalink: /services/red-team-review/
 ---
 
-## The Challenge Function
+## What the Red Team Review Is
 
-Conventional planning is prone to optimism bias. Teams develop strategic plans, investment cases, and M&A rationales with genuine conviction, and that conviction systematically blinds them to the assumptions they have stopped questioning.
+The Red Team Review is the **standalone application of the Red Team Protocol** — the continuous adversarial tool at the core of SGaaS — applied to a single strategic decision, investment case, or governance question. The methodology and intellectual foundation are identical to those used within Retained and Embedded engagements; the difference is scope. The Review concentrates the protocol on one decision rather than deploying it continuously across the governance cycle.
 
-We systematically search for disconfirming evidence, test the logic of core assumptions, and identify the single points of failure that represent the most material risk to the plan.
+## Why the Red Team Protocol Exists
 
-It is an insurance policy against catastrophic error. Not a critique of the team. A challenge to the plan.
+Conventional planning is prone to optimism bias. Teams develop strategic plans, investment cases, and M&A rationales with genuine conviction — and that conviction systematically blinds them to the assumptions they have stopped questioning. Internal challenge functions inherit the chain-of-authority constraints that suppress dissent in the first place: candour cannot be willed into existence by the same leaders whose authority creates the social cost of dissenting.
 
-## Accelerated Methodology (4 Weeks)
+The Red Team Protocol **externalises** the challenge function. The principal sits outside the chain of authority being questioned. Dissent is not a personal act of professional courage; it is the principal's contracted output.
 
-1. **Phase I: Scoping and Confidential Briefing.** We define the precise scope, understand the plan's objectives, and receive confidential documentation. Strict protocols established.
+## The Three-Phase Methodology
 
-2. **Phase II: Assumption Deconstruction and Analysis.** We map all stated and unstated assumptions. We challenge each through focused research, looking for contradictory data and logical inconsistencies in the plan's core logic.
+**Phase 1: Asynchronous analysis.** The principal maps the decision architecture — what has been decided, by whom, on what evidence, with what assumptions, and with what alternatives considered or dismissed. The principal then constructs adversarial scenarios: the conditions under which the key assumptions fail, the evidence is incomplete, or the dismissed alternatives prove correct. This analytical work is conducted asynchronously. The board does not conduct the red team exercise; the board receives its distilled output.
 
-3. **Phase III: Stress Testing and Scenario Application.** We apply targeted stress scenarios (competitor reaction, macroeconomic shock, regulatory shift) to test the resilience of the plan under adverse conditions.
+**Phase 2: Forced independent deliberation.** Before the principal reveals the Challenge Memo, each director independently submits a structured pre-deliberation assessment, recording their confidence in the key assumptions, their view of the most material risks, and the conditions under which they would change their position. The principal collects these anonymously and aggregates the results.
 
-4. **Phase IV: Reporting and Executive Debrief.** We deliver a concise, confidential Critique Memorandum outlining critical vulnerabilities and actionable recommendations, followed by a closed-door working session.
+**Phase 3: Adversarial disclosure and structured debate.** The principal then presents the Challenge Memo alongside the aggregated pre-deliberation data, revealing where directors' prior confidence aligns with the adversarial findings and where it diverges. The board debates the decision with three inputs no conventional governance process provides: their own independently committed positions, a structured adversarial assessment of the evidentiary basis, and a map of the divergence between the two.
 
-## Core Outcomes
+The board retains the authority to decide. The Red Team Protocol ensures that the decision is made with adversarial intelligence, cognitive self-awareness, and structured debate.
 
-- Systematic identification of hidden weaknesses and unexamined assumptions
-- A clear, evidence-based critique to strengthen the plan before execution
-- Objective, third-party assurance for Investment or Strategy Committees
-- Specific recommendations ranked by materiality and ease of remediation
+## What the Review Delivers
 
-## Within the GaaS Architecture
+- A **Challenge Memo** documenting the decision's key assumptions, the evidentiary basis supporting each, and the conditions under which each would fail.
+- An **aggregated pre-deliberation map** comparing directors' prior confidence with the adversarial findings.
+- A facilitated **structured debate session** that operationalises the third phase of the protocol.
+- A **prioritised list of remediation actions** — what would need to change in the decision, the evidence base, or the supporting analysis to materially reduce the documented fragility.
 
-The Red Team Review is deployed as a standard component within all Strategic GaaS tiers:
+## Within the SGaaS Architecture
 
-- **Retained GaaS (T2):** Annual Red Team Review of governance framework effectiveness
-- **Embedded GaaS (T3):** Quarterly adversarial challenge of board decisions and governance processes
-- **Pre-Exit GaaS (T4):** Buyer-perspective Red Team on governance readiness before exit process
+The Red Team Protocol is deployed across the four SGaaS tiers on different cadences:
 
-It is also available as a standalone engagement for organisations not yet on a retained relationship, and frequently serves as the entry point that leads to a longer-term GaaS arrangement.
+- **Diagnostic GaaS (T1).** Used as the primary instrument for the architecture assessment.
+- **Retained GaaS (T2).** Operated continuously, generating Board Challenge Memos ahead of significant decisions throughout the governance cycle.
+- **Embedded GaaS (T3).** Applied with direct board access, with the principal sitting as Independent Board Observer or Mandated Advisor.
+- **Pre-Exit GaaS (T4).** Applied from the buyer's perspective, surfacing governance gaps before the buyer's diligence team does.
+
+The standalone Red Team Review is the most efficient entry point for organisations not yet on a retainer. The Review frequently leads to a longer-term SGaaS engagement once the value of structured adversarial challenge has been demonstrated against a single decision.
+
+## When to Commission a Red Team Review
+
+- Before a material capital commitment, acquisition, divestiture, or market entry.
+- Before a strategic plan is taken to the board for approval.
+- Before an investment committee final vote on a transaction of significance.
+- When the board senses that an emerging consensus has not been seriously tested.
+- When the cost of an unexamined assumption would be material.

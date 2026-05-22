@@ -1,17 +1,17 @@
 ---
 layout: service
 title: "Retained GaaS"
-headline: "Retained GaaS: Continuous Fractional CRO"
-strapline: "Ongoing, principal-level governance counsel for boards and C-suite teams. 15–30 hours per month of continuous oversight, adversarial challenge, and regulatory intelligence."
-description: "Retained Strategic GaaS from Marentis Labs: continuous fractional CRO advisory for FTSE 350 and PE-backed organisations."
-tools: ["Monthly Governance Pulse", "Quarterly Red Team", "Regulatory Intelligence", "On-Call Advisory"]
-best_for: "FTSE 350 boards, AIM-listed companies, PE portfolio companies seeking continuous governance oversight without the cost of a full-time CRO hire."
-duration: "12+ months, auto-renewing"
+headline: "Retained GaaS: Continuous Adversarial Governance Challenge"
+strapline: "Continuous, adversarial governance challenge delivered on an annual retainer across board cycles. The core SGaaS offering for organisations committed to closing the governance value gap on a sustained basis."
+description: "Retained Strategic Governance as a Service from Marentis Labs: continuous, principal-led, adversarial governance challenge for FTSE 350 and PE-backed organisations."
+tools: ["Governance Pulse Reports", "Board Challenge Memos", "Risk Simulation Lab", "Pre-Mortem Diagnostic"]
+best_for: "Regulated financial institutions, mid-market companies with complex risk profiles, organisations navigating strategic transformation, and boards that have completed a Diagnostic and want to act on its findings."
+duration: "Annual retainer, ongoing, with quarterly review points"
 tier: "Tier 2: Retained GaaS"
 
 cta_label: "Request Retainer Details"
-cta_heading: "Start a Retained Relationship"
-cta_body: "The primary governance relationship. Continuous, adversarial, principal-led. No junior teams."
+cta_heading: "Begin a Retained SGaaS Engagement"
+cta_body: "The core SGaaS offering. Continuous, adversarial, principal-led. Complementary to internal audit, risk, and compliance — not a substitute for them."
 case_study_url: /case-studies/risk-governance-overhaul-fca-regulated-insurer/
 case_study_title: "Risk Governance Overhaul at an FCA-Regulated Insurer"
 case_study_org: "FCA-Regulated Insurer"
@@ -21,42 +21,42 @@ permalink: /services/retained-gaas/
 ---
 
 <div class="gaas-intro">
-<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Retained GaaS is the core engagement: the primary principal-led governance relationship.</div>
+<div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Retained GaaS is the core offering: the primary continuous engagement around which the architecture is built.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
-<div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
-<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs: continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
+<div class="why-ml-quote">"The risks that matter most are rarely the ones already on the risk register. They are the assumptions the board has stopped examining."</div>
+<div class="why-ml-body">SGaaS is principal-led by design. The principal is the engagement. They build the relationships, develop the institutional knowledge, and carry the authority to challenge effectively. The analytical burden — assumption mapping, document review, adversarial scenario construction, coordination with the second and third lines — is conducted asynchronously by the principal. The board receives distilled, high-signal adversarial intelligence, not raw analytical workload.</div>
 </div>
 
-## The Risks That Matter Most Are Not in Your Risk Register
+## What Retained GaaS Delivers
 
-The most significant risks to an organisation are rarely the ones already recorded. They are the assumptions the board has stopped examining and the emerging threats no internal function has been assigned to watch.
+The Retained tier provides three categories of output, delivered on a continuous cycle across board cycles.
 
-A Retained GaaS relationship provides a continuous, confidential, and independent governance function. Not a consultant called in for a project. A permanent challenge function inside your governance framework.
+**Governance Pulse Reports.** Periodic assessments of the governance environment, identifying emerging risks, shifting dynamics, and areas where the board's information may be incomplete or stale. These reports provide the continuous governance intelligence that bridges the gap between board meetings.
 
-## What the Engagement Includes
+**Board Challenge Memos.** Structured adversarial briefs prepared ahead of significant board decisions, delivered through the forced deliberation protocol. Before the memo is presented, each director independently submits an anonymous pre-deliberation assessment, recording their confidence in the decision's key assumptions and the risks they consider most material. The principal then presents the Challenge Memo alongside the aggregated director assessments, revealing where prior confidence aligns with the adversarial findings and where it diverges. This protocol ensures that directors engage cognitively with the decision before receiving the adversarial analysis, preventing the passive consumption that would undermine the decision hygiene the methodology depends on.
 
-**Monthly Governance Pulse**
-A concise 5–10 page report covering regulatory environment changes, internal risk events, emerging governance issues, and forward-looking alerts. Built on pre-agreed KPIs and triggers specific to your sector and risk profile.
+**Pre-Mortem Diagnostics and Risk Simulation Labs.** Deployed at defined intervals or ahead of strategic inflections. The retained relationship ensures that these exercises are calibrated to the organisation's specific context, informed by cumulative institutional knowledge, and connected to the ongoing governance narrative rather than conducted as isolated events.
 
-**Quarterly Board Briefing**
-A scheduled 1–2 hour session with your board or governance committee covering quarterly findings, sector changes, risk heatmap, and strategic recommendations. Principal-delivered.
+## How Retained GaaS Integrates
 
-**Annual Red Team Review**
-Once yearly: a structured adversarial challenge of risk framework design, governance effectiveness, and board decision-making processes. Outputs the key vulnerabilities and remediation options.
+The SGaaS principal operates **alongside** the CRO, head of internal audit, and compliance leadership — not in place of them. The principal attends governance committee meetings as an observer with a defined challenge mandate. They have access to board papers, risk reports, and audit findings, not to duplicate the work of internal functions, but to assess whether the governance architecture is producing the outcomes those functions are designed to deliver. The relationship is **collaborative in tone and adversarial in function**.
 
-**On-Call Advisory**
-Immediate principal-level support for urgent governance, compliance, or risk questions as they arise between scheduled touchpoints. Response within 24–48 hours.
+## Why Retained Rather Than Episodic Advisory
 
-## Why Retained GaaS Rather Than a Full-Time CRO?
+The retainer model is integral to the governance proposition. It eliminates the episodic engagement problem that characterises project-based advisory, accumulates institutional memory over quarters and years, and aligns the commercial incentive with sustained governance improvement rather than with discrete project deliverables.
 
-A retained engagement delivers continuous CRO-level expertise with no fixed employment obligation: no pension liability, no severance risk, no recruitment cost.
+## Regulatory Alignment
 
-Unlike a standard fractional CRO placement, Retained GaaS includes the adversarial methodology that makes governance work: we challenge assumptions, stress-test frameworks, and deliver independent challenge rather than additional consensus.
+For senior managers operating under SM&CR or equivalent personal accountability regimes, Retained GaaS provides documented, continuous, independent governance challenge — the evidence of "reasonable steps" that strengthens the personal defence. For boards facing Provision 29's declaration requirement, it provides the ongoing evidence base to support annual statements on control effectiveness.
 
-## The Upgrade Path
+## Commercial Structure
 
-Retained clients with identified transformation needs upgrade to **Embedded GaaS (T3)** for deeper governance ownership. PE portfolio companies approaching exit transition to **Pre-Exit GaaS (T4)**, typically with continuity of engagement rather than a cold start.
+Retained GaaS is delivered on an **annual retainer**, structured to provide continuity across board cycles, with **quarterly review points** to recalibrate scope as the organisation's risk profile evolves.
+
+## The Progression Path
+
+For organisations where the governance challenge requires permanent, structurally embedded presence at board level, the natural evolution is **Retained → Embedded GaaS (T3)**. The trust and institutional knowledge accumulated through the Retained relationship is what makes Embedded effective. For PE portfolio companies approaching exit, the path is typically **Retained → Pre-Exit GaaS (T4)**, with continuity of engagement rather than a cold start.

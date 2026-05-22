@@ -1,0 +1,58 @@
+{%- comment -%}
+  Reusable iframe embed for Marentis Labs interactive visualisations.
+
+  Usage:
+    {% include interactive-embed.html
+        slug="cost-ratio"
+        title="Cost Ratio Interactive — Failure vs SGaaS Retainer"
+        min_height="1700" %}
+
+  Parameters:
+    slug        Required. Filename (without .html) under /assets/interactives/
+    title       Required. Accessible iframe title.
+    min_height  Optional. Initial height in px (default 1700). The iframe
+                auto-resizes via postMessage from the embedded page.
+{%- endcomment -%}
+
+{%- assign slug = include.slug -%}
+{%- assign title = include.title | default: "Marentis Labs Interactive" -%}
+{%- assign min_height = include.min_height | default: "1700" -%}
+
+<div class="ml-interactive-wrap" data-slug="{{ slug }}">
+  <iframe
+    id="ml-interactive-{{ slug }}"
+    src="/assets/interactives/{{ slug }}.html?embed=1"
+    title="{{ title | escape }}"
+    loading="lazy"
+    scrolling="no"
+    referrerpolicy="no-referrer-when-downgrade"
+    sandbox="allow-scripts allow-same-origin allow-popups"
+    style="width:100%; min-height:{{ min_height }}px; border:0; background:#F8F9FA; display:block;"></iframe>
+  <noscript>
+    <p style="padding:24px; background:#F8F9FA; border:1px solid #DEE2E6; color:#495057; font-family: Inter, sans-serif; font-size:14px;">
+      This interactive requires JavaScript. <a href="/assets/interactives/{{ slug }}.html" style="color:#A98C5A;">Open the static version &rarr;</a>
+    </p>
+  </noscript>
+</div>
+
+{%- comment -%} Inject the height listener once per page {%- endcomment -%}
+{%- unless page.ml_interactive_listener_added -%}
+<script>
+(function(){
+  if (window.__mlInteractiveListener) return;
+  window.__mlInteractiveListener = true;
+  window.addEventListener('message', function(e) {
+    if (!e.data || e.data.type !== 'mlInteractiveHeight' || typeof e.data.height !== 'number') return;
+    // Find the iframe whose contentWindow is the message source
+    var iframes = document.querySelectorAll('iframe[id^="ml-interactive-"]');
+    for (var i = 0; i < iframes.length; i++) {
+      if (iframes[i].contentWindow === e.source) {
+        // Add a small buffer to avoid sub-pixel scrollbars
+        iframes[i].style.height = (e.data.height + 12) + 'px';
+        break;
+      }
+    }
+  });
+})();
+</script>
+{%- endunless -%}

@@ -1,70 +1,59 @@
 ---
 layout: service
 title: "Embedded GaaS"
-headline: "Embedded GaaS: Principal-Level Governance Ownership"
-strapline: "A named governance role: board seat, risk committee chair, or equivalent. Owen owns the framework, manages regulatory liaison, and chairs the internal challenge function as a permanent resource."
-description: "Embedded Strategic GaaS from Marentis Labs: principal-level governance ownership for regulated, high-risk, and actively restructuring organisations."
-tools: ["Quarterly Red Team Protocol", "Risk Simulation Lab", "Continuous Pre-Mortem Framing", "Regulatory Red Team"]
-best_for: "Regulated entities, high-risk businesses, organisations undergoing active governance restructuring, post-acquisition integration, compliance remediation following regulatory findings."
-duration: "12–18 months typical. Many embedded clients transition to Retained GaaS post-engagement."
+headline: "Embedded GaaS: Permanent Board-Level Challenge Function"
+strapline: "Permanent integration of the SGaaS principal into the organisation's governance architecture as an Independent Board Observer or Mandated Advisor — with contractual authority to challenge, and no fiduciary exposure."
+description: "Embedded SGaaS from Marentis Labs: a permanent, board-level adversarial challenge function for regulated, transforming, or multi-jurisdictional organisations."
+tools: ["Independent Board Observer", "Mandated Advisor (Risk/Audit)", "Contractual Challenge Authority", "Real-Time Challenge", "Agenda-Setting Input"]
+best_for: "Organisations navigating major transformation (merger integration, business model pivot, regulatory remediation); firms with heightened regulatory scrutiny requiring demonstrable, continuous, board-level governance; complex organisations where the governance architecture spans multiple entities, jurisdictions, or regulatory regimes."
+duration: "Multi-year, ongoing"
 tier: "Tier 3: Embedded GaaS"
 
 cta_label: "Discuss Embedded Engagement"
 cta_heading: "The Deepest Governance Partnership"
-cta_body: "Board-seated. Framework-owning. Adversarial by design. No employment liability."
+cta_body: "Permanent board-level presence with contractual challenge authority. Structurally independent of fiduciary liability by design."
 permalink: /services/embedded-gaas/
 ---
 
 <div class="gaas-intro">
-<div class="gaas-intro-term">Governance as a Service (GaaS)</div>
-<div class="gaas-intro-def">Continuous, retainer-based board-level governance counsel, replacing the episodic consulting model with ongoing principal oversight that flexes with the organisation's needs. Marentis Labs operates a four-tier GaaS architecture: Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: Owen takes a named governance role inside your organisation for 12–18 months.</div>
+<div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: a permanent, contracted board-level challenge function structurally independent of directorial liability.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
-<div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
-<div class="why-ml-body">Marentis Labs occupies the space between two alternatives most boards accept without question: the expensive full-time hire and the generic Big 4 engagement. Neither delivers what a board actually needs: continuous, hands-on governance counsel from someone who has sat on both sides of the table, as CRO and as board chair. That combination is rare. At Marentis Labs, it is the standard.</div>
+<div class="why-ml-quote">"A board that has embedded a continuous, independent, adversarial governance function demonstrates a level of oversight commitment that strengthens its position in any future Caremark analysis."</div>
+<div class="why-ml-body">The Embedded tier preserves the SGaaS principal's independence from fiduciary liability by design. The principal does not take a formal directorial appointment — a deliberate architectural choice. Under corporate law in mature jurisdictions, fiduciary duties are holistic, collective, and non-delegable; a director cannot ring-fence liability to an adversarial function without assuming full responsibility for the board's strategic decisions. Formal appointment would compromise the very independence that makes the function valuable.</div>
 </div>
 
 ## What Embedded GaaS Provides
 
-The deepest engagement tier in the Strategic GaaS model. Owen takes a named governance role (a standing seat on the board, the risk committee, or an audit committee) and acts as the organisation's permanent internal challenge function.
+The Embedded tier provides **everything in the Retained tier, plus permanent board-level presence**. The SGaaS principal attends board and committee meetings with a defined adversarial mandate, providing real-time challenge during board deliberations, contributing to agenda-setting so that governance-critical issues are not omitted, and serving as a standing adversarial voice in the room.
 
-This is not advisory. Owen does not attend board meetings to observe and report. He attends to challenge, to own the risk framework, to manage the regulatory relationship, and to ensure that the governance function is working at the standard a regulator, a buyer, or a shareholder would expect.
+## The Two Operating Structures
 
-## Scope of Engagement
+Embedded GaaS operates through one of two structures, both of which cleanly separate the SGaaS principal from directorial liability while preserving the access, authority, and permanence that make the tier effective.
 
-**Standing Board or Committee Seat**
-Named attendance at board or audit/risk committee meetings, typically monthly or quarterly, with advisory or voting rights as negotiated. Active challenge to management's risk assessments, control effectiveness, and governance decisions.
+**Independent Board Observer with contractual challenge authority.** The SGaaS principal holds a permanent, contracted observer role with board and committee access, the right to speak, the right to table challenge papers, and the right to require management response to findings. The principal does not vote and owes no fiduciary duties to the company. This is the default structure for Embedded engagements.
 
-**Framework Ownership**
-Full responsibility for the design and maintenance of the enterprise risk management framework, including policy development, control mapping, and methodology updates. The framework is Owen's responsibility, not a document that gets reviewed annually.
+**Mandated Advisor to the Risk or Audit Committee.** The principal serves as a standing advisor to the relevant board committee, with a defined reporting line to the committee chair and, through the committee, to the full board. This structure provides institutional standing and a formal governance channel without creating direct fiduciary exposure.
 
-**Regulatory Liaison**
-Point of contact for regulators (FCA, PRA, and others) on governance and risk matters. Representation in regulatory meetings. Proactive regulatory intelligence sharing with the board.
+In both structures, the principal does not make governance decisions; they provide the adversarial intelligence that the actual fiduciaries need to discharge their duties under frameworks such as the Caremark doctrine or the UK Corporate Governance Code.
 
-**Quarterly Adversarial Challenge**
-Structured quarterly challenge of governance effectiveness, decision-making authority, and control environment using the Red Team Protocol. Not a review of what happened, but a challenge to whether current governance is adequate for what is coming.
+## Who Embedded Serves
 
-**Risk Simulation Lab**
-Annual deployment of the Risk Simulation Lab: a bespoke 90-day scenario designed to test leadership decision-making and governance processes under a realistic high-stakes shock. Boards that have been through a simulation think about governance differently afterwards.
+The Embedded tier serves organisations where the governance challenge is significant enough to require a permanent, structurally embedded function with defined access and contractual challenge authority. Typical contexts include:
 
-## The Economics Versus a Full-Time CRO Hire
+- Organisations navigating **major transformation** — merger integration, business model pivot, or regulatory remediation.
+- Firms with **heightened regulatory scrutiny** requiring demonstrable, continuous, board-level governance.
+- Complex organisations where the **governance architecture spans multiple entities, jurisdictions, or regulatory regimes**.
 
-Embedded GaaS delivers equivalent or superior governance capability to a full-time hire, with no fixed employment obligation: no pension liability, no severance risk, no recruitment cost.
+## Commercial Structure
 
-The difference in value is not just financial. A full-time internal CRO is subject to the institutional pressures, career considerations, and political dynamics that reduce the sharpness of internal challenge. An embedded principal adviser is independent. The challenge function is not softened by organisational loyalty.
+Embedded GaaS is delivered on a **multi-year retainer**, reflecting the depth of integration and the commitment required from both parties. The commercial structure reflects the premium value of board-level presence and the principal's investment in deep institutional knowledge.
 
-## When Embedded GaaS Applies
+## The Progression Logic
 
-- Regulated financial services entities requiring board-level risk oversight without a full-time CRO hire
-- Organisations in active compliance remediation following a regulatory finding
-- Post-acquisition integration, where governance frameworks need rapid redesign under time pressure
-- Governance transformation: rebuilding risk infrastructure following a significant failure or change of board
-- Pre-IPO governance preparation: establishing institutional governance standards before listing
+The natural progression for most organisations is **Diagnostic → Retained → Embedded**. The Diagnostic builds the institutional knowledge that establishes the trust on which Retained engagement rests; the Retained tier deepens the relationship and demonstrates the value of continuous challenge, creating the conditions under which Embedded becomes a natural evolution.
 
-## The Transition Path
-
-Most Embedded GaaS clients transition to **Retained GaaS (T2)** at the end of the engagement. The framework has been built. The regulatory relationship has been established. The transition from intensive embedded delivery to ongoing oversight is natural and preserves the institutional knowledge built over the engagement.
-
-PE portfolio companies approaching exit from an Embedded engagement typically move to **Pre-Exit GaaS (T4)** to specifically address exit governance preparation.
+For PE portfolio companies on a defined exit path, an Embedded engagement transitions to **Pre-Exit GaaS (T4)** as the exit timeline shortens, with the continuity of engagement that pre-existing institutional knowledge provides.
