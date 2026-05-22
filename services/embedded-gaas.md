@@ -1,13 +1,13 @@
 ---
 layout: service
-title: "Embedded GaaS"
-headline: "Embedded GaaS: Permanent Board-Level Challenge Function"
+title: "Embedded SGaaS"
+headline: "Embedded SGaaS: Permanent Board-Level Challenge Function"
 strapline: "Permanent integration of the SGaaS principal into the organisation's governance architecture as an Independent Board Observer or Mandated Advisor — with contractual authority to challenge, and no fiduciary exposure."
 description: "Embedded SGaaS from Marentis Labs: a permanent, board-level adversarial challenge function for regulated, transforming, or multi-jurisdictional organisations."
 tools: ["Independent Board Observer", "Mandated Advisor (Risk/Audit)", "Contractual Challenge Authority", "Real-Time Challenge", "Agenda-Setting Input"]
 best_for: "Organisations navigating major transformation (merger integration, business model pivot, regulatory remediation); firms with heightened regulatory scrutiny requiring demonstrable, continuous, board-level governance; complex organisations where the governance architecture spans multiple entities, jurisdictions, or regulatory regimes."
 duration: "Multi-year, ongoing"
-tier: "Tier 3: Embedded GaaS"
+tier: "Tier 3: Embedded SGaaS"
 
 cta_label: "Discuss Embedded Engagement"
 cta_heading: "The Deepest Governance Partnership"
@@ -17,7 +17,7 @@ permalink: /services/embedded-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
-<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Embedded GaaS is the deepest tier: a permanent, contracted board-level challenge function structurally independent of directorial liability.</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Embedded SGaaS is the deepest tier: a permanent, contracted board-level challenge function structurally independent of directorial liability.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
@@ -26,13 +26,13 @@ permalink: /services/embedded-gaas/
 <div class="why-ml-body">The Embedded tier preserves the SGaaS principal's independence from fiduciary liability by design. The principal does not take a formal directorial appointment — a deliberate architectural choice. Under corporate law in mature jurisdictions, fiduciary duties are holistic, collective, and non-delegable; a director cannot ring-fence liability to an adversarial function without assuming full responsibility for the board's strategic decisions. Formal appointment would compromise the very independence that makes the function valuable.</div>
 </div>
 
-## What Embedded GaaS Provides
+## What Embedded SGaaS Provides
 
 The Embedded tier provides **everything in the Retained tier, plus permanent board-level presence**. The SGaaS principal attends board and committee meetings with a defined adversarial mandate, providing real-time challenge during board deliberations, contributing to agenda-setting so that governance-critical issues are not omitted, and serving as a standing adversarial voice in the room.
 
 ## The Two Operating Structures
 
-Embedded GaaS operates through one of two structures, both of which cleanly separate the SGaaS principal from directorial liability while preserving the access, authority, and permanence that make the tier effective.
+Embedded SGaaS operates through one of two structures, both of which cleanly separate the SGaaS principal from directorial liability while preserving the access, authority, and permanence that make the tier effective.
 
 **Independent Board Observer with contractual challenge authority.** The SGaaS principal holds a permanent, contracted observer role with board and committee access, the right to speak, the right to table challenge papers, and the right to require management response to findings. The principal does not vote and owes no fiduciary duties to the company. This is the default structure for Embedded engagements.
 
@@ -50,10 +50,10 @@ The Embedded tier serves organisations where the governance challenge is signifi
 
 ## Commercial Structure
 
-Embedded GaaS is delivered on a **multi-year retainer**, reflecting the depth of integration and the commitment required from both parties. The commercial structure reflects the premium value of board-level presence and the principal's investment in deep institutional knowledge.
+Embedded SGaaS is delivered on a **multi-year retainer**, reflecting the depth of integration and the commitment required from both parties. The commercial structure reflects the premium value of board-level presence and the principal's investment in deep institutional knowledge.
 
 ## The Progression Logic
 
 The natural progression for most organisations is **Diagnostic → Retained → Embedded**. The Diagnostic builds the institutional knowledge that establishes the trust on which Retained engagement rests; the Retained tier deepens the relationship and demonstrates the value of continuous challenge, creating the conditions under which Embedded becomes a natural evolution.
 
-For PE portfolio companies on a defined exit path, an Embedded engagement transitions to **Pre-Exit GaaS (T4)** as the exit timeline shortens, with the continuity of engagement that pre-existing institutional knowledge provides.
+For PE portfolio companies on a defined exit path, an Embedded engagement transitions to **Pre-Exit SGaaS (T4)** as the exit timeline shortens, with the continuity of engagement that pre-existing institutional knowledge provides.

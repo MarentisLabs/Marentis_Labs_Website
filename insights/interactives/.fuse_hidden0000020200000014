@@ -1,0 +1,77 @@
+---
+layout: default
+title: "The Amplification Cascade: Why &pound;1 of Loss Becomes &pound;12 of Damage"
+description: "McKinsey&rsquo;s 12x multiplier shows that one pound of direct loss becomes twelve pounds of shareholder damage. Interactive cascade across five stages."
+permalink: /insights/interactives/amplification-cascade/
+---
+
+<!-- ════════════════════════════════════════════════════════════
+     Hero
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero-section text-white py-16 md:py-20">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Interactive Insight</p>
+    <h1 class="text-3xl md:text-5xl font-black mb-5 leading-tight">
+      The Amplification Cascade.&nbsp;<br class='hidden md:block'>From Direct Loss to Permanent Damage.
+    </h1>
+    <p class="text-gray-400 text-lg max-w-3xl leading-relaxed">
+      McKinsey&rsquo;s analysis of 350 operational risk incidents, documented by Grimwade (2025), shows that total shareholder returns over the 120 working days following disclosure are impacted at more than twelve times the direct monetary loss. Walk through the cascade.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Framing paragraph
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <p class="text-ml-slate-grey text-base md:text-lg leading-relaxed">
+      The fines, settlements, and remediation costs that fill the headline are typically less than ten per cent of the total damage. Eleven-twelfths of the cost arrives after the disclosure event &mdash; through share-price decline, credit downgrade, funding-cost increase, and customer attrition that compound rather than merely add. The cascade is the empirical signature of governance failure&rsquo;s persistence. It is also the reason the time from risk crystallisation to board awareness is the single most important variable governance can affect.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Interactive embed
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-6 md:py-8 bg-ml-light-bg border-t border-gray-100 border-b">
+  <div class="container mx-auto px-2 md:px-6 max-w-6xl">
+    {% include interactive-embed.html
+        slug="amplification-cascade"
+        title="The Amplification Cascade: Why &pound;1 of Loss Becomes &pound;12 of Damage"
+        min_height="1700" %}
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     White paper CTA
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: var(--ml-gold); letter-spacing: 0.2em;">From the SGaaS White Paper</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal mb-5 leading-snug">
+      How SGaaS compresses the cascade window
+    </h2>
+    <p class="text-ml-slate-grey text-base leading-relaxed max-w-2xl mx-auto mb-8">
+      Continuous principal-led challenge is structured to shorten the time from internal signal to board awareness &mdash; the variable that determines how far the cascade runs before the board acts.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/white-paper/" class="btn-primary">Download the white paper &rarr;</a>
+      <a href="/contact/" class="btn-nav-cta">Schedule a confidential call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Related insights
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-ml-light-bg border-t border-gray-100">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--ml-gold); letter-spacing: 0.2em;">More interactive insights</p>
+    <ul class="grid md:grid-cols-3 gap-4 list-none">
+      <li><a href="/insights/interactives/cost-ratio/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Cost Ratio &mdash; spend vs. failure &rarr;</a></li>
+      <li><a href="/insights/interactives/recovery-gap/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Recovery Gap &mdash; two years after &rarr;</a></li>
+      <li><a href="/insights/interactives/three-structural-defects/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Three Structural Defects &mdash; the diagnosis &rarr;</a></li>
+    </ul>
+  </div>
+</section>

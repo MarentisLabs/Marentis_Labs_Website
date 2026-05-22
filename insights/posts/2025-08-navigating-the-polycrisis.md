@@ -69,4 +69,4 @@ The boards that will navigate it most effectively are not the ones with the best
 
 ---
 
-*Owen Vallis is the founder of Marentis Labs. If your board is considering how to strengthen its geopolitical risk governance, this is one of the scenarios we work through in a Diagnostic GaaS engagement. [Schedule a confidential discussion](/contact/).*
+*Owen Vallis is the founder of Marentis Labs. If your board is considering how to strengthen its geopolitical risk governance, this is one of the scenarios we work through in a Diagnostic SGaaS engagement. [Schedule a confidential discussion](/contact/).*

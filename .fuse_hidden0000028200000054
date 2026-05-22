@@ -1,0 +1,926 @@
+---
+layout: default
+title: "The Architecture of Governance Failure | Marentis Labs White Paper"
+description: "More governance has not produced better governance. Download the Marentis Labs research paper: 90 pages,
+insightful case studies, and the structural response that closes the value gap in board-level oversight."
+permalink: /white-paper/
+schema_white_paper: true
+---
+
+<!-- ══════════════════════════════════════════════════════════
+     WHITE PAPER HERO
+     ══════════════════════════════════════════════════════════ -->
+<section class="hero-section text-white py-20 md:py-28">
+  <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+
+    <p class="text-xs font-semibold uppercase tracking-widest mb-5"
+      style="color: var(--ml-gold); letter-spacing: 0.22em; font-family: var(--font-sub);">
+      Marentis Labs Research &middot; 2026
+    </p>
+
+    <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight"
+      style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.05em;">
+      The Architecture of<br class="hidden md:block"> Governance Failure
+    </h1>
+
+    <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto mb-10 leading-relaxed">
+      More governance has not produced better governance. This 90-page research
+      paper documents why, traces the structural defects through high-profile case
+      studies, and presents the architectural response.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#wp-form" class="btn-gold px-10 py-4">
+        Download the Paper &darr;
+      </a>
+      <a href="/services/" class="btn-outline px-10 py-4">
+        Explore SGaaS Services &rarr;
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     PROOF STRIP — stat blocks (clickable → expands interactive)
+     ══════════════════════════════════════════════════════════ -->
+<style>
+  .wp-stat-trigger {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding: 18px 12px 16px;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    position: relative;
+  }
+  .wp-stat-trigger:hover {
+    border-color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.04);
+    transform: translateY(-2px);
+  }
+  .wp-stat-trigger.active {
+    border-color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.08);
+  }
+  .wp-stat-trigger .wp-stat-affordance {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  .wp-stat-trigger:hover .wp-stat-affordance,
+  .wp-stat-trigger.active .wp-stat-affordance { opacity: 1; }
+  .wp-stat-affordance svg {
+    transition: transform 0.25s ease;
+  }
+  .wp-stat-trigger.active .wp-stat-affordance svg { transform: rotate(180deg); }
+
+  #wp-stat-expand {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: var(--ml-light-bg, #F8F9FA);
+    border-top: 1px solid #DEE2E6;
+  }
+  #wp-stat-expand.open { max-height: 6000px; }
+  .wp-expand-inner {
+    padding: 20px 0 8px;
+    max-width: 1320px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .wp-expand-header {
+    max-width: 100%;
+    margin: 0 0 4px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .wp-expand-meta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+  }
+  .wp-expand-close {
+    background: transparent;
+    border: 1px solid #DEE2E6;
+    color: var(--ml-slate-grey);
+    font-family: inherit;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .wp-expand-close:hover { border-color: var(--ml-gold); color: var(--ml-charcoal); }
+  .wp-expand-iframe-wrap {
+    background: var(--ml-light-bg, #F8F9FA);
+    padding: 0 24px 12px;
+  }
+  @media (max-width: 720px) {
+    .wp-expand-inner { padding: 14px 0 6px; }
+    .wp-expand-header { padding: 0 16px; }
+    .wp-expand-iframe-wrap { padding: 0 12px 8px; }
+  }
+  .wp-expand-iframe-wrap iframe {
+    width: 100%;
+    height: 320px;          /* loading placeholder; overridden inline once content reports its height */
+    border: 0;
+    display: block;
+    background: var(--ml-light-bg, #F8F9FA);
+    transition: height 0.25s ease;
+  }
+</style>
+
+<section class="bg-white border-b border-gray-100 py-10">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="cost-ratio"
+              data-label="Cost Ratio — what £200K of governance buys vs $20B of failure"
+              aria-expanded="false" aria-controls="wp-stat-expand">
+        <p class="text-3xl font-black mb-1"
+          style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">$135B</p>
+        <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
+          style="font-family: var(--font-sub);">Projected Global GRC Spend, 2032</p>
+        <span class="wp-stat-affordance">
+          See the cost ratio
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
+
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="reporting-cycle"
+              data-label="Reporting Cycle — when DACH severe events cluster"
+              aria-expanded="false" aria-controls="wp-stat-expand">
+        <p class="text-3xl font-black mb-1"
+          style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">234</p>
+        <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
+          style="font-family: var(--font-sub);">Regulatory Alerts per Working Day</p>
+        <span class="wp-stat-affordance">
+          See the cycle
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
+
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="recovery-gap"
+              data-label="Recovery Gap — the years after a crisis"
+              aria-expanded="false" aria-controls="wp-stat-expand">
+        <p class="text-3xl font-black mb-1"
+          style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">32%</p>
+        <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
+          style="font-family: var(--font-sub);">Of Listed Firms Hit by Severe Crisis, 2018&ndash;24</p>
+        <span class="wp-stat-affordance">
+          See the recovery gap
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
+
+      <button type="button" class="wp-stat-trigger stat-block"
+              data-interactive="three-structural-defects"
+              data-label="Three Structural Defects — why 80% goes unmonitored"
+              aria-expanded="false" aria-controls="wp-stat-expand">
+        <p class="text-3xl font-black mb-1"
+          style="color: var(--ml-charcoal); font-family: var(--font-display); letter-spacing: 0.04em;">80%</p>
+        <p class="text-xs text-ml-slate-grey uppercase tracking-wide font-semibold"
+          style="font-family: var(--font-sub);">Of Crises Driven by Strategy, Not Compliance</p>
+        <span class="wp-stat-affordance">
+          See the defects
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+            <path d="M2 4 L5 7 L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Expand panel: one shared section, iframe swaps on click -->
+  <div id="wp-stat-expand" aria-live="polite">
+    <div class="wp-expand-inner">
+      <div class="wp-expand-header">
+        <span class="wp-expand-meta" id="wp-expand-meta">&nbsp;</span>
+        <button type="button" class="wp-expand-close" id="wp-expand-close" aria-label="Close interactive">Close &times;</button>
+      </div>
+      <div class="wp-expand-iframe-wrap">
+        <iframe id="wp-expand-iframe"
+                src="about:blank"
+                title="Marentis Labs interactive"
+                loading="lazy"
+                scrolling="no"
+                referrerpolicy="no-referrer-when-downgrade"
+                sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var triggers = document.querySelectorAll('.wp-stat-trigger');
+  var expand = document.getElementById('wp-stat-expand');
+  var iframe = document.getElementById('wp-expand-iframe');
+  var metaEl = document.getElementById('wp-expand-meta');
+  var closeBtn = document.getElementById('wp-expand-close');
+  var activeSlug = null;
+
+  function deactivateAll() {
+    triggers.forEach(function(t){
+      t.classList.remove('active');
+      t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function closePanel() {
+    deactivateAll();
+    expand.classList.remove('open');
+    activeSlug = null;
+    // Small delay to let the collapse animation finish before clearing
+    setTimeout(function(){
+      if (!activeSlug) {
+        iframe.src = 'about:blank';
+        iframe.style.height = '';   // reset to CSS placeholder height
+        lastAppliedHeight = 0;
+      }
+    }, 450);
+  }
+
+  function openPanel(slug, label, trigger) {
+    deactivateAll();
+    trigger.classList.add('active');
+    trigger.setAttribute('aria-expanded', 'true');
+    metaEl.textContent = label;
+    if (activeSlug !== slug) {
+      iframe.style.height = '';     // reset so the new interactive starts from the placeholder
+      lastAppliedHeight = 0;
+      iframe.src = '/assets/interactives/' + slug + '.html?embed=1';
+      activeSlug = slug;
+    }
+    expand.classList.add('open');
+    // Smooth-scroll the expand panel into comfortable view
+    setTimeout(function(){
+      expand.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+
+  triggers.forEach(function(t){
+    t.addEventListener('click', function(){
+      var slug = t.dataset.interactive;
+      var label = t.dataset.label || '';
+      if (activeSlug === slug) {
+        closePanel();
+      } else {
+        openPanel(slug, label, t);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closePanel);
+
+  // Auto-resize iframe based on postMessage from the embedded interactive.
+  // Setting `height` (not `minHeight`) lets the frame shrink as well as grow.
+  // We dedup on the last applied height (with a small tolerance) so that
+  // the iframe's own resize event — which fires every time we change its
+  // height — cannot drive an unbounded growth feedback loop.
+  var lastAppliedHeight = 0;
+  window.addEventListener('message', function(e){
+    if (!e.data || e.data.type !== 'mlInteractiveHeight' || typeof e.data.height !== 'number') return;
+    if (e.source !== iframe.contentWindow) return;
+    var h = Math.round(e.data.height);
+    if (Math.abs(h - lastAppliedHeight) < 2) return;   // ignore sub-pixel jitter
+    lastAppliedHeight = h;
+    iframe.style.height = h + 'px';
+  });
+})();
+</script>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     WHAT YOU WILL TAKE AWAY — three columns
+     ══════════════════════════════════════════════════════════ -->
+<section class="py-20 md:py-24 bg-ml-light-bg">
+  <div class="container mx-auto px-6 max-w-5xl">
+
+    <div class="text-center mb-14 reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-3"
+        style="color: var(--ml-gold); letter-spacing: 0.2em; font-family: var(--font-sub);">
+        Inside the Paper
+      </p>
+      <h2 class="text-3xl md:text-4xl text-ml-charcoal"
+        style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.05em;">
+        Three Arguments That Change<br class="hidden md:block"> How Boards Price Their Governance.
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Insight 1 — The Governance Paradox -->
+      <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 reveal" style="border-top-color: var(--ml-gold);">
+        <div class="w-10 h-10 flex items-center justify-center mb-5"
+          style="background: rgba(169,140,90,0.1); border-radius: 4px;">
+          <svg viewBox="0 0 32 32" fill="none" class="w-5 h-5">
+            <circle cx="16" cy="16" r="12" stroke="#a98c5a" stroke-width="2" />
+            <path d="M16 9v7l4 4" stroke="#a98c5a" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-ml-charcoal mb-3 leading-snug" style="font-family: var(--font-sub);">
+          Spending Has Tripled. Failure Rates Have Not Fallen.
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed">
+          The paper opens with high profile documented case studies, including Boeing,
+          Wirecard, Silicon Valley Bank, the Post Office, and Credit Suisse. Cumulative
+          direct losses exceed $150 billion. Each failure occurred inside a full
+          governance stack: board, audit committee, internal audit, external
+          auditor, regulator. Volume was never the constraint.
+        </p>
+      </div>
+
+      <!-- Insight 2 — The 80/20 Inversion -->
+      <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 reveal" style="border-top-color: var(--ml-gold);">
+        <div class="w-10 h-10 flex items-center justify-center mb-5"
+          style="background: rgba(169,140,90,0.1); border-radius: 4px;">
+          <svg viewBox="0 0 32 32" fill="none" class="w-5 h-5">
+            <path d="M4 28 L12 10 L16 18 L20 8 L28 28" stroke="#a98c5a" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="12" cy="10" r="2" fill="#a98c5a" />
+            <circle cx="20" cy="8" r="2" fill="#a98c5a" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-ml-charcoal mb-3 leading-snug" style="font-family: var(--font-sub);">
+          Compliance Governance Was Built for the Wrong 19%.
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed">
+          Across 669 listed companies in Germany, Austria, and Switzerland between
+          2018 and 2024, 80% of severe corporate crises were driven by strategy and
+          external risks. The paper diagnoses the three structural defects that
+          leave the other 80% unmonitored: episodic engagement, consensus
+          dependency, and the absence of institutionalised challenge.
+        </p>
+      </div>
+
+      <!-- Insight 3 — The Twelve-Point Recovery Gap -->
+      <div class="bg-white p-8 rounded-lg shadow-sm border-t-4 reveal" style="border-top-color: var(--ml-gold);">
+        <div class="w-10 h-10 flex items-center justify-center mb-5"
+          style="background: rgba(169,140,90,0.1); border-radius: 4px;">
+          <svg viewBox="0 0 32 32" fill="none" class="w-5 h-5">
+            <path d="M6 26 L26 6" stroke="#a98c5a" stroke-width="2" stroke-linecap="round" />
+            <path d="M14 6 H26 V18" stroke="#a98c5a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-ml-charcoal mb-3 leading-snug" style="font-family: var(--font-sub);">
+          The Cost Is Not the Write-Down. It is the Years That Follow.
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed">
+          Twenty-four months after a severe corporate crisis, affected firms had,
+          on average, recovered only their pre-crisis share price. The broader
+          market had advanced 15%. The resulting twelve-point gap is permanent
+          loss of relative market position. The paper reframes governance
+          investment against this gap, not against the event itself.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     3D BOOK COVER CSS
+     ══════════════════════════════════════════════════════════ -->
+<style>
+  .wp-book-scene {
+    perspective: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .wp-book {
+    position: relative;
+    width: 210px;
+    height: 280px;
+    transform: rotateY(-18deg) rotateX(4deg);
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(-18px 22px 36px rgba(0, 0, 0, 0.32));
+  }
+
+  .wp-book:hover {
+    transform: rotateY(-10deg) rotateX(2deg);
+  }
+
+  .wp-book-front {
+    position: absolute;
+    inset: 0;
+    background: var(--ml-charcoal);
+    border: 1px solid rgba(169, 140, 90, 0.2);
+    padding: 16px 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .wp-book-front::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(135deg, rgba(169, 140, 90, 0.06) 25%, transparent 25%),
+      linear-gradient(225deg, rgba(169, 140, 90, 0.06) 25%, transparent 25%),
+      linear-gradient(45deg, rgba(169, 140, 90, 0.06) 25%, transparent 25%),
+      linear-gradient(315deg, rgba(169, 140, 90, 0.06) 25%, transparent 25%);
+    background-size: 36px 36px;
+    pointer-events: none;
+  }
+
+  .wp-book-spine {
+    position: absolute;
+    top: 0;
+    left: -26px;
+    width: 26px;
+    height: 280px;
+    background: var(--ml-gold-dark);
+    transform-origin: right center;
+    transform: rotateY(90deg) translateZ(13px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wp-book-spine-text {
+    font-family: var(--font-sub);
+    font-size: 0.45rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  .wp-book-gold-rule {
+    height: 1px;
+    background: var(--ml-gold);
+    margin: 6px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* === TOP ZONE: brand wordmark + tagline + rule === */
+  .wp-book-top {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wp-book-brand {
+    font-family: var(--font-sub);
+    font-size: 0.62rem;
+    color: white;
+    line-height: 1;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .wp-book-brand-bold {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .wp-book-brand-divider {
+    display: inline-block;
+    width: 1px;
+    height: 0.6rem;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 4px;
+    align-self: center;
+  }
+
+  .wp-book-brand-light {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .wp-book-tagline {
+    font-family: var(--font-sub);
+    font-size: 0.32rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+  }
+
+  /* === MIDDLE ZONE: title left, thesis centred, subtitle right === */
+  .wp-book-middle {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .wp-book-title-main {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.18;
+    letter-spacing: 0.04em;
+    text-align: left;
+    margin: 0;
+  }
+
+  .wp-book-thesis {
+    font-family: var(--font-display);
+    font-size: 0.66rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  .wp-book-thesis-tagline {
+    font-family: var(--font-display);
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: var(--ml-gold);
+    text-align: right;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin: 0;
+  }
+
+  /* === BOTTOM ZONE: meta + rule + author === */
+  .wp-book-bottom {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wp-book-meta {
+    font-family: var(--font-body);
+    font-size: 0.36rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  .wp-book-author-block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  .wp-book-author-name {
+    font-family: var(--font-sub);
+    font-size: 0.42rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .wp-book-author-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--ml-gold);
+    display: inline-block;
+  }
+
+  .wp-book-author-role {
+    font-family: var(--font-sub);
+    font-size: 0.36rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+  }
+</style>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     BOOK + FORM — primary lead capture section
+     ══════════════════════════════════════════════════════════ -->
+<section id="wp-form" class="py-20 md:py-28 bg-white scroll-mt-24">
+  <div class="container mx-auto px-6 max-w-5xl">
+
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+      <!-- Left column — cover + credibility -->
+      <div class="reveal">
+
+        <div class="wp-book-scene">
+          <div class="wp-book" role="img"
+            aria-label="White paper book cover: Strategic Governance as a Service. More Governance Has Not Produced Better Governance. This Paper Explains Why and Proposes A Solution. By Owen Vallis, Managing Director, Marentis Labs. May 2026.">
+            <!-- Spine -->
+            <div class="wp-book-spine">
+              <span class="wp-book-spine-text">Marentis Labs &nbsp;&middot;&nbsp; Strategic Governance as a
+                Service</span>
+            </div>
+            <!-- Front face -->
+            <div class="wp-book-front">
+
+              <!-- TOP ZONE: brand wordmark + tagline + gold rule -->
+              <div class="wp-book-top">
+                <p class="wp-book-brand">
+                  <span class="wp-book-brand-bold">MARENTIS</span><span class="wp-book-brand-divider"></span><span
+                    class="wp-book-brand-light">Labs</span>
+                </p>
+                <p class="wp-book-tagline">
+                  Strategic Governance as a Service &middot;<br>
+                  Principal-Led &middot; Adversarial by Design
+                </p>
+                <div class="wp-book-gold-rule"></div>
+              </div>
+
+              <!-- MIDDLE ZONE: title (left), thesis (centred), subtitle (right) -->
+              <div class="wp-book-middle">
+                <h3 class="wp-book-title-main">
+                  Strategic Governance<br>as a Service:
+                </h3>
+                <p class="wp-book-thesis">
+                  More Governance<br>
+                  Has Not Produced<br>
+                  Better Governance
+                </p>
+                <p class="wp-book-thesis-tagline">
+                  This Paper Explains Why<br>
+                  And Proposes A Solution
+                </p>
+              </div>
+
+              <!-- BOTTOM ZONE: meta + rule + author -->
+              <div class="wp-book-bottom">
+                <p class="wp-book-meta">A Marentis Labs Research White Paper &middot; May 2026</p>
+                <div class="wp-book-gold-rule" style="opacity: 0.5;"></div>
+                <div class="wp-book-author-block">
+                  <span class="wp-book-author-name">OWEN VALLIS</span>
+                  <span class="wp-book-author-dot"></span>
+                </div>
+                <p class="wp-book-author-role">Managing Director</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Credibility badges beneath the cover -->
+        <div class="space-y-3 mt-4 max-w-xs mx-auto md:mx-0">
+          <div class="credential-badge">
+            <p class="text-xs font-semibold text-ml-charcoal" style="font-family: var(--font-sub);">
+              90 Pages &middot; Insightful Case Studies
+            </p>
+            <p class="text-xs text-ml-slate-grey">
+              Boeing, Wirecard, SVB, Post Office, Credit Suisse and others.
+            </p>
+          </div>
+          <div class="credential-badge">
+            <p class="text-xs font-semibold text-ml-charcoal" style="font-family: var(--font-sub);">
+              Owen Vallis, Former Group Chief Risk Officer & INED
+            </p>
+            <p class="text-xs text-ml-slate-grey">
+              Credit Suisse &middot; J.P. Morgan &middot; Morgan Stanley &middot; SICO Bank
+            </p>
+          </div>
+          <div class="credential-badge">
+            <p class="text-xs font-semibold text-ml-charcoal" style="font-family: var(--font-sub);">
+              Multi-Jurisdictional Regulatory Practice
+            </p>
+            <p class="text-xs text-ml-slate-grey">
+              FCA, PRA, FINMA, CSSF, CBB, and SCA.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right column — form -->
+      <div class="reveal">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-2"
+          style="color: var(--ml-gold); letter-spacing: 0.2em; font-family: var(--font-sub);">
+          Download the Paper
+        </p>
+        <h2 class="text-2xl md:text-3xl text-ml-charcoal mb-3"
+          style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.04em;">
+          Fill and submit the form to download the full white paper
+        </h2>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-8">
+          Ninety pages of practitioner research. Relevant case studies. Empirical, well sourced
+          evidence. Regulatory analysis across the UK, EU,
+          and US. The four-tier architecture through which Marentis Labs delivers
+          continuous adversarial challenge at board level. Your details stay with
+          us, handled under our
+          <a href="/privacy/" class="text-ml-gold hover:text-ml-gold-dark transition-colors">Privacy Notice</a>.
+          No spam. No unsolicited outreach.
+        </p>
+
+        <!-- ═══════════════════════════════════════════════════════
+             HUBSPOT FORM — paste embed snippet here
+             ═══════════════════════════════════════════════════════
+             Replace the placeholder div below with the HubSpot
+             embed code from:
+               Marketing > Forms > [White Paper Form] > Share / Embed
+
+             The snippet will look like:
+               <script charset="utf-8" type="text/javascript"
+                 src="//js.hsforms.net/forms/embed/v2.js"></script>
+               <script>
+                 hbspt.forms.create({
+                   region: "eu1",
+                   portalId: "XXXXXXXX",
+                   formId: "xxxx-xxxx-xxxx-xxxx"
+                 });
+               </script>
+
+             In the HubSpot form Options tab, set:
+               Redirect URL → https://marentislabs.com/white-paper/thank-you/
+        ════════════════════════════════════════════════════════ -->
+
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "eu1",
+            portalId: "148185499",
+            formId: "f4ddb24c-342d-4244-bb8a-d3cba2e2e8f1"
+          });
+        </script>
+
+        <p class="text-xs text-gray-400 mt-4 text-center leading-relaxed">
+          PDF &middot; 90 pages &middot; Written for FTSE 350 boards, PE portfolio
+          companies, and regulated entities &middot; Unsubscribe at any time
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FROM FRAMEWORK TO ENGAGEMENT — dark tier strip
+     ══════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20" style="background: var(--ml-charcoal);">
+  <div class="container mx-auto px-6 max-w-5xl">
+
+    <div class="text-center mb-10 reveal">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-3"
+        style="color: var(--ml-gold); letter-spacing: 0.2em; font-family: var(--font-sub);">
+        From Diagnosis to Engagement
+      </p>
+      <h2 class="text-2xl md:text-3xl text-white mb-4"
+        style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.05em;">
+        The Methodology in the Paper,<br class="hidden md:block"> Delivered Through Four Tiers.
+      </h2>
+      <p class="text-sm leading-relaxed max-w-xl mx-auto" style="color: rgba(255,255,255,0.55);">
+        Diagnostic, Retained, Embedded, and Pre-Exit. Each tier is structured
+        for the governance maturity of the organisation entering at that point.
+        Each builds toward the next.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-4">
+
+      <a href="/services/diagnostic-gaas/"
+        class="block p-5 rounded-md border hover:border-ml-gold transition-colors group reveal"
+        style="border-color: rgba(255,255,255,0.1);">
+        <span class="step-number mb-3"
+          style="width: 1.75rem; height: 1.75rem; font-size: 0.75rem; display: flex;">T1</span>
+        <p class="text-xs font-semibold uppercase tracking-wide mb-1 group-hover:text-ml-gold transition-colors"
+          style="color: var(--ml-slate-blue); font-family: var(--font-sub);">Diagnostic GaaS</p>
+        <p class="text-sm font-semibold leading-snug mb-2 text-white" style="font-family: var(--font-sub);">
+          Governance Architecture Assessment
+        </p>
+        <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.5);">
+          A 4&ndash;8 week structured diagnostic assessment. The entry point for boards weighing sustained engagement.
+        </p>
+      </a>
+
+      <a href="/services/retained-gaas/"
+        class="block p-5 rounded-md border hover:border-ml-gold transition-colors group reveal"
+        style="border-color: rgba(169,140,90,0.35);">
+        <span class="step-number mb-3"
+          style="width: 1.75rem; height: 1.75rem; font-size: 0.75rem; display: flex;">T2</span>
+        <p class="text-xs font-semibold uppercase tracking-wide mb-1"
+          style="color: var(--ml-gold); font-family: var(--font-sub);">Retained GaaS</p>
+        <p class="text-sm font-semibold leading-snug mb-2 text-white" style="font-family: var(--font-sub);">
+          Continuous Principal-Led Challenge
+        </p>
+        <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.5);">
+          Annual retainer. Continuous governance intelligence between board cycles. The core SGaaS offering.
+        </p>
+      </a>
+
+      <a href="/services/embedded-gaas/"
+        class="block p-5 rounded-md border hover:border-ml-gold transition-colors group reveal"
+        style="border-color: rgba(255,255,255,0.1);">
+        <span class="step-number mb-3"
+          style="width: 1.75rem; height: 1.75rem; font-size: 0.75rem; display: flex;">T3</span>
+        <p class="text-xs font-semibold uppercase tracking-wide mb-1 group-hover:text-ml-gold transition-colors"
+          style="color: var(--ml-slate-blue); font-family: var(--font-sub);">Embedded GaaS</p>
+        <p class="text-sm font-semibold leading-snug mb-2 text-white" style="font-family: var(--font-sub);">
+          Independent Board Observer
+        </p>
+        <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.5);">
+          Permanent board-level presence with contractual challenge authority. Multi-year commitment.
+        </p>
+      </a>
+
+      <a href="/services/pre-exit-gaas/"
+        class="block p-5 rounded-md border hover:border-ml-gold transition-colors group reveal"
+        style="border-color: rgba(255,255,255,0.1);">
+        <span class="step-number mb-3"
+          style="width: 1.75rem; height: 1.75rem; font-size: 0.75rem; display: flex;">T4</span>
+        <p class="text-xs font-semibold uppercase tracking-wide mb-1 group-hover:text-ml-gold transition-colors"
+          style="color: rgba(255,255,255,0.45); font-family: var(--font-sub);">Pre-Exit GaaS</p>
+        <p class="text-sm font-semibold leading-snug mb-2 text-white" style="font-family: var(--font-sub);">
+          Exit-Aligned Governance Uplift
+        </p>
+        <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.5);">
+          12&ndash;24 months pre-exit. Builds the governance evidence base buyers price into the valuation model.
+        </p>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="/contact/" class="btn-gold px-9 py-3 inline-block">
+        Discuss a Governance Engagement &rarr;
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     AUTHOR STRIP
+     ══════════════════════════════════════════════════════════ -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8 reveal">
+
+      <div class="flex-shrink-0">
+        <div class="rounded-full overflow-hidden border-2"
+          style="width: 5.5rem; height: 5.5rem; border-color: var(--ml-gold);">
+          <img src="/assets/images/owen-vallis-headshot.jpg" alt="Owen Vallis, Author"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: top;">
+        </div>
+      </div>
+
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-widest mb-1"
+          style="color: var(--ml-gold); font-family: var(--font-sub); letter-spacing: 0.2em;">
+          Author
+        </p>
+        <h3 class="text-lg font-bold text-ml-charcoal mb-2" style="font-family: var(--font-sub);">
+          Owen Vallis - Managing Director, Marentis Labs Ltd
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed">
+          Former Group Chief Risk Officer with twenty years of governance and risk management experience across Credit
+          Suisse, J.P. Morgan,
+          Morgan Stanley, and SICO Bank.
+          Non-Executive Director, Active Prospects, Office of the Children's Commissioner and EdAct Trust.
+          Multi-jurisdictional
+          regulatory practice: FCA, PRA, BaFIN, FINMA, CSSF, CBB, and SCA.
+        </p>
+        <a href="/about/" class="footer-link text-sm font-semibold hover:text-ml-gold mt-3 inline-block"
+          style="color: var(--ml-gold-dark);">
+          Full credentials &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>

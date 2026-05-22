@@ -96,7 +96,7 @@ Each column: one icon + bold short title + 2-sentence description. The three ins
 
 - *Why continuous governance outperforms annual board reviews by a measurable factor* — and what the Basel 3.1 capital model implications are for risk committee composition.
 - *The four failure modes that appear in every governance health check* — and how FTSE 350 chairs are systematically blind to three of them.
-- *How PE operating partners are using Pre-Exit GaaS to convert governance from a diligence liability into a premium valuation narrative.*
+- *How PE operating partners are using Pre-Exit SGaaS to convert governance from a diligence liability into a premium valuation narrative.*
 
 These should be written from the actual white paper content. Placeholders can be refined once Owen confirms the three insights he wants surfaced.
 
@@ -134,7 +134,7 @@ This is added as a `<script type="application/ld+json">` block. The cleanest way
 
 **E. "While you read..." service links strip**
 
-Below the form, a light-background row of four service cards (T1–T4) with a single line each. Copy: *"The frameworks in this paper map directly to our four GaaS engagement tiers."* This section converts readers who arrive, download, and browse — before they email.
+Below the form, a light-background row of four service cards (T1–T4) with a single line each. Copy: *"The frameworks in this paper map directly to our four SGaaS engagement tiers."* This section converts readers who arrive, download, and browse — before they email.
 
 ---
 
@@ -153,7 +153,7 @@ This page has three elements:
 
 1. Confirmation message (charcoal hero-style): *"Your copy is ready."* + *"We've also sent a link to your inbox."*
 2. A large gold CTA button: **"Download the Framework →"** linking directly to the PDF URL.
-3. Below that: a brief "Next step" nudge — *"The framework describes four GaaS engagement configurations. If the governance challenges it surfaces resonate, a confidential conversation with Owen takes 45 minutes."* → link to `/contact/`.
+3. Below that: a brief "Next step" nudge — *"The framework describes four SGaaS engagement configurations. If the governance challenges it surfaces resonate, a confidential conversation with Owen takes 45 minutes."* → link to `/contact/`.
 
 HubSpot form "Options" tab is configured to redirect to this URL on submission.
 

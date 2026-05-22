@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episodic Engagement | Marentis Labs</title>
+<meta name="description" content="Hunziker et al. (2025) found that severe corporate share-price events cluster on the reporting calendar. The pattern is the empirical signature of the episodic-engagement structural defect.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #A98C5A;
+    --ml-gold-soft: #C2A57A;
+    --ml-gold-pale: #EFE3CC;
+    --ml-slate-blue: #4A6572;
+    --ml-deep-blue: #2E5266;
+    --ml-light-bg: #F8F9FA;
+    --ml-line: #DEE2E6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ml-light-bg);
+    color: var(--ml-charcoal);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 32px 64px;
+  }
+
+  /* Header */
+  .brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--ml-line);
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+  }
+  .brand-mark {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+  .brand-mark .accent { color: var(--ml-gold); }
+  .brand-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+  }
+
+  /* Title */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 14px;
+  }
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(38px, 5.6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+  h1.title em {
+    font-style: italic;
+    color: var(--ml-deep-blue);
+    font-weight: 500;
+  }
+  .deck {
+    font-weight: 300;
+    font-size: clamp(16px, 1.6vw, 19px);
+    color: var(--ml-slate-grey);
+    max-width: 760px;
+    line-height: 1.55;
+    margin-bottom: 44px;
+  }
+
+  /* Chart card */
+  .chart-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ml-line);
+    border-radius: 4px;
+    padding: 40px 44px 36px;
+    box-shadow: 0 1px 2px rgba(33, 37, 41, 0.04);
+  }
+
+  /* Hero stat block */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) 2fr;
+    gap: 36px;
+    align-items: center;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--ml-line);
+    margin-bottom: 32px;
+  }
+  .hero-stat {
+    text-align: left;
+  }
+  .hero-number {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(68px, 9vw, 104px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--ml-charcoal);
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-number .pct { color: var(--ml-gold); font-style: italic; }
+  .hero-caption {
+    font-family: var(--serif);
+    font-size: clamp(17px, 1.7vw, 21px);
+    font-style: italic;
+    color: var(--ml-slate-grey);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .hero-caption strong { color: var(--ml-charcoal); font-weight: 600; font-style: normal; }
+
+  /* Toggle */
+  .mode-toggle {
+    display: inline-flex;
+    border: 1px solid var(--ml-line);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 18px;
+    cursor: pointer;
+    color: var(--ml-slate-grey);
+    letter-spacing: 0.04em;
+    transition: all 0.15s ease;
+  }
+  .toggle-btn:hover { color: var(--ml-charcoal); }
+  .toggle-btn.active {
+    background: var(--ml-charcoal);
+    color: #FFFFFF;
+  }
+
+  /* Heatmap */
+  .heatmap-wrap {
+    width: 100%;
+    aspect-ratio: 20 / 9;
+    min-height: 360px;
+    margin-bottom: 4px;
+  }
+  svg.heatmap {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: block;
+  }
+  svg text { font-family: var(--sans); }
+
+  .bar-group { cursor: pointer; }
+  .bar-rect {
+    transition: filter 0.18s ease-out, fill 0.18s ease-out;
+  }
+  .bar-group:hover .bar-rect { filter: brightness(1.06); }
+  .bar-group.active .bar-rect { filter: brightness(1.04); }
+  .bar-label, .bar-value, .bar-peak, .axis-label, .axis-title {
+    pointer-events: none;
+  }
+  .bar-value {
+    font-family: var(--serif);
+    font-weight: 600;
+    fill: var(--ml-charcoal);
+  }
+  .bar-label {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .bar-peak {
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    fill: var(--ml-gold);
+    text-transform: uppercase;
+  }
+
+  /* Chart subtitle outside the SVG so it can't collide with in-chart annotations */
+  .chart-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .chart-meta-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    margin-bottom: 6px;
+  }
+  .chart-meta-sub {
+    font-size: 12px;
+    color: var(--ml-slate-grey);
+    font-style: italic;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  .legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ml-slate-grey);
+    letter-spacing: 0.02em;
+  }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Readout */
+  .readout {
+    margin-top: 24px;
+    padding: 22px 26px;
+    background: var(--ml-light-bg);
+    border-left: 3px solid var(--ml-gold);
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    transition: opacity 0.18s ease-out;
+  }
+  .readout-item .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    margin-bottom: 6px;
+  }
+  .readout-item .value {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--ml-charcoal);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .readout-item .sub {
+    font-size: 11.5px;
+    color: var(--ml-slate-grey);
+    margin-top: 4px;
+    line-height: 1.45;
+  }
+  .readout-item .sub em {
+    font-style: italic;
+    color: var(--ml-gold);
+  }
+
+  /* Methodology note */
+  .methodology {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: #FFFDF8;
+    border: 1px solid #EFE3CC;
+    border-radius: 2px;
+    font-size: 12px;
+    color: var(--ml-slate-grey);
+    line-height: 1.55;
+  }
+  .methodology strong { color: var(--ml-charcoal); font-weight: 600; }
+
+  /* Insight cards */
+  .mechanism-section {
+    margin-top: 56px;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-header h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--ml-charcoal);
+    letter-spacing: -0.005em;
+    margin-bottom: 8px;
+  }
+  .section-header p {
+    font-size: 14px;
+    color: var(--ml-slate-grey);
+    max-width: 640px;
+  }
+  .mech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .mech-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ml-line);
+    border-radius: 2px;
+    padding: 24px 26px;
+    transition: all 0.18s ease;
+  }
+  .mech-card:hover {
+    border-color: var(--ml-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33,37,41,0.06);
+  }
+  .mech-title {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ml-charcoal);
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+  .mech-body {
+    font-size: 13px;
+    color: var(--ml-slate-grey);
+    line-height: 1.6;
+  }
+  .mech-card .quote-mark {
+    font-family: var(--serif);
+    font-size: 36px;
+    line-height: 0.6;
+    color: var(--ml-gold);
+    margin-bottom: 4px;
+  }
+
+  /* Conclusion */
+  .conclusion {
+    margin-top: 56px;
+    padding: 40px 44px;
+    background: var(--ml-charcoal);
+    color: #FFFFFF;
+    border-radius: 2px;
+  }
+  .conclusion-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 14px;
+  }
+  .conclusion-text {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .conclusion-cite {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ml-line);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--ml-slate-grey);
+    line-height: 1.6;
+  }
+  .footer .src { max-width: 820px; }
+
+  @media (max-width: 720px) {
+    .page { padding: 32px 20px 48px; }
+    .chart-card { padding: 28px 20px; }
+    .hero { grid-template-columns: 1fr; gap: 12px; }
+    .readout { grid-template-columns: 1fr; gap: 12px; }
+    .conclusion { padding: 28px 24px; }
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 28px; }
+  body.embed-mode .footer { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="eyebrow">Research Insight · From Section 3 of the SGaaS White Paper</div>
+  <h1 class="title">Episodic Engagement</h1>
+  <p class="deck">Hunziker et al. (2025) analysed <strong>471 severe share-price declines</strong> of 25% or more across Germany, Austria, and Switzerland between 2018 and 2024. The events do not arrive evenly across the year. They <em>cluster on the reporting calendar</em>. This is the empirical signature of the structural defect at the heart of conventional governance.</p>
+
+  <section class="chart-card">
+    <!-- Hero stat -->
+    <div class="hero">
+      <div class="hero-stat">
+        <div class="hero-number"><span class="pct">38.9</span>%</div>
+      </div>
+      <div class="hero-caption">of severe corporate value-destruction events occurred in just <strong>three months</strong> &mdash; September, June, and October.<br>The pattern is not coincidence. It is the calendar of disclosure.</div>
+    </div>
+
+    <!-- Toggle -->
+    <div class="mode-toggle" role="tablist">
+      <button class="toggle-btn active" data-mode="count">Event count</button>
+      <button class="toggle-btn" data-mode="share">Share of annual total</button>
+    </div>
+
+    <!-- Chart metadata (title + legend) — outside SVG so it can't clash with annotations -->
+    <div class="chart-meta">
+      <div>
+        <div class="chart-meta-title">Severe Share-Price Events by Month · DACH 2018&ndash;2024</div>
+        <div class="chart-meta-sub">Each bar shows the count of severe (&ge;25%) monthly share-price declines for that calendar month, summed across the seven-year window (n=471).</div>
+      </div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-swatch" style="background: var(--ml-gold);"></span>Published peak month</div>
+        <div class="legend-item"><span class="legend-swatch" style="background: var(--ml-line); border: 1px solid #C6CBCF;"></span>Modelled to total 471 events</div>
+      </div>
+    </div>
+
+    <!-- Bar chart SVG -->
+    <div class="heatmap-wrap">
+      <svg class="heatmap" id="heatmap" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <!-- Readout -->
+    <div class="readout" id="readout">
+      <div class="readout-item">
+        <div class="label">Selected Month</div>
+        <div class="value" id="rd-month">September</div>
+        <div class="sub" id="rd-sub">The annual peak. Q2 / H1 reporting completes in DACH markets; pre-Q3 prep begins.</div>
+      </div>
+      <div class="readout-item">
+        <div class="label">Severe Events</div>
+        <div class="value" id="rd-value">70</div>
+        <div class="sub" id="rd-share">14.9% of the 471-event annual total</div>
+      </div>
+      <div class="readout-item">
+        <div class="label">Data Provenance</div>
+        <div class="value" id="rd-prov" style="font-size:18px;">Hunziker et&nbsp;al.&nbsp;(2025)</div>
+        <div class="sub"><em id="rd-prov-sub">Published as a top-3 peak month</em></div>
+      </div>
+    </div>
+
+    <!-- Methodology -->
+    <div class="methodology">
+      <strong>Methodology.</strong> September (70 events), June (57), and October (56) are the three peaks explicitly identified by Hunziker et al. (2025) as the heaviest reporting months. The other nine monthly values shown here are modelled to total the paper&rsquo;s published <strong>471 events</strong>, distributed according to the DACH quarterly reporting cycle (Q4 / annual results in February&ndash;March; Q1 results in April&ndash;May; H1 results in August; Q3 results in November). These modelled values are clearly marked as such on hover.
+    </div>
+  </section>
+
+  <!-- Insight cards -->
+  <section class="mechanism-section">
+    <div class="section-header">
+      <h3>What the cluster proves</h3>
+      <p>Three months hold 38.9% of severe events. The remaining nine months hold the rest. This is not an artefact of when risk crystallises &mdash; it is an artefact of when risk is <em>recognised</em>.</p>
+    </div>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="mech-title">Risk does not follow the reporting calendar</div>
+        <div class="mech-body">Material risk accumulates continuously. Its <strong>public recognition</strong> arrives on a quarterly schedule. The cluster is the moment at which the market and the board learn what was already true.</div>
+      </div>
+      <div class="mech-card">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="mech-title">Boards engage on the same rhythm</div>
+        <div class="mech-body">When governance attention is indexed to reporting cycles, the board learns of material exposures <strong>at the moment the market does</strong>. There is no window of foreknowledge in which to act.</div>
+      </div>
+      <div class="mech-card">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="mech-title">Episodic engagement is structural</div>
+        <div class="mech-body">This is not a failure of effort. It is a failure of <strong>cadence</strong>. The defect is built into how boards are scheduled to consume risk information, not into how seriously they take it.</div>
+      </div>
+      <div class="mech-card">
+        <div class="quote-mark">&ldquo;</div>
+        <div class="mech-title">Continuous challenge changes the cadence</div>
+        <div class="mech-body">A retained adversarial function operates on the calendar of risk, not the calendar of disclosure. It produces governance intelligence <strong>between</strong> the reporting episodes, when the cluster is forming.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="conclusion">
+    <div class="conclusion-eyebrow">The Structural Defect</div>
+    <div class="conclusion-text">Material risk does not crystallise on the reporting rhythm; its public recognition does. Boards whose engagement with risk is indexed to the same rhythm learn of material exposures at roughly the moment the market does, with no advantage of foreknowledge and no window in which to act.</div>
+    <div class="conclusion-cite">From <em>Strategic Governance as a Service</em>, Section 3 &mdash; Marentis Labs, 2026.</div>
+  </section>
+
+  <footer class="footer">
+    <div class="src">
+      <strong style="color:var(--ml-charcoal)">Source.</strong> Hunziker, S., et&nbsp;al. (2025). Analysis of 471 severe monthly share-price declines (&ge;25%) across the DACH region (Germany, Austria, Switzerland), 2018&ndash;2024. The three heaviest months identified by the authors are September (70 events), June (57), and October (56). Other monthly values shown here are modelled to total the published 471-event aggregate, distributed according to the DACH quarterly reporting cycle, and labelled on hover as estimates rather than published figures. Reporting-calendar context based on standard DACH disclosure timing for Q1, H1, Q3, and annual results.
+    </div>
+    <div>&copy; 2026 Marentis Labs Ltd<br>marentislabs.com</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- DATA ----------
+  // Three monthly values published by Hunziker et al. (2025): Sep 70, Jun 57, Oct 56.
+  // Other nine values modelled to total the published 471-event aggregate,
+  // distributed according to standard DACH reporting cadence.
+  const months = [
+    { name: 'January',   short: 'Jan', count: 22, published: false, note: 'Post-holiday lull; minimal disclosure activity.' },
+    { name: 'February',  short: 'Feb', count: 35, published: false, note: 'Q4 / annual results disclosure begins.' },
+    { name: 'March',     short: 'Mar', count: 38, published: false, note: 'Annual reports finalised; AGM season approaches.' },
+    { name: 'April',     short: 'Apr', count: 26, published: false, note: 'Q1 reporting season opens.' },
+    { name: 'May',       short: 'May', count: 33, published: false, note: 'Q1 results disclosed across DACH markets.' },
+    { name: 'June',      short: 'Jun', count: 57, published: true,  note: 'H1 reporting preparation peak. Material risks surface before publication.' },
+    { name: 'July',      short: 'Jul', count: 27, published: false, note: 'Mid-summer; pre-results lull.' },
+    { name: 'August',    short: 'Aug', count: 35, published: false, note: 'H1 results begin to disclose.' },
+    { name: 'September', short: 'Sep', count: 70, published: true,  note: 'The annual peak. Q2 / H1 reporting completes; pre-Q3 prep begins.' },
+    { name: 'October',   short: 'Oct', count: 56, published: true,  note: 'Q3 reporting season opens; surprises crystallise.' },
+    { name: 'November',  short: 'Nov', count: 38, published: false, note: 'Q3 results disclosed; year-end positioning begins.' },
+    { name: 'December',  short: 'Dec', count: 34, published: false, note: 'Year-end positioning; reduced disclosure activity.' }
+  ];
+
+  const TOTAL = months.reduce((a, m) => a + m.count, 0); // 471
+  const TOP3_PEAK = months.filter(m => m.published).reduce((a, m) => a + m.count, 0); // 183
+  const TOP3_PCT = (TOP3_PEAK / TOTAL) * 100; // 38.85... ≈ 38.9%
+  const minCount = Math.min(...months.map(m => m.count));
+  const maxCount = Math.max(...months.map(m => m.count));
+
+  // Peak / non-peak fills — no colour gradient needed for a bar chart;
+  // the bar HEIGHT carries the magnitude information, and a flat two-tone fill
+  // (gold for published peaks, neutral grey for modelled) keeps labels legible.
+  const FILL_PEAK = 'var(--ml-gold)';
+  const FILL_PEAK_HOVER = '#B89867';
+  const FILL_MODELLED = 'var(--ml-line)';
+  const FILL_MODELLED_HOVER = '#CDD2D7';
+
+  // ---------- ELEMENTS ----------
+  const svg = document.getElementById('heatmap');
+  const rdMonth = document.getElementById('rd-month');
+  const rdValue = document.getElementById('rd-value');
+  const rdShare = document.getElementById('rd-share');
+  const rdSub = document.getElementById('rd-sub');
+  const rdProv = document.getElementById('rd-prov');
+  const rdProvSub = document.getElementById('rd-prov-sub');
+  const readoutEl = document.getElementById('readout');
+  const toggleBtns = document.querySelectorAll('.toggle-btn');
+  const fmt = new Intl.NumberFormat('en-GB');
+  const fmt1 = new Intl.NumberFormat('en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  const elNS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(elNS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  // ---------- HERO COUNT-UP ----------
+  const heroPctEl = document.querySelector('.hero-number .pct');
+  function animateNumber(from, to, duration, target, formatter) {
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const v = from + (to - from) * easeOutCubic(t);
+      target.textContent = formatter(v);
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---------- BAR CHART RENDER ----------
+  // Layout: 12 vertical bars across the SVG viewBox. Y-axis with gridlines.
+  // Month names below each bar; quarterly bands below the month labels.
+  const VB_W = 1200, VB_H = 540;
+  const padL = 70, padR = 30, padTop = 70, padBottom = 130;
+  const chartW = VB_W - padL - padR;       // 1100
+  const chartH = VB_H - padTop - padBottom; // 340
+  const chartTopY = padTop;
+  const chartBaseY = padTop + chartH;       // 410
+  const barGap = 18;
+  const barW = (chartW - barGap * 11) / 12; // ~74px
+
+  // Y-scales for the two modes
+  function yMaxFor(mode) {
+    if (mode === 'share') return 16; // %, ~14.86% max → headroom to 16
+    return 80;                       // count, max 70 → headroom to 80
+  }
+  function yScale(v, mode) {
+    return chartBaseY - (v / yMaxFor(mode)) * chartH;
+  }
+  function yTicksFor(mode) {
+    return mode === 'share' ? [0, 4, 8, 12, 16] : [0, 20, 40, 60, 80];
+  }
+
+  const bars = [];
+  let currentMode = 'count';
+  let selectedIdx = 8; // start on September
+
+  function valueForMode(m, mode) {
+    return mode === 'share' ? (m.count / TOTAL) * 100 : m.count;
+  }
+  function formatValue(v, mode) {
+    return mode === 'share' ? fmt1.format(v) + '%' : String(Math.round(v));
+  }
+
+  function renderBars(animate) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    bars.length = 0;
+    const mode = currentMode;
+
+    // ----- Y-axis gridlines and tick labels -----
+    yTicksFor(mode).forEach(v => {
+      const y = yScale(v, mode);
+      el('line', {
+        x1: padL, x2: padL + chartW,
+        y1: y, y2: y,
+        stroke: v === 0 ? 'var(--ml-charcoal)' : 'var(--ml-line)',
+        'stroke-width': v === 0 ? 1 : 1,
+        'stroke-dasharray': v === 0 ? '0' : '2 4',
+        opacity: v === 0 ? 1 : 0.65
+      }, svg);
+      el('text', {
+        x: padL - 12, y: y + 4,
+        'text-anchor': 'end',
+        'font-size': 11,
+        fill: 'var(--ml-slate-grey)',
+        class: 'axis-label'
+      }, svg).textContent = mode === 'share' ? v + '%' : v;
+    });
+
+    // Y-axis title
+    el('text', {
+      x: padL - 12, y: chartTopY - 14,
+      'text-anchor': 'end',
+      'font-size': 10, 'font-weight': 600,
+      'letter-spacing': '0.16em',
+      'text-transform': 'uppercase',
+      fill: 'var(--ml-slate-grey)',
+      class: 'axis-title'
+    }, svg).textContent = mode === 'share' ? '% of yr' : 'Events';
+
+    // ----- Bars -----
+    months.forEach((m, i) => {
+      const x = padL + i * (barW + barGap);
+      const isPeak = m.published;
+      const value = valueForMode(m, mode);
+      const finalTopY = yScale(value, mode);
+      const finalH = chartBaseY - finalTopY;
+      const fill = isPeak ? FILL_PEAK : FILL_MODELLED;
+      const stroke = isPeak ? 'transparent' : '#C6CBCF';
+
+      const g = el('g', {
+        class: 'bar-group' + (isPeak ? ' peak' : '') + (i === selectedIdx ? ' active' : ''),
+        'data-idx': i
+      }, svg);
+
+      // Generous hover hit-area (full column height) so labels also receive hover
+      el('rect', {
+        x: x - 2, y: chartTopY,
+        width: barW + 4, height: chartH + 64,
+        fill: 'transparent'
+      }, g);
+
+      // The bar itself — starts at baseline (h=0) when animating, expands to final height
+      const rect = el('rect', {
+        x: x,
+        y: animate ? chartBaseY : finalTopY,
+        width: barW,
+        height: animate ? 0 : finalH,
+        fill: fill,
+        stroke: stroke,
+        'stroke-width': 1,
+        rx: 2,
+        class: 'bar-rect'
+      }, g);
+
+      // Highlight ring for selected bar
+      if (i === selectedIdx) {
+        rect.setAttribute('stroke', 'var(--ml-charcoal)');
+        rect.setAttribute('stroke-width', 2);
+      }
+
+      // Value label above the bar
+      const valueText = el('text', {
+        x: x + barW / 2,
+        y: animate ? chartBaseY - 4 : finalTopY - 10,
+        'text-anchor': 'middle',
+        'font-size': 17,
+        class: 'bar-value',
+        opacity: animate ? 0 : 1
+      }, g);
+      valueText.textContent = formatValue(value, mode);
+
+      // PEAK callout above the value (only for published peaks)
+      let peakText = null;
+      if (isPeak) {
+        peakText = el('text', {
+          x: x + barW / 2,
+          y: animate ? chartBaseY - 24 : finalTopY - 28,
+          'text-anchor': 'middle',
+          'font-size': 9.5,
+          class: 'bar-peak',
+          opacity: animate ? 0 : 1
+        }, g);
+        peakText.textContent = 'PEAK';
+      }
+
+      // Month abbreviation below the baseline
+      el('text', {
+        x: x + barW / 2,
+        y: chartBaseY + 22,
+        'text-anchor': 'middle',
+        'font-size': 12,
+        class: 'bar-label',
+        fill: isPeak ? 'var(--ml-charcoal)' : 'var(--ml-slate-grey)'
+      }, g).textContent = m.short.toUpperCase();
+
+      // Hover / click handlers
+      g.addEventListener('mouseenter', () => selectMonth(i));
+      g.addEventListener('click', () => selectMonth(i));
+
+      bars.push({ g, rect, valueText, peakText, x, barW, finalTopY, finalH, isPeak });
+    });
+
+    // ----- Quarterly bands below the month labels -----
+    const bandY = chartBaseY + 42;
+    const bandH = 22;
+    const quarters = [
+      { label: 'Q1', monthsRange: [0, 2] },
+      { label: 'Q2', monthsRange: [3, 5] },
+      { label: 'Q3', monthsRange: [6, 8] },
+      { label: 'Q4', monthsRange: [9, 11] }
+    ];
+    quarters.forEach((q, qi) => {
+      const x1 = padL + q.monthsRange[0] * (barW + barGap) - 4;
+      const x2 = padL + q.monthsRange[1] * (barW + barGap) + barW + 4;
+      el('rect', {
+        x: x1, y: bandY, width: x2 - x1, height: bandH,
+        fill: qi % 2 === 0 ? 'var(--ml-light-bg)' : '#F1F3F5',
+        stroke: 'var(--ml-line)', 'stroke-width': 1, rx: 2
+      }, svg);
+      el('text', {
+        x: (x1 + x2) / 2, y: bandY + bandH / 2 + 4,
+        'text-anchor': 'middle',
+        'font-size': 11.5, 'font-weight': 600,
+        'letter-spacing': '0.16em',
+        fill: 'var(--ml-slate-grey)'
+      }, svg).textContent = q.label;
+    });
+
+    // Quarterly band caption
+    el('text', {
+      x: padL, y: bandY + bandH + 22,
+      'font-size': 10.5, 'letter-spacing': '0.16em',
+      'font-weight': 600,
+      fill: 'var(--ml-slate-grey)',
+      class: 'axis-title'
+    }, svg).textContent = 'DACH REPORTING QUARTERS';
+    el('text', {
+      x: padL, y: bandY + bandH + 40,
+      'font-size': 11,
+      fill: 'var(--ml-slate-grey)',
+      'font-style': 'italic'
+    }, svg).textContent = 'Each peak month sits at the close of a reporting quarter, when undisclosed risk crystallises into public information.';
+
+    // ----- Entry animation: bars grow from baseline, staggered -----
+    if (animate) {
+      bars.forEach((b, i) => {
+        const delay = 80 + i * 50;
+        setTimeout(() => {
+          // Use rAF tween for smooth height/y/opacity transition
+          tweenBar(b, 540);
+        }, delay);
+      });
+    }
+  }
+
+  function tweenBar(b, duration) {
+    const startY = parseFloat(b.rect.getAttribute('y'));
+    const startH = parseFloat(b.rect.getAttribute('height'));
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const e = easeOutCubic(t);
+      const y = startY + (b.finalTopY - startY) * e;
+      const h = startH + (b.finalH - startH) * e;
+      b.rect.setAttribute('y', y);
+      b.rect.setAttribute('height', h);
+      b.valueText.setAttribute('y', y - 10);
+      b.valueText.setAttribute('opacity', e);
+      if (b.peakText) {
+        b.peakText.setAttribute('y', y - 28);
+        b.peakText.setAttribute('opacity', e);
+      }
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // Used on toggle change: animate bars from current values to new mode's values
+  function animateBarsToCurrentMode(duration) {
+    const mode = currentMode;
+    bars.forEach((b, i) => {
+      const m = months[i];
+      const startY = parseFloat(b.rect.getAttribute('y'));
+      const startH = parseFloat(b.rect.getAttribute('height'));
+      const newValue = valueForMode(m, mode);
+      const newTopY = yScale(newValue, mode);
+      const newH = chartBaseY - newTopY;
+      b.finalTopY = newTopY;
+      b.finalH = newH;
+      // Also retarget the value label text
+      const startTextOpacity = parseFloat(b.valueText.getAttribute('opacity') || 1);
+      const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+      const startTime = performance.now();
+      // Swap the text at the midpoint so the label changes when the bar is near its new height
+      let textSwapped = false;
+      function step(now) {
+        const t = Math.min(1, (now - startTime) / duration);
+        const e = easeOutCubic(t);
+        const y = startY + (newTopY - startY) * e;
+        const h = startH + (newH - startH) * e;
+        b.rect.setAttribute('y', y);
+        b.rect.setAttribute('height', h);
+        b.valueText.setAttribute('y', y - 10);
+        if (b.peakText) b.peakText.setAttribute('y', y - 28);
+        if (t > 0.5 && !textSwapped) {
+          b.valueText.textContent = formatValue(newValue, mode);
+          textSwapped = true;
+        }
+        if (t < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  // ---------- READOUT ----------
+  function selectMonth(idx) {
+    selectedIdx = idx;
+    const m = months[idx];
+
+    // Brief fade so the swap is smooth
+    readoutEl.style.opacity = '0';
+    setTimeout(() => {
+      rdMonth.textContent = m.name;
+      if (currentMode === 'share') {
+        rdValue.textContent = fmt1.format((m.count / TOTAL) * 100) + '%';
+        rdShare.textContent = m.count + ' events of the 471-event total';
+      } else {
+        rdValue.textContent = String(m.count);
+        rdShare.textContent = fmt1.format((m.count / TOTAL) * 100) + '% of the 471-event annual total';
+      }
+      rdSub.textContent = m.note;
+      if (m.published) {
+        rdProv.textContent = 'Hunziker et al. (2025)';
+        rdProvSub.textContent = 'Published top-3 peak month';
+      } else {
+        rdProv.textContent = 'Modelled estimate';
+        rdProvSub.textContent = 'Not individually published — modelled to total 471 events';
+      }
+      readoutEl.style.opacity = '1';
+    }, 110);
+
+    bars.forEach((b, i) => {
+      const isActive = i === idx;
+      const isPeak = months[i].published;
+      b.g.classList.toggle('active', isActive);
+      if (isActive) {
+        b.rect.setAttribute('stroke', 'var(--ml-charcoal)');
+        b.rect.setAttribute('stroke-width', 2);
+      } else {
+        b.rect.setAttribute('stroke', isPeak ? 'transparent' : '#C6CBCF');
+        b.rect.setAttribute('stroke-width', 1);
+      }
+    });
+  }
+
+  toggleBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+      toggleBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentMode = btn.dataset.mode;
+      renderBars(true);
+      setTimeout(() => selectMonth(selectedIdx), 50);
+    });
+  });
+
+  renderBars(true);
+  animateNumber(0, TOP3_PCT, 1100, heroPctEl, v => fmt1.format(v));
+  setTimeout(() => selectMonth(8), 700);
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          // Measure body content only. documentElement.scrollHeight is floored
+          // to the iframe's viewport height, which would feed back into a
+          // resize loop once the parent applied the height.
+          var rect = document.body.getBoundingClientRect();
+          var h = Math.max(document.body.scrollHeight, Math.ceil(rect.height));
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

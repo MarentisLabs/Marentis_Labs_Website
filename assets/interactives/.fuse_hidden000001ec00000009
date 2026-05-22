@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wealth Concentration | Marentis Labs</title>
+<meta name="description" content="0.7% of US public companies created more than 75% of all shareholder wealth. Mauboussin and Callahan (2026), 24,000 companies, 1926–2025. The empirical case for governance that extends competitive advantage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #A98C5A;
+    --ml-gold-pale: #EFE3CC;
+    --ml-slate-blue: #4A6572;
+    --ml-deep-blue: #2E5266;
+    --ml-light-bg: #F8F9FA;
+    --ml-line: #DEE2E6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ml-light-bg); color: var(--ml-charcoal); font-family: var(--sans); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 48px 32px 64px; }
+
+  .brand-bar { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ml-line); padding-bottom: 18px; margin-bottom: 36px; }
+  .brand-mark { font-family: var(--serif); font-weight: 600; font-size: 18px; letter-spacing: 0.04em; }
+  .brand-mark .accent { color: var(--ml-gold); }
+  .brand-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ml-slate-grey); }
+
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  h1.title { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 18px; }
+  h1.title em { font-style: italic; color: var(--ml-deep-blue); font-weight: 500; }
+  .deck { font-weight: 300; font-size: clamp(16px, 1.6vw, 19px); color: var(--ml-slate-grey); max-width: 760px; line-height: 1.55; margin-bottom: 44px; }
+
+  .chart-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 4px; padding: 40px 44px 36px; box-shadow: 0 1px 2px rgba(33,37,41,0.04); }
+
+  /* Hero stat grid */
+  .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-bottom: 32px; border-bottom: 1px solid var(--ml-line); margin-bottom: 32px; }
+  .stat { text-align: left; }
+  .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ml-slate-grey); margin-bottom: 8px; }
+  .stat-value { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 4.2vw, 52px); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .stat-value.is-gold { color: var(--ml-gold); font-style: italic; }
+  .stat-value.is-charcoal { color: var(--ml-charcoal); }
+  .stat-sub { font-size: 12px; color: var(--ml-slate-grey); margin-top: 6px; line-height: 1.45; }
+
+  /* Sankey */
+  .sankey-wrap { width: 100%; aspect-ratio: 12 / 5; min-height: 460px; margin-bottom: 4px; }
+  svg.sankey { width: 100%; height: 100%; overflow: visible; display: block; }
+  svg text { font-family: var(--sans); }
+  .node-rect { cursor: pointer; transition: filter 0.18s ease-out; }
+  .node-rect:hover { filter: brightness(1.06); }
+  .node-rect.active { stroke: var(--ml-charcoal); stroke-width: 2; }
+  .flow-path { cursor: pointer; transition: opacity 0.25s ease-out; }
+  .flow-path:hover { opacity: 0.65 !important; }
+  .axis-title { font-weight: 600; letter-spacing: 0.18em; fill: var(--ml-slate-grey); pointer-events: none; }
+  .node-label, .node-sub, .node-callout { pointer-events: none; }
+
+  /* Tier detail */
+  .tier-detail { margin-top: 28px; padding: 26px 30px; background: var(--ml-light-bg); border-left: 3px solid var(--ml-gold); border-radius: 2px; transition: opacity 0.2s ease-out; }
+  .td-meta { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 6px; }
+  .td-title { font-family: var(--serif); font-weight: 600; font-size: 24px; color: var(--ml-charcoal); margin-bottom: 10px; line-height: 1.25; }
+  .td-body { font-size: 14.5px; color: var(--ml-slate-grey); line-height: 1.6; margin-bottom: 14px; }
+  .td-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .td-data { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .td-data-item { background: #FFFFFF; border: 1px solid var(--ml-line); padding: 14px 16px; border-radius: 2px; }
+  .td-data-label { font-size: 11px; color: var(--ml-slate-grey); line-height: 1.4; margin-bottom: 4px; }
+  .td-data-value { font-family: var(--serif); font-weight: 600; font-size: 19px; color: var(--ml-charcoal); }
+
+  /* Context */
+  .cap-section { margin-top: 56px; padding: 38px 42px; background: #FFFFFF; border: 1px solid var(--ml-line); border-top: 3px solid var(--ml-gold); border-radius: 2px; }
+  .cap-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 12px; }
+  .cap-title { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.6vw, 32px); color: var(--ml-charcoal); margin-bottom: 14px; line-height: 1.2; letter-spacing: -0.005em; }
+  .cap-body { font-size: 14.5px; color: var(--ml-slate-grey); line-height: 1.65; max-width: 880px; }
+  .cap-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .cap-body em { font-style: italic; color: var(--ml-deep-blue); }
+
+  /* Insight cards */
+  .mechanism-section { margin-top: 56px; }
+  .section-header { margin-bottom: 28px; }
+  .section-header h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; color: var(--ml-charcoal); letter-spacing: -0.005em; margin-bottom: 8px; }
+  .section-header p { font-size: 14px; color: var(--ml-slate-grey); max-width: 680px; }
+  .mech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .mech-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 2px; padding: 22px 24px; }
+  .mech-num { font-family: var(--serif); font-size: 26px; color: var(--ml-gold); font-weight: 500; line-height: 1; margin-bottom: 10px; }
+  .mech-title { font-weight: 600; font-size: 14px; color: var(--ml-charcoal); margin-bottom: 8px; }
+  .mech-body { font-size: 13px; color: var(--ml-slate-grey); line-height: 1.55; }
+  .mech-body strong { color: var(--ml-charcoal); font-weight: 600; }
+
+  /* Conclusion */
+  .conclusion { margin-top: 56px; padding: 40px 44px; background: var(--ml-charcoal); color: #FFFFFF; border-radius: 2px; }
+  .conclusion-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  .conclusion-text { font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; margin-bottom: 12px; letter-spacing: -0.005em; }
+  .conclusion-cite { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+  /* Footer */
+  .footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--ml-line); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--ml-slate-grey); line-height: 1.6; }
+  .footer .src { max-width: 820px; }
+
+  @media (max-width: 720px) {
+    .page { padding: 32px 20px 48px; }
+    .chart-card { padding: 28px 20px; }
+    .hero-grid { grid-template-columns: 1fr 1fr; }
+    .cap-section { padding: 26px 22px; }
+    .conclusion { padding: 28px 24px; }
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 28px; }
+  body.embed-mode .footer { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="eyebrow">Research Insight · From Sections 11 &amp; 14 of the SGaaS White Paper</div>
+  <h1 class="title">The Wealth Concentration</h1>
+  <p class="deck">Mauboussin and Callahan (2026) analysed nearly <strong>24,000 US public companies</strong> across a century. The result is a distribution most boards do not want to see: <em>seventy percent</em> failed to justify their IPO price. <em>Less than one percent</em> created the bulk of the wealth. The shape of that asymmetry is what governance is for.</p>
+
+  <section class="chart-card">
+    <!-- Hero stat grid -->
+    <div class="hero-grid">
+      <div class="stat">
+        <div class="stat-label">Companies analysed</div>
+        <div class="stat-value is-charcoal" id="stat-companies">0</div>
+        <div class="stat-sub">US public companies, 1926&ndash;2025</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Failed to justify IPO</div>
+        <div class="stat-value is-charcoal"><span id="stat-failed">0</span>%</div>
+        <div class="stat-sub">lifetime earnings below the IPO price they were sold at</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Created 75%+ of all wealth</div>
+        <div class="stat-value is-gold"><span id="stat-top">0</span>%</div>
+        <div class="stat-sub">approximately 168 companies out of 24,000</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Aggregate shareholder wealth</div>
+        <div class="stat-value is-charcoal">$<span id="stat-wealth">0</span>T</div>
+        <div class="stat-sub">total US public company value creation, 1926&ndash;2025</div>
+      </div>
+    </div>
+
+    <!-- Sankey-style twin bars -->
+    <div class="sankey-wrap">
+      <svg class="sankey" id="sankey" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <!-- Tier detail panel -->
+    <div class="tier-detail" id="tier-detail">
+      <div class="td-meta" id="td-meta">The 0.7% &middot; ~168 companies</div>
+      <div class="td-title" id="td-title">The companies that account for three-quarters of a century of wealth creation</div>
+      <div class="td-body" id="td-body">A mere <strong>0.7%</strong> of all listed US companies created more than <strong>75%</strong> of the $91 trillion in aggregate shareholder wealth produced over the 1926&ndash;2025 window. Around <strong>168 firms</strong> account for roughly <strong>$68 trillion</strong> of value, an average of <strong>~$406 billion</strong> each.</div>
+      <div class="td-data" id="td-data"></div>
+    </div>
+  </section>
+
+  <!-- CAP framework context -->
+  <section class="cap-section">
+    <div class="cap-eyebrow">Why the 0.7% is the 0.7%</div>
+    <div class="cap-title">The 0.7% is not a sampling oddity. It is the population of firms that sustained a long competitive advantage period.</div>
+    <div class="cap-body">
+      Mauboussin and Callahan&rsquo;s evidence is direct. Companies that sustained <strong>top-quintile ROIC for ten years or more</strong> did so primarily through <em>differentiation</em>, not cost leadership; their NOPAT margins ran at <strong>2.8&times; the universe median</strong>. Default trajectory is value erosion: ROIC regresses toward the sector mean at an <strong>average annual fade rate of approximately one-fifth</strong>. The question is how long a company can resist that gravitational pull. <strong>Competitive advantage period</strong> (CAP) is the measure of that resistance, and terminal value &mdash; which represents <strong>70%+ of firm value</strong> in standard DCF &mdash; is a direct function of it. Governance challenge is one of the mechanisms that determines the answer, because the assumptions that accelerate the fade (unchallenged strategy, unexamined competitive position, unquestioned capital allocation) are <em>precisely the assumptions an adversarial function is designed to surface</em>.
+    </div>
+  </section>
+
+  <!-- Insight cards -->
+  <section class="mechanism-section">
+    <div class="section-header">
+      <h3>What this means for the board</h3>
+      <p>The wealth distribution is not random. It is the cumulative outcome of capital-allocation decisions made under variable governance quality, year after year.</p>
+    </div>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <div class="mech-num">01</div>
+        <div class="mech-title">Default is value erosion</div>
+        <div class="mech-body">For 99.3% of public companies, the trajectory is regression to the sector mean. Governance challenge is what resists that gravitational pull <strong>one capital-allocation decision at a time</strong>.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">02</div>
+        <div class="mech-title">CAP is the dominant variable</div>
+        <div class="mech-body">Terminal value &mdash; 70%+ of firm value in standard DCF &mdash; is a direct function of CAP duration. <strong>Every additional year of CAP</strong> compounds at the spread the firm sustains.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">03</div>
+        <div class="mech-title">Differentiation, not cost leadership</div>
+        <div class="mech-body">Top-quintile firms achieved their position through differentiation, with NOPAT margins <strong>2.8&times; the universe median</strong>. Strategic clarity matters more than operational efficiency at the long horizon.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">04</div>
+        <div class="mech-title">SGaaS targets the fade rate</div>
+        <div class="mech-body">Adversarial governance challenge interrogates the assumptions that accelerate ROIC fade. The economic argument for Embedded and Pre-Exit tiers is measured against <strong>CAP-extension value</strong>, not loss avoidance.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <div class="conclusion-eyebrow">The Economic Logic</div>
+    <div class="conclusion-text">The default trajectory for the public company is value erosion. The 0.7% that resists that trajectory does so through sustained competitive advantage, and competitive advantage is sustained through capital-allocation discipline and strategic falsification. Governance is the architecture inside which both happen &mdash; or do not.</div>
+    <div class="conclusion-cite">From <em>Strategic Governance as a Service</em>, Sections 11 &amp; 14 &mdash; Marentis Labs, 2026.</div>
+  </section>
+
+  <footer class="footer">
+    <div class="src">
+      <strong style="color:var(--ml-charcoal)">Sources.</strong>
+      Mauboussin, M.J. &amp; Callahan, D. (2026). <em>Competitive Advantage Period: The Neglected Value Driver.</em> Morgan Stanley Counterpoint Global Insights. Analysis of approximately 24,000 US public companies, 1926&ndash;2025; aggregate shareholder wealth of $91 trillion; 70% lifetime earnings insufficient to justify IPO price; 0.7% accounting for &gt;75% of aggregate wealth; 5-year ROIC fade rates 0.10&ndash;0.30 (average 0.21); top-quintile ROIC sustained 10+ years via NOPAT margins 2.8&times; universe median. Terminal-value share of standard DCF and competitive-advantage-period framing per the same source.
+    </div>
+    <div>&copy; 2026 Marentis Labs Ltd<br>marentislabs.com</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- DATA ----------
+  // Two tiers for the headline comparison:
+  //  - Top 0.7% of companies → ~75% of aggregate wealth
+  //  - Other 99.3% of companies → ~25% of aggregate wealth
+  // The 70% IPO-failure rate is a sub-statistic of the 99.3% non-top tier;
+  // we surface it in the hero stats and detail panel but not on the bars.
+  const tiers = [
+    {
+      id: 'rest',
+      label: 'The other 99.3%',
+      companyPct: 99.3,
+      wealthPct: 25,
+      companyColor: 'var(--ml-slate-blue)',
+      wealthColor: 'var(--ml-slate-blue)',
+      tdMeta: 'The other 99.3% · ~23,832 companies',
+      tdTitle: 'The default trajectory: regression to the mean',
+      tdBody: 'Out of nearly <strong>24,000</strong> US public companies analysed, <strong>99.3%</strong> account for only <strong>~25%</strong> of the $91 trillion in aggregate shareholder wealth. Within this tier, <strong>70%</strong> produced lifetime earnings <em>insufficient to justify their IPO price</em> &mdash; they were sold to investors at a higher price than the company subsequently earned. Average value created per company in this tier: <strong>roughly $1 billion</strong> over the 1926&ndash;2025 window.',
+      data: [
+        { k: 'Companies', v: '~23,832' },
+        { k: 'Failed to justify IPO', v: '70% of all companies' },
+        { k: 'Aggregate wealth created', v: '~$22.75T' },
+        { k: 'Average per company', v: '~$1B' },
+        { k: 'ROIC trajectory', v: 'Regresses to mean' },
+        { k: 'Average annual fade rate', v: '0.21' }
+      ]
+    },
+    {
+      id: 'top',
+      label: 'The 0.7%',
+      companyPct: 0.7,
+      wealthPct: 75,
+      companyColor: 'var(--ml-gold)',
+      wealthColor: 'var(--ml-gold)',
+      tdMeta: 'The 0.7% · ~168 companies',
+      tdTitle: 'The companies that account for three-quarters of a century of wealth creation',
+      tdBody: 'A mere <strong>0.7%</strong> of all listed US companies &mdash; roughly <strong>168 firms</strong> &mdash; created more than <strong>75%</strong> of the $91 trillion in aggregate shareholder wealth produced over the 1926&ndash;2025 window. That works out to approximately <strong>$68 trillion</strong> of value, an average of <strong>~$406 billion</strong> per company. The mechanism: sustained top-quintile ROIC for ten years or more, achieved primarily through <em>differentiation</em> at NOPAT margins <strong>2.8&times; the universe median</strong>.',
+      data: [
+        { k: 'Companies', v: '~168' },
+        { k: 'Share of aggregate wealth', v: '75%+' },
+        { k: 'Aggregate wealth created', v: '~$68T' },
+        { k: 'Average per company', v: '~$406B' },
+        { k: 'Mechanism', v: 'Differentiation, not cost' },
+        { k: 'NOPAT margin vs median', v: '2.8×' }
+      ]
+    }
+  ];
+
+  // ---------- ELEMENTS ----------
+  const svg = document.getElementById('sankey');
+  const tierDetail = document.getElementById('tier-detail');
+  const tdMeta = document.getElementById('td-meta');
+  const tdTitle = document.getElementById('td-title');
+  const tdBody = document.getElementById('td-body');
+  const tdData = document.getElementById('td-data');
+  const statCompanies = document.getElementById('stat-companies');
+  const statFailed = document.getElementById('stat-failed');
+  const statTop = document.getElementById('stat-top');
+  const statWealth = document.getElementById('stat-wealth');
+  const fmt = new Intl.NumberFormat('en-GB');
+  const fmt1 = new Intl.NumberFormat('en-GB', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+  // ---------- HELPERS ----------
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  function tween(from, to, duration, onUpdate, ease) {
+    const e = ease || easeOutCubic;
+    const t0 = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - t0) / duration);
+      onUpdate(from + (to - from) * e(t));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---------- LAYOUT ----------
+  // Proper horizontal Sankey: companies (left, sized by count) flow → wealth (right, sized by $).
+  // Flow band widths morph from the source quantity to the destination quantity, so the bands
+  // taper or fan dramatically — that's the visual expression of the asymmetry.
+  const VB_W = 1200, VB_H = 500;
+  const padTop = 70, padBottom = 80;
+  const padX = 80;
+  const nodeW = 18;                         // node "wall" width on each side
+  const colGap = 240;                       // padding inside columns for labels
+  const usableH = VB_H - padTop - padBottom; // 350
+  const nodeGap = 18;                        // visual gap between stacked nodes
+
+  // Column x positions
+  const leftNodeX1 = padX + colGap - nodeW;       // left node's left edge
+  const leftNodeX2 = padX + colGap;               // left node's right edge (flow starts here)
+  const rightNodeX1 = VB_W - padX - colGap;       // right node's left edge (flow ends here)
+  const rightNodeX2 = VB_W - padX - colGap + nodeW;
+
+  // ---------- RENDER ----------
+  let selectedIdx = 1; // start on "The 0.7%" — the headline
+
+  function renderSankey() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    // ----- Column heading labels -----
+    el('text', {
+      x: leftNodeX2, y: padTop - 32,
+      'text-anchor': 'end',
+      'font-size': 11, 'font-weight': 600, 'letter-spacing': '0.18em',
+      fill: 'var(--ml-slate-grey)', class: 'axis-title'
+    }, svg).textContent = 'COMPANIES · n = 24,000';
+    el('text', {
+      x: leftNodeX2, y: padTop - 14,
+      'text-anchor': 'end',
+      'font-size': 10, fill: 'var(--ml-slate-grey)', 'font-style': 'italic',
+      class: 'axis-title'
+    }, svg).textContent = 'sized by population';
+
+    el('text', {
+      x: rightNodeX1, y: padTop - 32,
+      'text-anchor': 'start',
+      'font-size': 11, 'font-weight': 600, 'letter-spacing': '0.18em',
+      fill: 'var(--ml-slate-grey)', class: 'axis-title'
+    }, svg).textContent = 'AGGREGATE WEALTH · $91T';
+    el('text', {
+      x: rightNodeX1, y: padTop - 14,
+      'text-anchor': 'start',
+      'font-size': 10, fill: 'var(--ml-slate-grey)', 'font-style': 'italic',
+      class: 'axis-title'
+    }, svg).textContent = 'sized by $ created';
+
+    // ----- Node heights -----
+    // Companies (left): proportional to population. The 0.7% node has a 10px minimum
+    // so it remains selectable; the visual asymmetry is otherwise preserved.
+    const totalLeftH = usableH - nodeGap;
+    const aHIdeal = totalLeftH * (tiers[0].companyPct / 100);
+    const bHIdeal = totalLeftH * (tiers[1].companyPct / 100);
+    const bH = Math.max(10, bHIdeal);                  // minimum visible
+    const aH = totalLeftH - bH;                        // re-allocate so column fits
+    // Wealth (right): proportional to $ created
+    const totalRightH = usableH - nodeGap;
+    const dH = totalRightH * (tiers[1].wealthPct / 100); // 75% wealth (gold, top)
+    const cH = totalRightH * (tiers[0].wealthPct / 100); // 25% wealth (slate, bottom)
+
+    // Y positions
+    const aY = padTop;
+    const aYEnd = aY + aH;
+    const bY = aYEnd + nodeGap;
+    const bYEnd = bY + bH;
+    const dY = padTop;
+    const dYEnd = dY + dH;
+    const cY = dYEnd + nodeGap;
+    const cYEnd = cY + cH;
+
+    // ----- Flow bands (drawn first so node walls sit on top) -----
+    // Flow B → D: 0.7% companies (tiny source) explode out to 75% wealth (huge dest)
+    drawFlow(leftNodeX2, bY, bYEnd, rightNodeX1, dY, dYEnd, 'var(--ml-gold)', 0.42, 1);
+    // Flow A → C: 99.3% companies (huge source) narrow to 25% wealth (modest dest)
+    drawFlow(leftNodeX2, aY, aYEnd, rightNodeX1, cY, cYEnd, 'var(--ml-slate-blue)', 0.32, 0);
+
+    // ----- Left column nodes (Companies) -----
+    // Node A — 99.3%
+    const nodeA = el('rect', {
+      x: leftNodeX1, y: aY, width: nodeW, height: aH, rx: 2,
+      fill: 'var(--ml-slate-blue)',
+      class: 'node-rect' + (selectedIdx === 0 ? ' active' : ''),
+      'data-tier': 0
+    }, svg);
+    nodeA.addEventListener('click', () => selectTier(0));
+    nodeA.addEventListener('mouseenter', () => selectTier(0));
+    el('text', {
+      x: leftNodeX1 - 14, y: aY + aH / 2 - 6,
+      'text-anchor': 'end',
+      'font-family': 'var(--serif)', 'font-size': 28, 'font-weight': 600,
+      fill: 'var(--ml-charcoal)', class: 'node-label'
+    }, svg).textContent = '99.3%';
+    el('text', {
+      x: leftNodeX1 - 14, y: aY + aH / 2 + 14,
+      'text-anchor': 'end',
+      'font-size': 12, fill: 'var(--ml-slate-grey)', class: 'node-sub'
+    }, svg).textContent = 'of companies';
+    el('text', {
+      x: leftNodeX1 - 14, y: aY + aH / 2 + 30,
+      'text-anchor': 'end',
+      'font-size': 11, fill: 'var(--ml-slate-grey)', 'font-style': 'italic',
+      class: 'node-sub'
+    }, svg).textContent = '~23,832 firms';
+
+    // Node B — 0.7% (tiny, callout label)
+    const nodeB = el('rect', {
+      x: leftNodeX1, y: bY, width: nodeW, height: bH, rx: 1,
+      fill: 'var(--ml-gold)',
+      class: 'node-rect' + (selectedIdx === 1 ? ' active' : ''),
+      'data-tier': 1
+    }, svg);
+    nodeB.addEventListener('click', () => selectTier(1));
+    nodeB.addEventListener('mouseenter', () => selectTier(1));
+    // Leader line + callout to the left
+    el('line', {
+      x1: leftNodeX1 - 4, y1: bY + bH / 2,
+      x2: leftNodeX1 - 50, y2: bY + bH / 2,
+      stroke: 'var(--ml-gold)', 'stroke-width': 1
+    }, svg);
+    el('text', {
+      x: leftNodeX1 - 56, y: bY + bH / 2 - 4,
+      'text-anchor': 'end',
+      'font-family': 'var(--serif)', 'font-size': 22, 'font-weight': 600,
+      fill: 'var(--ml-gold)', 'font-style': 'italic',
+      class: 'node-callout'
+    }, svg).textContent = '0.7%';
+    el('text', {
+      x: leftNodeX1 - 56, y: bY + bH / 2 + 14,
+      'text-anchor': 'end',
+      'font-size': 11, fill: 'var(--ml-slate-grey)', class: 'node-sub'
+    }, svg).textContent = '~168 firms';
+
+    // ----- Right column nodes (Wealth) -----
+    // Node D — 75% wealth (gold dominant block)
+    const nodeD = el('rect', {
+      x: rightNodeX1, y: dY, width: nodeW, height: dH, rx: 2,
+      fill: 'var(--ml-gold)',
+      class: 'node-rect' + (selectedIdx === 1 ? ' active' : ''),
+      'data-tier': 1
+    }, svg);
+    nodeD.addEventListener('click', () => selectTier(1));
+    nodeD.addEventListener('mouseenter', () => selectTier(1));
+    el('text', {
+      x: rightNodeX2 + 14, y: dY + dH / 2 - 6,
+      'text-anchor': 'start',
+      'font-family': 'var(--serif)', 'font-size': 30, 'font-weight': 600,
+      fill: 'var(--ml-gold)', 'font-style': 'italic',
+      class: 'node-label'
+    }, svg).textContent = '75%';
+    el('text', {
+      x: rightNodeX2 + 14, y: dY + dH / 2 + 14,
+      'text-anchor': 'start',
+      'font-size': 12, 'font-weight': 600, fill: 'var(--ml-charcoal)',
+      class: 'node-sub'
+    }, svg).textContent = 'of $91T wealth';
+    el('text', {
+      x: rightNodeX2 + 14, y: dY + dH / 2 + 30,
+      'text-anchor': 'start',
+      'font-size': 11, fill: 'var(--ml-slate-grey)', 'font-style': 'italic',
+      class: 'node-sub'
+    }, svg).textContent = '~$68 trillion';
+
+    // Node C — 25% wealth (modest residual)
+    const nodeC = el('rect', {
+      x: rightNodeX1, y: cY, width: nodeW, height: cH, rx: 2,
+      fill: 'var(--ml-slate-blue)',
+      class: 'node-rect' + (selectedIdx === 0 ? ' active' : ''),
+      'data-tier': 0
+    }, svg);
+    nodeC.addEventListener('click', () => selectTier(0));
+    nodeC.addEventListener('mouseenter', () => selectTier(0));
+    el('text', {
+      x: rightNodeX2 + 14, y: cY + cH / 2 - 4,
+      'text-anchor': 'start',
+      'font-family': 'var(--serif)', 'font-size': 22, 'font-weight': 600,
+      fill: 'var(--ml-charcoal)', class: 'node-label'
+    }, svg).textContent = '25%';
+    el('text', {
+      x: rightNodeX2 + 14, y: cY + cH / 2 + 14,
+      'text-anchor': 'start',
+      'font-size': 11, fill: 'var(--ml-slate-grey)', class: 'node-sub'
+    }, svg).textContent = '~$23 trillion';
+
+    // ----- Caption beneath the Sankey -----
+    el('text', {
+      x: VB_W / 2, y: VB_H - 30,
+      'text-anchor': 'middle',
+      'font-family': 'var(--serif)', 'font-style': 'italic',
+      'font-size': 17, fill: 'var(--ml-charcoal)',
+      class: 'node-callout'
+    }, svg).textContent = 'A 0.7% sliver of the population creates three-quarters of all the value.';
+  }
+
+  // Draws a tapering Sankey flow band whose width morphs from (srcY1→srcY2) on the left
+  // to (dstY1→dstY2) on the right via smooth cubic-bezier curves on each edge.
+  function drawFlow(srcX, srcY1, srcY2, dstX, dstY1, dstY2, color, opacity, tier) {
+    const midX = (srcX + dstX) / 2;
+    const d = 'M ' + srcX + ' ' + srcY1 +
+              ' C ' + midX + ' ' + srcY1 + ', ' + midX + ' ' + dstY1 + ', ' + dstX + ' ' + dstY1 +
+              ' L ' + dstX + ' ' + dstY2 +
+              ' C ' + midX + ' ' + dstY2 + ', ' + midX + ' ' + srcY2 + ', ' + srcX + ' ' + srcY2 +
+              ' Z';
+    const path = el('path', {
+      d: d, fill: color, opacity: opacity,
+      class: 'flow-path', 'data-tier': tier
+    }, svg);
+    path.addEventListener('click', () => selectTier(tier));
+    path.addEventListener('mouseenter', () => selectTier(tier));
+  }
+
+
+  // ---------- TIER SELECTION ----------
+  function selectTier(idx) {
+    selectedIdx = idx;
+    const t = tiers[idx];
+
+    // Highlight the selected tier's segments
+    document.querySelectorAll('.node-rect').forEach(s => {
+      const ti = parseInt(s.dataset.tier, 10);
+      s.classList.toggle('active', ti === idx);
+    });
+
+    // Detail panel
+    tierDetail.style.opacity = '0';
+    setTimeout(() => {
+      tdMeta.textContent = t.tdMeta;
+      tdTitle.textContent = t.tdTitle;
+      tdBody.innerHTML = t.tdBody;
+      tdData.innerHTML = '';
+      t.data.forEach(d => {
+        const div = document.createElement('div');
+        div.className = 'td-data-item';
+        div.innerHTML = '<div class="td-data-label">' + d.k + '</div><div class="td-data-value">' + d.v + '</div>';
+        tdData.appendChild(div);
+      });
+      tierDetail.style.opacity = '1';
+    }, 130);
+  }
+
+  // ---------- INIT ----------
+  renderSankey();
+  // Animate hero stats from 0
+  tween(0, 24000, 1500, v => { statCompanies.textContent = fmt.format(Math.round(v)); });
+  tween(0, 70, 1100, v => { statFailed.textContent = Math.round(v); });
+  setTimeout(() => tween(0, 0.7, 1100, v => { statTop.textContent = fmt1.format(v); }), 200);
+  tween(0, 91, 1100, v => { statWealth.textContent = Math.round(v); });
+  // Start with The 0.7% selected (the headline insight)
+  selectTier(1);
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          var h = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight
+          );
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

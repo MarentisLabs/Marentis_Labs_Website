@@ -72,9 +72,9 @@ Second, **directors are not passive consumers of that intelligence**. Forced ind
 
 ## Deployment Across the SGaaS Tiers
 
-- **Diagnostic GaaS (T1).** The Red Team Protocol is the primary instrument, used for the architecture assessment that defines the Diagnostic.
-- **Retained GaaS (T2).** All three tools deployed on continuous, periodic, and event-driven cadences respectively.
-- **Embedded GaaS (T3).** All three tools, with direct board application — the principal sits as Independent Board Observer or Mandated Advisor with contractual challenge authority.
-- **Pre-Exit GaaS (T4).** Diagnostic and Retained tooling, focused on exit readiness and the governance evidence base buyers will examine.
+- **Diagnostic SGaaS (T1).** The Red Team Protocol is the primary instrument, used for the architecture assessment that defines the Diagnostic.
+- **Retained SGaaS (T2).** All three tools deployed on continuous, periodic, and event-driven cadences respectively.
+- **Embedded SGaaS (T3).** All three tools, with direct board application — the principal sits as Independent Board Observer or Mandated Advisor with contractual challenge authority.
+- **Pre-Exit SGaaS (T4).** Diagnostic and Retained tooling, focused on exit readiness and the governance evidence base buyers will examine.
 
 The tools can also be engaged standalone, and frequently serve as the entry point that demonstrates the value of a longer-term relationship.

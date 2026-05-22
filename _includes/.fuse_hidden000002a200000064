@@ -1,0 +1,137 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://marentislabs.com/#organization",
+      "name": "Marentis Labs",
+      "legalName": "Marentis Labs Ltd",
+      "url": "https://marentislabs.com",
+      "foundingDate": "2025-07",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://marentislabs.com/assets/images/Marentis_Labs_Full_Logo.png"
+      },
+      "description": "Strategic Governance as a Service for FTSE 350 companies and PE-backed organisations. Principal-led, continuous, adversarial by design.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "London",
+        "addressCountry": "GB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@marentislabs.com",
+        "contactType": "business enquiries"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/marentislabs",
+        "https://find-and-update.company-information.service.gov.uk/company/16600357"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://marentislabs.com/#owen-vallis",
+      "name": "Owen Vallis",
+      "jobTitle": "Managing Director",
+      "description": "Strategic risk executive with 20 years as Group Chief Risk Officer across Credit Suisse, JP Morgan, SICO Bank and Morgan Stanley. Active board Chair and Non-Executive Director.",
+      "worksFor": { "@id": "https://marentislabs.com/#organization" },
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Marentis Labs Ltd"
+      },
+      "url": "https://marentislabs.com/about/",
+      "knowsAbout": [
+        "corporate governance",
+        "risk management",
+        "board advisory",
+        "Basel III",
+        "DORA",
+        "FCA regulation",
+        "PE exit governance"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/owen-vallis/",
+        "https://find-and-update.company-information.service.gov.uk/search?q=Owen+Vallis",
+        "https://www.wikidata.org/wiki/Q_PLACEHOLDER"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://marentislabs.com/#strategic-gaas",
+      "name": "Strategic Governance as a Service",
+      "provider": { "@id": "https://marentislabs.com/#organization" },
+      "description": "Continuous, principal-level governance advisory for FTSE 350 boards and PE-backed organisations. Four-tier model: Diagnostic, Retained, Embedded, and Pre-Exit GaaS.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": "Governance Advisory"
+    }
+    {% if page.layout == 'service' %},
+    {
+      "@type": "Service",
+      "name": "{{ page.title }}",
+      "provider": { "@id": "https://marentislabs.com/#organization" },
+      "description": "{{ page.description | default: page.strapline }}",
+      "url": "https://marentislabs.com{{ page.url }}"
+    }
+    {% endif %}
+    {% if page.schema_white_paper %},
+    {
+      "@type": "Report",
+      "@id": "https://marentislabs.com/white-paper/#report",
+      "name": "Strategic Governance as a Service — The Definitive Framework",
+      "headline": "The Definitive Framework for Strategic Governance as a Service",
+      "description": "90+ pages of practitioner-authored governance frameworks for FTSE 350 boards, PE-backed organisations, and FCA-regulated entities. Defines the Adversarial Governance Methodology and originates SGaaS as a defined service category.",
+      "url": "https://marentislabs.com/white-paper/",
+      "datePublished": "2025",
+      "inLanguage": "en-GB",
+      "author": {
+        "@id": "https://marentislabs.com/#owen-vallis"
+      },
+      "publisher": {
+        "@id": "https://marentislabs.com/#organization"
+      },
+      "about": [
+        { "@type": "Thing", "name": "corporate governance" },
+        { "@type": "Thing", "name": "Strategic Governance as a Service" },
+        { "@type": "Thing", "name": "risk management" },
+        { "@type": "Thing", "name": "FTSE 350 board governance" },
+        { "@type": "Thing", "name": "PE exit governance" },
+        { "@type": "Thing", "name": "Basel 3.1" },
+        { "@type": "Thing", "name": "FCA regulatory compliance" }
+      ],
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "FTSE 350 CFOs, Chairs, Governance Committees, PE Operating Partners"
+      },
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://marentislabs.com/assets/downloads/marentis-labs-strategic-governance-as-a-service-white-paper.pdf",
+      "isPartOf": {
+        "@id": "https://marentislabs.com/#strategic-gaas"
+      }
+    }
+    {% endif %}
+    {% if page.layout == 'article' %},
+    {
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://marentislabs.com{{ page.url }}"
+      },
+      "headline": "{{ page.title }}",
+      "description": "{{ page.description | default: page.excerpt | strip_html | truncatewords: 30 }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {
+        "@id": "https://marentislabs.com/#owen-vallis"
+      },
+      "publisher": {
+        "@id": "https://marentislabs.com/#organization"
+      }
+    }
+    {% endif %}
+  ]
+}
+</script>

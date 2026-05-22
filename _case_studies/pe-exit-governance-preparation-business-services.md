@@ -3,7 +3,7 @@ title: "Exit Governance Preparation for a PE-Backed Business Services Group"
 description: "With a strategic sale 18 months out, a PE operating partner engaged Marentis Labs to identify and remediate governance gaps that would be exposed in vendor due diligence."
 sector: "Professional Services"
 organisation_type: "PE-Backed Business Services Group"
-service_tier: "Pre-Exit GaaS"
+service_tier: "Pre-Exit SGaaS"
 challenge: "The portfolio company's governance infrastructure had been built for operational management, not for the scrutiny of a strategic buyer's legal and financial due diligence team."
 outcome: "Governance remediation completed 11 months before exit; no material governance findings in the buyer's due diligence report."
 date: 2025-06-01
@@ -32,7 +32,7 @@ The operating partner's internal review had identified concerns in delegation do
 
 ## Our Approach
 
-The engagement was structured as Pre-Exit GaaS with an 11-month runway before the anticipated commencement of the sale process.
+The engagement was structured as Pre-Exit SGaaS with an 11-month runway before the anticipated commencement of the sale process.
 
 **Pre-Mortem Diagnostic (month 1)**
 
@@ -67,4 +67,4 @@ The common mistake is to begin this work six months before the process starts. B
 
 ---
 
-*This illustrative engagement scenario demonstrates Marentis Labs' [Pre-Exit GaaS](/services/pre-exit-gaas/) model. All client details are kept completely confidential for all engagements. To discuss exit governance preparation, [schedule a confidential conversation](/contact/).*
+*This illustrative engagement scenario demonstrates Marentis Labs' [Pre-Exit SGaaS](/services/pre-exit-gaas/) model. All client details are kept completely confidential for all engagements. To discuss exit governance preparation, [schedule a confidential conversation](/contact/).*

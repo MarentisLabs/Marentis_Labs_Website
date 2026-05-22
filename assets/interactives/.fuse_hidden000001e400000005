@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cost Ratio | Marentis Labs</title>
+<meta name="description" content="The cost of governance failure is measured in billions. The cost of continuous adversarial challenge is measured in hundreds of thousands. The ratio does not require sophisticated modelling to understand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #A98C5A;
+    --ml-gold-soft: #C2A57A;
+    --ml-slate-blue: #4A6572;
+    --ml-deep-blue: #2E5266;
+    --ml-light-bg: #F8F9FA;
+    --ml-line: #DEE2E6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ml-light-bg);
+    color: var(--ml-charcoal);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 32px 64px;
+  }
+
+  /* Header */
+  .brand-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--ml-line);
+    padding-bottom: 18px;
+    margin-bottom: 36px;
+  }
+  .brand-mark {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+  }
+  .brand-mark .accent { color: var(--ml-gold); }
+  .brand-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+  }
+
+  /* Title */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 14px;
+  }
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(38px, 5.6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+  }
+  h1.title em {
+    font-style: italic;
+    color: var(--ml-deep-blue);
+    font-weight: 500;
+  }
+  .deck {
+    font-weight: 300;
+    font-size: clamp(16px, 1.6vw, 19px);
+    color: var(--ml-slate-grey);
+    max-width: 760px;
+    line-height: 1.55;
+    margin-bottom: 44px;
+  }
+
+  /* Chart card */
+  .chart-card {
+    background: #FFFFFF;
+    border: 1px solid var(--ml-line);
+    border-radius: 4px;
+    padding: 44px 44px 36px;
+    box-shadow: 0 1px 2px rgba(33, 37, 41, 0.04);
+  }
+
+  /* Hero ratio */
+  .hero {
+    text-align: center;
+    margin-bottom: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--ml-line);
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    margin-bottom: 16px;
+    transition: opacity 0.25s ease;
+  }
+  .hero-eyebrow strong {
+    color: var(--ml-charcoal);
+    font-weight: 600;
+  }
+  .hero-number {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(72px, 12vw, 144px);
+    line-height: 0.95;
+    color: var(--ml-charcoal);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 8px;
+  }
+  .hero-number .multiplier {
+    color: var(--ml-gold);
+    font-style: italic;
+    font-size: 0.6em;
+    vertical-align: 0.18em;
+    margin-left: 4px;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2vw, 24px);
+    font-style: italic;
+    color: var(--ml-slate-grey);
+    font-weight: 400;
+  }
+
+  /* Case picker */
+  .case-picker {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+  .case-btn {
+    background: transparent;
+    border: 1px solid var(--ml-line);
+    color: var(--ml-slate-grey);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    letter-spacing: 0.01em;
+  }
+  .case-btn:hover {
+    border-color: var(--ml-gold);
+    color: var(--ml-charcoal);
+  }
+  .case-btn.active {
+    border-color: var(--ml-charcoal);
+    background: var(--ml-charcoal);
+    color: #FFFFFF;
+  }
+
+  /* Visualization */
+  .viz-wrap {
+    width: 100%;
+    aspect-ratio: 20 / 7;
+    min-height: 280px;
+    margin-bottom: 8px;
+  }
+  svg.viz {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    display: block;
+  }
+  svg text { font-family: var(--sans); }
+
+  /* Stats row */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ml-line);
+  }
+  .stat {
+    text-align: center;
+    padding: 0 12px;
+  }
+  .stat-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    margin-bottom: 8px;
+  }
+  .stat-value {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(24px, 2.8vw, 34px);
+    color: var(--ml-charcoal);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+    transition: opacity 0.18s ease-out, color 0.2s ease;
+  }
+  .stat-value.is-swapping { opacity: 0; }
+  .stat-value.is-gold { color: var(--ml-gold); }
+  .stat-sub {
+    font-size: 11px;
+    color: var(--ml-slate-grey);
+    margin-top: 4px;
+  }
+
+  /* Slider */
+  .slider-section {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--ml-line);
+  }
+  .slider-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .slider-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    flex-shrink: 0;
+    min-width: 200px;
+  }
+  .slider-output {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ml-charcoal);
+    min-width: 110px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1;
+    height: 4px;
+    background: var(--ml-line);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px; height: 18px;
+    background: var(--ml-gold);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 1px 3px rgba(33,37,41,0.25);
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 18px; height: 18px;
+    background: var(--ml-gold);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 1px 3px rgba(33,37,41,0.25);
+  }
+  .slider-bounds {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    margin-left: 218px;
+    font-size: 11px;
+    color: var(--ml-slate-grey);
+  }
+
+  /* Case detail */
+  .case-detail {
+    margin-top: 32px;
+    padding: 28px 32px;
+    background: var(--ml-light-bg);
+    border-left: 3px solid var(--ml-gold);
+    border-radius: 2px;
+    transition: opacity 0.22s ease-out;
+  }
+  .case-detail.is-swapping { opacity: 0; }
+  .case-detail h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--ml-charcoal);
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+  .case-detail .case-meta {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ml-slate-grey);
+    margin-bottom: 14px;
+  }
+  .case-detail .case-body {
+    font-size: 14.5px;
+    color: var(--ml-slate-grey);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .case-detail .case-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .components {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 14px;
+  }
+  .component {
+    border: 1px solid var(--ml-line);
+    background: #FFFFFF;
+    padding: 12px 14px;
+    border-radius: 2px;
+  }
+  .component-label {
+    font-size: 11px;
+    color: var(--ml-slate-grey);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .component-value {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ml-charcoal);
+    line-height: 1.1;
+  }
+
+  /* Conclusion */
+  .conclusion {
+    margin-top: 56px;
+    padding: 40px 44px;
+    background: var(--ml-charcoal);
+    color: #FFFFFF;
+    border-radius: 2px;
+  }
+  .conclusion-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 14px;
+  }
+  .conclusion-text {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(20px, 2.2vw, 26px);
+    line-height: 1.4;
+    margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .conclusion-cite {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ml-line);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--ml-slate-grey);
+    line-height: 1.6;
+  }
+  .footer .src { max-width: 820px; }
+
+  @media (max-width: 720px) {
+    .page { padding: 32px 20px 48px; }
+    .chart-card { padding: 28px 20px; }
+    .conclusion { padding: 28px 24px; }
+    .stats { grid-template-columns: 1fr; gap: 16px; }
+    .slider-label { min-width: 0; }
+    .slider-bounds { margin-left: 0; }
+    .slider-row { flex-wrap: wrap; }
+    .case-detail { padding: 22px 20px; }
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 28px; }
+  body.embed-mode .footer { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="eyebrow">Research Insight · From Section 11 of the SGaaS White Paper</div>
+  <h1 class="title">The Cost Ratio</h1>
+  <p class="deck">The cost of governance failure, the evidence demonstrates, is measured in <em>billions</em>. The cost of continuous, adversarial governance challenge is measured in <em>hundreds of thousands</em>. The ratio does not require sophisticated modelling to understand.</p>
+
+  <section class="chart-card">
+    <!-- Hero ratio -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="hero-eyebrow"><strong id="case-name">Boeing 737 MAX</strong> settlements could have funded</div>
+      <div class="hero-number"><span id="hero-num">0</span><span class="multiplier">×</span></div>
+      <div class="hero-sub" id="hero-sub">years of continuous, independent adversarial governance challenge</div>
+    </div>
+
+    <!-- Case picker -->
+    <div class="case-picker" id="case-picker">
+      <button class="case-btn active" data-case="boeing">Boeing 737 MAX</button>
+      <button class="case-btn" data-case="wirecard">Wirecard</button>
+      <button class="case-btn" data-case="svb">Silicon Valley Bank</button>
+      <button class="case-btn" data-case="postoffice">Post Office Horizon</button>
+      <button class="case-btn" data-case="wellsfargo">Wells Fargo</button>
+    </div>
+
+    <!-- Visualization -->
+    <div class="viz-wrap">
+      <svg class="viz" id="viz" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Failure Cost</div>
+        <div class="stat-value" id="stat-failure">&mdash;</div>
+        <div class="stat-sub" id="stat-failure-sub">total liability</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">SGaaS Retainer</div>
+        <div class="stat-value" id="stat-retainer">&mdash;</div>
+        <div class="stat-sub">continuous, principal-led, retained</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">The Ratio</div>
+        <div class="stat-value is-gold" id="stat-ratio">&mdash;</div>
+        <div class="stat-sub" id="stat-ratio-sub">years of governance equivalent</div>
+      </div>
+    </div>
+
+    <!-- Retainer slider -->
+    <div class="slider-section">
+      <div class="slider-row">
+        <div class="slider-label">Adjust Annual SGaaS Retainer</div>
+        <input type="range" id="retainer-slider" min="200" max="400" step="10" value="300">
+        <div class="slider-output" id="retainer-output">£300,000</div>
+      </div>
+      <div class="slider-bounds">
+        <span>£200,000 · Diagnostic / lower retained band</span>
+        <span>£400,000 · Embedded / upper retained band</span>
+      </div>
+    </div>
+
+    <!-- Case detail -->
+    <div class="case-detail">
+      <div class="case-meta" id="case-meta">Boeing 737 MAX · 2018&ndash;2025 · ~$20 billion total</div>
+      <h3 id="case-headline">When safety sat outside the governance framework</h3>
+      <p class="case-body" id="case-body">Two crashes, 346 deaths.</p>
+      <div class="components" id="case-components"></div>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="conclusion">
+    <div class="conclusion-eyebrow">The Economic Logic of SGaaS</div>
+    <div class="conclusion-text">The cost of a retained governance challenge function is measured in the low hundreds of thousands. The cost of governance failure, as the evidence demonstrates, is measured in the billions. The ratio does not require sophisticated modelling to understand.</div>
+    <div class="conclusion-cite">From <em>Strategic Governance as a Service</em> &mdash; Marentis Labs, 2026.</div>
+  </section>
+
+  <footer class="footer">
+    <div class="src">
+      <strong style="color:var(--ml-charcoal)">Sources.</strong>
+      Boeing: <em>House Committee on Transportation</em> (2020); Boeing Deferred Prosecution Agreement (DOJ, 2021); <em>In re Boeing Co. Derivative Litigation</em> (Del. Ch. 2021). Wirecard: KPMG Special Investigation (2020); Bundestag Parliamentary Inquiry (2021); Langenbucher &amp; Leuz (Oxford Faculty of Law). Silicon Valley Bank: FDIC (2023); Metrick (2024). Post Office Horizon: Post Office Horizon System Inquiry (2025); UK Government compensation figures (March 2026). Wells Fargo: SGaaS White Paper, Section 2 (Failure Record table). SGaaS retainer band: Marentis Labs commercial structure, Section 11.
+      Currency conversions are approximate (May 2026): USD 1 &asymp; GBP 0.80; EUR 1 &asymp; GBP 0.85.
+    </div>
+    <div>&copy; 2026 Marentis Labs Ltd<br>marentislabs.com</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- DATA ----------
+  // Failure costs converted to GBP for ratio calculation (May 2026 approximate rates).
+  // USD → GBP: 0.80, EUR → GBP: 0.85.
+  const cases = {
+    boeing: {
+      name: 'Boeing 737 MAX',
+      meta: 'Boeing 737 MAX · 2018–2025 · ~$20 billion total liability',
+      eyebrow: '<strong>Boeing 737 MAX</strong> settlements could have funded',
+      costLabel: '$20.0B',
+      costSub: 'USD · ≈ £16.0B GBP',
+      costGBP: 16_000_000_000,
+      headline: 'When safety sat outside the governance framework',
+      body: 'Two crashes, 346 deaths. Before August 2019, no Boeing board committee charter assigned responsibility for aircraft safety oversight. After the first crash, Boeing management waited ten days to notify the board. The CEO then reported the 737 MAX was safe. At the February 2019 board meeting, one month before the second crash, the board deferred any internal investigation to regulatory processes. The Caremark cash settlement of $237.5M is the largest in Delaware Chancery Court history.',
+      components: [
+        { label: 'DOJ Deferred Prosecution (Jan 2021)', value: '$2.5B' },
+        { label: 'Additional settlements (2025)', value: '$1.1B' },
+        { label: 'Airline compensation', value: '$1.77B' },
+        { label: 'Caremark cash settlement', value: '$237.5M' },
+        { label: 'SEC penalty', value: '$200M' },
+        { label: 'Stock decline (peak)', value: '−71%' }
+      ]
+    },
+    wirecard: {
+      name: 'Wirecard',
+      meta: 'Wirecard AG · June 2020 · ~€24 billion in shareholder value destroyed',
+      eyebrow: 'The <strong>Wirecard</strong> collapse could have funded',
+      costLabel: '€24.0B',
+      costSub: 'EUR · ≈ £20.4B GBP',
+      costGBP: 20_400_000_000,
+      headline: 'Every line of defence failed simultaneously',
+      body: 'Share price collapsed from €193 to €0.30 within days of the June 2020 disclosure. Five distinct governance layers failed simultaneously: internal controls, supervisory board oversight, external audit (EY), auditing oversight bodies, and BaFin. EY accepted screenshots and PDF bank statements as evidence of cash balances for three consecutive audit cycles. When the whistleblower raised evidence of fraud internally in March 2018, the function that should have escalated it instead suppressed it.',
+      components: [
+        { label: 'Shareholder value destroyed', value: '€24B' },
+        { label: 'Missing cash balances', value: '€1.9B' },
+        { label: 'Bank losses', value: '€3.1B' },
+        { label: 'Years of fraud undetected', value: '5+' },
+        { label: 'Governance layers that failed', value: '5' }
+      ]
+    },
+    svb: {
+      name: 'Silicon Valley Bank',
+      meta: 'Silicon Valley Bank · March 2023 · $16.1B FDIC fund cost',
+      eyebrow: 'The <strong>Silicon Valley Bank</strong> failure could have funded',
+      costLabel: '$16.1B',
+      costSub: 'USD · ≈ £12.9B GBP',
+      costGBP: 12_880_000_000,
+      headline: 'The risk that everyone saw and nobody escalated',
+      body: 'Failed on 10 March 2023. $42 billion in single-day deposit flight on 9 March (≈25% of total deposits), with $100B more queued. The failure did not remain contained — Signature Bank failed within 48 hours; First Republic Bank followed in May 2023 with ≈$229B in assets, surpassing SVB as the largest U.S. bank failure since Washington Mutual. The cascade ultimately delivered the final blow to Credit Suisse.',
+      components: [
+        { label: 'FDIC fund cost', value: '$16.1B' },
+        { label: 'Single-day deposit flight', value: '$42B' },
+        { label: 'Withdrawals queued', value: '$100B' },
+        { label: 'Total assets at failure', value: '$209B' },
+        { label: 'Downstream bank failures', value: '3+' }
+      ]
+    },
+    postoffice: {
+      name: 'Post Office Horizon',
+      meta: 'Post Office Horizon · 1999–present · >£1.44 billion compensation (March 2026)',
+      eyebrow: 'The <strong>Post Office Horizon</strong> scandal could have funded',
+      costLabel: '£1.44B',
+      costSub: 'GBP · compensation paid as of March 2026',
+      costGBP: 1_440_000_000,
+      headline: 'Twenty years of institutional consensus against individual evidence',
+      body: 'Over 900 sub-postmasters prosecuted between 1999 and 2015; at least 236 imprisoned. The Criminal Cases Review Commission described it as the "most widespread miscarriage of justice" in its history. The Post Office board accepted management\'s assurance the Horizon system was robust without commissioning independent technical audit. No protected mechanism existed for sub-postmasters to escalate system errors to the board. The consensus held against hundreds of independent reports of the same error pattern for over two decades.',
+      components: [
+        { label: 'Compensation paid (Mar 2026)', value: '£1.44B' },
+        { label: 'Legal fees', value: '£250M' },
+        { label: 'Wrongful prosecutions', value: '900+' },
+        { label: 'Imprisoned (minimum)', value: '236' },
+        { label: 'Individual claimants', value: '11,300+' },
+        { label: 'Years of suppressed evidence', value: '20+' }
+      ]
+    },
+    wellsfargo: {
+      name: 'Wells Fargo',
+      meta: 'Wells Fargo · 2016 · USD 3+ billion in fines and settlements',
+      eyebrow: '<strong>Wells Fargo</strong> fines and settlements could have funded',
+      costLabel: '$3.0B+',
+      costSub: 'USD · ≈ £2.4B GBP',
+      costGBP: 2_400_000_000,
+      headline: 'Sales-practice failures across approximately 3.5 million unauthorised accounts',
+      body: 'Sales-practice failures creating approximately 3.5 million unauthorised accounts. Risk management and internal controls failed to escalate systemic misconduct. The case resulted in USD 3+ billion in fines and settlements, and the resignation of the CEO.',
+      components: [
+        { label: 'Year', value: '2016' },
+        { label: 'Unauthorised accounts', value: '~3.5M' },
+        { label: 'Fines &amp; settlements', value: '$3B+' },
+        { label: 'Source', value: 'SGaaS §2' }
+      ]
+    }
+  };
+
+  // ---------- ELEMENTS ----------
+  const heroNum = document.getElementById('hero-num');
+  const heroEyebrow = document.getElementById('hero-eyebrow');
+  const heroSub = document.getElementById('hero-sub');
+  const statFailure = document.getElementById('stat-failure');
+  const statFailureSub = document.getElementById('stat-failure-sub');
+  const statRetainer = document.getElementById('stat-retainer');
+  const statRatio = document.getElementById('stat-ratio');
+  const statRatioSub = document.getElementById('stat-ratio-sub');
+  const retainerSlider = document.getElementById('retainer-slider');
+  const retainerOutput = document.getElementById('retainer-output');
+  const caseMeta = document.getElementById('case-meta');
+  const caseHeadline = document.getElementById('case-headline');
+  const caseBody = document.getElementById('case-body');
+  const caseComponents = document.getElementById('case-components');
+  const caseButtons = document.querySelectorAll('.case-btn');
+  const svg = document.getElementById('viz');
+
+  // ---------- HELPERS ----------
+  const fmt = new Intl.NumberFormat('en-GB');
+  const elNS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(elNS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  // Easing helpers
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  const easeInOutQuad = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+  // Generic rAF tween
+  function tween(from, to, duration, onUpdate, easing) {
+    const ease = easing || easeOutCubic;
+    const start = performance.now();
+    let frame;
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      onUpdate(from + (to - from) * ease(t));
+      if (t < 1) frame = requestAnimationFrame(step);
+    }
+    frame = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(frame);
+  }
+
+  // Animated count-up for the hero number
+  let animFrame = null;
+  function animateNumber(from, to, duration) {
+    if (animFrame) cancelAnimationFrame(animFrame);
+    const start = performance.now();
+    function step(now) {
+      const elapsed = now - start;
+      const t = Math.min(1, elapsed / duration);
+      const eased = easeOutCubic(t);
+      const v = Math.round(from + (to - from) * eased);
+      heroNum.textContent = fmt.format(v);
+      if (t < 1) animFrame = requestAnimationFrame(step);
+      else animFrame = null;
+    }
+    animFrame = requestAnimationFrame(step);
+  }
+
+  // ---------- VIZ (SVG) ----------
+  // viewBox 1200 x 360
+  // The "failure cost" is rendered as a wide horizontal bar at true width.
+  // A magnifier callout to the left shows what 1 year of SGaaS looks like at true scale
+  // (sub-pixel) versus its enlarged-for-visibility version.
+  function renderViz(state, opts) {
+    opts = opts || {};
+    const animate = opts.animate !== false; // default true
+
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    const VB_W = 1200, VB_H = 360;
+    const barX = 80, barY = 110, barW = 1040, barH = 70;
+    const ratio = state.ratio; // years
+
+    // ----- Wipe-in clipPath (animates left → right on case change) -----
+    const defs = el('defs', {}, svg);
+    const clip = el('clipPath', { id: 'viz-wipe' }, defs);
+    // The wipe rect's width is animated. The clip extends slightly past barX+barW so
+    // overflowing text (right-end "TOTAL FAILURE COST" labels) is revealed cleanly.
+    const wipeStart = animate ? 0 : (barX + barW + 80);
+    const wipeRect = el('rect', {
+      x: 0, y: 0, width: wipeStart, height: VB_H
+    }, clip);
+
+    // All animated content lives inside this clipped group
+    const root = el('g', { 'clip-path': 'url(#viz-wipe)' }, svg);
+
+    // Background "scale" track behind the bar for context
+    el('rect', {
+      x: barX, y: barY, width: barW, height: barH,
+      fill: '#F1F3F5', stroke: '#DEE2E6', 'stroke-width': 1, rx: 2
+    }, root);
+
+    // The "1 year SGaaS" sliver at the leftmost edge — at true scale this is
+    // sub-pixel; we render it as 6px for visibility and annotate the enlargement.
+    const sliverTrueWidth = barW / ratio;
+    const sliverDisplayWidth = 6;
+    el('rect', {
+      x: barX, y: barY, width: sliverDisplayWidth, height: barH,
+      fill: 'var(--ml-gold)', rx: 1
+    }, root);
+
+    // Rest of bar = the failure cost continues to the right
+    el('rect', {
+      x: barX + sliverDisplayWidth, y: barY,
+      width: barW - sliverDisplayWidth, height: barH,
+      fill: 'var(--ml-charcoal)', rx: 0
+    }, root);
+
+    // --- Top label: SGaaS retainer (over the gold sliver) ---
+    el('line', {
+      x1: barX + sliverDisplayWidth/2, y1: barY - 8,
+      x2: barX + sliverDisplayWidth/2, y2: barY - 36,
+      stroke: 'var(--ml-gold)', 'stroke-width': 1
+    }, root);
+    el('text', {
+      x: barX + 14, y: barY - 42,
+      'font-size': 12, 'font-weight': 600, 'letter-spacing': '0.04em',
+      fill: 'var(--ml-gold)', 'text-anchor': 'start'
+    }, root).textContent = '£' + fmt.format(state.retainer) + ' · 1 YEAR OF SGAAS';
+    el('text', {
+      x: barX + 14, y: barY - 26,
+      'font-size': 10.5, fill: 'var(--ml-slate-grey)', 'text-anchor': 'start',
+      'font-style': 'italic'
+    }, root).textContent = 'shown 6 px wide for visibility · true scale: ' + sliverTrueWidth.toFixed(3) + ' px';
+
+    // --- Top label: Failure cost (right-aligned over end of bar) ---
+    el('line', {
+      x1: barX + barW - 1, y1: barY - 8,
+      x2: barX + barW - 1, y2: barY - 36,
+      stroke: 'var(--ml-charcoal)', 'stroke-width': 1
+    }, root);
+    el('text', {
+      x: barX + barW - 14, y: barY - 42,
+      'font-size': 12, 'font-weight': 600, 'letter-spacing': '0.04em',
+      fill: 'var(--ml-charcoal)', 'text-anchor': 'end'
+    }, root).textContent = state.costLabel.toUpperCase() + ' · TOTAL FAILURE COST';
+    el('text', {
+      x: barX + barW - 14, y: barY - 26,
+      'font-size': 10.5, fill: 'var(--ml-slate-grey)', 'text-anchor': 'end',
+      'font-style': 'italic'
+    }, root).textContent = state.costSub;
+
+    // --- Ruler beneath the bar showing year markers ---
+    const rulerY = barY + barH + 12;
+    el('line', {
+      x1: barX, y1: rulerY, x2: barX + barW, y2: rulerY,
+      stroke: 'var(--ml-line)', 'stroke-width': 1
+    }, root);
+
+    // Choose tick intervals based on ratio magnitude
+    let tickInterval;
+    if (ratio > 40000) tickInterval = 10000;
+    else if (ratio > 15000) tickInterval = 5000;
+    else if (ratio > 7000)  tickInterval = 2000;
+    else if (ratio > 3000)  tickInterval = 1000;
+    else tickInterval = 500;
+
+    for (let y = 0; y <= ratio; y += tickInterval) {
+      const tx = barX + (y / ratio) * barW;
+      el('line', {
+        x1: tx, y1: rulerY, x2: tx, y2: rulerY + 6,
+        stroke: 'var(--ml-slate-grey)', 'stroke-width': 1
+      }, root);
+      if (y > 0) {
+        el('text', {
+          x: tx, y: rulerY + 22,
+          'font-size': 11, fill: 'var(--ml-slate-grey)', 'text-anchor': 'middle'
+        }, root).textContent = y >= 1000 ? (y / 1000) + 'K' : y;
+      }
+    }
+    // Year unit label
+    el('text', {
+      x: barX, y: rulerY + 22,
+      'font-size': 11, fill: 'var(--ml-slate-grey)', 'text-anchor': 'start',
+      'font-weight': 600
+    }, root).textContent = 'YEARS';
+    // Final tick mark for the actual ratio (always show the exact endpoint)
+    const endTx = barX + barW;
+    el('line', {
+      x1: endTx, y1: rulerY, x2: endTx, y2: rulerY + 6,
+      stroke: 'var(--ml-charcoal)', 'stroke-width': 1.5
+    }, root);
+    el('text', {
+      x: endTx, y: rulerY + 22,
+      'font-size': 11.5, fill: 'var(--ml-charcoal)', 'text-anchor': 'end',
+      'font-weight': 700
+    }, root).textContent = fmt.format(ratio);
+
+    // --- Magnifier callout below the bar: zoom into the leftmost edge ---
+    // Show what £200K - £400K vs the rest of the bar actually means
+    const magY = 260;
+    const magCenterX = 200;
+
+    // Connecting lines from sliver to magnifier
+    el('line', {
+      x1: barX, y1: barY + barH,
+      x2: magCenterX - 60, y2: magY,
+      stroke: 'var(--ml-gold)', 'stroke-width': 1, 'stroke-dasharray': '3 3', opacity: 0.6
+    }, root);
+    el('line', {
+      x1: barX + sliverDisplayWidth, y1: barY + barH,
+      x2: magCenterX + 60, y2: magY,
+      stroke: 'var(--ml-gold)', 'stroke-width': 1, 'stroke-dasharray': '3 3', opacity: 0.6
+    }, root);
+
+    // Magnifier box
+    const magW = 120, magH = 50;
+    el('rect', {
+      x: magCenterX - magW/2, y: magY, width: magW, height: magH,
+      fill: 'var(--ml-gold)', rx: 2
+    }, root);
+    el('text', {
+      x: magCenterX, y: magY + magH + 18,
+      'font-size': 11, fill: 'var(--ml-charcoal)', 'text-anchor': 'middle',
+      'font-weight': 600
+    }, root).textContent = '1 YEAR @ £' + fmt.format(state.retainer);
+    el('text', {
+      x: magCenterX, y: magY + magH + 32,
+      'font-size': 10, fill: 'var(--ml-slate-grey)', 'text-anchor': 'middle',
+      'font-style': 'italic'
+    }, root).textContent = 'magnified for visibility';
+
+    // Central caption that sits beside the magnifier
+    el('text', {
+      x: 380, y: magY + 18,
+      'font-size': 13, fill: 'var(--ml-charcoal)', 'text-anchor': 'start',
+      'font-weight': 500
+    }, root).textContent = state.costLabel + ' of governance failure =';
+    const t = el('text', {
+      x: 380, y: magY + 40,
+      'font-size': 13, 'text-anchor': 'start'
+    }, root);
+    const tspan1 = el('tspan', { fill: 'var(--ml-gold)', 'font-weight': 700 }, t);
+    tspan1.textContent = fmt.format(ratio) + ' years';
+    const tspan2 = el('tspan', { fill: 'var(--ml-charcoal)', 'font-weight': 500, dx: 6 }, t);
+    tspan2.textContent = 'of continuous SGaaS at £' + fmt.format(state.retainer) + '/yr.';
+
+    // ----- Kick off the wipe animation -----
+    if (animate) {
+      const finalW = barX + barW + 80; // include label overflow on the right
+      tween(0, finalW, 750, v => wipeRect.setAttribute('width', v), easeInOutQuad);
+    }
+  }
+
+  // ---------- UPDATE ----------
+  let current = { caseKey: 'boeing', retainer: 300000 };
+
+  function computeState() {
+    const c = cases[current.caseKey];
+    const ratio = Math.round(c.costGBP / current.retainer);
+    return {
+      caseKey: current.caseKey,
+      caseObj: c,
+      retainer: current.retainer,
+      costLabel: c.costLabel,
+      costSub: c.costSub,
+      ratio
+    };
+  }
+
+  // Cached references that need to cross-fade together on case change
+  const caseDetailEl = document.querySelector('.case-detail');
+  const statValEls = [statFailure, statRetainer, statRatio];
+
+  // Content that only changes on case-change (not on retainer-slider drag)
+  function applyCaseContent(c) {
+    heroEyebrow.innerHTML = c.eyebrow;
+    statFailure.textContent = c.costLabel;
+    statFailureSub.textContent = c.costSub;
+    caseMeta.textContent = c.meta;
+    caseHeadline.textContent = c.headline;
+    caseBody.textContent = c.body;
+    caseComponents.innerHTML = '';
+    c.components.forEach(comp => {
+      const div = document.createElement('div');
+      div.className = 'component';
+      div.innerHTML = '<div class="component-label">' + comp.label + '</div>' +
+                      '<div class="component-value">' + comp.value + '</div>';
+      caseComponents.appendChild(div);
+    });
+  }
+
+  // Content that changes on EVERY render (case change OR retainer-slider drag)
+  function applyLiveValues(s) {
+    statRetainer.textContent = '£' + fmt.format(s.retainer);
+    statRatio.textContent = fmt.format(s.ratio) + '×';
+    statRatioSub.textContent = fmt.format(s.ratio) + ' years of SGaaS equivalent';
+    retainerOutput.textContent = '£' + fmt.format(s.retainer);
+  }
+
+  function render(mode) {
+    // mode: 'initial' | 'case' | 'slider'
+    mode = mode || 'initial';
+    const s = computeState();
+    const c = s.caseObj;
+
+    if (mode === 'slider') {
+      // Live drag → snap update, no wipe, no fade
+      heroNum.textContent = fmt.format(s.ratio);
+      applyLiveValues(s);
+      renderViz(s, { animate: false });
+      return;
+    }
+
+    if (mode === 'case') {
+      // Fade side stats + case-detail card out while the SVG wipes in fresh content
+      statValEls.forEach(elem => elem.classList.add('is-swapping'));
+      caseDetailEl.classList.add('is-swapping');
+
+      setTimeout(() => {
+        applyCaseContent(c);
+        applyLiveValues(s);
+        const fromVal = parseInt((heroNum.textContent || '0').replace(/[^\d]/g, ''), 10) || 0;
+        animateNumber(fromVal, s.ratio, 950);
+        renderViz(s, { animate: true });
+        // Fade them back in on the next frame so the new content paints first
+        requestAnimationFrame(() => {
+          statValEls.forEach(elem => elem.classList.remove('is-swapping'));
+          caseDetailEl.classList.remove('is-swapping');
+        });
+      }, 200);
+      return;
+    }
+
+    // 'initial' — content swap + wipe + count-up from zero
+    applyCaseContent(c);
+    applyLiveValues(s);
+    animateNumber(0, s.ratio, 950);
+    renderViz(s, { animate: true });
+  }
+
+  // ---------- EVENTS ----------
+  caseButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return; // ignore re-clicks on active case
+      caseButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      current.caseKey = btn.dataset.case;
+      render('case');
+    });
+  });
+
+  retainerSlider.addEventListener('input', e => {
+    current.retainer = parseInt(e.target.value, 10) * 1000;
+    render('slider');
+  });
+
+  // Initial render: wipe animation + count-up from 0
+  render('initial');
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          // Measure body content only. documentElement.scrollHeight is floored
+          // to the iframe's viewport height, which would feed back into a
+          // resize loop once the parent applied the height.
+          var rect = document.body.getBoundingClientRect();
+          var h = Math.max(document.body.scrollHeight, Math.ceil(rect.height));
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

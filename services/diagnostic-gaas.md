@@ -1,13 +1,13 @@
 ---
 layout: service
-title: "Diagnostic GaaS"
-headline: "Diagnostic GaaS: Governance Architecture Assessment"
+title: "Diagnostic SGaaS"
+headline: "Diagnostic SGaaS: Governance Architecture Assessment"
 strapline: "A structured, adversarial evaluation of whether your governance architecture is capable of surfacing the information the board needs to prevent catastrophic failure. The low-risk entry point to the SGaaS model."
-description: "Diagnostic GaaS from Marentis Labs: a structured, adversarial assessment of governance architecture for FTSE 350 and PE-backed organisations."
+description: "Diagnostic SGaaS from Marentis Labs: a structured, adversarial assessment of governance architecture for FTSE 350 and PE-backed organisations."
 tools: ["Red Team Protocol", "Three Lines Effectiveness Review", "Architecture Mapping", "Structural Defect Diagnostic"]
 best_for: "A new chair or CEO inheriting an unfamiliar governance environment; a board responding to a near-miss or regulatory finding; a PE sponsor assessing portfolio governance readiness; an audit committee that senses a gap between what it receives and what it needs."
 duration: "4–8 weeks, fixed scope"
-tier: "Tier 1: Diagnostic GaaS"
+tier: "Tier 1: Diagnostic SGaaS"
 
 cta_label: "Request Diagnostic Proposal"
 cta_heading: "Commission a Governance Architecture Assessment"

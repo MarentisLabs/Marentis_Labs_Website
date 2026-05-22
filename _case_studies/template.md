@@ -3,7 +3,7 @@ title: "DRAFT: Case Study Title"
 description: "One or two sentences describing the engagement and outcome. This appears on the case studies listing page."
 sector: "Financial Services"
 organisation_type: "FTSE 250 Insurance Group"
-service_tier: "Retained GaaS"
+service_tier: "Retained SGaaS"
 challenge: "One sentence describing the governance challenge or risk the client faced."
 outcome: "One sentence stating the measurable or qualitative outcome achieved."
 date: 2025-01-01
@@ -32,8 +32,8 @@ This is where the adversarial framing comes in. Don't write "the board needed to
 
 Describe the engagement structure and methodology applied. Reference the relevant service tier and tools:
 
-- **Diagnostic GaaS** — what the diagnostic found
-- **Retained GaaS** — how the ongoing principal-led advisory was structured
+- **Diagnostic SGaaS** — what the diagnostic found
+- **Retained SGaaS** — how the ongoing principal-led advisory was structured
 - **Red Team Review** — if applied, what scenarios were stress-tested
 - **Pre-Mortem Diagnostic** — if applied, what failure modes were examined
 
@@ -58,4 +58,4 @@ This section can be more direct about the firm's view — it's the editorial clo
 
 ---
 
-*This illustrative engagement scenario demonstrates Marentis Labs' [Retained GaaS](/services/retained-gaas/) model. All client details are kept completely confidential for all engagements. To discuss a similar challenge, [schedule a confidential conversation](/contact/).*
+*This illustrative engagement scenario demonstrates Marentis Labs' [Retained SGaaS](/services/retained-gaas/) model. All client details are kept completely confidential for all engagements. To discuss a similar challenge, [schedule a confidential conversation](/contact/).*

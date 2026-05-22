@@ -1,13 +1,13 @@
 ---
 layout: service
-title: "Pre-Exit GaaS"
-headline: "Pre-Exit GaaS: Exit-Aligned Governance"
+title: "Pre-Exit SGaaS"
+headline: "Pre-Exit SGaaS: Exit-Aligned Governance"
 strapline: "Governance uplift and exit-readiness assessment for PE portfolio companies in the 12–24 months before a sale, IPO, or other liquidity event. Governance as a direct input to the exit multiple, grounded in the same analytical framework buyers use to price the transaction."
 description: "Pre-Exit SGaaS from Marentis Labs: governance maturity uplift, exit-readiness opinion, and CAP/DCF input for PE portfolio company exits."
 tools: ["Governance Maturity Scorecard", "Independent Exit-Readiness Opinion", "Buyer-Perspective Red Team Protocol", "CAP / DCF Sustainability Assessment"]
 best_for: "PE sponsors and portfolio company boards seeking to maximise governance-driven exit value, particularly where governance gaps could create diligence friction or affect the buyer's competitive advantage period assumption."
 duration: "12–24 months before the anticipated exit event"
-tier: "Tier 4: Pre-Exit GaaS"
+tier: "Tier 4: Pre-Exit SGaaS"
 
 cta_label: "Discuss Exit Preparation"
 cta_heading: "Convert Governance Maturity into Exit Value"
@@ -22,7 +22,7 @@ permalink: /services/pre-exit-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
-<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit GaaS is the PE-specific tier: exit-aligned governance delivered across the 12–24 months prior to a planned transaction.</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit SGaaS is the PE-specific tier: exit-aligned governance delivered across the 12–24 months prior to a planned transaction.</div>
 </div>
 
 ## Why Governance Is an Exit Variable
@@ -31,7 +31,7 @@ Governance quality is a recognised factor in M&A diligence. Buyers assess financ
 
 The Pre-Exit tier combines the Diagnostic's assessment capability with the Retained tier's continuous challenge, focused specifically on exit readiness.
 
-## What Pre-Exit GaaS Delivers
+## What Pre-Exit SGaaS Delivers
 
 The principal conducts a **governance maturity assessment benchmarked against buyer expectations**, identifies and remediates governance gaps that could create diligence friction, and provides an **independent governance opinion** that the seller can present to prospective buyers as evidence of governance quality.
 
@@ -48,13 +48,13 @@ The Pre-Exit tier also provides the PE sponsor with an assessment of how the por
 
 This positions governance uplift as a direct input to the exit multiple, grounded in the same analytical framework buyers use to price the transaction. The implication is operational, not rhetorical: governance maturity translates into a defensible component of the valuation case, not a soft narrative supplementing it.
 
-## How Pre-Exit GaaS Integrates
+## How Pre-Exit SGaaS Integrates
 
 The Pre-Exit principal works alongside the portfolio company's management team, the PE sponsor's value creation team, and any other advisors involved in exit preparation. The function is specifically designed to be **independent of the management team** preparing the business for sale — providing the buyer with confidence that the governance assessment was not self-serving.
 
 ## Commercial Structure
 
-Pre-Exit GaaS is delivered on a **structured retainer basis** across the 12–24 month engagement period. Commercial terms reflect the defined scope of governance assessment, remediation, and exit-readiness work, and are agreed in detail during the initial scoping conversation.
+Pre-Exit SGaaS is delivered on a **structured retainer basis** across the 12–24 month engagement period. Commercial terms reflect the defined scope of governance assessment, remediation, and exit-readiness work, and are agreed in detail during the initial scoping conversation.
 
 An optional **gain-sharing arrangement** on exit value uplift attributable to governance improvements is available. The gain-share is capped, structured at engagement kick-off, and paid post-close. It aligns the SGaaS commercial incentive directly with exit outcomes.
 

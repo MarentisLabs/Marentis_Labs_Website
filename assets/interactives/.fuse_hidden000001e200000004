@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Amplification Cascade | Marentis Labs</title>
+<meta name="description" content="One pound of direct loss becomes twelve pounds of shareholder damage. Grimwade (2025) and McKinsey's analysis of 350 operational risk incidents shows the amplification chain that makes governance failure permanent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #A98C5A;
+    --ml-gold-soft: #C2A57A;
+    --ml-gold-pale: #EFE3CC;
+    --ml-slate-blue: #4A6572;
+    --ml-deep-blue: #2E5266;
+    --ml-light-bg: #F8F9FA;
+    --ml-line: #DEE2E6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ml-light-bg); color: var(--ml-charcoal); font-family: var(--sans); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 48px 32px 64px; }
+
+  .brand-bar { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ml-line); padding-bottom: 18px; margin-bottom: 36px; }
+  .brand-mark { font-family: var(--serif); font-weight: 600; font-size: 18px; letter-spacing: 0.04em; }
+  .brand-mark .accent { color: var(--ml-gold); }
+  .brand-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ml-slate-grey); }
+
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  h1.title { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 18px; }
+  h1.title em { font-style: italic; color: var(--ml-deep-blue); font-weight: 500; }
+  .deck { font-weight: 300; font-size: clamp(16px, 1.6vw, 19px); color: var(--ml-slate-grey); max-width: 760px; line-height: 1.55; margin-bottom: 44px; }
+
+  .chart-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 4px; padding: 40px 44px 36px; box-shadow: 0 1px 2px rgba(33, 37, 41, 0.04); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; gap: 36px; align-items: center; padding-bottom: 28px; border-bottom: 1px solid var(--ml-line); margin-bottom: 28px; }
+  .hero-number { font-family: var(--serif); font-weight: 500; font-size: clamp(78px, 11vw, 128px); line-height: 0.95; letter-spacing: -0.025em; font-variant-numeric: tabular-nums; }
+  .hero-number .mult { color: var(--ml-gold); font-style: italic; }
+  .hero-number .x { color: var(--ml-charcoal); font-size: 0.55em; vertical-align: 0.25em; margin-left: 4px; }
+  .hero-caption { font-family: var(--serif); font-size: clamp(17px, 1.7vw, 21px); font-style: italic; color: var(--ml-slate-grey); line-height: 1.4; }
+  .hero-caption strong { color: var(--ml-charcoal); font-weight: 600; font-style: normal; }
+
+  /* Controls */
+  .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .ctrl-btn { background: transparent; border: 1px solid var(--ml-line); color: var(--ml-charcoal); font-family: var(--sans); font-size: 13px; font-weight: 500; padding: 9px 18px; border-radius: 999px; cursor: pointer; transition: all 0.15s ease; }
+  .ctrl-btn:hover { border-color: var(--ml-gold); }
+  .ctrl-btn.primary { background: var(--ml-charcoal); color: #FFFFFF; border-color: var(--ml-charcoal); }
+  .ctrl-btn.primary:hover { background: var(--ml-gold); border-color: var(--ml-gold); }
+  .ctrl-hint { font-size: 11.5px; color: var(--ml-slate-grey); font-style: italic; margin-left: 4px; }
+
+  /* Cascade SVG */
+  .cascade-wrap { width: 100%; aspect-ratio: 24 / 9; min-height: 320px; margin-bottom: 4px; }
+  svg.cascade { width: 100%; height: 100%; overflow: visible; display: block; }
+  svg text { font-family: var(--sans); }
+  .stage-rect { transition: filter 0.2s ease-out, fill 0.2s ease-out; cursor: pointer; }
+  .stage-group:hover .stage-rect { filter: brightness(1.05); }
+  .stage-group.active .stage-rect { filter: brightness(1.06); }
+  .stage-group.dim .stage-rect { opacity: 0.35; }
+  .stage-group.dim .stage-text { opacity: 0.5; }
+  .stage-text, .stage-label, .axis-text { pointer-events: none; }
+  .stage-label { font-weight: 600; letter-spacing: 0.05em; fill: var(--ml-charcoal); }
+  .stage-num { font-family: var(--serif); font-weight: 600; fill: var(--ml-charcoal); }
+  .arrow-path { transition: opacity 0.25s ease-out; }
+
+  /* Stage detail panel */
+  .stage-detail { margin-top: 28px; padding: 26px 30px; background: var(--ml-light-bg); border-left: 3px solid var(--ml-gold); border-radius: 2px; transition: opacity 0.2s ease-out; }
+  .sd-meta { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 6px; }
+  .sd-title { font-family: var(--serif); font-weight: 600; font-size: 24px; color: var(--ml-charcoal); margin-bottom: 10px; line-height: 1.25; }
+  .sd-body { font-size: 14.5px; color: var(--ml-slate-grey); line-height: 1.6; margin-bottom: 14px; }
+  .sd-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .sd-data { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 14px; }
+  .sd-data-item { background: #FFFFFF; border: 1px solid var(--ml-line); padding: 14px 16px; border-radius: 2px; }
+  .sd-data-label { font-size: 11px; color: var(--ml-slate-grey); line-height: 1.4; margin-bottom: 4px; }
+  .sd-data-value { font-family: var(--serif); font-weight: 600; font-size: 17px; color: var(--ml-charcoal); }
+  .sd-source { font-size: 11.5px; color: var(--ml-slate-grey); font-style: italic; margin-top: 12px; }
+
+  /* Examples */
+  .examples-section { margin-top: 56px; }
+  .section-header { margin-bottom: 28px; }
+  .section-header h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; color: var(--ml-charcoal); letter-spacing: -0.005em; margin-bottom: 8px; }
+  .section-header p { font-size: 14px; color: var(--ml-slate-grey); max-width: 640px; }
+  .example-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .example-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 2px; padding: 26px 28px; }
+  .example-card:hover { border-color: var(--ml-gold); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(33,37,41,0.06); transition: all 0.2s ease; }
+  .ex-name { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--ml-charcoal); margin-bottom: 4px; letter-spacing: 0.01em; }
+  .ex-period { font-size: 11px; color: var(--ml-slate-grey); margin-bottom: 14px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .ex-key { font-family: var(--serif); font-weight: 500; font-size: 30px; color: var(--ml-gold); line-height: 1; margin-bottom: 4px; }
+  .ex-key-label { font-size: 12px; color: var(--ml-slate-grey); margin-bottom: 14px; }
+  .ex-body { font-size: 13px; color: var(--ml-slate-grey); line-height: 1.55; }
+
+  /* Insight cards */
+  .mechanism-section { margin-top: 56px; }
+  .mech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .mech-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 2px; padding: 22px 24px; }
+  .mech-num { font-family: var(--serif); font-size: 26px; color: var(--ml-gold); font-weight: 500; line-height: 1; margin-bottom: 10px; }
+  .mech-title { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--ml-charcoal); margin-bottom: 8px; }
+  .mech-body { font-size: 13px; color: var(--ml-slate-grey); line-height: 1.55; }
+  .mech-body strong { color: var(--ml-charcoal); font-weight: 600; }
+
+  /* Conclusion */
+  .conclusion { margin-top: 56px; padding: 40px 44px; background: var(--ml-charcoal); color: #FFFFFF; border-radius: 2px; }
+  .conclusion-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  .conclusion-text { font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; margin-bottom: 12px; letter-spacing: -0.005em; }
+  .conclusion-cite { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+  /* Footer */
+  .footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--ml-line); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--ml-slate-grey); line-height: 1.6; }
+  .footer .src { max-width: 820px; }
+
+  @media (max-width: 720px) {
+    .page { padding: 32px 20px 48px; }
+    .chart-card { padding: 28px 20px; }
+    .hero { grid-template-columns: 1fr; gap: 12px; }
+    .conclusion { padding: 28px 24px; }
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 28px; }
+  body.embed-mode .footer { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="eyebrow">Research Insight · From Section 11 of the SGaaS White Paper</div>
+  <h1 class="title">The Amplification Cascade</h1>
+  <p class="deck">The initial write-down is the trigger. The amplification chain is what makes the damage permanent. McKinsey&rsquo;s analysis of <strong>350 operational risk incidents</strong> at European and North American financial institutions, documented by Grimwade (2025), shows that total shareholder returns over the 120 working days following disclosure are impacted at <em>more than twelve times</em> the actual monetary losses from fines, settlements, and direct costs.</p>
+
+  <section class="chart-card">
+    <div class="hero">
+      <div>
+        <div class="hero-number"><span class="mult" id="hero-num">0</span><span class="x">&times;</span></div>
+      </div>
+      <div class="hero-caption">A <strong>&pound;1</strong> direct loss becomes <strong>&pound;12</strong> of shareholder damage over the <strong>120 working days</strong> following disclosure &mdash; the empirical signature of governance failure&rsquo;s persistence.</div>
+    </div>
+
+    <div class="controls">
+      <button class="ctrl-btn primary" id="btn-play">&#9654; Play the cascade</button>
+      <button class="ctrl-btn" id="btn-reset">&#8634; Reset</button>
+      <span class="ctrl-hint">or click any stage to focus</span>
+    </div>
+
+    <div class="cascade-wrap">
+      <svg class="cascade" id="cascade" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="stage-detail" id="stage-detail">
+      <div class="sd-meta" id="sd-meta">Stage 1 of 5 · Trigger</div>
+      <div class="sd-title" id="sd-title">The direct loss</div>
+      <div class="sd-body" id="sd-body">The fines, settlements, and operational costs that result directly from the governance failure event. This is the visible, headline-grabbing cost &mdash; and the smallest component of the cumulative damage.</div>
+      <div class="sd-data" id="sd-data"></div>
+      <div class="sd-source" id="sd-source">Source: McKinsey via Grimwade (2025); n = 350 operational risk incidents at European and North American financial institutions.</div>
+    </div>
+  </section>
+
+  <section class="examples-section">
+    <div class="section-header">
+      <h3>The cascade in the real world</h3>
+      <p>Two cases trace the amplification chain end to end. One recovered. The other was overrun by it.</p>
+    </div>
+    <div class="example-grid">
+      <div class="example-card">
+        <div class="ex-name">UBS &mdash; 2011 rogue-trader incident</div>
+        <div class="ex-period">Sep 2011 &middot; Fitch downgrade · SGaaS White Paper §11</div>
+        <div class="ex-key">5 years</div>
+        <div class="ex-key-label">to recover the Fitch &lsquo;A&rsquo; rating after downgrade</div>
+        <div class="ex-body">A further <strong>fifteen months</strong> beyond that to reach &lsquo;AA&minus;&rsquo;. The credit-rating impact persisted long after the operational loss itself had been absorbed &mdash; the funding-cost penalty compounded for years across all future borrowing.</div>
+      </div>
+      <div class="example-card">
+        <div class="ex-name">Credit Suisse &mdash; 2022 collapse</div>
+        <div class="ex-period">Q4 2022 &middot; CHF&thinsp;138B in deposit outflows</div>
+        <div class="ex-key">123B<span style="font-size:0.55em; color: var(--ml-slate-grey); margin-left:8px;">CHF AUM</span></div>
+        <div class="ex-key-label">in wealth &amp; asset management outflows over the year</div>
+        <div class="ex-body">Share-price decline and client withdrawal compounded into a <strong>self-amplifying loop</strong>. Q4 2022 alone saw CHF&thinsp;111B in net wealth/asset management outflows. The cascade outran the rescue. The end state was forced acquisition by UBS.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mechanism-section">
+    <div class="section-header">
+      <h3>Why this matters for governance</h3>
+      <p>The 12&times; multiplier is not optional. It is the cost of detecting the trigger event only at the moment the market does.</p>
+    </div>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <div class="mech-num">01</div>
+        <div class="mech-title">The trigger is the smallest cost</div>
+        <div class="mech-body">The direct loss &mdash; the headline number in the press release &mdash; is roughly <strong>8%</strong> of the total damage. Eleven-twelfths of the damage arrives <em>after</em> the disclosure.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">02</div>
+        <div class="mech-title">The cascade is self-reinforcing</div>
+        <div class="mech-body">Share decline, downgrade, funding spread, and client attrition compound each other. Each stage <strong>worsens the next</strong>, not merely adds to it. The amplification is a loop, not a sum.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">03</div>
+        <div class="mech-title">Detection timing changes the multiplier</div>
+        <div class="mech-body">Continuous adversarial governance reduces the time from <strong>risk crystallisation</strong> to <strong>board awareness</strong>, which shortens the cascade window. A 30-day head start on the disclosure narrative compresses the amplification chain materially.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">04</div>
+        <div class="mech-title">The penalty outlasts the event</div>
+        <div class="mech-body">The credit and funding penalties persist for <strong>years</strong> after the operational loss is absorbed. Damage that doesn&rsquo;t appear in the year-of-event P&amp;L still appears in every subsequent year&rsquo;s cost of capital.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <div class="conclusion-eyebrow">The Economic Logic</div>
+    <div class="conclusion-text">Markets price the cascade, and the cascade outlasts the event. The economic case for continuous, adversarial governance challenge is measured against the full twelve-fold damage chain &mdash; not against the headline write-down that triggers it.</div>
+    <div class="conclusion-cite">From <em>Strategic Governance as a Service</em>, Section 11 &mdash; Marentis Labs, 2026.</div>
+  </section>
+
+  <footer class="footer">
+    <div class="src">
+      <strong style="color:var(--ml-charcoal)">Sources.</strong>
+      Grimwade, M. (2025). Drawing on McKinsey&rsquo;s analysis of approximately 350 operational risk incidents at European and North American financial institutions, finding that TSR impact over 120 working days post-disclosure exceeded 12&times; direct monetary losses.
+      Grimwade, M. (2023). Investment-grade single-notch credit downgrade typically widens debt spreads by 10&ndash;50 basis points; UBS Fitch downgrade recovery timeline.
+      FINMA (2023). Credit Suisse Q4 2022 deposit and AUM outflow figures.
+      Stage timing on the cascade curve is illustrative; the published quantities are the 1&times; baseline and the 12&times; cumulative endpoint at 120 working days.
+    </div>
+    <div>&copy; 2026 Marentis Labs Ltd<br>marentislabs.com</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- STAGE DATA ----------
+  const stages = [
+    {
+      id: 'trigger', label: 'Direct Loss', icon: '£1', short: '1×',
+      mult: 1, day: 0,
+      title: 'The direct loss',
+      body: 'The fines, settlements, and operational costs that result directly from the governance failure event. The visible, headline-grabbing cost &mdash; and the smallest component of the cumulative damage.',
+      data: [{ k: 'Cumulative damage', v: '×1' }, { k: 'Time window', v: 'Day 0' }, { k: 'Sample size', v: 'n = 350' }],
+      source: 'McKinsey via Grimwade (2025) &middot; 350 operational risk incidents, European and North American financial institutions.'
+    },
+    {
+      id: 'share', label: 'Share Price Decline', icon: '↓', short: '≈3×',
+      mult: 3, day: 7,
+      title: 'Share-price decline',
+      body: 'Public disclosure triggers immediate market repricing. The most visible amplification stage, and the one most boards mistake for the <strong>full cost</strong>. It is the first multiplier, not the last.',
+      data: [{ k: 'Approximate cumulative', v: '≈3×' }, { k: 'Typical window', v: 'Days 1–10' }, { k: 'Mechanism', v: 'Market repricing' }],
+      source: 'Grimwade (2025); pattern documented across DACH event-study data (Hunziker et al., 2025).'
+    },
+    {
+      id: 'downgrade', label: 'Credit Rating Downgrade', icon: '▼', short: '≈5×',
+      mult: 5, day: 21,
+      title: 'Credit-rating downgrade',
+      body: 'Rating agencies revise outlook downward as governance concerns surface. <strong>Multi-notch downgrades</strong> are common in severe incidents. The downgrade is the structural bridge from a one-off event to a multi-year funding penalty.',
+      data: [{ k: 'Approximate cumulative', v: '≈5×' }, { k: 'Typical window', v: 'Days 14–30' }, { k: 'UBS recovery (2011)', v: '5 years to ‘A’' }],
+      source: 'Grimwade (2023); UBS / Fitch recovery timeline following the 2011 rogue-trader incident.'
+    },
+    {
+      id: 'funding', label: 'Funding Cost Increase', icon: '↑', short: '≈8×',
+      mult: 8, day: 50,
+      title: 'Funding-cost increase',
+      body: 'Debt spreads widen as credit deteriorates, raising the cost of all future funding. A <strong>one-notch downgrade widens spreads by 10–50 basis points</strong>, a penalty that persists long after the operational loss has been absorbed.',
+      data: [{ k: 'Approximate cumulative', v: '≈8×' }, { k: 'Spread widening per notch', v: '10–50 bps' }, { k: 'Persistence', v: 'Multi-year' }],
+      source: 'Grimwade (2023). Spread impact applies to investment-grade institutions; emerging-market and high-yield issuers face larger movements.'
+    },
+    {
+      id: 'customer', label: 'Customer Attrition', icon: '↯', short: '12×',
+      mult: 12, day: 120,
+      title: 'Customer attrition',
+      body: 'Reputation damage triggers customer withdrawals. The cascade becomes <strong>self-reinforcing</strong> as media speculation and loss of confidence reinforce each other. In severe cases the loop accelerates past recovery.',
+      data: [{ k: 'Cumulative damage', v: '×12' }, { k: 'Time window', v: 'Day 120' }, { k: 'Credit Suisse Q4 2022', v: 'CHF 138B deposits' }],
+      source: 'Grimwade (2025); FINMA (2023) on Credit Suisse Q4 2022 deposit and AUM outflows.'
+    }
+  ];
+
+  // ---------- ELEMENTS ----------
+  const svg = document.getElementById('cascade');
+  const heroNum = document.getElementById('hero-num');
+  const sdMeta = document.getElementById('sd-meta');
+  const sdTitle = document.getElementById('sd-title');
+  const sdBody = document.getElementById('sd-body');
+  const sdData = document.getElementById('sd-data');
+  const sdSource = document.getElementById('sd-source');
+  const stageDetail = document.getElementById('stage-detail');
+  const btnPlay = document.getElementById('btn-play');
+  const btnReset = document.getElementById('btn-reset');
+
+  // ---------- HELPERS ----------
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  function tween(from, to, duration, onUpdate, ease) {
+    const e = ease || easeOutCubic;
+    const t0 = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - t0) / duration);
+      onUpdate(from + (to - from) * e(t));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---------- LAYOUT ----------
+  // viewBox 1200 x 380
+  // Layout:
+  //  - top zone (y 20-60): stage labels
+  //  - main stage row (y 80-200): 5 stage boxes connected by arrows
+  //  - cumulative bar (y 230-260): the amplification thermometer
+  //  - x-axis labels (y 280-320): cumulative multipliers
+  const VB_W = 1200, VB_H = 380;
+  const padL = 60, padR = 60;
+  const innerW = VB_W - padL - padR;
+  const boxW = 150, boxH = 100;
+  const boxY = 90;
+  const stagePositions = stages.map((_, i) => {
+    // Evenly space 5 boxes across innerW
+    const gap = (innerW - boxW * 5) / 4;
+    return padL + i * (boxW + gap);
+  });
+
+  const barY = 240, barH = 22;
+  const barX = padL, barW = innerW;
+
+  // ---------- RENDER ----------
+  let selectedIdx = 0;
+  let activeIdx = -1; // for play animation
+  let playing = false;
+  let abortPlay = false;
+
+  function renderCascade() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    // --- Arrows connecting stages (drawn first so they sit behind boxes) ---
+    for (let i = 0; i < stages.length - 1; i++) {
+      const x1 = stagePositions[i] + boxW;
+      const x2 = stagePositions[i + 1];
+      const yMid = boxY + boxH / 2;
+      // Arrow path: line + triangle head
+      const baseWidth = 1.5 + i * 0.8; // arrows get thicker through the cascade
+      el('line', {
+        x1: x1 + 6, y1: yMid, x2: x2 - 10, y2: yMid,
+        stroke: 'var(--ml-slate-grey)', 'stroke-width': baseWidth,
+        class: 'arrow-path',
+        'data-arrow': i,
+        opacity: 0.55
+      }, svg);
+      // Triangle head
+      el('polygon', {
+        points: (x2 - 10) + ',' + (yMid - 6) + ' ' + (x2 - 10) + ',' + (yMid + 6) + ' ' + (x2 - 2) + ',' + yMid,
+        fill: 'var(--ml-slate-grey)',
+        class: 'arrow-path',
+        'data-arrow': i,
+        opacity: 0.55
+      }, svg);
+    }
+
+    // --- Stage boxes ---
+    stages.forEach((s, i) => {
+      const x = stagePositions[i];
+      const isFirst = i === 0;
+      const isLast = i === stages.length - 1;
+      const fill = isFirst ? 'var(--ml-gold-pale)' : (isLast ? 'var(--ml-gold)' : '#FFFFFF');
+      const stroke = (isFirst || isLast) ? 'var(--ml-gold)' : 'var(--ml-line)';
+      const strokeW = (isFirst || isLast) ? 1.5 : 1;
+
+      const g = el('g', {
+        class: 'stage-group',
+        'data-idx': i,
+        transform: 'translate(' + x + ',' + boxY + ')'
+      }, svg);
+
+      // Background rect
+      el('rect', {
+        x: 0, y: 0, width: boxW, height: boxH, rx: 4,
+        fill: fill, stroke: stroke, 'stroke-width': strokeW,
+        class: 'stage-rect'
+      }, g);
+
+      // Stage number (top-left)
+      el('text', {
+        x: 12, y: 22, 'font-size': 10, 'font-weight': 600,
+        'letter-spacing': '0.16em', fill: 'var(--ml-slate-grey)',
+        class: 'stage-text'
+      }, g).textContent = 'STAGE ' + (i + 1);
+
+      // Icon / glyph (top-right of box)
+      const iconColor = isLast ? '#FFFFFF' : 'var(--ml-gold)';
+      el('text', {
+        x: boxW - 16, y: 26,
+        'text-anchor': 'end',
+        'font-family': 'var(--serif)',
+        'font-size': 22, 'font-weight': 600,
+        fill: iconColor,
+        class: 'stage-text'
+      }, g).textContent = s.icon;
+
+      // Multiplier number (centre, large serif)
+      el('text', {
+        x: boxW / 2, y: boxH / 2 + 8,
+        'text-anchor': 'middle',
+        'font-family': 'var(--serif)',
+        'font-size': 28, 'font-weight': 600,
+        fill: isLast ? '#FFFFFF' : 'var(--ml-charcoal)',
+        class: 'stage-num stage-text'
+      }, g).textContent = s.short;
+
+      // Stage label (below box)
+      el('text', {
+        x: boxW / 2, y: boxH + 24,
+        'text-anchor': 'middle',
+        'font-size': 11.5, 'font-weight': 600,
+        fill: 'var(--ml-charcoal)',
+        'letter-spacing': '0.04em',
+        class: 'stage-label stage-text'
+      }, g).textContent = s.label;
+
+      // Click handler
+      g.addEventListener('click', () => { selectStage(i); });
+      g.addEventListener('mouseenter', () => { selectStage(i); });
+    });
+
+    // --- Cumulative amplification bar (thermometer) ---
+    el('rect', {
+      x: barX, y: barY, width: barW, height: barH,
+      fill: '#F1F3F5', stroke: 'var(--ml-line)', 'stroke-width': 1, rx: 11
+    }, svg);
+    // The fill rect — animated by tweening width
+    const fillRect = el('rect', {
+      id: 'cum-fill',
+      x: barX, y: barY, width: 0, height: barH,
+      fill: 'var(--ml-gold)', rx: 11
+    }, svg);
+
+    // Bar tick marks at each stage's cumulative multiplier (1, 3, 5, 8, 12)
+    stages.forEach((s, i) => {
+      const tx = barX + (s.mult / 12) * barW;
+      // tick line above and below the bar
+      el('line', {
+        x1: tx, x2: tx, y1: barY - 6, y2: barY + barH + 6,
+        stroke: 'var(--ml-charcoal)', 'stroke-width': 1.2,
+        opacity: 0.6
+      }, svg);
+      // tick value
+      el('text', {
+        x: tx, y: barY + barH + 22,
+        'text-anchor': 'middle', 'font-size': 11, 'font-weight': 600,
+        fill: 'var(--ml-charcoal)',
+        class: 'axis-text'
+      }, svg).textContent = '×' + s.mult;
+    });
+
+    // Bar caption
+    el('text', {
+      x: barX, y: barY - 14,
+      'font-size': 10.5, 'font-weight': 600, 'letter-spacing': '0.16em',
+      'text-transform': 'uppercase',
+      fill: 'var(--ml-slate-grey)',
+      class: 'axis-text'
+    }, svg).textContent = 'CUMULATIVE TSR DAMAGE · ×1 → ×12';
+    el('text', {
+      x: barX + barW, y: barY - 14,
+      'text-anchor': 'end',
+      'font-size': 10.5, 'font-style': 'italic',
+      fill: 'var(--ml-slate-grey)',
+      class: 'axis-text'
+    }, svg).textContent = 'over 120 working days post-disclosure';
+
+    return fillRect;
+  }
+
+  let cumFillRect = null;
+
+  // ---------- STAGE SELECTION ----------
+  function selectStage(idx, opts) {
+    opts = opts || {};
+    selectedIdx = idx;
+    const s = stages[idx];
+
+    // Visual highlight
+    document.querySelectorAll('.stage-group').forEach(g => {
+      const gi = parseInt(g.dataset.idx, 10);
+      g.classList.toggle('active', gi === idx);
+      g.classList.toggle('dim', activeIdx >= 0 && gi > activeIdx);
+    });
+
+    // If we're scrubbing manually (not during play), advance the cumulative bar to this stage's mult
+    if (!opts.skipBar) {
+      const targetW = (s.mult / 12) * barW;
+      const currentW = parseFloat(cumFillRect.getAttribute('width')) || 0;
+      tween(currentW, targetW, 350, v => cumFillRect.setAttribute('width', v));
+      // Hero number animation
+      const fromN = parseInt((heroNum.textContent || '0').replace(/[^\d]/g, ''), 10) || 0;
+      animateNum(fromN, s.mult, 500);
+    }
+
+    // Detail panel
+    stageDetail.style.opacity = '0';
+    setTimeout(() => {
+      sdMeta.textContent = 'Stage ' + (idx + 1) + ' of 5 · ' + (idx === 0 ? 'Trigger' : idx === stages.length - 1 ? 'Final state' : 'Mechanism');
+      sdTitle.textContent = s.title;
+      sdBody.innerHTML = s.body;
+      sdData.innerHTML = '';
+      s.data.forEach(d => {
+        const div = document.createElement('div');
+        div.className = 'sd-data-item';
+        div.innerHTML = '<div class="sd-data-label">' + d.k + '</div><div class="sd-data-value">' + d.v + '</div>';
+        sdData.appendChild(div);
+      });
+      sdSource.innerHTML = 'Source: ' + s.source;
+      stageDetail.style.opacity = '1';
+    }, 130);
+  }
+
+  function animateNum(from, to, duration) {
+    tween(from, to, duration, v => { heroNum.textContent = Math.round(v); });
+  }
+
+  // ---------- PLAY ANIMATION ----------
+  async function playCascade() {
+    if (playing) return;
+    playing = true;
+    abortPlay = false;
+    btnPlay.textContent = '⏸ Pause cascade';
+
+    // Reset bar and hero to zero
+    cumFillRect.setAttribute('width', 0);
+    heroNum.textContent = '0';
+    activeIdx = -1;
+    document.querySelectorAll('.stage-group').forEach(g => g.classList.add('dim'));
+
+    for (let i = 0; i < stages.length; i++) {
+      if (abortPlay) break;
+      activeIdx = i;
+      // Reveal this stage
+      const g = document.querySelector('.stage-group[data-idx="' + i + '"]');
+      g.classList.remove('dim');
+      // Animate bar fill to this stage's multiplier
+      const targetW = (stages[i].mult / 12) * barW;
+      const currentW = parseFloat(cumFillRect.getAttribute('width')) || 0;
+      const fromN = parseInt(heroNum.textContent, 10) || 0;
+      const dur = 700;
+      tween(currentW, targetW, dur, v => cumFillRect.setAttribute('width', v));
+      animateNum(fromN, stages[i].mult, dur);
+
+      // Update detail panel
+      selectStage(i, { skipBar: true });
+
+      // Reveal the arrow to the next stage near the end of this stage's animation
+      if (i < stages.length - 1) {
+        const arrow = document.querySelectorAll('[data-arrow="' + i + '"]');
+        arrow.forEach(a => a.setAttribute('opacity', '1'));
+      }
+
+      // Wait for animation + pause
+      await sleep(dur + 350);
+    }
+
+    btnPlay.textContent = '↻ Play again';
+    playing = false;
+    activeIdx = -1;
+    // Clear dim state on all stages once cascade completes
+    document.querySelectorAll('.stage-group').forEach(g => g.classList.remove('dim'));
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // ---------- INIT ----------
+  cumFillRect = renderCascade();
+  // Start with stage 1 selected and bar at 1×
+  selectStage(0);
+  // (selectStage handled bar + hero animation already)
+
+  btnPlay.addEventListener('click', () => {
+    if (playing) {
+      abortPlay = true;
+      playing = false;
+      btnPlay.textContent = '▶ Play the cascade';
+      return;
+    }
+    playCascade();
+  });
+
+  btnReset.addEventListener('click', () => {
+    abortPlay = true;
+    playing = false;
+    btnPlay.textContent = '▶ Play the cascade';
+    activeIdx = -1;
+    document.querySelectorAll('.stage-group').forEach(g => g.classList.remove('dim'));
+    selectStage(0);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          var h = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight
+          );
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

@@ -157,14 +157,14 @@ Close the article. What should the reader take away?
 *Owen Vallis is the founder of Marentis Labs. [Description of relevance to a service or engagement type.] [Schedule a confidential discussion](/contact/).*
 ```
 
-The final italicised paragraph and horizontal rule (`---`) are the standard article attribution and call-to-action. Adjust the middle sentence to reference the relevant service (Diagnostic GaaS, Retained GaaS, etc.) but keep the structure consistent.
+The final italicised paragraph and horizontal rule (`---`) are the standard article attribution and call-to-action. Adjust the middle sentence to reference the relevant service (Diagnostic SGaaS, Retained SGaaS, etc.) but keep the structure consistent.
 
 ### Linking within the article
 
 To link to other pages on the site, use site-relative links:
 
 ```markdown
-[our Diagnostic GaaS service](/services/diagnostic-gaas/)
+[our Diagnostic SGaaS service](/services/diagnostic-gaas/)
 [schedule a call](/contact/)
 ```
 
@@ -206,7 +206,7 @@ Most board effectiveness reviews are comfortable exercises...
 
 ---
 
-*Owen Vallis is the founder of Marentis Labs. Board effectiveness is a core component of our Retained GaaS engagements. [Schedule a confidential discussion](/contact/).*
+*Owen Vallis is the founder of Marentis Labs. Board effectiveness is a core component of our Retained SGaaS engagements. [Schedule a confidential discussion](/contact/).*
 ```
 
 ---

@@ -3,7 +3,7 @@ title: "Risk Governance Overhaul at an FCA-Regulated Insurer"
 description: "A mid-market insurer facing supervisory pressure engaged Marentis Labs to restructure its risk committee architecture and rebuild its risk appetite framework from the board down."
 sector: "Financial Services"
 organisation_type: "FCA-Regulated Insurer"
-service_tier: "Retained GaaS"
+service_tier: "Retained SGaaS"
 challenge: "Risk committee structure had fragmented over three years of rapid growth, creating accountability gaps that the FCA had flagged in a Dear CEO letter."
 outcome: "Consolidated committee architecture approved by the board; revised risk appetite statement embedded in executive reporting within six months."
 date: 2025-03-01
@@ -31,7 +31,7 @@ The regulatory dimension added urgency: the FCA had indicated it expected a subs
 
 ## Our Approach
 
-Marentis Labs was engaged on a Retained GaaS basis, with the principal working directly with the Chair of the Audit and Risk Committee and the incoming CRO. The engagement proceeded in two phases.
+Marentis Labs was engaged on a Retained SGaaS basis, with the principal working directly with the Chair of the Audit and Risk Committee and the incoming CRO. The engagement proceeded in two phases.
 
 **Phase one: Diagnostic (weeks 1–4)**
 
@@ -58,7 +58,7 @@ Within six months of the engagement commencing:
 - Board risk papers had been restructured; the Chair of the Audit and Risk Committee described the new format as "the first time I've been able to read a risk paper and form a view rather than just receive information"
 - The CRO had a defensible, documented governance framework to present to the FCA at its next supervisory visit
 
-The engagement continued into a second year as Retained GaaS, focused on embedding the new framework into the annual planning cycle and stress testing processes.
+The engagement continued into a second year as Retained SGaaS, focused on embedding the new framework into the annual planning cycle and stress testing processes.
 
 ## What This Engagement Illustrates
 
@@ -68,4 +68,4 @@ The value of principal-led, external governance is the ability to diagnose what 
 
 ---
 
-*This illustrative engagement scenario demonstrates Marentis Labs' [Retained GaaS](/services/retained-gaas/) model. All client details are kept completely confidential for all engagements. To discuss a similar challenge, [schedule a confidential conversation](/contact/).*
+*This illustrative engagement scenario demonstrates Marentis Labs' [Retained SGaaS](/services/retained-gaas/) model. All client details are kept completely confidential for all engagements. To discuss a similar challenge, [schedule a confidential conversation](/contact/).*

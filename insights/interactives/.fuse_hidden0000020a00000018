@@ -1,0 +1,77 @@
+---
+layout: default
+title: "The Reporting Cycle: When DACH Severe Events Cluster"
+description: "471 severe events across DACH from 2018-24 cluster around the reporting calendar. Interactive monthly distribution."
+permalink: /insights/interactives/reporting-cycle/
+---
+
+<!-- ════════════════════════════════════════════════════════════
+     Hero
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero-section text-white py-16 md:py-20">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Interactive Insight</p>
+    <h1 class="text-3xl md:text-5xl font-black mb-5 leading-tight">
+      Severe Events Cluster.&nbsp;<br class='hidden md:block'>The Reporting Calendar Is Their Trigger.
+    </h1>
+    <p class="text-gray-400 text-lg max-w-3xl leading-relaxed">
+      Of 471 severe corporate events documented in the DACH region from 2018 to 2024, nearly 40% landed in just three months &mdash; September, June, and October. Hover any bar for the monthly readout.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Framing paragraph
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <p class="text-ml-slate-grey text-base md:text-lg leading-relaxed">
+      Severe corporate events do not arrive at random. They cluster around the reporting calendar &mdash; the moments at which strategic concealment, accounting choices, and forecast revisions are most exposed to external view. Hunziker et al. (2025) document the pattern across 669 listed firms in Germany, Austria, and Switzerland. The implication for boards is that resourcing governance attention proportionate to the calendar is structurally backwards: the times the calendar is busy with reporting are precisely the times severe events surface.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Interactive embed
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-6 md:py-8 bg-ml-light-bg border-t border-gray-100 border-b">
+  <div class="container mx-auto px-2 md:px-6 max-w-6xl">
+    {% include interactive-embed.html
+        slug="reporting-cycle"
+        title="The Reporting Cycle: When DACH Severe Events Cluster"
+        min_height="1700" %}
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     White paper CTA
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: var(--ml-gold); letter-spacing: 0.2em;">From the SGaaS White Paper</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal mb-5 leading-snug">
+      Reporting calendar pressure is one of three structural defects
+    </h2>
+    <p class="text-ml-slate-grey text-base leading-relaxed max-w-2xl mx-auto mb-8">
+      Episodic engagement, consensus dependency, and the absence of institutionalised challenge together explain why volume of oversight has not closed the governance gap. The white paper diagnoses each in turn.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/white-paper/" class="btn-primary">Download the white paper &rarr;</a>
+      <a href="/contact/" class="btn-nav-cta">Schedule a confidential call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Related insights
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-ml-light-bg border-t border-gray-100">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--ml-gold); letter-spacing: 0.2em;">More interactive insights</p>
+    <ul class="grid md:grid-cols-3 gap-4 list-none">
+      <li><a href="/insights/interactives/cost-ratio/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Cost Ratio &mdash; spend vs. failure &rarr;</a></li>
+      <li><a href="/insights/interactives/recovery-gap/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Recovery Gap &mdash; two years after &rarr;</a></li>
+      <li><a href="/insights/interactives/amplification-cascade/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Amplification Cascade &mdash; the 12&times; multiplier &rarr;</a></li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three Structural Defects | Marentis Labs</title>
+<meta name="description" content="A diagnostic dossier on the three structural defects in modern board governance — episodic engagement, consensus dependency, and the absence of institutionalised challenge. Drawn from Section 1 and Section 3 of the Marentis Labs Strategic Governance as a Service white paper.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-ink:      #1A1D20;
+    --ml-slate:    #495057;
+    --ml-muted:    #6C757D;
+    --ml-faint:    #ADB5BD;
+    --ml-gold:     #A98C5A;
+    --ml-gold-dk:  #8A7048;
+    --ml-paper:    #FAFAF7;
+    --ml-light-bg: #F4F4EF;
+    --ml-line:     #D8D5CC;
+    --ml-rule:     #C9C5BA;
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body {
+    background: var(--ml-paper);
+    color: var(--ml-ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page { max-width: 1040px; margin: 0 auto; padding: 56px 44px 80px; }
+  @media (max-width: 720px) { .page { padding: 36px 22px 56px; } }
+
+  /* Brand bar */
+  .brand-bar {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-bottom: 1px solid var(--ml-rule);
+    padding-bottom: 20px; margin-bottom: 48px;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .brand-mark { font-family: var(--serif); font-weight: 600; font-size: 19px; letter-spacing: 0.04em; color: var(--ml-charcoal); }
+  .brand-mark .accent { color: var(--ml-gold); margin: 0 2px; }
+  .brand-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-muted); }
+
+  /* Title block */
+  .kicker { font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 22px; }
+  .kicker .kicker-sep { color: var(--ml-faint); margin: 0 10px; font-weight: 400; }
+
+  h1.title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(44px, 6.4vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.012em;
+    color: var(--ml-charcoal);
+    margin-bottom: 28px;
+  }
+
+  .deck {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(20px, 2.1vw, 24px);
+    line-height: 1.45;
+    color: var(--ml-slate);
+    max-width: 720px;
+    margin-bottom: 56px;
+  }
+
+  /* Provenance block */
+  .provenance {
+    border-top: 1px solid var(--ml-rule);
+    border-bottom: 1px solid var(--ml-rule);
+    padding: 22px 0;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 28px;
+  }
+  @media (max-width: 720px) {
+    .provenance { grid-template-columns: 1fr; gap: 14px; padding: 20px 0; margin-bottom: 48px; }
+  }
+  .provenance-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-muted); padding-top: 4px; }
+  .provenance-body { font-size: 14.5px; line-height: 1.7; color: var(--ml-slate); }
+  .provenance-body p { margin-bottom: 10px; }
+  .provenance-body p:last-child { margin-bottom: 0; }
+  .provenance-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .provenance-body em { font-style: italic; color: var(--ml-charcoal); }
+
+  /* Defect section */
+  .defect-section { margin-bottom: 88px; }
+  .defect-section:last-of-type { margin-bottom: 64px; }
+
+  .defect-head {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 0;
+    align-items: baseline;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--ml-line);
+  }
+  @media (max-width: 720px) { .defect-head { grid-template-columns: 64px 1fr; } }
+  .defect-num {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 56px;
+    color: var(--ml-gold);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  @media (max-width: 720px) { .defect-num { font-size: 44px; } }
+  .defect-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-muted); margin-bottom: 8px; }
+  .defect-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(32px, 4vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.008em;
+    color: var(--ml-charcoal);
+  }
+
+  /* Paper-sourced definition: presented as a verbatim block-quote */
+  .paper-defn {
+    margin-left: 96px;
+    max-width: 720px;
+    margin-bottom: 36px;
+    padding-left: 22px;
+    border-left: 3px solid var(--ml-gold);
+  }
+  @media (max-width: 720px) { .paper-defn { margin-left: 0; padding-left: 18px; } }
+  .paper-defn-label {
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 10px;
+  }
+  .paper-defn-text {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--ml-charcoal);
+  }
+  .paper-defn-text strong { font-weight: 600; font-style: normal; }
+  .paper-defn-source {
+    margin-top: 14px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--ml-muted);
+    font-style: normal;
+    letter-spacing: 0.04em;
+  }
+
+  /* Prose */
+  .prose {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ml-slate);
+    max-width: 720px;
+    margin-left: 96px;
+  }
+  @media (max-width: 720px) { .prose { margin-left: 0; font-size: 15.5px; } }
+  .prose p { margin-bottom: 18px; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose strong { color: var(--ml-charcoal); font-weight: 600; }
+  .prose em { font-style: italic; color: var(--ml-charcoal); }
+
+  .block-label {
+    font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ml-gold);
+    margin-bottom: 14px;
+    margin-left: 96px;
+  }
+  @media (max-width: 720px) { .block-label { margin-left: 0; } }
+  .block-gap-lg { height: 40px; }
+
+  /* Citation marker */
+  .cite {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 10.5px; font-weight: 600;
+    vertical-align: super;
+    line-height: 1;
+    color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.10);
+    padding: 2px 5px 1px;
+    margin-left: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .cite:hover { background: var(--ml-gold); color: #FFF; }
+  .cite-popup {
+    display: none;
+    position: absolute;
+    z-index: 50;
+    max-width: 360px;
+    background: var(--ml-charcoal);
+    color: #FFFFFF;
+    padding: 16px 18px;
+    border-radius: 3px;
+    font-family: var(--sans);
+    font-size: 13px;
+    line-height: 1.55;
+    box-shadow: 0 10px 30px rgba(33, 37, 41, 0.18);
+  }
+  .cite-popup.show { display: block; }
+  .cite-popup .cite-popup-source {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+  }
+
+  /* Consensus pull quote (five-narrative passage from sec04) */
+  .pullquote {
+    margin-left: 96px;
+    margin-top: 12px;
+    max-width: 720px;
+    border-top: 1px solid var(--ml-rule);
+    border-bottom: 1px solid var(--ml-rule);
+    padding: 36px 0 30px;
+  }
+  @media (max-width: 720px) { .pullquote { margin-left: 0; padding: 28px 0 24px; } }
+  .pullquote-text {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.4;
+    color: var(--ml-charcoal);
+    letter-spacing: -0.005em;
+    margin-bottom: 22px;
+  }
+  .pullquote-narrative {
+    display: block;
+    margin: 12px 0 4px;
+    padding-left: 18px;
+    border-left: 2px solid var(--ml-gold);
+    color: var(--ml-slate);
+    font-size: 0.85em;
+  }
+  .pullquote-attribution {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ml-muted);
+  }
+  .pullquote-attribution .attr-sep { color: var(--ml-faint); margin: 0 8px; }
+
+  /* Three-lines table for Defect 3 */
+  .roles-exhibit {
+    margin-left: 96px;
+    margin-top: 18px;
+    max-width: calc(100% - 96px);
+    overflow-x: auto;
+  }
+  @media (max-width: 720px) { .roles-exhibit { margin-left: 0; max-width: 100%; } }
+  .roles-table {
+    width: 100%;
+    min-width: 0;
+    border-collapse: collapse;
+    border-top: 1px solid var(--ml-rule);
+    border-bottom: 1px solid var(--ml-rule);
+    font-family: var(--sans);
+    table-layout: fixed;
+  }
+  .roles-table th, .roles-table td {
+    text-align: left;
+    padding: 18px 16px;
+    border-bottom: 1px solid var(--ml-line);
+    vertical-align: top;
+  }
+  .roles-table tr:last-child td { border-bottom: none; }
+  .roles-table th {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ml-muted);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ml-rule);
+  }
+  .roles-table td.role-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ml-charcoal);
+    line-height: 1.25;
+    width: 30%;
+  }
+  .roles-table td.role-name .role-sub {
+    font-weight: 500; font-size: 14px; color: var(--ml-slate);
+    font-family: var(--sans); font-style: normal;
+    display: block; margin-top: 2px;
+  }
+  .roles-table td.role-desc { font-size: 14px; color: var(--ml-slate); line-height: 1.55; }
+  .roles-table td.role-stat {
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ml-charcoal);
+    font-weight: 500;
+    line-height: 1.5;
+    width: 30%;
+  }
+  .roles-table tr.role-missing td.role-name { color: var(--ml-gold); font-style: italic; }
+  .roles-table tr.role-missing td.role-name .role-sub { color: var(--ml-muted); font-style: italic; }
+  .roles-table tr.role-missing td { background: linear-gradient(90deg, rgba(169,140,90,0.05), rgba(169,140,90,0.02)); }
+  .roles-table tr.role-missing td.role-desc { color: var(--ml-muted); font-style: italic; }
+  .roles-table tr.role-missing td.role-desc::before { content: '— '; color: var(--ml-gold); font-style: normal; margin-right: 4px; }
+  .roles-table tr.role-missing td.role-stat { color: var(--ml-gold); font-style: italic; }
+
+  .figure-caption {
+    margin-top: 16px;
+    font-size: 12.5px;
+    color: var(--ml-muted);
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  /* Closing observation */
+  .closing {
+    margin-top: 64px;
+    padding: 48px 0 8px;
+    border-top: 1px solid var(--ml-rule);
+  }
+  .closing-label { font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 22px; }
+  .closing-body {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(19px, 2vw, 23px);
+    line-height: 1.55;
+    color: var(--ml-charcoal);
+    max-width: 720px;
+  }
+  .closing-body p { margin-bottom: 18px; }
+  .closing-body p:last-child { margin-bottom: 0; }
+  .closing-body em { font-style: italic; }
+
+  /* Footer / bibliography */
+  .footer {
+    margin-top: 72px;
+    padding-top: 26px;
+    border-top: 1px solid var(--ml-rule);
+    font-size: 12.5px;
+    color: var(--ml-muted);
+    line-height: 1.7;
+  }
+  .footer-label { font-size: 10.5px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-charcoal); margin-bottom: 14px; }
+  .footer-bibliography { columns: 2; column-gap: 40px; }
+  @media (max-width: 720px) { .footer-bibliography { columns: 1; } }
+  .footer-bibliography .biblio-entry { break-inside: avoid; margin-bottom: 14px; padding-left: 18px; text-indent: -18px; }
+  .footer-bibliography .biblio-entry strong { color: var(--ml-charcoal); font-weight: 600; }
+  .footer-bibliography .biblio-entry em { font-style: italic; color: var(--ml-slate); }
+  .footer-bibliography .biblio-entry .biblio-marker { color: var(--ml-gold); font-weight: 600; margin-right: 6px; }
+  .colophon {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 1px solid var(--ml-line);
+    font-size: 11.5px;
+    color: var(--ml-faint);
+    letter-spacing: 0.04em;
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 32px; }
+  body.embed-mode .footer { margin-top: 56px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="kicker">
+    Research Insight
+    <span class="kicker-sep">/</span>
+    Sections 1 and 3 of the SGaaS White Paper
+  </div>
+
+  <h1 class="title">Three Structural<br>Defects.</h1>
+
+  <p class="deck">
+    Why two decades of compounding governance investment has not closed the gap on strategic risk. The three defects identified in the Strategic Governance as a Service research are diagnostic, not editorial: each is a feature of how governance is designed, not how it is performed.
+  </p>
+
+  <div class="provenance">
+    <div class="provenance-label">Empirical Frame</div>
+    <div class="provenance-body">
+      <p>Across <strong>669 listed companies</strong> in Germany, Austria, and Switzerland between 2018 and 2024, <strong>32%</strong> suffered at least one severe corporate crisis &mdash; defined as a monthly share-price decline of 25% or more. <strong>Over 80%</strong> of those events were driven by strategy and external risks, not by compliance failures.<span class="cite" data-cite="1">1</span></p>
+      <p>The diagnosis below is taken directly from the paper. The three structural defects are <em>defects of architecture, present in organisations with well-resourced governance functions and highly competent boards, because they are products of how governance is designed rather than how it is performed.</em><span class="cite" data-cite="2">2</span></p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       Defect 01 — Episodic Engagement
+       ════════════════════════════════════════════════════════════ -->
+  <section class="defect-section">
+
+    <div class="defect-head">
+      <div class="defect-num">I</div>
+      <div>
+        <div class="defect-label">Defect 01</div>
+        <h2 class="defect-title">Episodic Engagement</h2>
+      </div>
+    </div>
+
+    <div class="paper-defn">
+      <div class="paper-defn-label">From the white paper</div>
+      <p class="paper-defn-text">
+        Boards engage with risk on periodic cycles, through quarterly risk reports, annual strategy reviews, and scheduled committee meetings. But risks do not evolve on quarterly cycles. The result is <strong>governance by snapshot rather than by signal</strong>, i.e. boards see the risk environment as it was at the last reporting date, not as it is when decisions are made.
+      </p>
+      <div class="paper-defn-source">SGaaS White Paper, Section 1.2 (The Diagnosis).</div>
+    </div>
+
+    <div class="block-label">The empirical signature</div>
+    <div class="prose">
+      <p>The cognitive argument is reinforced by a market pattern. Hunziker et al. analysed <strong>471 severe share-price declines</strong> of 25% or more across Germany, Austria, and Switzerland between 2018 and 2024 and found that they cluster on the reporting calendar. The heaviest months were September (70 events), June (57), and October (56).<span class="cite" data-cite="3">3</span></p>
+      <p>The authors' interpretation: <em>event risk clusters around reporting cycles and is often triggered by corporate announcements</em>. The implication for governance is sharper than the statistic. Material risk does not crystallise on the reporting rhythm; its public recognition does. Boards whose engagement with risk is indexed to the same rhythm <strong>learn of material exposures at roughly the moment the market does</strong>, with no advantage of foreknowledge and no window in which to act.</p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       Defect 02 — Consensus Dependency
+       ════════════════════════════════════════════════════════════ -->
+  <section class="defect-section">
+
+    <div class="defect-head">
+      <div class="defect-num">II</div>
+      <div>
+        <div class="defect-label">Defect 02</div>
+        <h2 class="defect-title">Consensus Dependency</h2>
+      </div>
+    </div>
+
+    <div class="paper-defn">
+      <div class="paper-defn-label">From the white paper</div>
+      <p class="paper-defn-text">
+        Board decision-making is structurally biased toward <strong>satisficing</strong>; accepting the first option that achieves group agreement rather than stress-testing for the most resilient path. This is a predictable consequence of bounded rationality operating in a group setting, compounded by what Kahneman, Sibony, and Sunstein identify as <em>"noise"</em><span class="cite" data-cite="4">4</span> &mdash; the variability in professional judgement that even qualified decision-makers produce under identical conditions.
+      </p>
+      <div class="paper-defn-source">SGaaS White Paper, Section 1.2 (The Diagnosis).</div>
+    </div>
+
+    <div class="block-label">The empirical signature</div>
+    <div class="prose">
+      <p>The pattern recurs through every case study examined in the paper.<span class="cite" data-cite="5">5</span> In each, a prevailing narrative was maintained by consensus long after evidence to the contrary was available:</p>
+    </div>
+
+    <div class="block-gap-lg"></div>
+
+    <div class="pullquote">
+      <p class="pullquote-text">
+        In each case, the prevailing narrative was maintained by consensus long after evidence to the contrary was available.
+        <span class="pullquote-narrative">"The aircraft is safe." &nbsp;|&nbsp; "The company is a fintech success." &nbsp;|&nbsp; "The bank's model is sound." &nbsp;|&nbsp; "The new leadership will restore discipline." &nbsp;|&nbsp; "The system is robust."</span>
+      </p>
+      <div class="pullquote-attribution">
+        SGaaS White Paper
+        <span class="attr-sep">/</span>
+        Section 4 (The Evidence of Failure)
+        <span class="attr-sep">/</span>
+        Boeing &middot; Wirecard &middot; SVB &middot; Credit Suisse &middot; Post Office
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top: 36px;">
+      <p>The paper's diagnosis is direct: <em>consensus is not inherently dangerous, but without a structured mechanism for challenge, consensus becomes the means by which organisations convince themselves that what is comfortable is also true.</em><span class="cite" data-cite="5">5</span></p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       Defect 03 — Absence of Institutionalised Challenge
+       ════════════════════════════════════════════════════════════ -->
+  <section class="defect-section">
+
+    <div class="defect-head">
+      <div class="defect-num">III</div>
+      <div>
+        <div class="defect-label">Defect 03</div>
+        <h2 class="defect-title">Absence of Institutionalised<br>Challenge.</h2>
+      </div>
+    </div>
+
+    <div class="paper-defn">
+      <div class="paper-defn-label">From the white paper</div>
+      <p class="paper-defn-text">
+        No permanent function exists within most governance architectures whose explicit purpose is to challenge assumptions, stress-test decisions, and surface failure modes before they materialise. Internal audit, the function nominally positioned for this role, <strong>spends 75% of its capacity on routine assurance and compliance.</strong><span class="cite" data-cite="6">6</span> Risk management functions face ever-increasing funding constraints for emerging-risk identification, consuming their bandwidth on business-as-usual monitoring and regulatory reporting.<span class="cite" data-cite="7">7</span> Neither has the mandate, the capacity, or the methodology to act as a continuous, adversarial challenge function at board level.
+      </p>
+      <div class="paper-defn-source">SGaaS White Paper, Section 1.2 (The Diagnosis).</div>
+    </div>
+
+    <div class="block-label">The architectural gap</div>
+    <div class="prose">
+      <p>The Three Lines Model, updated by the Institute of Internal Auditors in July 2020, remains the dominant governance architecture in medium-to-large organisations.<span class="cite" data-cite="6">6</span> It defines ownership of risk across the organisation, establishes the principle of independent assurance, and provides a common language for governance architecture. It is, however, <strong>a model designed for assurance</strong>: providing confidence that controls are operating and risks are being managed.</p>
+      <p>What it was not designed for, and does not provide, is a resilient mechanism for continuous, adversarial challenge of strategic decisions and governance architecture at board level. <em>Between these lines, in the space where continuous, adversarial, forward-looking challenge of governance and strategy should occur, there is a structural gap. The gap is architectural.</em><span class="cite" data-cite="8">8</span></p>
+    </div>
+
+    <div class="block-gap-lg"></div>
+
+    <div class="block-label">Exhibit &middot; The Three Lines and the Architectural Gap</div>
+    <div class="roles-exhibit">
+      <table class="roles-table">
+        <thead>
+          <tr>
+            <th style="width: 30%;">Line</th>
+            <th>Function</th>
+            <th style="width: 30%;">Empirical reality (paper)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="role-name">Line 1<span class="role-sub">Operational management</span></td>
+            <td class="role-desc">Owns and manages risk in the conduct of day-to-day business activity. Risk identification at the point of origination.</td>
+            <td class="role-stat">Focused on execution.</td>
+          </tr>
+          <tr>
+            <td class="role-name">Line 2<span class="role-sub">Risk &amp; compliance</span></td>
+            <td class="role-desc">Specialist oversight; framework design and policy. Independent in reporting line.</td>
+            <td class="role-stat">73&ndash;75% report funding constraints for emerging-risk identification and advanced monitoring.<span class="cite" data-cite="7">7</span></td>
+          </tr>
+          <tr>
+            <td class="role-name">Line 3<span class="role-sub">Internal audit</span></td>
+            <td class="role-desc">Independent assurance over the effectiveness of governance, risk management, and internal controls.</td>
+            <td class="role-stat">75% of capacity on routine assurance.<span class="cite" data-cite="6">6</span> Only 23% of functions received budget increases in 2025, down from 34% the year before.<span class="cite" data-cite="9">9</span></td>
+          </tr>
+          <tr class="role-missing">
+            <td class="role-name">The gap<span class="role-sub">Continuous adversarial challenge</span></td>
+            <td class="role-desc">No standing role within the formal governance architecture.</td>
+            <td class="role-stat">The architectural gap the paper identifies.<span class="cite" data-cite="8">8</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="figure-caption">
+        Schematic drawn from the Three Lines Model as articulated by the Institute of Internal Auditors (2020) and applied in the SGaaS white paper. Empirical reality figures are taken from the paper, drawing on IIA Vision 2035, IIA NA Pulse 2026, and the PwC Global Risk Survey.
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       Closing Observation
+       ════════════════════════════════════════════════════════════ -->
+  <section class="closing">
+    <div class="closing-label">The Structural Response</div>
+    <div class="closing-body">
+      <p>The paper's conclusion is direct. The three defects are <em>defects of architecture, present in organisations with well-resourced governance functions and highly competent boards, because they are products of how governance is designed rather than how it is performed.</em><span class="cite" data-cite="2">2</span></p>
+      <p>Strategic Governance as a Service is the structural response: it replaces episodic oversight with continuous engagement, consensus dependency with adversarial challenge, and the absence of institutionalised challenge with <em>a permanent, principal-led governance function that operates at board level.</em><span class="cite" data-cite="10">10</span></p>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       Bibliography
+       ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-label">References</div>
+    <div class="footer-bibliography">
+      <div class="biblio-entry"><span class="biblio-marker">[1]</span> Hunziker, Aebersold, R&uuml;tsche &amp; B&auml;rtschi (2025). Cited in the SGaaS white paper, Section 1.1 and Section 2 (The Failure Record): 669 listed firms across Germany, Austria, and Switzerland, 2018&ndash;2024.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[2]</span> Marentis Labs, <em>Strategic Governance as a Service</em> (2026), Section 2 (The Paradox Defined).</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[3]</span> Hunziker et al. (2025), via SGaaS white paper, Section 3 (The Theory of Governance Failure): 471 severe share-price declines analysed; clustering by reporting calendar.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[4]</span> Kahneman, Sibony &amp; Sunstein (2021), <em>Noise: A Flaw in Human Judgement</em>. Cited in the SGaaS white paper, Section 1.2 (Consensus dependency).</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[5]</span> SGaaS white paper, Section 4 (The Evidence of Failure), synthesis across the five extended case studies.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[6]</span> Institute of Internal Auditors (IIA Vision 2035). Cited in the SGaaS white paper, Section 1.2 and Section 6 (The Value Gap in the Three Lines Model): internal audit allocates 75% of capacity to routine assurance.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[7]</span> PwC Global Risk Survey. Cited in the SGaaS white paper, Section 3 and Section 6: 73% of risk functions report funding constraints for emerging-risk identification; 75% for advanced monitoring capabilities.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[8]</span> SGaaS white paper, Section 3 (The Theory of Governance Failure): the architectural gap between the three lines.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[9]</span> IIA North American Pulse Report 2026. Cited in the SGaaS white paper, Section 3: 23% of internal audit functions received budget increases in 2025, down from 34% the year before.</div>
+
+      <div class="biblio-entry"><span class="biblio-marker">[10]</span> SGaaS white paper, Section 1.3 (The Response).</div>
+    </div>
+
+    <div class="colophon">
+      &copy; 2026 Marentis Labs Ltd &nbsp;&middot;&nbsp; Extracted from <em>Strategic Governance as a Service</em>, Sections 1 and 3 &nbsp;&middot;&nbsp; marentislabs.com
+    </div>
+  </footer>
+
+</div>
+
+<!-- Citation popup container -->
+<div class="cite-popup" id="cite-popup" role="dialog" aria-live="polite"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  var citations = {
+    "1": {
+      body: "Hunziker et al. (2025) analysed 669 listed companies across Germany, Austria, and Switzerland between 2018 and 2024 and found that 32% suffered at least one severe corporate crisis, defined as a monthly share-price decline of 25% or more. Over 80% of those events were driven by strategy and external risks; only 19.2% by compliance-oriented preventable risks.",
+      source: "SGaaS white paper, Section 1.1 and Section 2."
+    },
+    "2": {
+      body: "From the paper, Section 2 (The Paradox Defined): 'This paper argues that governance fails because of three structural defects embedded in the dominant governance model... They are defects of architecture, present in organisations with well-resourced governance functions and highly competent boards, because they are products of how governance is designed rather than how it is performed.'",
+      source: "SGaaS white paper, Section 2."
+    },
+    "3": {
+      body: "From Section 3: 'Hunziker et al analysed 471 severe share-price declines of 25% or more across Germany, Austria, and Switzerland between 2018 and 2024 (of which 395 were classified by underlying risk driver) and found that they cluster on the reporting calendar. The heaviest months were September (70 events), June (57), and October (56).'",
+      source: "SGaaS white paper, Section 3.2 (The empirical signature)."
+    },
+    "4": {
+      body: "From Section 1.2: 'compounded by what Kahneman, Sibony, and Sunstein identify as \\u201cnoise\\u201d, i.e. the variability in professional judgement that even qualified decision-makers produce under identical conditions.'",
+      source: "Kahneman, Sibony & Sunstein (2021), Noise: A Flaw in Human Judgement. Cited in SGaaS white paper, Section 1.2."
+    },
+    "5": {
+      body: "From Section 4: 'In each case, the prevailing narrative (\\u201cthe aircraft is safe,\\u201d \\u201cthe company is a fintech success,\\u201d \\u201cthe bank\\u2019s model is sound,\\u201d \\u201cthe new leadership will restore discipline,\\u201d \\u201cthe system is robust\\u201d) was maintained by consensus long after evidence to the contrary was available. Consensus is not inherently dangerous, but without a structured mechanism for challenge, consensus becomes the means by which organisations convince themselves that what is comfortable is also true.'",
+      source: "SGaaS white paper, Section 4 (synthesis across Boeing, Wirecard, SVB, Credit Suisse, Post Office)."
+    },
+    "6": {
+      body: "From Section 6: 'Internal audit spends 75% of its time on routine assurance. This single statistic captures the value gap at the heart of the Three Lines Model. The IIA's Vision 2035 report, based on a survey of over 7,000 respondents, found that internal audit currently allocates an average of 75% of its capacity to routine assurance work, including compliance audits, Sarbanes-Oxley testing, and regulatory obligations.'",
+      source: "IIA Vision 2035, cited in SGaaS white paper, Sections 1.2 and 6."
+    },
+    "7": {
+      body: "From Section 3: 'The PwC Global Risk Survey found that 73% of risk functions report funding constraints for emerging-risk identification and 75% for advanced monitoring capabilities.'",
+      source: "PwC Global Risk Survey, cited in SGaaS white paper, Sections 3 and 6."
+    },
+    "8": {
+      body: "From Section 3: 'The Three Lines Model was designed for layered assurance. In practice, it produces three lines that are each occupied with their own mandates... Between these lines, in the space where continuous, adversarial, forward-looking challenge of governance and strategy should occur, there is a structural gap. The gap is architectural.'",
+      source: "SGaaS white paper, Section 3."
+    },
+    "9": {
+      body: "From Section 3: 'Only 23% of internal audit functions received budget increases in 2025, down from 34% the previous year.'",
+      source: "IIA North American Pulse Report 2026, cited in SGaaS white paper, Section 3."
+    },
+    "10": {
+      body: "From Section 1.3 (The Response): 'Strategic Governance as a Service (SGaaS) is the structural response to these three defects. Developed and originated by Marentis Labs, SGaaS replaces episodic oversight with continuous engagement, consensus dependency with adversarial challenge, and the absence of institutionalised challenge with a permanent, principal-led governance function that operates at board level.'",
+      source: "SGaaS white paper, Section 1.3."
+    }
+  };
+
+  var popup = document.getElementById('cite-popup');
+  var activeCite = null;
+
+  function positionPopup(marker) {
+    var rect = marker.getBoundingClientRect();
+    var scrollY = window.scrollY || window.pageYOffset;
+    var scrollX = window.scrollX || window.pageXOffset;
+    var top = rect.bottom + scrollY + 8;
+    var left = rect.left + scrollX;
+    var viewportW = document.documentElement.clientWidth;
+    var popupW = 360;
+    if (left + popupW > viewportW - 20) left = Math.max(20, viewportW - popupW - 20);
+    popup.style.top = top + 'px';
+    popup.style.left = left + 'px';
+  }
+  function showPopup(marker) {
+    var id = marker.dataset.cite;
+    var cite = citations[id];
+    if (!cite) return;
+    popup.innerHTML = '<div>' + cite.body + '</div><div class="cite-popup-source">' + cite.source + '</div>';
+    positionPopup(marker);
+    popup.classList.add('show');
+    activeCite = marker;
+  }
+  function hidePopup() { popup.classList.remove('show'); activeCite = null; }
+
+  document.querySelectorAll('.cite').forEach(function(marker) {
+    marker.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (activeCite === marker) hidePopup(); else showPopup(marker);
+    });
+    marker.setAttribute('role', 'button');
+    marker.setAttribute('tabindex', '0');
+    marker.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (activeCite === marker) hidePopup(); else showPopup(marker);
+      }
+    });
+  });
+  document.addEventListener('click', function(e) {
+    if (!popup.contains(e.target) && !e.target.classList.contains('cite')) hidePopup();
+  });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hidePopup(); });
+  window.addEventListener('scroll', function() { if (activeCite) positionPopup(activeCite); });
+  window.addEventListener('resize', function() { if (activeCite) positionPopup(activeCite); });
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          // Measure body content only. documentElement.scrollHeight is floored
+          // to the iframe's viewport height, which would feed back into a
+          // resize loop once the parent applied the height.
+          var rect = document.body.getBoundingClientRect();
+          var h = Math.max(document.body.scrollHeight, Math.ceil(rect.height));
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

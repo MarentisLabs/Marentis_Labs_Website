@@ -46,10 +46,10 @@ The board retains the authority to decide. The Red Team Protocol ensures that th
 
 The Red Team Protocol is deployed across the four SGaaS tiers on different cadences:
 
-- **Diagnostic GaaS (T1).** Used as the primary instrument for the architecture assessment.
-- **Retained GaaS (T2).** Operated continuously, generating Board Challenge Memos ahead of significant decisions throughout the governance cycle.
-- **Embedded GaaS (T3).** Applied with direct board access, with the principal sitting as Independent Board Observer or Mandated Advisor.
-- **Pre-Exit GaaS (T4).** Applied from the buyer's perspective, surfacing governance gaps before the buyer's diligence team does.
+- **Diagnostic SGaaS (T1).** Used as the primary instrument for the architecture assessment.
+- **Retained SGaaS (T2).** Operated continuously, generating Board Challenge Memos ahead of significant decisions throughout the governance cycle.
+- **Embedded SGaaS (T3).** Applied with direct board access, with the principal sitting as Independent Board Observer or Mandated Advisor.
+- **Pre-Exit SGaaS (T4).** Applied from the buyer's perspective, surfacing governance gaps before the buyer's diligence team does.
 
 The standalone Red Team Review is the most efficient entry point for organisations not yet on a retainer. The Review frequently leads to a longer-term SGaaS engagement once the value of structured adversarial challenge has been demonstrated against a single decision.
 

@@ -1,0 +1,74 @@
+---
+layout: default
+title: "The AI Governance Gap: What Boards Don&rsquo;t Know"
+description: "Deloitte 2025: two-thirds of boards lack the knowledge to govern AI risk; 31% have it off the agenda; 17% address it at every meeting. Three interactive gauges."
+permalink: /insights/interactives/ai-governance-gap/
+---
+
+<!-- ════════════════════════════════════════════════════════════
+     Hero
+     ════════════════════════════════════════════════════════════ -->
+<section class="hero-section text-white py-16 md:py-20">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Interactive Insight</p>
+    <h1 class="text-3xl md:text-5xl font-black mb-5 leading-tight">
+      The AI Governance Gap.&nbsp;<br class='hidden md:block'>What Boards Don&rsquo;t Know.
+    </h1>
+    <p class="text-gray-400 text-lg max-w-3xl leading-relaxed">
+      Deloitte&rsquo;s 2025 survey of 695 board members and C-suite executives across 56 countries: two-thirds lack the knowledge to govern AI risk; 31% do not have AI on the board agenda at all; only 17% address it at every meeting. Tap each gauge for the methodology.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Framing paragraph
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-white">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <p class="text-ml-slate-grey text-base md:text-lg leading-relaxed">
+      The board&rsquo;s primary governance failure pattern is recognising risk too late. The Deloitte (2025) survey makes the AI variant of that pattern explicit. Two-thirds of boards acknowledge they lack the knowledge to govern AI risk. 31% have not placed AI on the agenda. Only 17% address it at every meeting. None of those positions is sustainable. The risk does not pause while governance catches up: the World Economic Forum (2026) reports that only 1% of more than 1,300 surveyed risk experts anticipate a calm global outlook over either the two- or ten-year horizon. The risk environment that boards must govern through is one the practitioner consensus considers anything but benign.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Interactive embed
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-6 md:py-8 bg-ml-light-bg border-t border-gray-100 border-b">
+  <div class="container mx-auto px-2 md:px-6 max-w-6xl">
+    {% include interactive-embed.html
+        slug="ai-governance-gap"
+        title="The AI Governance Gap: What Boards Don&rsquo;t Know"
+        min_height="1750" %}
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     White paper CTA
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: var(--ml-gold); letter-spacing: 0.2em;">From the SGaaS White Paper</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal mb-5 leading-snug">
+      The structural response to emergent risk
+    </h2>
+    <p class="text-ml-slate-grey text-base leading-relaxed max-w-2xl mx-auto mb-8">
+      SGaaS is engineered to absorb emerging risk categories &mdash; AI, geopolitical, cyber, climate &mdash; without re-architecting the governance stack each time a new risk appears.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/white-paper/" class="btn-primary">Download the white paper &rarr;</a>
+      <a href="/contact/" class="btn-nav-cta">Schedule a confidential call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════════
+     Related insights
+     ════════════════════════════════════════════════════════════ -->
+<section class="py-12 md:py-16 bg-ml-light-bg border-t border-gray-100">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: var(--ml-gold); letter-spacing: 0.2em;">More interactive insights</p>
+    <ul class="grid md:grid-cols-3 gap-4 list-none">
+      <li><a href="/insights/interactives/cost-ratio/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Cost Ratio &mdash; spend vs. failure &rarr;</a></li>
+      <li><a href="/insights/interactives/recovery-gap/" class="block p-5 bg-white border border-gray-200 rounded-lg hover:border-ml-gold transition-colors text-ml-charcoal text-sm font-semibold">Recovery Gap &mdash; two years after &rarr;</a></li>
+      <li><a href="/insights/interactives/amplification-cascade/" class="block p-5 bg-white border border-gray-200 rounded-lg hover

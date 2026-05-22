@@ -1,0 +1,293 @@
+---
+layout: default
+title: "Our Services"
+description: "Strategic Governance as a Service: four engagement tiers for FTSE 350 and PE-backed organisations.
+Diagnostic, Retained, Embedded, and Pre-Exit SGaaS."
+permalink: /services/
+---
+
+<!-- Header -->
+<section class="hero-section text-white py-14 md:py-20">
+  <div class="container mx-auto px-6 max-w-5xl text-center">
+    <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-3">Service Architecture</p>
+    <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight">
+      Strategic Governance as a Service
+    </h1>
+    <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+      Four tiers structured as a progression from initial assessment to deep,
+      board-level governance partnership. Every engagement deploys the
+      Adversarial Methodology — Red Team Protocol, Risk Simulation Lab,
+      and Pre-Mortem Diagnostic — calibrated to the tier.
+    </p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="py-14 md:py-18 bg-white">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-ml-charcoal mb-4">A Continuous, Cumulative Governance Partnership.</h2>
+        <p class="text-ml-slate-grey leading-relaxed mb-4">
+          Traditional governance advisory is episodic. A firm engages a consultant,
+          receives a report, and manages governance internally until the next
+          incident triggers the next engagement. Institutional knowledge is lost
+          between engagements.
+        </p>
+        <p class="text-ml-slate-grey leading-relaxed mb-4">
+          SGaaS is structured as a continuous, principal-led function delivered on
+          a retainer architecture. It complements internal audit, risk, and
+          compliance — it does not replace them — and provides the adversarial
+          challenge the Three Lines Model was never designed to deliver.
+        </p>
+        <p class="text-ml-slate-grey leading-relaxed">
+          The four tiers are designed as a progression, not a menu. The Diagnostic
+          builds the institutional knowledge that makes the Retained tier
+          effective; the Retained tier creates the conditions under which Embedded
+          becomes a natural evolution; the Pre-Exit tier converts governance
+          maturity into measurable exit value.
+        </p>
+      </div>
+      <div class="space-y-3">
+        {% assign comparison = "Episodic project|Continuous retainer,Generic methodology|Adversarial by design,Project
+        team delivery|Principal-led always,Knowledge lost between engagements|Institutional memory retained,Board
+        engages then disengages|Permanent challenge function" | split: "," %}
+        {% for item in comparison %}
+        {% assign parts = item | split: "|" %}
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-gray-400 line-through flex-1">{{ parts[0] }}</span>
+          <svg class="w-4 h-4 text-ml-gold flex-shrink-0" fill="none" viewBox="0 0 16 16">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          <span class="text-ml-charcoal font-semibold flex-1">{{ parts[1] }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Adversarial methodology strip -->
+<section class="bg-ml-charcoal py-10">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="text-ml-gold text-xs font-semibold uppercase tracking-widest mb-1">The Methodology</p>
+        <h2 class="text-xl font-bold text-white">The Adversarial Methodology</h2>
+        <p class="text-gray-400 text-sm mt-1 max-w-lg">
+          Three integrated tools — the Red Team Protocol, the Risk Simulation Lab,
+          and the Pre-Mortem Diagnostic — deployed across every SGaaS tier on the
+          cadence each tier supports.
+        </p>
+      </div>
+      <a href="/services/adversarial-methodology/" class="btn-gold px-6 py-2 text-sm flex-shrink-0">
+        Learn More &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Four tiers detail -->
+<section class="py-16 md:py-24 bg-ml-light-bg" id="all-services">
+  <div class="container mx-auto px-6 max-w-5xl space-y-8">
+
+    <!-- T1 Diagnostic -->
+    <a href="/services/diagnostic-gaas/"
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      <div class="md:col-span-3">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-number">T1</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-slate-blue uppercase tracking-wide">Diagnostic SGaaS</p>
+            <h3 class="text-xl font-bold text-ml-charcoal">Governance Architecture Assessment</h3>
+          </div>
+        </div>
+        <p class="text-ml-slate-grey leading-relaxed mb-3">
+          A structured, adversarial assessment of the organisation's governance
+          architecture — identifying structural defects, value gaps, and capability
+          shortfalls. The low-risk entry point for boards that recognise the
+          governance gap but want evidence before committing to ongoing engagement.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tool-tag">Red Team Protocol</span>
+          <span class="tool-tag">Three Lines Assessment</span>
+          <span class="tool-tag">Architecture Mapping</span>
+        </div>
+      </div>
+      <div class="text-left md:text-right">
+        <p class="text-xs text-ml-slate-grey mb-3">4–8 weeks</p>
+        <p class="text-ml-gold text-sm font-semibold">View details &rarr;</p>
+      </div>
+    </a>
+
+    <!-- T2 Retained -->
+    <a href="/services/retained-gaas/"
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      <div class="md:col-span-3">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-number">T2</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-gold uppercase tracking-wide">Retained SGaaS</p>
+            <h3 class="text-xl font-bold text-ml-charcoal">Continuous Adversarial Governance Challenge</h3>
+          </div>
+        </div>
+        <p class="text-ml-slate-grey leading-relaxed mb-3">
+          Continuous, adversarial governance challenge delivered on an annual
+          retainer across board cycles. Governance Pulse Reports, Board Challenge
+          Memos delivered through the forced deliberation protocol, and Pre-Mortem
+          Diagnostics and Risk Simulation Labs deployed at strategic inflections.
+          The core SGaaS offering.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tool-tag">Governance Pulse Reports</span>
+          <span class="tool-tag">Board Challenge Memos</span>
+          <span class="tool-tag">Risk Simulation Lab</span>
+          <span class="tool-tag">Pre-Mortem Diagnostic</span>
+        </div>
+      </div>
+      <div class="text-left md:text-right">
+        <p class="text-xs text-ml-slate-grey mb-3">Annual retainer, ongoing</p>
+        <p class="text-ml-gold text-sm font-semibold">View details &rarr;</p>
+      </div>
+    </a>
+
+    <!-- T3 Embedded -->
+    <a href="/services/embedded-gaas/"
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      <div class="md:col-span-3">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-number">T3</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-slate-blue uppercase tracking-wide">Embedded SGaaS</p>
+            <h3 class="text-xl font-bold text-ml-charcoal">Permanent Board-Level Challenge Function</h3>
+          </div>
+        </div>
+        <p class="text-ml-slate-grey leading-relaxed mb-3">
+          The Embedded tier provides everything in the Retained tier, plus permanent board-level presence. The SGaaS
+          principal attends board and committee meetings as a contracted Independent Board Observer (or Mandated
+          Advisor to the Risk or Audit Committee) with contractual challenge authority. The principal does not vote
+          and owes no fiduciary duties — a deliberate architectural choice that preserves the independence on which
+          the challenge function depends.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tool-tag">Independent Board Observer</span>
+          <span class="tool-tag">Contractual Challenge Authority</span>
+          <span class="tool-tag">Real-Time Challenge</span>
+          <span class="tool-tag">Agenda-Setting Input</span>
+        </div>
+      </div>
+      <div class="text-left md:text-right">
+        <p class="text-xs text-ml-slate-grey mb-3">Multi-year, ongoing</p>
+        <p class="text-ml-gold text-sm font-semibold">View details &rarr;</p>
+      </div>
+    </a>
+
+    <!-- T4 Pre-Exit -->
+    <a href="/services/pre-exit-gaas/"
+      class="service-card bg-white p-8 rounded-lg shadow-sm grid md:grid-cols-4 gap-6 items-start block reveal">
+      <div class="md:col-span-3">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-number">T4</span>
+          <div>
+            <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide">Pre-Exit SGaaS</p>
+            <h3 class="text-xl font-bold text-ml-charcoal">Exit-Aligned Governance</h3>
+          </div>
+        </div>
+        <p class="text-ml-slate-grey leading-relaxed mb-3">
+          Governance uplift and exit-readiness assessment for PE portfolio
+          companies in the 12–24 months before a sale, IPO, or other liquidity
+          event. Governance maturity scorecard benchmarked against buyer
+          expectations; prioritised remediation; independent exit-readiness
+          opinion; and an assessment for the PE sponsor of how the governance
+          architecture affects the competitive advantage period embedded in the
+          buyer's discounted cash flow analysis.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tool-tag">Governance Maturity Scorecard</span>
+          <span class="tool-tag">Exit-Readiness Opinion</span>
+          <span class="tool-tag">CAP / DCF Input</span>
+          <span class="tool-tag">Buyer-Perspective Challenge</span>
+        </div>
+      </div>
+      <div class="text-left md:text-right">
+        <p class="text-xs text-ml-slate-grey mb-3">12–24 months pre-exit</p>
+        <p class="text-ml-gold text-sm font-semibold">View details &rarr;</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Case Studies -->
+<section class="py-14 md:py-18 bg-white border-t border-gray-200">
+  <div class="container mx-auto px-6 max-w-5xl">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+      <div>
+        <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-2">In Practice</p>
+        <h2 class="text-3xl font-bold text-ml-charcoal">Case Studies</h2>
+        <p class="text-ml-slate-grey mt-2 max-w-xl">Anonymised engagements illustrating how each tier delivers in
+          practice.</p>
+      </div>
+      <a href="/case-studies/"
+        class="text-ml-gold text-sm font-semibold hover:text-ml-gold-dark transition-colors flex-shrink-0">
+        View all &rarr;
+      </a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <a href="/case-studies/risk-governance-overhaul-fca-regulated-insurer/"
+        class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tool-tag">Retained SGaaS</span>
+          <span class="tool-tag">Financial Services</span>
+        </div>
+        <h3 class="text-lg font-bold text-ml-charcoal mb-2 leading-snug group-hover:text-ml-gold transition-colors">
+          Risk Governance Overhaul at an FCA-Regulated Insurer
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
+          Supervisory pressure triggered a full restructure of the risk committee architecture and rebuild of the risk
+          appetite framework from the board down.
+        </p>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study
+          &rarr;</span>
+      </a>
+
+      <a href="/case-studies/pe-exit-governance-preparation-business-services/"
+        class="service-card bg-white border border-gray-200 rounded-lg p-7 block reveal group">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tool-tag">Pre-Exit SGaaS</span>
+          <span class="tool-tag">Private Equity</span>
+        </div>
+        <h3 class="text-lg font-bold text-ml-charcoal mb-2 leading-snug group-hover:text-ml-gold transition-colors">
+          Exit Governance Preparation for a PE-Backed Business Services Group
+        </h3>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-4">
+          With a strategic sale 18 months out, governance gaps were identified and remediated before the buyer's due
+          diligence team arrived.
+        </p>
+        <span class="text-ml-gold text-sm font-semibold group-hover:text-ml-gold-dark transition-colors">Read case study
+          &rarr;</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-ml-charcoal text-white py-14">
+  <div class="container mx-auto px-6 text-center max-w-2xl">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Not sure which tier applies?</h2>
+    <p class="text-gray-400 mb-8">
+      Most engagements begin with a Diagnostic. Schedule a 30-minute
+      confidential call and we'll identify the right entry point.
+    </p>
+    <a href="/contact/" class="btn-gold px-10 py-3 inline-block">
+      Schedule a Confidential Call
+    </a>
+    <p class="mt-6 text-sm text-gray-400">
+      Quick questions first? Read the
+      <a href="/faq/" class="text-ml-gold hover:text-ml-gold-dark font-semibold underline">Frequently Asked
+        Questions</a>.
+    </p>
+  </div>
+</section>

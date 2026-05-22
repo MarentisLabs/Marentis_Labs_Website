@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="hero-section text-white py-12 md:py-16">
+  <div class="container mx-auto px-6 max-w-6xl">
+
+    <!-- Breadcrumb -->
+    <p class="text-sm text-gray-500 mb-5">
+      <a href="/" class="hover:text-ml-gold transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="/case-studies/" class="hover:text-ml-gold transition-colors">Case Studies</a>
+    </p>
+
+    <!-- Service tier + sector -->
+    <div class="flex flex-wrap gap-2 mb-5">
+      {% if page.service_tier %}<span class="tool-tag">{{ page.service_tier }}</span>{% endif %}
+      {% if page.sector %}<span class="tool-tag">{{ page.sector }}</span>{% endif %}
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight max-w-3xl">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="text-gray-300 text-lg mb-5 max-w-2xl leading-relaxed">{{ page.description }}</p>
+    {% endif %}
+
+    <p class="text-sm text-gray-500">{{ page.organisation_type }}
+      {% if page.date %}&middot; {{ page.date | date: "%Y" }}{% endif %}
+    </p>
+
+  </div>
+</section>
+
+<!-- Body -->
+<div class="bg-white">
+  <div class="container mx-auto px-6 max-w-6xl py-12 md:py-16">
+    <div class="lg:flex lg:gap-16">
+
+      <!-- Main content -->
+      <div class="min-w-0 flex-1">
+
+        <!-- Engagement snapshot -->
+        <div class="case-study-snapshot mb-10">
+          <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-4">Engagement Snapshot</p>
+          <div class="grid sm:grid-cols-3 gap-4">
+            {% if page.challenge %}
+            <div>
+              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Challenge</p>
+              <p class="text-sm text-ml-slate-grey leading-relaxed">{{ page.challenge }}</p>
+            </div>
+            {% endif %}
+            {% if page.service_tier %}
+            <div>
+              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Service</p>
+              <p class="text-sm text-ml-slate-grey leading-relaxed">{{ page.service_tier }}</p>
+            </div>
+            {% endif %}
+            {% if page.outcome %}
+            <div>
+              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Outcome</p>
+              <p class="text-sm text-ml-slate-grey font-semibold leading-relaxed">{{ page.outcome }}</p>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        <article class="article-prose">
+          {{ content }}
+        </article>
+
+      </div>
+
+      <!-- TOC Sidebar -->
+      <aside class="hidden lg:block w-52 flex-shrink-0">
+        <div class="sticky toc-panel">
+          <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-4">Contents</p>
+          <nav class="article-toc js-toc"></nav>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+<!-- Tocbot JS -->
+<script src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js"></script>
+<script>
+  tocbot.init({
+    tocSelector: '.js-toc',
+    contentSelector: '.article-prose',
+    headingSelector: 'h2, h3',
+    hasInnerContainers: true,
+    collapseDepth: 6,
+    scrollSmooth: true,
+    scrollSmoothOffset: -132
+  });
+</script>

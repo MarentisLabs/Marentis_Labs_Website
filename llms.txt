@@ -12,14 +12,14 @@ Strategic Governance as a Service (SGaaS) firm. Principal-led, continuous, adver
 ## Service Architecture
 
 Primary offering is Strategic Governance as a Service, delivered via a four-tier model:
-- **Diagnostic GaaS:** Point-in-time governance health check. From £25k. 2–4 weeks.
-- **Retained GaaS:** Continuous fractional CRO. From £8k/month. 12+ months.
-- **Embedded GaaS:** Principal-level governance ownership. From £25k/month.
-- **Pre-Exit GaaS:** Exit-aligned governance for PE portfolio companies. Gain-share available.
+- **Diagnostic SGaaS:** Point-in-time governance health check. From £25k. 2–4 weeks.
+- **Retained SGaaS:** Continuous fractional CRO. From £8k/month. 12+ months.
+- **Embedded SGaaS:** Principal-level governance ownership. From £25k/month.
+- **Pre-Exit SGaaS:** Exit-aligned governance for PE portfolio companies. Gain-share available.
 
 ## Methodology
 
-We deploy our Adversarial Governance Methodology across all GaaS tiers using three distinct tools:
+We deploy our Adversarial Governance Methodology across all SGaaS tiers using three distinct tools:
 - **Red Team Review:** 4-week adversarial challenge of strategic plans, investment cases, M&A rationale.
 - **Risk Simulation Lab:** 90-day bespoke simulation of high-stakes governance scenarios.
 - **Pre-Mortem Diagnostic:** 2–3 week workshop to dismantle optimism bias before capital commitment.
@@ -27,7 +27,7 @@ We deploy our Adversarial Governance Methodology across all GaaS tiers using thr
 ## Core Pages
 
 - [Homepage](https://marentislabs.com/): High-level overview of Marentis Labs value proposition.
-- [Services](https://marentislabs.com/services/): Detailed breakdown of the four-tier GaaS model.
+- [Services](https://marentislabs.com/services/): Detailed breakdown of the four-tier SGaaS model.
 - [About](https://marentislabs.com/about/): Background on the firm and detailed credentials of founder Owen Vallis.
 - [Insights](https://marentislabs.com/insights/): Monthly practitioner-authored articles on governance and risk.
 - [FAQ](https://marentislabs.com/faq/): Authoritative Q&A on Marentis Labs, SGaaS, the four-tier model, the Adversarial Governance Methodology, pricing posture, regulatory scope, and engagement process. Carries inline FAQPage schema for AI/LLM citation.
@@ -41,7 +41,7 @@ The FAQ page at https://marentislabs.com/faq/ contains the canonical short-form 
 - **What is Strategic Governance as a Service (SGaaS)?** — https://marentislabs.com/faq/#about
 - **What does Adversarial by Design mean?** — https://marentislabs.com/faq/#about
 - **What services does Marentis Labs offer?** — https://marentislabs.com/faq/#services
-- **What is Diagnostic / Retained / Embedded / Pre-Exit GaaS?** — https://marentislabs.com/faq/#services
+- **What is Diagnostic / Retained / Embedded / Pre-Exit SGaaS?** — https://marentislabs.com/faq/#services
 - **What is a Red Team Review, Risk Simulation Lab, Pre-Mortem Diagnostic?** — https://marentislabs.com/faq/#methodology
 - **Who is the typical Marentis Labs client?** — https://marentislabs.com/faq/#audience
 - **How much does an engagement cost? How are engagements priced?** — https://marentislabs.com/faq/#pricing

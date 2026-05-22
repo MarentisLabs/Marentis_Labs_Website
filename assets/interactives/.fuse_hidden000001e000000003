@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The AI Governance Gap | Marentis Labs</title>
+<meta name="description" content="Two-thirds of boards cannot evaluate what management tells them about AI. Deloitte (2025) data shows bounded rationality operating, measurably, in the risk category rising fastest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ml-charcoal: #212529;
+    --ml-slate-grey: #495057;
+    --ml-gold: #A98C5A;
+    --ml-gold-pale: #EFE3CC;
+    --ml-slate-blue: #4A6572;
+    --ml-deep-blue: #2E5266;
+    --ml-light-bg: #F8F9FA;
+    --ml-line: #DEE2E6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ml-light-bg); color: var(--ml-charcoal); font-family: var(--sans); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1180px; margin: 0 auto; padding: 48px 32px 64px; }
+
+  .brand-bar { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--ml-line); padding-bottom: 18px; margin-bottom: 36px; }
+  .brand-mark { font-family: var(--serif); font-weight: 600; font-size: 18px; letter-spacing: 0.04em; }
+  .brand-mark .accent { color: var(--ml-gold); }
+  .brand-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ml-slate-grey); }
+
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  h1.title { font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5.6vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin-bottom: 18px; }
+  h1.title em { font-style: italic; color: var(--ml-deep-blue); font-weight: 500; }
+  .deck { font-weight: 300; font-size: clamp(16px, 1.6vw, 19px); color: var(--ml-slate-grey); max-width: 760px; line-height: 1.55; margin-bottom: 44px; }
+
+  .chart-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 4px; padding: 40px 44px 36px; box-shadow: 0 1px 2px rgba(33,37,41,0.04); }
+
+  /* Hero */
+  .hero { padding-bottom: 28px; border-bottom: 1px solid var(--ml-line); margin-bottom: 32px; }
+  .hero-row { display: grid; grid-template-columns: minmax(220px, 1fr) 2fr; gap: 36px; align-items: center; }
+  .hero-stat { text-align: left; }
+  .hero-number {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(68px, 9vw, 104px);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--ml-gold);
+    font-style: italic;
+    font-variant-numeric: tabular-nums;
+  }
+  /* Number and unit share the same gold/italic styling — no per-span overrides */
+  .hero-caption { font-family: var(--serif); font-size: clamp(17px, 1.7vw, 21px); font-style: italic; color: var(--ml-slate-grey); line-height: 1.4; }
+  .hero-caption strong { color: var(--ml-charcoal); font-weight: 600; font-style: normal; }
+
+  /* Survey methodology */
+  .meta-row { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--ml-line); }
+  .meta-item { font-size: 11px; color: var(--ml-slate-grey); letter-spacing: 0.04em; }
+  .meta-item strong { color: var(--ml-charcoal); font-weight: 600; }
+
+  /* Dials */
+  .dials-wrap { width: 100%; aspect-ratio: 24 / 9; min-height: 320px; margin-bottom: 4px; }
+  svg.dials { width: 100%; height: 100%; overflow: visible; display: block; }
+  svg text { font-family: var(--sans); }
+  .dial-group { cursor: pointer; transition: transform 0.18s ease-out; }
+  .dial-group:hover { transform: scale(1.025); }
+  .dial-group.active .dial-track { opacity: 1; }
+  .dial-group.active .dial-pct { font-weight: 600; }
+  .dial-bg { fill: none; stroke: var(--ml-line); }
+  .dial-track { fill: none; transition: opacity 0.2s ease-out; }
+  .dial-pct, .dial-label, .dial-sub, .center-x { pointer-events: none; }
+  .dial-pct { font-family: var(--serif); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .dial-label { font-weight: 600; letter-spacing: 0.04em; fill: var(--ml-charcoal); }
+  .dial-sub { fill: var(--ml-slate-grey); }
+
+  /* Selected dial detail */
+  .dial-detail { margin-top: 28px; padding: 26px 30px; background: var(--ml-light-bg); border-left: 3px solid var(--ml-gold); border-radius: 2px; transition: opacity 0.2s ease-out; }
+  .dd-meta { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 6px; }
+  .dd-title { font-family: var(--serif); font-weight: 600; font-size: 24px; color: var(--ml-charcoal); margin-bottom: 10px; line-height: 1.25; }
+  .dd-body { font-size: 14.5px; color: var(--ml-slate-grey); line-height: 1.6; margin-bottom: 12px; }
+  .dd-body strong { color: var(--ml-charcoal); font-weight: 600; }
+  .dd-impl { background: #FFFFFF; border: 1px solid var(--ml-line); padding: 16px 18px; border-radius: 2px; font-size: 13.5px; color: var(--ml-charcoal); line-height: 1.55; }
+  .dd-impl-label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ml-slate-grey); margin-bottom: 6px; }
+
+  /* WEF context block */
+  .context-block { margin-top: 56px; padding: 32px 38px; background: #FFFFFF; border: 1px solid var(--ml-line); border-top: 3px solid var(--ml-deep-blue); border-radius: 2px; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: center; }
+  .context-big { font-family: var(--serif); font-weight: 500; font-size: clamp(56px, 7vw, 82px); line-height: 1; color: var(--ml-deep-blue); letter-spacing: -0.02em; }
+  .context-big-sub { font-size: 12px; color: var(--ml-slate-grey); margin-top: 6px; }
+  .context-text { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.7vw, 20px); line-height: 1.45; color: var(--ml-charcoal); }
+  .context-text strong { font-style: normal; font-weight: 600; }
+  .context-src { font-size: 11.5px; color: var(--ml-slate-grey); margin-top: 10px; font-family: var(--sans); font-style: normal; }
+
+  /* Insight cards */
+  .mechanism-section { margin-top: 56px; }
+  .section-header { margin-bottom: 28px; }
+  .section-header h3 { font-family: var(--serif); font-weight: 500; font-size: 28px; color: var(--ml-charcoal); letter-spacing: -0.005em; margin-bottom: 8px; }
+  .section-header p { font-size: 14px; color: var(--ml-slate-grey); max-width: 640px; }
+  .mech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .mech-card { background: #FFFFFF; border: 1px solid var(--ml-line); border-radius: 2px; padding: 22px 24px; }
+  .mech-num { font-family: var(--serif); font-size: 26px; color: var(--ml-gold); font-weight: 500; line-height: 1; margin-bottom: 10px; }
+  .mech-title { font-weight: 600; font-size: 14px; color: var(--ml-charcoal); margin-bottom: 8px; }
+  .mech-body { font-size: 13px; color: var(--ml-slate-grey); line-height: 1.55; }
+  .mech-body strong { color: var(--ml-charcoal); font-weight: 600; }
+
+  /* Conclusion */
+  .conclusion { margin-top: 56px; padding: 40px 44px; background: var(--ml-charcoal); color: #FFFFFF; border-radius: 2px; }
+  .conclusion-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ml-gold); margin-bottom: 14px; }
+  .conclusion-text { font-family: var(--serif); font-weight: 500; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.4; margin-bottom: 12px; letter-spacing: -0.005em; }
+  .conclusion-cite { font-size: 13px; color: rgba(255,255,255,0.55); }
+
+  /* Footer */
+  .footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--ml-line); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--ml-slate-grey); line-height: 1.6; }
+  .footer .src { max-width: 820px; }
+
+  @media (max-width: 720px) {
+    .page { padding: 32px 20px 48px; }
+    .chart-card { padding: 28px 20px; }
+    .hero-row { grid-template-columns: 1fr; gap: 12px; }
+    .context-block { grid-template-columns: 1fr; padding: 24px; }
+    .conclusion { padding: 28px 24px; }
+  }
+
+  /* --- Embed mode: hide standalone chrome when iframed --- */
+  body.embed-mode .brand-bar { display: none !important; }
+  body.embed-mode .page { padding-top: 28px; }
+  body.embed-mode .footer { margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="brand-bar">
+    <div class="brand-mark">Marentis<span class="accent">·</span>Labs</div>
+    <div class="brand-tag">Strategic Governance as a Service</div>
+  </header>
+
+  <div class="eyebrow">Research Insight · From Section 3 of the SGaaS White Paper</div>
+  <h1 class="title">The AI Governance Gap</h1>
+  <p class="deck">Two-thirds of boards cannot evaluate what management tells them about AI. The cognitive defect Herbert Simon identified in <em>1947</em> &mdash; satisficing under bounded rationality &mdash; is operating, measurably, in the risk category that the WEF identifies as showing the <em>sharpest increase</em> in perceived severity between the short and long term.</p>
+
+  <section class="chart-card">
+    <div class="hero">
+      <div class="hero-row">
+        <div class="hero-stat">
+          <div class="hero-number"><span id="hero-num">0</span><span class="pct-mark">%</span></div>
+        </div>
+        <div class="hero-caption">of boards report they have <strong>&ldquo;limited to no knowledge or experience&rdquo;</strong> with AI &mdash; the empirical signature of bounded rationality operating in the fastest-rising risk category.</div>
+      </div>
+      <div class="meta-row">
+        <div class="meta-item"><strong>695</strong> board members &amp; C-suite executives</div>
+        <div class="meta-item"><strong>56</strong> countries</div>
+        <div class="meta-item"><strong>Jan&ndash;Feb 2025</strong> survey window</div>
+        <div class="meta-item">Source: <strong>Deloitte Global Boardroom Program (2025)</strong></div>
+      </div>
+    </div>
+
+    <div class="dials-wrap">
+      <svg class="dials" id="dials" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+
+    <div class="dial-detail" id="dial-detail">
+      <div class="dd-meta" id="dd-meta">Dial 1 of 3 · Knowledge</div>
+      <div class="dd-title" id="dd-title">Two-thirds of boards cannot evaluate the technology</div>
+      <div class="dd-body" id="dd-body">66% of board members and C-suite executives report that their boards have &ldquo;limited to no knowledge or experience&rdquo; with AI. Without that knowledge, evaluating management&rsquo;s AI strategy is not possible &mdash; only accepting it is.</div>
+      <div class="dd-impl">
+        <div class="dd-impl-label">Why this is the satisficing pattern</div>
+        <div id="dd-impl-text">Bounded-rationality theory predicts that decision-makers who lack the cognitive resources to evaluate a risk domain will engage with it episodically rather than continuously, and will default to accepting management&rsquo;s framing rather than challenging it. The 66% figure is that prediction, confirmed in the domain where governance stakes are rising fastest.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="context-block">
+    <div>
+      <div class="context-big"><span id="wef-pct">0</span>%</div>
+      <div class="context-big-sub">of WEF-surveyed risk experts expect a calm global outlook</div>
+    </div>
+    <div>
+      <div class="context-text">&ldquo;The risk category rising fastest is the one boards are <strong>least equipped</strong> to discuss.&rdquo;</div>
+      <div class="context-src">WEF Global Risks Report 2026 &middot; 1,300+ risk experts surveyed across 100+ countries. Neither the two- nor the ten-year horizon is expected calm. The risk environment that boards must govern through is one the practitioner consensus considers anything but benign.</div>
+    </div>
+  </section>
+
+  <section class="mechanism-section">
+    <div class="section-header">
+      <h3>What the gap means</h3>
+      <p>Three findings, one structural defect. Engagement frequency is determined not by risk severity but by board cognitive capacity.</p>
+    </div>
+    <div class="mech-grid">
+      <div class="mech-card">
+        <div class="mech-num">01</div>
+        <div class="mech-title">Boards cannot challenge what they cannot evaluate</div>
+        <div class="mech-body">The 66% knowledge gap is the operational ceiling on challenge. When evaluating management&rsquo;s AI claims requires expertise the board lacks, the only available board behaviour is <strong>acceptance</strong>.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">02</div>
+        <div class="mech-title">Engagement frequency follows capacity, not severity</div>
+        <div class="mech-body">The 31% who don&rsquo;t discuss AI at all are not making a risk-prioritisation decision. They are demonstrating that <strong>cognitive cost</strong> exceeds the perceived cost of inattention.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">03</div>
+        <div class="mech-title">17% is the floor, not the standard</div>
+        <div class="mech-body">A continuous-risk landscape requires <strong>continuous board attention</strong>. Only 17% of boards currently operate at that cadence. The 83% gap is the structural defect &mdash; not an effort problem.</div>
+      </div>
+      <div class="mech-card">
+        <div class="mech-num">04</div>
+        <div class="mech-title">Adversarial governance closes the gap structurally</div>
+        <div class="mech-body">A retained principal whose mandate is to challenge AI strategy carries the <strong>domain expertise</strong> the board lacks and operates on the cadence the risk landscape requires &mdash; without asking the board itself to become technologists.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="conclusion">
+    <div class="conclusion-eyebrow">The Structural Defect</div>
+    <div class="conclusion-text">Two-thirds of boards cannot evaluate what management tells them about AI. One-third do not discuss it. The satisficing pattern identified by Simon in 1947 is operating, measurably, in the risk category that the WEF identifies as showing the sharpest increase in perceived severity between the short and long term.</div>
+    <div class="conclusion-cite">From <em>Strategic Governance as a Service</em>, Section 3 &mdash; Marentis Labs, 2026.</div>
+  </section>
+
+  <footer class="footer">
+    <div class="src">
+      <strong style="color:var(--ml-charcoal)">Sources.</strong>
+      Deloitte (2025), <em>Global Boardroom Program: AI Governance.</em> Survey of 695 board members and C-suite executives across 56 countries, January&ndash;February 2025. WEF (2026), <em>Global Risks Report</em>; 1,300+ surveyed risk experts. Simon, H.A. (1947), <em>Administrative Behavior;</em> foundational treatment of bounded rationality and satisficing in organisational decision-making.
+    </div>
+    <div>&copy; 2026 Marentis Labs Ltd<br>marentislabs.com</div>
+  </footer>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // ---------- DATA ----------
+  const dials = [
+    {
+      id: 'knowledge', pct: 66, color: 'var(--ml-gold)',
+      label: 'Limited or no AI knowledge',
+      sub: 'of boards surveyed',
+      ddTitle: 'Two-thirds of boards cannot evaluate the technology',
+      ddBody: '<strong>66%</strong> of board members and C-suite executives report that their boards have &ldquo;limited to no knowledge or experience&rdquo; with AI. Without that knowledge, evaluating management&rsquo;s AI strategy is not possible &mdash; only accepting it is.',
+      ddImpl: 'Bounded-rationality theory predicts that decision-makers who lack the cognitive resources to evaluate a risk domain will engage with it episodically rather than continuously, and will default to accepting management&rsquo;s framing rather than challenging it. The 66% figure is that prediction, confirmed in the domain where governance stakes are rising fastest.'
+    },
+    {
+      id: 'agenda', pct: 31, color: 'var(--ml-charcoal)',
+      label: 'AI not on board agenda',
+      sub: 'do not discuss it at all',
+      ddTitle: 'Nearly one in three boards do not discuss AI at all',
+      ddBody: '<strong>31%</strong> of respondents say AI does not appear on the board agenda. Risk that is not discussed cannot be governed &mdash; and cannot be challenged. This is episodic engagement at its most extreme: <strong>engagement frequency is zero</strong>.',
+      ddImpl: 'When a risk category sits outside the agenda entirely, governance has not failed to handle it &mdash; governance has not been deployed against it. The structural defect is not poor execution. It is non-execution.'
+    },
+    {
+      id: 'every', pct: 17, color: 'var(--ml-deep-blue)',
+      label: 'Address AI at every meeting',
+      sub: 'engage continuously',
+      ddTitle: 'Only one in six boards engages at the required cadence',
+      ddBody: 'Just <strong>17%</strong> of boards address AI at every meeting. This is the cadence a continuous-risk landscape requires &mdash; and the proportion of boards currently operating at it. The 83% gap is the structural shortfall.',
+      ddImpl: 'A risk environment that evolves continuously cannot be governed on an episodic cycle. The 17% figure is the floor that becomes the standard once continuous adversarial governance is in place &mdash; not the ceiling that current board capacity allows.'
+    }
+  ];
+
+  // ---------- ELEMENTS ----------
+  const svg = document.getElementById('dials');
+  const heroNum = document.getElementById('hero-num');
+  const wefPct = document.getElementById('wef-pct');
+  const ddMeta = document.getElementById('dd-meta');
+  const ddTitle = document.getElementById('dd-title');
+  const ddBody = document.getElementById('dd-body');
+  const ddImplText = document.getElementById('dd-impl-text');
+  const dialDetail = document.getElementById('dial-detail');
+
+  // ---------- HELPERS ----------
+  const NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(NS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  function tween(from, to, duration, onUpdate, ease) {
+    const e = ease || easeOutCubic;
+    const t0 = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - t0) / duration);
+      onUpdate(from + (to - from) * e(t));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---------- GAUGE ARC GEOMETRY ----------
+  // 270° arc opening at the bottom. Compass-style angles: 0° = north, 90° = east.
+  // Background runs 225° → 495° (= 135°), total span 270°.
+  // Progress runs 225° → 225° + (pct/100)*270.
+  const ARC_START = 225;       // compass degrees
+  const ARC_TOTAL = 270;       // degrees of full gauge sweep
+  function polarToCart(cx, cy, r, compassDeg) {
+    const rad = compassDeg * Math.PI / 180;
+    return { x: cx + r * Math.sin(rad), y: cy - r * Math.cos(rad) };
+  }
+  function arcPath(cx, cy, r, startDeg, spanDeg) {
+    const endDeg = startDeg + spanDeg;
+    const s = polarToCart(cx, cy, r, startDeg);
+    const e = polarToCart(cx, cy, r, endDeg);
+    const largeArc = spanDeg > 180 ? 1 : 0;
+    const sweep = 1; // clockwise (screen space)
+    return 'M ' + s.x.toFixed(2) + ' ' + s.y.toFixed(2) +
+           ' A ' + r + ' ' + r + ' 0 ' + largeArc + ' ' + sweep + ' ' +
+           e.x.toFixed(2) + ' ' + e.y.toFixed(2);
+  }
+
+  // ---------- RENDER ----------
+  const VB_W = 1200, VB_H = 380;
+  const dialCxs = [200, 600, 1000]; // three dials evenly spaced
+  const dialCy = 170;
+  const dialR = 100;
+  const dialStrokeW = 18;
+
+  let selectedIdx = 0;
+  const dialEls = []; // { progressPath, pctText, group, targetPct }
+
+  function renderDials() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    dialEls.length = 0;
+
+    dials.forEach((d, i) => {
+      const cx = dialCxs[i];
+      const cy = dialCy;
+      const g = el('g', {
+        class: 'dial-group' + (i === selectedIdx ? ' active' : ''),
+        'data-idx': i
+      }, svg);
+
+      // Background arc (the unfilled portion of the gauge)
+      el('path', {
+        d: arcPath(cx, cy, dialR, ARC_START, ARC_TOTAL),
+        class: 'dial-bg',
+        'stroke-width': dialStrokeW,
+        'stroke-linecap': 'round'
+      }, g);
+
+      // Progress arc — starts at 0%, will be animated to its target percentage
+      const progressPath = el('path', {
+        d: arcPath(cx, cy, dialR, ARC_START, 0.001), // tiny seed so the path is valid
+        class: 'dial-track',
+        stroke: d.color,
+        'stroke-width': dialStrokeW,
+        'stroke-linecap': 'round',
+        fill: 'none',
+        opacity: i === selectedIdx ? 1 : 0.85
+      }, g);
+
+      // Center percentage number
+      const pctText = el('text', {
+        x: cx, y: cy + 16,
+        'text-anchor': 'middle',
+        'font-size': 64,
+        class: 'dial-pct',
+        fill: d.color
+      }, g);
+      pctText.textContent = '0';
+
+      // % sign next to the number
+      el('text', {
+        x: cx, y: cy + 16,
+        'text-anchor': 'middle',
+        'font-size': 64,
+        'font-family': 'var(--serif)',
+        'font-weight': 500,
+        fill: d.color,
+        opacity: 0.4,
+        class: 'center-x',
+        dx: 56,
+        dy: -34
+      }, g).textContent = '';
+
+      // % suffix small, after the number
+      el('text', {
+        x: cx + 54, y: cy - 4,
+        'text-anchor': 'start',
+        'font-family': 'var(--serif)',
+        'font-size': 28,
+        'font-weight': 500,
+        fill: d.color,
+        opacity: 0.7,
+        class: 'center-x'
+      }, g).textContent = '%';
+
+      // Label below dial
+      el('text', {
+        x: cx, y: cy + dialR + 36,
+        'text-anchor': 'middle',
+        'font-size': 12.5,
+        class: 'dial-label'
+      }, g).textContent = d.label;
+
+      // Sub-label below
+      el('text', {
+        x: cx, y: cy + dialR + 54,
+        'text-anchor': 'middle',
+        'font-size': 11,
+        class: 'dial-sub'
+      }, g).textContent = d.sub;
+
+      // Stage tag above dial
+      el('text', {
+        x: cx, y: cy - dialR - 28,
+        'text-anchor': 'middle',
+        'font-size': 10,
+        'font-weight': 600,
+        'letter-spacing': '0.18em',
+        fill: 'var(--ml-slate-grey)',
+        class: 'dial-sub'
+      }, g).textContent = 'DIAL ' + (i + 1);
+
+      g.addEventListener('click', () => selectDial(i));
+      g.addEventListener('mouseenter', () => selectDial(i));
+
+      dialEls.push({ progressPath, pctText, group: g, targetPct: d.pct, color: d.color, cx, cy });
+    });
+  }
+
+  // ---------- ANIMATION ----------
+  function animateDialFill(de, fromPct, toPct, duration) {
+    tween(fromPct, toPct, duration, v => {
+      const span = (v / 100) * ARC_TOTAL;
+      de.progressPath.setAttribute('d', arcPath(de.cx, de.cy, dialR, ARC_START, Math.max(0.001, span)));
+      de.pctText.textContent = Math.round(v);
+    });
+  }
+
+  // ---------- SELECTION ----------
+  function selectDial(idx) {
+    selectedIdx = idx;
+    const d = dials[idx];
+
+    // Visual highlight
+    document.querySelectorAll('.dial-group').forEach((g, i) => {
+      g.classList.toggle('active', i === idx);
+    });
+
+    // Hero number (always shows the 66% by default, but follows selection)
+    const fromHero = parseInt(heroNum.textContent, 10) || 0;
+    tween(fromHero, d.pct, 460, v => { heroNum.textContent = Math.round(v); });
+
+    // Update hero caption based on selection — keep the 66% framing as the primary
+
+    // Detail panel
+    dialDetail.style.opacity = '0';
+    setTimeout(() => {
+      ddMeta.textContent = 'Dial ' + (idx + 1) + ' of 3 · ' + (idx === 0 ? 'Knowledge' : idx === 1 ? 'Agenda presence' : 'Engagement cadence');
+      ddTitle.textContent = d.ddTitle;
+      ddBody.innerHTML = d.ddBody;
+      ddImplText.innerHTML = d.ddImpl;
+      dialDetail.style.opacity = '1';
+    }, 140);
+  }
+
+  // ---------- INIT ----------
+  renderDials();
+
+  // Stagger the dial fill-in animations on load, then animate the hero + WEF context.
+  setTimeout(() => animateDialFill(dialEls[0], 0, 66, 1200), 250);
+  setTimeout(() => animateDialFill(dialEls[1], 0, 31, 1100), 500);
+  setTimeout(() => animateDialFill(dialEls[2], 0, 17, 1000), 750);
+
+  // Hero number: count up to 66 (the headline) starting from 0
+  setTimeout(() => tween(0, 66, 1200, v => { heroNum.textContent = Math.round(v); }), 250);
+  // WEF 1% — small but visceral
+  setTimeout(() => tween(0, 1, 900, v => { wefPct.textContent = Math.round(v); }), 1400);
+
+  // Initial selection: knowledge (dial 1) by default
+  selectDial(0);
+})();
+</script>
+
+<script>
+(function(){
+  try {
+    var p = new URLSearchParams(window.location.search);
+    if (p.get('embed') === '1') {
+      document.body.classList.add('embed-mode');
+      var sendHeight = function(){
+        try {
+          var h = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight
+          );
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
+          }
+        } catch(err) {}
+      };
+      if (document.readyState === 'complete') sendHeight();
+      else window.addEventListener('load', sendHeight);
+      window.addEventListener('resize', sendHeight);
+      setTimeout(sendHeight, 250);
+      setTimeout(sendHeight, 800);
+      setTimeout(sendHeight, 1800);
+    }
+  } catch(e) {}
+})();
+</script>
+</body>
+</html>

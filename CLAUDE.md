@@ -60,12 +60,12 @@ marentis-site/
 ├── contact.html                 # Contact form + Proton Meet
 ├── contact-thank-you.html       # Post-form redirect page
 ├── services/
-│   ├── index.html               # Services hub — four-tier GaaS architecture
+│   ├── index.html               # Services hub — four-tier SGaaS architecture
 │   ├── diagnostic-gaas.md       # T1 service page
 │   ├── retained-gaas.md         # T2 service page (primary revenue)
 │   ├── embedded-gaas.md         # T3 service page
 │   ├── pre-exit-gaas.md         # T4 service page
-│   ├── red-team-review.md       # Adversarial tool — standalone or within GaaS
+│   ├── red-team-review.md       # Adversarial tool — standalone or within SGaaS
 │   └── adversarial-methodology.md  # Methodology umbrella page
 ├── insights/
 │   ├── _quarto.yml              # Quarto config — Flatly theme + brand SCSS
@@ -130,10 +130,10 @@ The firm's services follow a four-tier model. This structure must be preserved c
 
 | Tier | Name | Positioning | Duration |
 |---|---|---|---|
-| T1 | Diagnostic GaaS | Entry point — governance health check | 2–4 weeks |
-| T2 | Retained GaaS | Core revenue — continuous fractional CRO | 12+ months |
-| T3 | Embedded GaaS | Deep — board seat / governance ownership | 12–18 months |
-| T4 | Pre-Exit GaaS | PE portfolio — exit-aligned governance | 12–18 months pre-exit |
+| T1 | Diagnostic SGaaS | Entry point — governance health check | 2–4 weeks |
+| T2 | Retained SGaaS | Core revenue — continuous fractional CRO | 12+ months |
+| T3 | Embedded SGaaS | Deep — board seat / governance ownership | 12–18 months |
+| T4 | Pre-Exit SGaaS | PE portfolio — exit-aligned governance | 12–18 months pre-exit |
 
 Pricing is bespoke and quoted after inquiry. Do not add price figures to any service page or index.
 
