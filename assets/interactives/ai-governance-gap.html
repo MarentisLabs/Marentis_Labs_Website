@@ -595,12 +595,11 @@
       document.body.classList.add('embed-mode');
       var sendHeight = function(){
         try {
-          var h = Math.max(
-            document.body.scrollHeight,
-            document.documentElement.scrollHeight,
-            document.body.offsetHeight,
-            document.documentElement.offsetHeight
-          );
+          // Measure body content only. documentElement.scrollHeight is floored
+          // to the iframe's viewport height, which would feed back into a
+          // resize loop once the parent applied the height.
+          var rect = document.body.getBoundingClientRect();
+          var h = Math.max(document.body.scrollHeight, Math.ceil(rect.height));
           if (window.parent && window.parent !== window) {
             window.parent.postMessage({ type: 'mlInteractiveHeight', height: h }, '*');
           }

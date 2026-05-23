@@ -27,7 +27,7 @@
     scrolling="no"
     referrerpolicy="no-referrer-when-downgrade"
     sandbox="allow-scripts allow-same-origin allow-popups"
-    style="width:100%; min-height:{{ min_height }}px; border:0; background:#F8F9FA; display:block;"></iframe>
+    style="width:100%; height:{{ min_height }}px; border:0; background:#F8F9FA; display:block; transition:height 0.25s ease;"></iframe>
   <noscript>
     <p style="padding:24px; background:#F8F9FA; border:1px solid #DEE2E6; color:#495057; font-family: Inter, sans-serif; font-size:14px;">
       This interactive requires JavaScript. <a href="/assets/interactives/{{ slug }}.html" style="color:#A98C5A;">Open the static version &rarr;</a>
@@ -41,16 +41,26 @@
 (function(){
   if (window.__mlInteractiveListener) return;
   window.__mlInteractiveListener = true;
+
+  // Per-iframe dedup map. Each iframe's `resize` event fires whenever we
+  // change its height — without dedup, even a 1px difference can drive a
+  // runaway feedback loop where the iframe grows by ~12px each tick.
+  var lastApplied = new WeakMap();
+
   window.addEventListener('message', function(e) {
     if (!e.data || e.data.type !== 'mlInteractiveHeight' || typeof e.data.height !== 'number') return;
-    // Find the iframe whose contentWindow is the message source
     var iframes = document.querySelectorAll('iframe[id^="ml-interactive-"]');
     for (var i = 0; i < iframes.length; i++) {
-      if (iframes[i].contentWindow === e.source) {
-        // Add a small buffer to avoid sub-pixel scrollbars
-        iframes[i].style.height = (e.data.height + 12) + 'px';
-        break;
-      }
+      var iframe = iframes[i];
+      if (iframe.contentWindow !== e.source) continue;
+      var h = Math.round(e.data.height);
+      var prev = lastApplied.get(iframe) || 0;
+      // Ignore sub-pixel jitter — without this guard the iframe's own
+      // resize event would feed back and grow the height indefinitely.
+      if (Math.abs(h - prev) < 2) break;
+      lastApplied.set(iframe, h);
+      iframe.style.height = h + 'px';
+      break;
     }
   });
 })();
