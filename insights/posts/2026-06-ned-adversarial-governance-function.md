@@ -7,7 +7,7 @@ categories: [Governance, Board Performance, Risk Management]
 permalink: /insights/posts/ned-adversarial-governance-function/
 ---
 
-A good Non-Executive Director adds value. A governance function is something different, and most boards have quietly substituted the first for the second.
+A good Non-Executive Director adds value. A governance function does something else entirely, and most boards have quietly mistaken the first for the second.
 
 The substitution has consequences beyond semantics. A board that believes it has a governance function because it has a capable NED cohort is exposed in exactly the way governance failures have been exposed for the past twenty years. The model produces the exposure. The cohort, however able, operates inside it.
 
