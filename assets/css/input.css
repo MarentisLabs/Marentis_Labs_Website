@@ -426,6 +426,26 @@ h3 {
 .article-prose em {
   color: var(--ml-slate-grey);
 }
+.article-prose img {
+  max-width: 100%;
+  height: auto;
+}
+.article-prose figure {
+  margin: 2.25rem 0;
+}
+.article-prose figure img {
+  display: block;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+}
+.article-prose figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--ml-slate-grey);
+  font-style: italic;
+}
 
 /* ── Article TOC ───────────────────────────────────────────── */
 /* sticky offset = nav logo (90px) + py-4 top (16px) + py-4 bottom (16px) + 10px gap */
@@ -774,6 +794,22 @@ h3 {
 /* v3.2: pullouts use DM Sans 300 italic; Cormorant restricted to decorative ❝ glyph only */
 .why-ml-quote {
   font-family: var(--font-sub);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  color: var(--ml-charcoal);
+  border-left: 3px solid var(--ml-gold);
+  padding-left: 1.125rem;
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.why-ml-body {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--ml-slate-grey);
+  line-height: 1.8;
+  max-width: 36rem;
+}
   font-style: italic;
   font-weight: 300;
   font-size: 0.9375rem;
