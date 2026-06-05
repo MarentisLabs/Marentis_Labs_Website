@@ -16,7 +16,7 @@ A mid-market PE house with approximately £2bn AUM held a majority stake in a bu
 
 With a strategic sale being considered for the following 18 months, the operating partner conducted an internal review of exit readiness. The financial story was strong. The operational improvements were demonstrable. But the governance infrastructure — the board composition, committee architecture, management information, and documented decision-making processes — had been built to run the business, not to withstand the scrutiny of a buyer's legal and financial due diligence team.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. The operating partner had seen governance findings slow or reprice exits in two previous portfolio transactions. He engaged Marentis Labs to conduct a pre-emptive governance audit and manage the remediation programme.
+The operating partner had seen governance findings slow or reprice exits in two previous portfolio transactions. He engaged Marentis Labs to conduct a pre-emptive governance audit and manage the remediation programme.
 
 ## The Governance Challenge
 

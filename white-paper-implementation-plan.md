@@ -96,7 +96,7 @@ Each column: one icon + bold short title + 2-sentence description. The three ins
 
 - *Why continuous governance outperforms annual board reviews by a measurable factor* — and what the Basel 3.1 capital model implications are for risk committee composition.
 - *The four failure modes that appear in every governance health check* — and how FTSE 350 chairs are systematically blind to three of them.
-- *How PE operating partners are using Pre-Exit SGaaS to convert governance from a diligence liability into a premium valuation narrative.*
+- *How PE operating partners are using Pre-Exit SGaaS to convert governance from a diligence liability into a defended exit valuation.*
 
 These should be written from the actual white paper content. Placeholders can be refined once Owen confirms the three insights he wants surfaced.
 

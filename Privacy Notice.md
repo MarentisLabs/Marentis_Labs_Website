@@ -12,7 +12,7 @@ We are the data controller for the personal data described in this notice, which
 
 **Contact for data protection matters:** [privacy@marentislabs.com]
 
-We are registered with the Information Commissioner's Office (ICO) as a data controller. Our ICO registration number is \[PLACEHOLDER\].
+We are registered with the Information Commissioner's Office (ICO) as a data controller. Our ICO registration number is CSN2532063.
 
 ---
 
@@ -64,7 +64,7 @@ Our website uses cookies. Strictly necessary cookies operate the website and are
 
 | Cookie | Provider | Type | Purpose | Duration |
 |---|---|---|---|---|
-| \[PLACEHOLDER\] | Marentis Labs | Strictly necessary | Session management | Session |
+| `ml_cookie_consent` | Marentis Labs | Strictly necessary | Stores your cookie consent choice (held in browser local storage) | Persistent, until cleared |
 | `_ga` | Google Analytics | Analytics | Distinguishes individual users | 2 years |
 | `_ga_[ID]` | Google Analytics | Analytics | Maintains session state | 2 years |
 | `_gid` | Google Analytics | Analytics | Distinguishes users across sessions | 24 hours |
