@@ -1,98 +1,95 @@
 ---
-title: "Capital Allocation Governance: The Pre-Exit Risk Private Equity Misses"
-description: "BlackRock now wants a fifth of the standard portfolio in private markets. For a company heading to exit, the move to 50-30-20 raises a capital allocation governance question most boards have never answered, and a sophisticated acquirer is increasingly likely to ask it first."
+title: "The Avoidable Discount Weak Governance Brings to a PE Exit"
+description: "Weak governance hands a buyer the cheapest reason to discount a sale price, and in a higher-rate market that penalty is entirely avoidable. Here is where the discount hides, and how to close it ahead of diligence."
 author: "Owen Vallis"
 date: 2026-06-05
-categories: [Pre-Exit, Portfolio Strategy, Governance]
+categories: [Pre-Exit, Strategy, Governance]
 permalink: /insights/posts/capital-allocation-pre-exit-risk/
 ---
 
-BlackRock now wants a fifth of the standard portfolio in private markets.
+BlackRock now wants a fifth of the standard institutional portfolio in private markets.
 
-That is the headline of the 50-30-20 model Larry Fink set out this spring: half in equities, 30% in fixed income, and 20% in private assets held as a core allocation, in place of the 60/40 split that has defined institutional investing for a generation. For an asset manager, it is a product recommendation. For a private equity operating partner, or a CFO preparing a portfolio company for sale, it raises a different and more uncomfortable question. Who at board level owns your capital allocation framework, when was it last reviewed, and does it reflect the environment the business is actually operating in?
+That is the headline of Larry Fink's 50-30-20 model. For a limited partner, it is an asset allocation decision. For the private equity operating partners and portfolio company CFOs preparing those same assets for sale, it is a signal that the cost of capital has fundamentally re-based. In a high-rate regime, capital allocation governance bears on a board's exit valuation as heavily as operational execution does. Who owns the company's internal capital allocation framework, its hurdle rates, its debt structure and its capex discipline, and does it reflect the macroeconomic environment the business actually operates in?
 
-That question rarely appears on an exit readiness checklist. It should. The assumptions embedded in most corporate investment policies were calibrated for a world that no longer exists, and a sophisticated acquirer is increasingly likely to notice.
+That question rarely appears on an exit readiness checklist. It should. Most companies set their capital allocation rules in the near-zero-rate years between 2015 and 2022, and a sophisticated acquirer knows it.
 
-## The regime has changed. Most policies have been left behind.
+## The cost of capital has re-based. The governance around it has not.
 
-The investment environment facing portfolio companies has shifted on every axis an investment policy depends on. Each shift below is named, dated, and evidenced.
+Every internal capital decision a board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they have not moved since. Three of them now sit exposed.
 
-The stock-bond correlation has turned positive. Bonds fell alongside equities through the first quarter of 2026, producing the worst quarterly outcome for a 60/40 portfolio since June 2022. The hedge a policy assumed would cushion an equity drawdown now amplifies it.
+Hurdle rates are out of date. Boards are still approving long-term capex, product development and bolt-on acquisitions against hurdle rates set at 8 to 10% in the cheap-money era, while their weighted average cost of capital has climbed past 12%. Every project that clears the old hurdle but falls short of the true cost of capital destroys value the day it is funded.
 
 <figure class="article-figure chart-figure">
-<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="sb-t sb-d" preserveAspectRatio="xMidYMid meet" width="720" height="380" style="width:100%;height:auto;">
-<title id="sb-t">Rolling stock-bond correlation, 2015 to 2026 (indicative)</title>
-<desc id="sb-d">The correlation sits around minus 0.2 to minus 0.3 through the low-rate era to 2021, then crosses zero in 2022 and rises above plus 0.6 in 2023 and 2024, staying positive into 2026. A positive correlation means bonds no longer hedge equity falls.</desc>
-<rect x="64" y="28" width="632" height="171.4" fill="#9a3b2e" opacity="0.05"/>
-<line x1="64" y1="306.6" x2="696" y2="306.6" stroke="#e3e1dc" stroke-width="1" /><text x="56" y="310.6" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">-0.5</text><line x1="64" y1="199.4" x2="696" y2="199.4" stroke="#212529" stroke-width="1.5" stroke-dasharray="4 3"/><text x="56" y="203.4" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">+0.0</text><line x1="64" y1="92.3" x2="696" y2="92.3" stroke="#e3e1dc" stroke-width="1" /><text x="56" y="96.3" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">+0.5</text>
-<polyline points="64.0,263.7 121.5,253.0 178.9,263.7 236.4,238.0 293.8,263.7 351.3,242.3 408.7,216.6 466.2,103.0 523.6,62.3 581.1,70.9 638.5,81.6 696.0,81.6" fill="none" stroke="#a98c5a" stroke-width="2.5"/>
-<circle cx="408.7" cy="216.6" r="3.5" fill="#212529"/><circle cx="466.2" cy="103.0" r="3.5" fill="#212529"/><circle cx="523.6" cy="62.3" r="3.5" fill="#212529"/>
-<line x1="64" y1="28" x2="64" y2="328" stroke="#212529" stroke-width="1.5"/>
-<text x="121.5" y="295.9" font-size="12" fill="#495057" font-family="Inter, sans-serif">Bonds hedge equities (the 60/40 assumption)</text>
-<text x="696" y="40.9" text-anchor="end" font-size="12" fill="#9a3b2e" font-family="Inter, sans-serif" font-weight="600">Hedge breaks down: both fall together</text>
-<text transform="translate(18,178.0) rotate(-90)" text-anchor="middle" font-size="12" fill="#495057" font-family="Inter, sans-serif">Stock-bond correlation</text>
-<text x="64.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2015</text><text x="236.4" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2018</text><text x="408.7" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2021</text><text x="466.2" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2022</text><text x="581.1" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2024</text><text x="696.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2026</text>
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hr-t hr-d" preserveAspectRatio="xMidYMid meet" width="720" height="380" style="width:100%;height:auto;">
+<title id="hr-t">The hurdle-rate gap, 2015 to 2026 (illustrative)</title>
+<desc id="hr-d">A static investment hurdle rate of about 9 per cent, set in the zero-rate era, against a weighted average cost of capital that sat near 7 per cent until 2021 and then climbed above 12 per cent by 2026. After 2022 the cost of capital rises above the hurdle, so projects that clear the old hurdle no longer cover the true cost of capital.</desc>
+<line x1="66" y1="328.0" x2="696" y2="328.0" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="332.0" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">0%</text><line x1="66" y1="285.4" x2="696" y2="285.4" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="289.4" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">2%</text><line x1="66" y1="242.9" x2="696" y2="242.9" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="246.9" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">4%</text><line x1="66" y1="200.3" x2="696" y2="200.3" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="204.3" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">6%</text><line x1="66" y1="157.7" x2="696" y2="157.7" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="161.7" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">8%</text><line x1="66" y1="115.1" x2="696" y2="115.1" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="119.1" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">10%</text><line x1="66" y1="72.6" x2="696" y2="72.6" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="76.6" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">12%</text><line x1="66" y1="30.0" x2="696" y2="30.0" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="34.0" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">14%</text>
+<polygon points="462.1,136.4 696.0,136.4 696.0,61.9 696.0,61.9 638.7,66.2 581.5,70.4 524.2,89.6 466.9,132.2 462.1,136.4" fill="#9a3b2e" opacity="0.10"/>
+<line x1="66" y1="136.4" x2="696" y2="136.4" stroke="#a98c5a" stroke-width="2.5" stroke-dasharray="7 4"/>
+<polyline points="66.0,168.4 123.3,174.7 180.5,179.0 237.8,174.7 295.1,179.0 352.4,191.8 409.6,183.3 466.9,132.2 524.2,89.6 581.5,70.4 638.7,66.2 696.0,61.9" fill="none" stroke="#9a3b2e" stroke-width="2.5"/>
+<circle cx="696.0" cy="61.9" r="3.5" fill="#9a3b2e"/>
+<line x1="66" y1="30" x2="66" y2="328" stroke="#212529" stroke-width="1.5"/>
+<line x1="66" y1="328" x2="696" y2="328" stroke="#212529" stroke-width="1.5"/>
+<text x="123.3" y="128.4" font-size="12" fill="#8a7048" font-family="Inter, sans-serif" font-weight="600">Hurdle rate, fixed in the zero-rate era</text>
+<text x="696.0" y="52.9" text-anchor="end" font-size="12" fill="#9a3b2e" font-family="Inter, sans-serif" font-weight="600">Cost of capital (WACC)</text>
+<text x="581.5" y="106.6" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">Clears the hurdle,</text>
+<text x="581.5" y="117.3" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">below the true cost of capital</text>
+<text x="66.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2015</text><text x="237.8" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2018</text><text x="409.6" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2021</text><text x="466.9" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2022</text><text x="581.5" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2024</text><text x="696.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2026</text>
+<text x="381.0" y="372" text-anchor="middle" font-size="12" fill="#495057" font-family="Inter, sans-serif">Hurdle rate vs weighted average cost of capital</text>
 </svg>
-  <figcaption>The rolling correlation between stocks and bonds, shown here as an indicative series, held negative through the low-rate era, then turned positive in 2022 and has stayed there. A positive reading means bonds no longer cushion an equity fall.<span class="fig-source">Sources: BlackRock Investment Directions, Spring 2026 (2026 reading); long-run estimates of roughly &minus;0.24 across the 2009 to 2022 low-rate era, rising above +0.6 from 2022, per Vanguard, Morningstar and J.P. Morgan analysis.</span></figcaption>
+  <figcaption>An investment hurdle rate fixed at about 9% in the zero-rate era, against a cost of capital that has climbed above 12% since 2022. Once the cost of capital passes the hurdle, projects that clear the old threshold no longer cover it.<span class="fig-source">The hurdle-rate and WACC figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
 </figure>
 
-Interest rates have re-based. UK 30-year gilt yields sit at their highest level since 1998, and US 30-year Treasuries trade within ten basis points of an 18-year peak. A treasury policy written against the near-zero rates of 2015 to 2022 is now managing cash and debt in a structurally different regime.
+Debt and currency exposures are uncovered. Loose board oversight of treasury was survivable when money was free. Legacy interest-rate hedges are now expiring into a higher-rate market, and the dollar's safe-haven behaviour has shifted, leaving floating-rate senior debt and international supply chains open to cash-flow shocks that land just as the exit window opens.
 
-The dollar's safe-haven property has weakened. Through high-volatility periods in 2025, the dollar moved with US equities 66% of the time, against 35 to 39% in the comparable stress windows of 2008 to 2012 and 2020 to 2024. The currency a policy treats as a refuge now behaves, more often than not, like a risk asset.
+Capital deployment habits formed in a different market. The cheap-debt playbook of aggressive, debt-funded bolt-ons without integration discipline has become a liability. Buyers now reward organic growth, balance-sheet deleveraging and working-capital efficiency, and a diligence team reads the old playbook straight off the numbers.
 
-Access has changed too. The EU's ELTIF 2.0, in force since 2024, and the UK's Long-Term Asset Fund have opened private markets well beyond the institutional gate. This is an allocation decision that did not exist in accessible form when most investment policies were written.
-
-This is the environment an acquirer's governance team is working in. The gap between it and the assumptions embedded in most investment policies is wide enough to set out in a single table.
+This is the environment an acquirer's diligence team works in. The gap between it and the capital allocation assumptions most portfolio companies still run on is wide enough to set out in a single table.
 
 <figure class="article-figure assumption-gap">
   <table>
     <thead>
       <tr>
-        <th>Assumption</th>
-        <th>When most policies were written</th>
-        <th>Today</th>
+        <th>Capital allocation vector</th>
+        <th>Zero-rate-era blind spot (2015 to 2022)</th>
+        <th>2026 high-rate reality</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Bond-equity correlation</td>
-        <td>Negative, so bonds hedge equity drawdowns</td>
-        <td>Positive, so both fell together in Q1 2026 (the worst 60/40 quarter since June 2022)</td>
+        <td>Investment hurdle rates</td>
+        <td>Static low hurdles of 8 to 10%, with capex approved loosely</td>
+        <td>Cost of capital above 12%, so projects must clear far higher cash-return thresholds</td>
       </tr>
       <tr>
-        <td>Interest rate baseline</td>
-        <td>Near zero (2015 to 2022 average)</td>
-        <td>30-year gilt at its highest since 1998</td>
+        <td>Debt and rate hedging</td>
+        <td>Unhedged floating debt or short-dated rate caps</td>
+        <td>Expiring hedges expose operating cash flow to higher interest cost, needing active board oversight</td>
       </tr>
       <tr>
-        <td>US dollar</td>
-        <td>Safe haven, moving against equities in stress (35 to 39% covariance)</td>
-        <td>66% positive covariance with US equities in 2025 stress windows</td>
+        <td>Strategic capital deployment</td>
+        <td>Aggressive, cheap-debt bolt-ons without integration audits</td>
+        <td>Organic growth, deleveraging and tight working-capital discipline</td>
       </tr>
       <tr>
-        <td>Private markets access</td>
-        <td>Institutional only</td>
-        <td>Now open well beyond institutions (EU ELTIF 2.0, UK Long-Term Asset Fund)</td>
-      </tr>
-      <tr>
-        <td>Standard portfolio model</td>
-        <td>60/40</td>
-        <td>50-30-20 (BlackRock's current recommendation)</td>
+        <td>Regulatory exposure</td>
+        <td>Compliance run as a back-office tick-box</td>
+        <td>Cross-border data, supply-chain and ESG rules (DORA, CSDDD) carry late-stage deal risk</td>
       </tr>
     </tbody>
   </table>
-  <figcaption>The table sets out the gap between the assumptions in most investment policies and today's conditions.<span class="fig-source">Sources: BlackRock Investment Directions, Spring 2026; McKinsey Global Private Markets Report 2026; JP Morgan 2026 Global M&A Annual Outlook.</span></figcaption>
+  <figcaption>The table sets out the gap between the capital allocation assumptions most portfolio companies still run on and the 2026 cost-of-capital reality.<span class="fig-source">The hurdle-rate and WACC figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
 </figure>
 
 ## The three questions an acquirer will ask
 
 Capital allocation governance falls inside the scope of both financial and governance due diligence at a sophisticated buyer. The questions are specific, and they are answerable. Most boards have simply never been asked them under deal conditions.
 
-The first is accountability. Which director holds formal responsibility for investment and treasury risk oversight? Is it written into a board mandate, or has it been delegated to management without board-level visibility?
+The first is accountability. Which director holds formal responsibility for capital allocation and treasury risk? Is it written into a board mandate, or has it been left to management without board-level visibility?
 
-The second is currency. When did the board last review the investment policy statement? Does it reflect the current rate, correlation, and inflation environment, and has the board seen any management information confirming the policy remains fit for purpose?
+The second is currency. When did the board last reset its investment hurdle rates against the current cost of capital, and stress its debt structure for unhedged exposure? Has it seen evidence that new capex and bolt-on acquisitions still clear the true cost of capital?
 
-The third is challenge. Does the board see the assumptions embedded in the framework itself, or only the cash balances and benchmark returns? A policy can report healthy returns while resting on a correlation assumption that broke two years ago.
+The third is challenge. Does the board receive information that surfaces a value-destroying decision before it is taken, a project approved below the cost of capital or a hedge left to expire into a refinancing, rather than after the loss has landed?
 
 These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-methodology/) asks. The difference is timing and cost. An acquirer asks them once, under deal pressure, when a gap has already become a negotiating lever. A pre-mortem asks them at the point where the answer can still be fixed quietly.
 
@@ -100,13 +97,13 @@ These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-m
 
 The exit environment is the most congested on record, and the buyers who now dominate it are precisely the ones most likely to examine this gap.
 
-The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire regime shift set out above. The policy written in year one is being tested by conditions that did not exist when it was approved.
+The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire cost-of-capital shift set out above. The hurdle rates and debt structure set in year one are being tested by conditions that did not exist when they were approved.
 
 The secondary market, meanwhile, has become a primary exit route. JP Morgan records $130 billion in secondary private equity transactions in 2025, up 31% year on year. Secondary buyers are institutional, governance-literate, and run detailed governance workstreams. They have seen this gap before, and they know which companies tend to carry it.
 
 ## The intervention point
 
-Proactive governance uplift in the 12 to 18 months before an exit costs less than reactive remediation under an acquirer's scrutiny. The work is governance audit and challenge. It reviews the accountability lines, tests the investment policy statement against the current macro regime, and identifies the management information gaps a buyer's diligence team would find. The [Pre-Mortem Diagnostic](/services/adversarial-methodology/) applied to capital allocation asks one question. What would have to go wrong for the current framework to fail, and what are we assuming that may no longer be true? BlackRock has already supplied part of the answer. Several of those assumptions have broken down.
+Proactive governance uplift in the 12 to 18 months before an exit costs less than reactive remediation under an acquirer's scrutiny. The work is governance audit and challenge. It resets the hurdle rates against the current cost of capital, tests the debt structure for unhedged exposure, hardens the capex and bolt-on approval discipline, and closes the regulatory gaps a buyer's diligence team would find. The [Pre-Mortem Diagnostic](/services/adversarial-methodology/) applied to capital allocation asks one question. What in this company's capital deployment would a buyer use to justify a faster fade and a lower price? In a high-rate regime, the honest answer is usually a longer list than the board expects.
 
 <figure class="article-figure chart-figure">
 <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cc-t cc-d" preserveAspectRatio="xMidYMid meet" width="720" height="380" style="width:100%;height:auto;">
@@ -130,15 +127,15 @@ Proactive governance uplift in the 12 to 18 months before an exit costs less tha
   <figcaption>The curve is illustrative. A capital allocation gap is cheap to settle while there is still runway before a sale, and expensive once an acquirer finds it in diligence and turns it into a price chip at the close.</figcaption>
 </figure>
 
-This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. A buyer's valuation turns on how long the business can hold its returns above the cost of capital before they fade, and a diligence team looks for evidence that lets it assume a faster fade and pay less. A team that finds zero-rate-era hurdle rates still in use, an unhedged floating-rate facility, an unmapped data-protection exposure, or no record of board-level challenge to the equity story has its quantified pretext to chip the price during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, benchmarks the governance position against what a buyer expects, and produces an independent exit-readiness opinion the seller can put in front of prospective buyers. Governance does not manufacture the multiple. It protects the headline price the business has already earned.
+This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. A buyer's valuation turns on how long the business can hold its returns above the cost of capital before they fade. That fade rate is set in the operations, by pricing power, unit economics and competitive moat, and governance cannot lengthen it. What governance can do is deny the buyer a reason to assume the fade comes faster than the operations warrant. A diligence team that finds zero-rate-era hurdle rates still in use, an unhedged floating-rate facility, an undisciplined capital deployment record, or an unmapped regulatory exposure has its quantified pretext to mark the price down during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, benchmarks the position against what a buyer expects, and produces an independent exit-readiness opinion the seller can put in front of prospective buyers. It protects the headline price the operating business has already earned.
 
 ## What to do next
 
-Ask your CFO one question this week. Has the board's investment policy been reviewed in the last twelve months, and does it reflect the rate and correlation environment that has held since 2022?
+Ask your CFO one question this week. Has the board reset its hurdle rates and debt strategy for the cost of capital that has prevailed since 2022, or are they still the ones set when money was cheap?
 
 The timing gives the question weight. Global M&A reached $5.1 trillion in 2025, up 49% on the year and the highest since 2021, with sponsors under mounting pressure to return capital after holding periods stretched to six and seven years (J.P. Morgan, 2026). The exit window is open, and the buyers moving through it read the governance section of vendor due diligence closely.
 
-Governance quality is the cheapest form of price protection a seller can buy. On a £200 million business, a single 3% chip at exclusivity is £6 million of lost value, and an unreviewed investment policy is exactly the kind of gap that earns one. Closing it ahead of the process is a few months of focused work set against a valuation measured in millions, and it pays for itself the moment one chip is avoided. That is what [Pre-Exit SGaaS](/services/pre-exit-gaas/) is built to do, in the 12 to 18 months before a sale. Check out the full evidence in our [white paper](/white-paper/), and [book an introductory call](/contact/).
+Governance quality is the cheapest form of price protection a seller can buy. On a £200 million business, a single 3% chip at exclusivity is £6 million of lost value, and a stale hurdle rate or an unhedged facility is exactly the kind of gap that earns one. Closing it ahead of the process is a few months of focused work set against a valuation measured in millions, and it pays for itself the moment one chip is avoided. That is what [Pre-Exit SGaaS](/services/pre-exit-gaas/) is built to do, in the 12 to 18 months before a sale. Check out the full evidence in our [white paper](/white-paper/), and [book an introductory call](/contact/).
 
 <style>
 .article-prose .chart-figure { margin: 2.5rem 0; }
