@@ -9,13 +9,13 @@ permalink: /insights/posts/capital-allocation-pre-exit-risk/
 
 BlackRock now wants a fifth of the standard institutional portfolio in private markets.
 
-That is the headline of Larry Fink's 50-30-20 model. For a limited partner, it is an asset allocation decision. For the private equity operating partners and portfolio company CFOs preparing those same assets for sale, it is a signal that the cost of capital has fundamentally re-based. In a high-rate regime, capital allocation governance bears on a board's exit valuation as heavily as operational execution does. Who owns the company's internal capital allocation framework, its hurdle rates, its debt structure and its capex discipline, and does it reflect the macroeconomic environment the business actually operates in?
+That is the headline of Larry Fink's 50-30-20 model. The force behind it, a cost of capital that has fundamentally re-based, lands hardest one level down, inside the operating companies those funds are preparing to sell. The governance a buyer prices at exit sits in the company being sold. Has its board reset how it approves capex, structures its debt and prices its bolt-ons for the rate the business now borrows at, or is it still running the rules it wrote when money was cheap?
 
-That question rarely appears on an exit readiness checklist. It should. Most companies set their capital allocation rules in the near-zero-rate years between 2015 and 2022, and a sophisticated acquirer knows it.
+That question rarely appears on an exit readiness checklist. It should. A buyer asks it under deal pressure, once a stale answer has already become a reason to pay less.
 
 ## The cost of capital has re-based. The governance around it has not.
 
-Every internal capital decision a board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they have not moved since. Three of them now sit exposed.
+Every capital decision a portfolio company's board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they have not moved since. Three of them now sit exposed.
 
 Hurdle rates are out of date. Boards are still approving long-term capex, product development and bolt-on acquisitions against hurdle rates set at 8 to 10% in the cheap-money era, while their weighted average cost of capital has climbed past 12%. Every project that clears the old hurdle but falls short of the true cost of capital destroys value the day it is funded.
 
@@ -127,7 +127,7 @@ Proactive governance uplift in the 12 to 18 months before an exit costs less tha
   <figcaption>The curve is illustrative. A capital allocation gap is cheap to settle while there is still runway before a sale, and expensive once an acquirer finds it in diligence and turns it into a price chip at the close.</figcaption>
 </figure>
 
-This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. A buyer's valuation turns on how long the business can hold its returns above the cost of capital before they fade. That fade rate is set in the operations, by pricing power, unit economics and competitive moat, and governance cannot lengthen it. What governance can do is deny the buyer a reason to assume the fade comes faster than the operations warrant. A diligence team that finds zero-rate-era hurdle rates still in use, an unhedged floating-rate facility, an undisciplined capital deployment record, or an unmapped regulatory exposure has its quantified pretext to mark the price down during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, benchmarks the position against what a buyer expects, and produces an independent exit-readiness opinion the seller can put in front of prospective buyers. It protects the headline price the operating business has already earned.
+This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. The fade rate a buyer underwrites is set in the operations, beyond the reach of governance. What governance can reach is the buyer's pretext to assume that fade comes faster. A diligence team that finds zero-rate-era hurdle rates still in use, an unhedged floating-rate facility, an undisciplined capital deployment record, or an unmapped regulatory exposure has exactly that pretext, and uses it to mark the price down during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, benchmarks the position against what a buyer expects, and produces an independent exit-readiness opinion the seller can put in front of prospective buyers. It protects the headline price the operating business has already earned.
 
 ## What to do next
 
