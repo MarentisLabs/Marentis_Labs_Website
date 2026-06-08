@@ -13,9 +13,9 @@ That is the headline of Larry Fink's 50-30-20 model, an allocation call for the 
 
 That question rarely appears on an exit readiness checklist. It should. A buyer asks it under deal pressure, once a stale answer has already become a reason to pay less.
 
-## The cost of capital has re-based. The governance around it has not.
+## The cost of capital has re-based, but the governance still reflects the cheap-money era.
 
-Every capital decision a portfolio company's board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they have not moved since. Three of them now sit exposed.
+Every capital decision a portfolio company's board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they still drive decisions today. Three of them now sit exposed.
 
 Hurdle rates are out of date. Boards are still greenlighting capex, product development and bolt-on acquisitions against the hurdle rates baked into the original buyout model, set when senior debt cost 5 to 7%. That debt has since repriced past 12%. A project that clears the old hurdle but earns less than the debt now funding it destroys value the day it draws down.
 
@@ -42,7 +42,7 @@ Hurdle rates are out of date. Boards are still greenlighting capex, product deve
 
 Debt and hedging exposures are uncovered. Loose board oversight of treasury was survivable when money was free. The interest-rate swaps and caps written in the zero-rate era are now expiring, floating-rate senior debt is repricing higher, and debt-service coverage tightens just as the exit window opens. A treasury function still set up for cheap money leaves that cash flow exposed, and unhedged currency does the same to any company with international operations.
 
-Capital deployment habits formed in a different market. The cheap-debt playbook of aggressive, debt-funded bolt-ons without integration discipline has become a liability. Buyers now reward organic growth, balance-sheet deleveraging and working-capital efficiency, and a diligence team reads the old playbook straight off the numbers.
+Capital deployment habits were formed in a different market. The cheap-debt playbook of aggressive, debt-funded bolt-ons without integration discipline has become a liability. Buyers now reward organic growth, balance-sheet deleveraging and working-capital efficiency, and a diligence team reads the old playbook straight off the numbers.
 
 This is the environment an acquirer's diligence team works in. The gap between it and the assumptions most portfolio companies still run on is wide enough to set out in a single table.
 
@@ -89,7 +89,7 @@ The first is accountability. Which director holds formal responsibility for the 
 
 The second is currency. When did the board last reset its capex hurdle rates and treasury policy against today's cost of debt, and stress its covenant headroom for a higher-rate world? Has it confirmed that new capex and bolt-ons still clear the cost of the debt funding them?
 
-The third is challenge. Does the board receive information that surfaces a value-destroying decision before it is taken, a project approved below the cost of capital or a hedge left to expire into a refinancing, rather than after the loss has landed?
+The third is challenge. Does the board receive information that surfaces a value-destroying decision before it is taken, a project approved below the cost of capital or a hedge left to expire into a refinancing?
 
 These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-methodology/) asks. The difference is timing and cost. An acquirer asks them once, under deal pressure, when a gap has already become a negotiating lever. A pre-mortem asks them at the point where the answer can still be fixed quietly.
 
@@ -97,7 +97,7 @@ These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-m
 
 The exit environment is the most congested on record, and the buyers who now dominate it are precisely the ones most likely to examine this gap.
 
-The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire cost-of-capital shift set out above. The hurdle rates and debt structure set in year one are being tested by conditions that did not exist when they were approved.
+The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire cost-of-capital shift set out above. The hurdle rates and debt structure set in year one are being tested by conditions that arrived long after they were approved.
 
 Secondary buyouts and GP-led continuation vehicles, meanwhile, have become primary exit routes alongside the strategic trade sale. The buyers running them are institutional, governance-literate, and put a target through exhaustive operational due diligence. They have seen this gap before, and they know which companies carry it.
 
