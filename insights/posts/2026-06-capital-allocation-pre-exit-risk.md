@@ -9,7 +9,7 @@ permalink: /insights/posts/capital-allocation-pre-exit-risk/
 
 BlackRock now wants a fifth of the standard institutional portfolio in private markets.
 
-That is the headline of Larry Fink's 50-30-20 model. The force behind it, a cost of capital that has fundamentally re-based, lands hardest one level down, inside the operating companies those funds are preparing to sell. The governance a buyer prices at exit sits in the company being sold. Has its board reset how it approves capex, structures its debt and prices its bolt-ons for the rate the business now borrows at, or is it still running the rules it wrote when money was cheap?
+That is the headline of Larry Fink's 50-30-20 model. The force behind it, a cost of capital that has fundamentally re-based, lands hardest one level down, in the operating companies those funds are preparing to sell. Have their boards reset how they approve capex, structure their debt and price their bolt-ons for the cost of capital they now face, or are they still running the rules they wrote when money was cheap?
 
 That question rarely appears on an exit readiness checklist. It should. A buyer asks it under deal pressure, once a stale answer has already become a reason to pay less.
 
