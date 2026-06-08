@@ -1,6 +1,6 @@
 ---
 title: "The Avoidable Discount Weak Governance Brings to a PE Exit"
-description: "Weak governance hands a buyer the cheapest reason to discount a sale price, and in a higher-rate market that penalty is entirely avoidable. Here is where the discount hides, and how to close it ahead of diligence."
+description: "Weak governance hands a buyer the cheapest reason to discount a PE exit, the stale financial models, unhedged debt and thin covenant headroom they find in diligence. Here is how pre-exit governance closes those gaps and protects portfolio company cash flow."
 author: "Owen Vallis"
 date: 2026-06-05
 categories: [Pre-Exit, Strategy, Governance]
@@ -17,12 +17,12 @@ That question rarely appears on an exit readiness checklist. It should. A buyer 
 
 Every capital decision a portfolio company's board makes runs off an assumption about the cost of capital. Most of those assumptions were set when money was close to free, and they still drive decisions today. Three of them now sit exposed.
 
-Hurdle rates are out of date. Boards are still greenlighting capex, product development and bolt-on acquisitions against the hurdle rates baked into the original buyout model, set when senior debt cost 5 to 7%. That debt has since repriced past 12%. A project that clears the old hurdle but earns less than the debt now funding it destroys value the day it draws down.
+The investment models still assume cheap money. Boards expect capex and bolt-on acquisitions to clear the sponsor's underwriting hurdle, typically 15 to 20%, but the models that justify them still discount cash flows at a rate set in the zero-rate era. With the blended cost of levered debt now past 12%, a project that shows a healthy return on the old spreadsheet destroys value from the day the capital is drawn.
 
 <figure class="article-figure chart-figure">
 <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hr-t hr-d" preserveAspectRatio="xMidYMid meet" width="720" height="380" style="width:100%;height:auto;">
-<title id="hr-t">Underwriting hurdle vs cost of senior debt, 2015 to 2026 (illustrative)</title>
-<desc id="hr-d">A capex hurdle rate of about 9 per cent, set at the buyout, against the cost of senior debt that sat near 7 per cent until 2021 and then repriced above 12 per cent by 2026. After 2022 the cost of debt rises above the hurdle, so projects that clear the old hurdle earn less than the debt funding them.</desc>
+<title id="hr-t">The discount rate in the models vs the real cost of debt, 2015 to 2026 (illustrative)</title>
+<desc id="hr-d">A discount rate of about 9 per cent still used in management project models, against the blended cost of levered debt that sat near 7 per cent until 2021 and then repriced above 12 per cent by 2026. After 2022 the real cost of debt rises above the rate in the models, so a project that clears the model destroys value.</desc>
 <line x1="66" y1="328.0" x2="696" y2="328.0" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="332.0" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">0%</text><line x1="66" y1="285.4" x2="696" y2="285.4" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="289.4" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">2%</text><line x1="66" y1="242.9" x2="696" y2="242.9" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="246.9" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">4%</text><line x1="66" y1="200.3" x2="696" y2="200.3" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="204.3" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">6%</text><line x1="66" y1="157.7" x2="696" y2="157.7" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="161.7" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">8%</text><line x1="66" y1="115.1" x2="696" y2="115.1" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="119.1" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">10%</text><line x1="66" y1="72.6" x2="696" y2="72.6" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="76.6" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">12%</text><line x1="66" y1="30.0" x2="696" y2="30.0" stroke="#e3e1dc" stroke-width="1"/><text x="58" y="34.0" text-anchor="end" font-size="11" fill="#495057" font-family="Inter, sans-serif">14%</text>
 <polygon points="462.1,136.4 696.0,136.4 696.0,61.9 696.0,61.9 638.7,66.2 581.5,70.4 524.2,89.6 466.9,132.2 462.1,136.4" fill="#9a3b2e" opacity="0.10"/>
 <line x1="66" y1="136.4" x2="696" y2="136.4" stroke="#a98c5a" stroke-width="2.5" stroke-dasharray="7 4"/>
@@ -30,17 +30,17 @@ Hurdle rates are out of date. Boards are still greenlighting capex, product deve
 <circle cx="696.0" cy="61.9" r="3.5" fill="#9a3b2e"/>
 <line x1="66" y1="30" x2="66" y2="328" stroke="#212529" stroke-width="1.5"/>
 <line x1="66" y1="328" x2="696" y2="328" stroke="#212529" stroke-width="1.5"/>
-<text x="123.3" y="128.4" font-size="12" fill="#8a7048" font-family="Inter, sans-serif" font-weight="600">Hurdle rate, set at the buyout</text>
-<text x="696.0" y="52.9" text-anchor="end" font-size="12" fill="#9a3b2e" font-family="Inter, sans-serif" font-weight="600">Cost of senior debt</text>
-<text x="581.5" y="106.6" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">Clears the hurdle,</text>
-<text x="581.5" y="117.3" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">below the cost of its debt</text>
+<text x="123.3" y="128.4" font-size="12" fill="#8a7048" font-family="Inter, sans-serif" font-weight="600">Discount rate in the models</text>
+<text x="696.0" y="52.9" text-anchor="end" font-size="12" fill="#9a3b2e" font-family="Inter, sans-serif" font-weight="600">Blended cost of levered debt</text>
+<text x="581.5" y="106.6" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">Clears the model,</text>
+<text x="581.5" y="117.3" text-anchor="middle" font-size="11" fill="#9a3b2e" font-family="Inter, sans-serif">below the real cost of debt</text>
 <text x="66.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2015</text><text x="237.8" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2018</text><text x="409.6" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2021</text><text x="466.9" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2022</text><text x="581.5" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2024</text><text x="696.0" y="348" text-anchor="middle" font-size="11" fill="#495057" font-family="Inter, sans-serif">2026</text>
-<text x="381.0" y="372" text-anchor="middle" font-size="12" fill="#495057" font-family="Inter, sans-serif">Capex hurdle rate vs cost of senior debt</text>
+<text x="381.0" y="372" text-anchor="middle" font-size="12" fill="#495057" font-family="Inter, sans-serif">Model discount rate vs blended cost of levered debt</text>
 </svg>
-  <figcaption>A capex hurdle rate fixed at about 9% at the buyout, against the cost of senior debt that has repriced above 12% since 2022. Once the debt costs more than the hurdle clears, new projects earn less than the money funding them.<span class="fig-source">The hurdle-rate and cost-of-debt figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
+  <figcaption>The discount rate baked into management's project models has barely moved, while the blended cost of levered debt has repriced above 12% since 2022. Once the real cost of capital exceeds the rate in the model, a project that looks healthy on the spreadsheet destroys value from the day it draws down.<span class="fig-source">The figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
 </figure>
 
-Debt and hedging exposures are uncovered. Loose board oversight of treasury was survivable when money was free. The interest-rate swaps and caps written in the zero-rate era are now expiring, floating-rate senior debt is repricing higher, and debt-service coverage tightens just as the exit window opens. A treasury function still set up for cheap money leaves that cash flow exposed, and unhedged currency does the same to any company with international operations.
+Debt and hedging exposures are uncovered. Loose board oversight of treasury was survivable when money was free. The interest-rate swaps and caps written in the zero-rate era are now expiring, floating-rate debt is repricing higher, and debt-service coverage tightens just as the exit window opens. A treasury function still set up for cheap money leaves that cash flow exposed, and unhedged currency does the same to any company with international operations.
 
 Capital deployment habits were formed in a different market. The cheap-debt playbook of aggressive, debt-funded bolt-ons without integration discipline has become a liability. Buyers now reward organic growth, balance-sheet deleveraging and working-capital efficiency, and a diligence team reads the old playbook straight off the numbers.
 
@@ -57,9 +57,9 @@ This is the environment an acquirer's diligence team works in. The gap between i
     </thead>
     <tbody>
       <tr>
-        <td>Capex hurdle rates</td>
-        <td>Underwriting hurdles of 8 to 10%, set when debt was cheap</td>
-        <td>Cost of senior debt past 12%, so capex must clear a far higher bar</td>
+        <td>Investment models</td>
+        <td>Cash flows discounted at a zero-rate-era cost of capital</td>
+        <td>Blended cost of levered debt past 12%, so model returns are overstated</td>
       </tr>
       <tr>
         <td>Debt and rate hedging</td>
@@ -78,18 +78,18 @@ This is the environment an acquirer's diligence team works in. The gap between i
       </tr>
     </tbody>
   </table>
-  <figcaption>The table sets out the gap between the assumptions most portfolio companies still run on and the 2026 cost-of-debt reality.<span class="fig-source">The hurdle-rate and cost-of-debt figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
+  <figcaption>The table sets out the gap between the assumptions most portfolio companies still run on and the 2026 cost-of-capital reality.<span class="fig-source">The cost-of-capital figures are illustrative of a typical leveraged mid-market business.</span></figcaption>
 </figure>
 
 ## The three questions an acquirer will ask
 
 How a company runs its capex, debt and deals falls inside the scope of both financial and governance due diligence at a sophisticated buyer. The questions are specific, and they are answerable. Most boards have simply never been asked them under deal conditions.
 
-The first is accountability. Which director holds formal responsibility for the company's capital and treasury decisions? Is it written into a board mandate, or has it been left to management without board-level visibility?
+The first is validation. Can the board independently audit the financial inputs management uses to justify capital deployment? Major decisions reach the board, but directors are structurally dependent on management's own modelling, which rarely meets independent, adversarial challenge.
 
-The second is currency. When did the board last reset its capex hurdle rates and treasury policy against today's cost of debt, and stress its covenant headroom for a higher-rate world? Has it confirmed that new capex and bolt-ons still clear the cost of the debt funding them?
+The second is stress-testing. When did the board last audit its treasury policy against today's re-based debt pricing and stress-test its debt-service coverage for a higher-rate world? Has it confirmed that the models behind its coming bolt-ons use the company's true marginal cost of debt today?
 
-The third is challenge. Does the board receive information that surfaces a value-destroying decision before it is taken, a project approved below the cost of capital or a hedge left to expire into a refinancing?
+The third is challenge. Does an independent voice interrogate these models before capital is committed, or does the first hard challenge come from the buyer's team in diligence?
 
 These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-methodology/) asks. The difference is timing and cost. An acquirer asks them once, under deal pressure, when a gap has already become a negotiating lever. A pre-mortem asks them at the point where the answer can still be fixed quietly.
 
@@ -97,13 +97,13 @@ These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-m
 
 The exit environment is the most congested on record, and the buyers who now dominate it are precisely the ones most likely to examine this gap.
 
-The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire cost-of-capital shift set out above. The hurdle rates and debt structure set in year one are being tested by conditions that arrived long after they were approved.
+The McKinsey Global Private Markets Report 2026 counts roughly 16,000 companies in the global exit backlog with hold periods over four years. That is 52% of total buyout-backed inventory, the highest share recorded, and the average hold period now stands at 6.6 years. A company held that long has traded through the entire cost-of-capital shift set out above. The financial assumptions and debt structure set in year one are being tested by conditions that arrived long after they were approved.
 
 Secondary buyouts and GP-led continuation vehicles, meanwhile, have become primary exit routes alongside the strategic trade sale. The buyers running them are institutional, governance-literate, and put a target through exhaustive operational due diligence. They have seen this gap before, and they know which companies carry it.
 
 ## The intervention point
 
-Proactive governance uplift in the 12 to 18 months before an exit costs less than reactive remediation under an acquirer's scrutiny. The work is governance audit and challenge. It resets the capex hurdle rates against the current cost of debt, tests the hedging and covenant position, hardens the bolt-on approval discipline, and closes the regulatory gaps a buyer's diligence team would find. The [Pre-Mortem Diagnostic](/services/adversarial-methodology/) applied to the company's capital decisions asks one question. What in this company's capital deployment would a buyer use to justify a faster fade and a lower price? In a high-rate regime, the honest answer is usually a longer list than the board expects.
+Proactive governance uplift in the 12 to 18 months before an exit costs less than reactive remediation under an acquirer's scrutiny. The work is governance audit and challenge. It rebuilds the project models on today's cost of capital, tests the hedging and covenant position, hardens the bolt-on approval discipline, and closes the regulatory gaps a buyer's diligence team would find. The [Pre-Mortem Diagnostic](/services/adversarial-methodology/) applied to the company's capital decisions asks one question. What in this company's capital deployment would a buyer use to justify a faster fade and a lower price? In a high-rate regime, the honest answer is usually a longer list than the board expects.
 
 <figure class="article-figure chart-figure">
 <svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cc-t cc-d" preserveAspectRatio="xMidYMid meet" width="720" height="380" style="width:100%;height:auto;">
@@ -127,15 +127,15 @@ Proactive governance uplift in the 12 to 18 months before an exit costs less tha
   <figcaption>The curve is illustrative. A governance gap is cheap to settle while there is still runway before a sale, and expensive once an acquirer finds it in diligence and turns it into a price chip at the close.</figcaption>
 </figure>
 
-This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. The fade rate a buyer underwrites is set in the operations, beyond the reach of governance. What governance can reach is the buyer's pretext to assume that fade comes faster. A diligence team that finds underwriting hurdle rates still in use, floating-rate debt left unhedged, thin covenant headroom, or an undisciplined bolt-on record has exactly that pretext, and uses it to mark the price down during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, hardens the treasury, hedging and capital-discipline position against a buyer's quality-of-earnings and due diligence work, and leaves the board with a documented assurance position to meet that diligence from. It protects the headline price the operating business has already earned.
+This is the core of our [Pre-Exit SGaaS engagement](/services/pre-exit-gaas/), and the case for it is defensive. The fade rate a buyer underwrites is set in the operations, beyond the reach of governance. What governance can reach is the buyer's pretext to assume that fade comes faster. A diligence team that finds project models still discounting at zero-rate-era assumptions, floating-rate debt left unhedged, thin covenant headroom, or an undisciplined bolt-on record has exactly that pretext, and uses it to mark the price down during exclusivity, when the seller has least leverage. Pre-Exit SGaaS finds and closes those gaps in the 12 to 18 months before the process starts, hardens the treasury, hedging and capital-discipline position against a buyer's quality-of-earnings and due diligence work, and leaves the board with a documented assurance position to meet that diligence from. It protects the headline price the operating business has already earned.
 
 ## What to do next
 
-Ask your CFO one question this week. Has the board reset its capex hurdle rates and treasury policy for the cost of debt the business now carries, or are they still the ones set when money was cheap?
+Ask your CFO one question this week. Has the board rebuilt its project models and treasury policy for the cost of debt the business now carries, or are they still the ones set when money was cheap?
 
 The timing gives the question weight. Global M&A reached $5.1 trillion in 2025, up 49% on the year and the highest since 2021, with sponsors under mounting pressure to return capital after holding periods stretched to six and seven years (J.P. Morgan, 2026). The exit window is open, and the buyers moving through it read the governance section of vendor due diligence closely.
 
-Governance quality is the cheapest form of price protection a seller can buy. On a £200 million business, a single 3% chip at exclusivity is £6 million of lost value, and a stale hurdle rate or an unhedged facility is exactly the kind of gap that earns one. Closing it ahead of the process is a few months of focused work set against a valuation measured in millions, and it pays for itself the moment one chip is avoided. That is what [Pre-Exit SGaaS](/services/pre-exit-gaas/) is built to do, in the 12 to 18 months before a sale. Check out the full evidence in our [white paper](/white-paper/), and [book an introductory call](/contact/).
+Governance quality is the cheapest form of price protection a seller can buy. On a £200 million business, a single 3% chip at exclusivity is £6 million of lost value, and a project model still run on cheap-money assumptions, or an unhedged facility, is exactly the kind of gap that earns one. Closing it ahead of the process is a few months of focused work set against a valuation measured in millions, and it pays for itself the moment one chip is avoided. That is what [Pre-Exit SGaaS](/services/pre-exit-gaas/) is built to do, in the 12 to 18 months before a sale. Check out the full evidence in our [white paper](/white-paper/), and [book an introductory call](/contact/).
 
 <style>
 .article-prose .chart-figure { margin: 2.5rem 0; }
