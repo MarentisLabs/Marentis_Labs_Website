@@ -12,6 +12,11 @@ tier: "Tier 3: Embedded SGaaS"
 cta_label: "Discuss Embedded Engagement"
 cta_heading: "The Deepest Governance Partnership"
 cta_body: "Permanent board-level presence with contractual challenge authority. Structurally independent of fiduciary liability by design."
+illustration_url: /illustrative-engagements/diagnostic-embedded-sgaas-fca-regulated-insurer/
+illustration_title: "Diagnostic to Embedded SGaaS: an FCA-Regulated Insurer"
+illustration_org: "FCA-Regulated Insurer"
+illustration_sector: "Financial Services"
+illustration_summary: "Three legacy risk committees, a supervisory letter, and a 90-day window. A four-week Diagnostic maps the accountability gaps; an Embedded rebuild produces an architecture the board can defend."
 permalink: /services/embedded-gaas/
 ---
 

@@ -43,9 +43,9 @@ highlighter: rouge
 permalink: pretty
 
 collections:
-  case_studies:
+  illustrations:
     output: true
-    permalink: /case-studies/:name/
+    permalink: /illustrative-engagements/:name/
 
 defaults:
   - scope:
@@ -65,6 +65,6 @@ defaults:
       layout: "article"
   - scope:
       path: ""
-      type: "case_studies"
+      type: "illustrations"
     values:
-      layout: "case-study"
+      layout: "illustration"

@@ -12,11 +12,11 @@ tier: "Tier 2: Retained SGaaS"
 cta_label: "Request Retainer Details"
 cta_heading: "Begin a Retained SGaaS Engagement"
 cta_body: "The core SGaaS offering. Continuous, adversarial, principal-led. Complementary to internal audit, risk, and compliance — not a substitute for them."
-case_study_url: /case-studies/risk-governance-overhaul-fca-regulated-insurer/
-case_study_title: "Risk Governance Overhaul at an FCA-Regulated Insurer"
-case_study_org: "FCA-Regulated Insurer"
-case_study_sector: "Financial Services"
-case_study_outcome: "Consolidated committee architecture approved by the board; revised risk appetite statement embedded in executive reporting within six months."
+illustration_url: /illustrative-engagements/retained-sgaas-listed-uk-mid-cap/
+illustration_title: "Retained SGaaS: a Listed UK Mid-Cap"
+illustration_org: "Listed UK Mid-Cap"
+illustration_sector: "Listed Companies"
+illustration_summary: "A newly appointed audit committee chair faces the Provision 29 internal controls declaration. The retainer builds the year of minuted independent challenge the board signs against."
 permalink: /services/retained-gaas/
 ---
 

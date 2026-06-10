@@ -12,11 +12,11 @@ tier: "Tier 4: Pre-Exit SGaaS"
 cta_label: "Discuss Exit Preparation"
 cta_heading: "Defend the Headline Price Before Diligence Begins"
 cta_body: "A principal delivered, buyer-ready governance review that removes the gaps a diligence team would otherwise price against."
-case_study_url: /case-studies/pe-exit-governance-preparation-business-services/
-case_study_title: "Exit Governance Preparation for a PE-Backed Business Services Group"
-case_study_org: "PE-Backed Business Services Group"
-case_study_sector: "Private Equity"
-case_study_outcome: "No material governance findings in the buyer's due diligence report. Transaction completed on originally negotiated terms."
+illustration_url: /illustrative-engagements/pre-exit-sgaas-pe-backed-business-services/
+illustration_title: "Pre-Exit SGaaS: a PE-Backed Business Services Group"
+illustration_org: "PE-Backed Business Services Group"
+illustration_sector: "Private Equity"
+illustration_summary: "Twelve to eighteen months before a planned sale, the engagement works backwards from a failed deal and removes the findings a buyer's diligence team would otherwise price against."
 permalink: /services/pre-exit-gaas/
 ---
 

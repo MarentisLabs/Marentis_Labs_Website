@@ -188,7 +188,7 @@ gem "webrick"
 
 ## CSS — Tailwind v3
 
-The compiled `assets/css/style.css` is committed to the repo. GitHub Actions recompiles it on every push. For local changes that add new Tailwind classes, recompile with:
+The compiled `assets/css/style.css` is committed to the repo and is what ships — the GitHub Actions workflow does NOT recompile it (the Tailwind step in `deploy.yml` is a comment only). Any change that introduces new Tailwind utility classes requires a local recompile and committing the updated `style.css`:
 
 ```bash
 npx tailwindcss@3 -i ./assets/css/input.css -o ./assets/css/style.css --minify
@@ -285,8 +285,8 @@ GitHub Actions then: compiles Tailwind → builds Jekyll → renders Quarto → 
 These were planned but not yet implemented:
 
 - `/services/risk-simulation-lab/` — service page (the live site has a server error on this URL)
-- Case studies section (`/case-studies/`) — collection defined in `_config.yml`, pages not written
-- Client testimonials
+- ~~Case studies section~~ — replaced by **Illustrative Engagements** (`/illustrative-engagements/`, collection `_illustrations/`, layout `illustration.html`). These are openly constructed scenarios, written in present tense, with a visible disclaimer callout at the top of each page. Hard rules: no regulator outcomes, no transaction outcomes, no delivery dates, no client identifiers, no new statistics. Old `/case-studies/` URLs redirect via stubs in `redirects/`. Never reframe these as delivered client work.
+- Client testimonials — not used; the firm does not publish client work, named or anonymised
 - ~~Web3Forms access key~~ — implemented, key `aa5011de-b672-438e-a7fe-ea12c4f693ec` active
 - Cloudflare DNS setup (recommended but not done)
 - HubSpot CRM webhook connection

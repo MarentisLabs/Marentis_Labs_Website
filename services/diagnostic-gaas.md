@@ -12,6 +12,11 @@ tier: "Tier 1: Diagnostic SGaaS"
 cta_label: "Request Diagnostic Proposal"
 cta_heading: "Commission a Governance Architecture Assessment"
 cta_body: "Fixed scope, board-ready output, foundation for any retained engagement that follows."
+illustration_url: /illustrative-engagements/diagnostic-embedded-sgaas-fca-regulated-insurer/
+illustration_title: "Diagnostic to Embedded SGaaS: an FCA-Regulated Insurer"
+illustration_org: "FCA-Regulated Insurer"
+illustration_sector: "Financial Services"
+illustration_summary: "Three legacy risk committees, a supervisory letter, and a 90-day window. A four-week Diagnostic maps the accountability gaps; an Embedded rebuild produces an architecture the board can defend."
 permalink: /services/diagnostic-gaas/
 ---
 

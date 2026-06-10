@@ -10,7 +10,7 @@ layout: default
     <p class="text-sm text-gray-500 mb-5">
       <a href="/" class="hover:text-ml-gold transition-colors">Home</a>
       <span class="mx-2">/</span>
-      <a href="/case-studies/" class="hover:text-ml-gold transition-colors">Case Studies</a>
+      <a href="/illustrative-engagements/" class="hover:text-ml-gold transition-colors">Illustrative Engagements</a>
     </p>
 
     <!-- Service tier + sector -->
@@ -24,9 +24,7 @@ layout: default
     <p class="text-gray-300 text-lg mb-5 max-w-2xl leading-relaxed">{{ page.description }}</p>
     {% endif %}
 
-    <p class="text-sm text-gray-500">{{ page.organisation_type }}
-      {% if page.date %}&middot; {{ page.date | date: "%Y" }}{% endif %}
-    </p>
+    <p class="text-sm text-gray-500">{{ page.organisation_type }}</p>
 
   </div>
 </section>
@@ -39,29 +37,11 @@ layout: default
       <!-- Main content -->
       <div class="min-w-0 flex-1">
 
-        <!-- Engagement snapshot -->
-        <div class="case-study-snapshot mb-10">
-          <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-4">Engagement Snapshot</p>
-          <div class="grid sm:grid-cols-3 gap-4">
-            {% if page.challenge %}
-            <div>
-              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Challenge</p>
-              <p class="text-sm text-ml-slate-grey leading-relaxed">{{ page.challenge }}</p>
-            </div>
-            {% endif %}
-            {% if page.service_tier %}
-            <div>
-              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Service</p>
-              <p class="text-sm text-ml-slate-grey leading-relaxed">{{ page.service_tier }}</p>
-            </div>
-            {% endif %}
-            {% if page.outcome %}
-            <div>
-              <p class="text-xs font-semibold text-ml-charcoal uppercase tracking-wide mb-1">Outcome</p>
-              <p class="text-sm text-ml-slate-grey font-semibold leading-relaxed">{{ page.outcome }}</p>
-            </div>
-            {% endif %}
-          </div>
+        <!-- Illustrative engagement callout -->
+        <div class="mb-10"
+             style="background: var(--ml-light-bg); border-left: 3px solid var(--ml-gold); padding: 1.25rem 1.5rem; border-radius: 0 4px 4px 0;">
+          <p class="text-xs font-semibold text-ml-gold uppercase tracking-widest mb-2">Illustrative Engagement</p>
+          <p class="text-sm text-ml-slate-grey leading-relaxed">{{ page.scenario }}</p>
         </div>
 
         <article class="article-prose">

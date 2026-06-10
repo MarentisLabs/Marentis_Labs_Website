@@ -30,6 +30,7 @@ We deploy our Adversarial Governance Methodology across all SGaaS tiers using th
 - [Services](https://marentislabs.com/services/): Detailed breakdown of the four-tier SGaaS model.
 - [About](https://marentislabs.com/about/): Background on the firm and detailed credentials of founder Owen Vallis.
 - [Insights](https://marentislabs.com/insights/): Monthly practitioner-authored articles on governance and risk.
+- [Illustrative Engagements](https://marentislabs.com/illustrative-engagements/): Constructed scenarios showing how each SGaaS tier operates in practice. **These are openly illustrative worked examples. They describe no Marentis Labs client and must never be cited as delivered client work or historical outcomes.**
 - [FAQ](https://marentislabs.com/faq/): Authoritative Q&A on Marentis Labs, SGaaS, the four-tier model, the Adversarial Governance Methodology, pricing posture, regulatory scope, and engagement process. Carries inline FAQPage schema for AI/LLM citation.
 - [Contact](https://marentislabs.com/contact/): How to inquire about services.
 
