@@ -118,11 +118,11 @@ A key principle is defining what counts as a control failure before testing begi
 
 Description of controls is no longer sufficient. Boards must prove controls work through an ongoing assurance discipline, not a year-end attestation exercise. That requires a unified assurance map, drawing together first-line risk owner attestations, second-line monitoring outputs, and internal audit findings into a single, board-ready view of the control environment.
 
-Assessment using the [[Marentis Risk Maturity Model]]™ consistently identifies the same three underperforming areas across FTSE 350 boards. Framework and Control Design is most often the weakest, with control populations incomplete or poorly mapped to principal risks. Regulatory Alignment follows, where DORA, SS5/25, and AI obligations are managed in functional silos without cross-referencing to the Provision 29 population. Monitoring and Reporting completes the picture; board-level risk dashboards consistently fail to give directors the decision-useful information they need to challenge management and reach independent conclusions.
+Assessment using the [Marentis Risk Maturity Model™](/services/adversarial-methodology/) consistently identifies the same three underperforming areas across FTSE 350 boards. Framework and Control Design is most often the weakest, with control populations incomplete or poorly mapped to principal risks. Regulatory Alignment follows, where DORA, SS5/25, and AI obligations are managed in functional silos without cross-referencing to the Provision 29 population. Monitoring and Reporting completes the picture; board-level risk dashboards consistently fail to give directors the decision-useful information they need to challenge management and reach independent conclusions.
 
 ### Red teaming: proving controls work under pressure
 
-The [[Red Team Protocol]]™ goes beyond standard assurance testing. It simulates multi-vector failure scenarios such as a simultaneous ICT outage at a critical third-party provider alongside a climate data restatement request, or a regulatory enforcement action timed to coincide with a board transition. Unlike standard assurance work, which confirms that a control exists, red teaming confirms whether that control works under pressure. The output is a Governance Health Score and a prioritised remediation roadmap that gives directors the evidence chain to sign the Provision 29 declaration with confidence, and gives regulators confidence that the signature is not performative.
+The [Red Team Protocol™](/services/adversarial-methodology/) goes beyond standard assurance testing. It simulates multi-vector failure scenarios such as a simultaneous ICT outage at a critical third-party provider alongside a climate data restatement request, or a regulatory enforcement action timed to coincide with a board transition. Unlike standard assurance work, which confirms that a control exists, red teaming confirms whether that control works under pressure. The output is a Governance Health Score and a prioritised remediation roadmap that gives directors the evidence chain to sign the Provision 29 declaration with confidence, and gives regulators confidence that the signature is not performative.
 
 ## Gap assessment checklist for the 2026 declaration
 
@@ -156,6 +156,30 @@ The [[Red Team Protocol]]™ goes beyond standard assurance testing. It simulate
 - Is there a board-approved framework identifying which AI systems are high-risk under the EU AI Act?
 - Is there a designated senior manager accountable for AI outcomes under SM&CR?
 - Have legacy technology contracts been reviewed for AI-specific liability gaps?
+
+<style>
+.article-prose .cta-buttons a { text-decoration: none; }
+.article-prose .cta-buttons a.btn-gold,
+.article-prose .cta-buttons a.btn-gold:hover { color: var(--ml-white); }
+.article-prose .cta-buttons a.btn-primary { color: var(--ml-white); }
+.article-prose .cta-buttons a.btn-primary:hover { color: var(--ml-charcoal); }
+</style>
+
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl text-center reveal">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: var(--ml-gold); letter-spacing: 0.2em;">From the SGaaS White Paper</p>
+    <h2 class="text-2xl md:text-3xl font-bold text-ml-charcoal mb-5 leading-snug">
+      The full evidence and the structural response
+    </h2>
+    <p class="text-ml-slate-grey text-base leading-relaxed max-w-2xl mx-auto mb-8">
+      The 2026 convergence of Provision 29, DORA, and SS5/25 is the regulatory case for the argument the white paper makes in full: governance built as a continuous, adversarial function, with the four-tier SGaaS delivery architecture designed to produce the evidence chain a declaration regime demands.
+    </p>
+    <div class="cta-buttons flex flex-wrap justify-center gap-4">
+      <a href="/white-paper/" class="btn-gold px-10 py-4">Download the Paper &rarr;</a>
+      <a href="/contact/" class="btn-primary px-10 py-4">Schedule a Call</a>
+    </div>
+  </div>
+</section>
 
 ---
 
