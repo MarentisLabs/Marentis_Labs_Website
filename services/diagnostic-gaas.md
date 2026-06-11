@@ -22,39 +22,39 @@ permalink: /services/diagnostic-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
-<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. The Diagnostic is the entry point: a structured, adversarial, fixed-scope assessment of the governance architecture itself.</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers: Diagnostic, Retained, Embedded, and Pre-Exit. The Diagnostic is the entry point, a structured, adversarial, fixed-scope assessment of the governance architecture itself.</div>
 </div>
 
 ## What the Diagnostic Does
 
 Most organisations have a governance framework. Most have a risk committee that meets on cadence. Most have policies that were reviewed at some point in the last two years. None of this means the governance is working.
 
-Unlike a conventional governance review, which typically evaluates compliance with a code or framework, the Diagnostic asks a sharper question: is this governance architecture capable of surfacing the information the board needs to prevent catastrophic failure? If not, where are the structural weaknesses, and what would it take to address them?
+A conventional governance review evaluates compliance with a code or framework. The Diagnostic asks a sharper question. Is this governance architecture capable of surfacing the information the board needs to prevent catastrophic failure? If not, where are the structural weaknesses, and what would it take to address them?
 
 The assessment is deliberately adversarial. It is the entry point to the SGaaS model and is designed both to surface the gaps that retained engagement will address and to stand as a complete board deliverable in its own right.
 
 ## What the Diagnostic Examines
 
-The Diagnostic produces a **Governance Architecture Assessment** — a structured, adversarial evaluation of:
+The Diagnostic produces a **Governance Architecture Assessment**, a structured, adversarial evaluation of:
 
 - The quality and independence of board-level decision-making, and the conditions under which it would degrade.
 - The effectiveness of the Three Lines Model as operationally implemented, distinct from how it is documented.
-- The organisation's capacity for institutionalised challenge — whether dissent is structurally protected or culturally suppressed.
+- The organisation's capacity for institutionalised challenge, and whether dissent is structurally protected or culturally suppressed.
 - The gap between governance aspiration and governance reality.
 
-The Diagnostic does not duplicate internal audit's work, nor does it replicate the risk function's assessments. It evaluates the *architecture* within which those functions operate: whether the board receives what it needs, whether the lines are coordinated, whether challenge is present or absent, and whether the framework is designed for the risks the organisation actually faces.
+Internal audit and the risk function keep their remits intact. The Diagnostic evaluates the *architecture* within which they operate. It asks whether the board receives what it needs, whether the lines are coordinated, whether challenge is present, and whether the framework is designed for the risks the organisation faces.
 
 ## How the Diagnostic Integrates
 
-The Diagnostic operates alongside existing governance functions on an observer basis. The principal conducts document review, interviews with senior management and non-executives, observation of governance processes where appropriate, and coordination with the second and third lines. The analytical burden sits with the principal, not with the board.
+The Diagnostic operates alongside existing governance functions on an observer basis. The principal conducts document review, interviews with senior management and non-executives, observation of governance processes where appropriate, and coordination with the second and third lines. The analytical burden sits with the principal throughout.
 
 ## Deliverables
 
-**Governance Architecture Assessment Report.** A structured adversarial assessment of the governance framework, identifying structural defects, value gaps, and capability shortfalls — with the conditions under which each could materialise as organisational loss.
+**Governance Architecture Assessment Report.** A structured adversarial assessment of the governance framework, identifying structural defects, value gaps, and capability shortfalls, with the conditions under which each could materialise as organisational loss.
 
 **Board Briefing.** A closed-door session with the board or governance committee presenting findings and fielding challenge. Principal-delivered.
 
-**Prioritised Remediation Path.** Specific, prioritised actions with ownership assignments and resource requirements, framed as the foundation of any subsequent retained engagement rather than as a generic improvement plan.
+**Prioritised Remediation Path.** Specific, prioritised actions with ownership assignments and resource requirements, framed as the foundation of any subsequent retained engagement.
 
 ## Commercial Structure
 
@@ -73,4 +73,4 @@ The Diagnostic is delivered on a **fixed-fee basis** with a defined scope, defin
 
 The natural progression is **Diagnostic → Retained → Embedded**. The Diagnostic builds the institutional knowledge that makes the Retained tier effective; the Retained tier creates the conditions under which Embedded becomes a natural evolution. For PE portfolio companies, the typical path is **Diagnostic → Pre-Exit**.
 
-The Diagnostic stands alone as a complete board deliverable. Where a retained relationship is the right next step, the transition is structurally efficient: the institutional knowledge accumulated during the Diagnostic transfers directly to the Retained tier without restart cost.
+The Diagnostic stands alone as a complete board deliverable. Where a retained relationship is the right next step, the transition is structurally efficient. The institutional knowledge accumulated during the Diagnostic transfers directly to the Retained tier without restart cost.

@@ -11,7 +11,7 @@ tier: "Tier 2: Retained SGaaS"
 
 cta_label: "Request Retainer Details"
 cta_heading: "Begin a Retained SGaaS Engagement"
-cta_body: "The core SGaaS offering. Continuous, adversarial, principal-led. Complementary to internal audit, risk, and compliance — not a substitute for them."
+cta_body: "The core SGaaS offering. Continuous, adversarial, principal-led. Complementary to internal audit, risk, and compliance."
 illustration_url: /illustrative-engagements/retained-sgaas-listed-uk-mid-cap/
 illustration_title: "Retained SGaaS: a Listed UK Mid-Cap"
 illustration_org: "Listed UK Mid-Cap"
@@ -22,13 +22,13 @@ permalink: /services/retained-gaas/
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
-<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers — Diagnostic, Retained, Embedded, and Pre-Exit. Retained SGaaS is the core offering: the primary continuous engagement around which the architecture is built.</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers: Diagnostic, Retained, Embedded, and Pre-Exit. Retained SGaaS is the core offering, the primary continuous engagement around which the architecture is built.</div>
 </div>
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
 <div class="why-ml-quote">"The risks that matter most are rarely the ones already on the risk register. They are the assumptions the board has stopped examining."</div>
-<div class="why-ml-body">SGaaS is principal-led by design. The principal is the engagement. They build the relationships, develop the institutional knowledge, and carry the authority to challenge effectively. The analytical burden — assumption mapping, document review, adversarial scenario construction, coordination with the second and third lines — is conducted asynchronously by the principal. The board receives distilled, high-signal adversarial intelligence, not raw analytical workload.</div>
+<div class="why-ml-body">SGaaS is principal-led by design. The principal is the engagement. They build the relationships, develop the institutional knowledge, and carry the authority to challenge effectively. The principal carries the analytical burden asynchronously, covering assumption mapping, document review, adversarial scenario construction, and coordination with the second and third lines. The board receives distilled, high-signal adversarial intelligence.</div>
 </div>
 
 ## What Retained SGaaS Delivers
@@ -43,7 +43,7 @@ The Retained tier provides three categories of output, delivered on a continuous
 
 ## How Retained SGaaS Integrates
 
-The SGaaS principal operates **alongside** the CRO, head of internal audit, and compliance leadership — not in place of them. The principal attends governance committee meetings as an observer with a defined challenge mandate. They have access to board papers, risk reports, and audit findings, not to duplicate the work of internal functions, but to assess whether the governance architecture is producing the outcomes those functions are designed to deliver. The relationship is **collaborative in tone and adversarial in function**.
+The SGaaS principal operates **alongside** the CRO, head of internal audit, and compliance leadership. The principal attends governance committee meetings as an observer with a defined challenge mandate. They use access to board papers, risk reports, and audit findings to assess whether the governance architecture is producing the outcomes those functions are designed to deliver. The relationship is **collaborative in tone and adversarial in function**.
 
 ## Why Retained Rather Than Episodic Advisory
 
@@ -51,7 +51,7 @@ The retainer model is integral to the governance proposition. It eliminates the 
 
 ## Regulatory Alignment
 
-For senior managers operating under SM&CR or equivalent personal accountability regimes, Retained SGaaS provides documented, continuous, independent governance challenge — the evidence of "reasonable steps" that strengthens the personal defence. For boards facing Provision 29's declaration requirement, it provides the ongoing evidence base to support annual statements on control effectiveness.
+For senior managers operating under SM&CR or equivalent personal accountability regimes, Retained SGaaS provides documented, continuous, independent governance challenge, the evidence of "reasonable steps" that strengthens the personal defence. For boards facing Provision 29's declaration requirement, it provides the ongoing evidence base to support annual statements on control effectiveness.
 
 ## Commercial Structure
 
@@ -59,4 +59,4 @@ Retained SGaaS is delivered on an **annual retainer**, structured to provide con
 
 ## The Progression Path
 
-For organisations where the governance challenge requires permanent, structurally embedded presence at board level, the natural evolution is **Retained → Embedded SGaaS (T3)**. The trust and institutional knowledge accumulated through the Retained relationship is what makes Embedded effective. For PE portfolio companies approaching exit, the path is typically **Retained → Pre-Exit SGaaS (T4)**, with continuity of engagement rather than a cold start.
+For organisations where the governance challenge requires permanent, structurally embedded presence at board level, the natural evolution is **Retained → Embedded SGaaS (T3)**. The trust and institutional knowledge accumulated through the Retained relationship is what makes Embedded effective. For PE portfolio companies approaching exit, the path is typically **Retained → Pre-Exit SGaaS (T4)**, with full continuity of engagement.
