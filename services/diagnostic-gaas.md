@@ -6,7 +6,7 @@ strapline: "A structured, adversarial evaluation of whether your governance arch
 description: "Diagnostic SGaaS from Marentis Labs: a structured, adversarial assessment of governance architecture for FTSE 350 and PE-backed organisations."
 tools: ["Red Team Protocol", "Three Lines Effectiveness Review", "Architecture Mapping", "Structural Defect Diagnostic"]
 best_for: "A new chair or CEO inheriting an unfamiliar governance environment; a board responding to a near-miss or regulatory finding; a PE sponsor assessing portfolio governance readiness; an audit committee that senses a gap between what it receives and what it needs."
-duration: "4–8 weeks, fixed scope"
+duration: "2–4 weeks, fixed scope"
 tier: "Tier 1: Diagnostic SGaaS"
 
 cta_label: "Request Diagnostic Proposal"

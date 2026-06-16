@@ -3,6 +3,7 @@
 # ─────────────────────────────────────────────────────────────
 
 title: "Marentis Labs"
+lang: "en_GB"
 tagline: "Strategic Governance as a Service. Adversarial by Design."
 description: "Marentis Labs provides Strategic Governance as a Service to FTSE 350 companies and PE-backed organisations. Principal-led, continuous, adversarial by design."
 url: "https://marentislabs.com"
@@ -35,7 +36,7 @@ twitter:
   username: ""
   card: "summary_large_image"
 linkedin: ""
-image: "/assets/images/Marentis_Labs_Full_Logo.png"
+image: "/assets/images/marentis-labs-social-card.png"
 
 # Build settings
 markdown: kramdown
