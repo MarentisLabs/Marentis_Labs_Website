@@ -105,7 +105,7 @@ All colours are also registered as Tailwind custom colours in `tailwind.config.j
 ### Tone of voice
 - Precise and senior — no generic consulting language
 - Adversarial framing where appropriate ("We simulate failure", "kill the project to save it")
-- Numbers and specifics preferred over adjectives ("338% turnaround", "£50bn AUM")
+- Numbers and specifics preferred over adjectives ("3.4x turnaround", "£50bn AUM")
 - British English spelling throughout (organisation, centre, rigour, colour)
 
 ---
@@ -130,7 +130,7 @@ The firm's services follow a four-tier model. This structure must be preserved c
 
 | Tier | Name | Positioning | Duration |
 |---|---|---|---|
-| T1 | Diagnostic SGaaS | Entry point — governance health check | 2–4 weeks |
+| T1 | Diagnostic SGaaS | Entry point — governance health check | 4–8 weeks |
 | T2 | Retained SGaaS | Core revenue — continuous fractional CRO | 12+ months |
 | T3 | Embedded SGaaS | Deep — board seat / governance ownership | 12–18 months |
 | T4 | Pre-Exit SGaaS | PE portfolio — exit-aligned governance | 12–18 months pre-exit |
@@ -291,6 +291,14 @@ These were planned but not yet implemented:
 - Cloudflare DNS setup (recommended but not done)
 - HubSpot CRM webhook connection
 
+## Built July 2026 (post-audit)
+
+- `/provision-29/` — Provision 29 readiness landing page (`services/provision-29-readiness.md`, layout `service`, inline FAQPage schema). The firm's dated demand wedge; keep facts consistent with `insights/posts/2026-05-uk-governance-compliance.md`.
+- `/what-is-sgaas/` — canonical SGaaS definition page (`what-is-sgaas.html`, DefinedTerm + FAQPage schema). `llms.txt` points AI engines here for the definition; keep the one-sentence definition consistent with the `gaas-intro` blocks on service pages.
+- `/assessment/` — Board Risk Readiness Assessment (`assessment.html`): 12-question self-serve tool, scores 0–24, client-side report (band + top-3 priority gaps + next step), submission posted to Web3Forms. Second gated asset after the white paper.
+- Static `sitemap.xml` deleted — `jekyll-sitemap` plugin is the single owner of `/sitemap.xml`. Do not re-add a manual sitemap.
+- Nested duplicate repo `Marentis_Labs_Website/`, brace-expansion dir, root logo duplicate, and `.fuse_hidden*` tombstones removed; dev/scratch files excluded from the build via `_config.yml` `exclude:`.
+
 ---
 
 ## Owner
@@ -299,4 +307,4 @@ These were planned but not yet implemented:
 Contact: info@marentislabs.com  
 Proton Meet: configured in `_config.yml` under `calendly:`
 
-Background: 20-year Group Chief Risk Officer career (Credit Suisse, JP Morgan, SICO Bank, Morgan Stanley). Active board Chair (Active Prospects — 338% turnaround) and NED (Children's Commissioner, EdAct Trust). Multi-jurisdictional regulatory experience: FCA, CBB, CMA, SCA.
+Background: 20-year Group Chief Risk Officer career (Credit Suisse, JP Morgan, SICO Bank, Morgan Stanley). Active board Chair (Active Prospects — revenue grew 3.4x) and NED (EdAct Trust); former NED, Children's Commissioner (2016–2020). Multi-jurisdictional regulatory experience: FCA, CBB, CMA, SCA.

@@ -17,6 +17,10 @@ Gemfile.lock
 # macOS
 .DS_Store
 
+# ProtonDrive sync artifacts
+.fuse_hidden*
+*# Name clash*
+
 # Editor
 .vscode/
 *.swp

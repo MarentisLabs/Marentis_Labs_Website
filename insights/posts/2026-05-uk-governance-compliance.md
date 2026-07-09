@@ -17,7 +17,7 @@ The personal stakes have hardened. The Court of Appeal's 2025 ruling in *Saxon W
 
 This briefing, written from twenty years of CRO and board-level practice across PRA and FCA-supervised institutions, sets out what each mandate requires, where boards are most exposed, and what adequate preparation looks like.
 
-**One action:** Take the Board Risk Readiness Assessment to score your organisation across all three mandates.
+**One action:** Take the [Board Risk Readiness Assessment](/assessment/) to score your organisation across all three mandates.
 
 ## Three mandates, one convergence risk
 

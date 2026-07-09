@@ -1,0 +1,414 @@
+---
+layout: default
+title: "Board Risk Readiness Assessment | Marentis Labs"
+description: "Score your board's readiness for the Provision 29 declaration, DORA, SS5/25, and AI governance in twelve questions. Receive a readiness score, your three priority gaps, and a recommended next step."
+permalink: /assessment/
+---
+
+<!-- ══════════════════════════════════════════════════════════
+     ASSESSMENT HERO
+     ══════════════════════════════════════════════════════════ -->
+<section class="hero-section text-white py-20 md:py-28">
+  <div class="container mx-auto px-6 max-w-4xl text-center relative z-10">
+    <p class="text-xs font-semibold uppercase tracking-widest mb-5"
+      style="color: var(--ml-gold); letter-spacing: 0.22em; font-family: var(--font-sub);">
+      Marentis Labs &middot; Self-Serve Diagnostic
+    </p>
+    <h1 class="text-3xl md:text-4xl lg:text-5xl mb-6 leading-tight"
+      style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.05em;">
+      Board Risk Readiness Assessment
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 font-light max-w-3xl mx-auto mb-8 leading-relaxed">
+      Twelve questions drawn from the assessment framework Marentis Labs applies in board
+      engagements, covering the Provision 29 declaration, DORA, PRA SS5/25, and AI governance.
+      Your score, your three priority gaps, and the recommended next step, on screen in
+      under five minutes.
+    </p>
+    <a href="#bra-tool" class="btn-gold px-10 py-4 inline-block">
+      Start the assessment &rarr;
+    </a>
+    <p class="text-xs text-gray-400 mt-6">
+      Answered by audit committee chairs, CFOs, and CROs. Your responses go to the
+      principal only, handled under our
+      <a href="/privacy/" class="text-ml-gold hover:text-ml-gold-dark transition-colors">Privacy Notice</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  .bra-q {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .bra-q legend {
+    font-weight: 600;
+    color: var(--ml-charcoal);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.85rem;
+  }
+  .bra-opt {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: var(--ml-slate-grey);
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .bra-opt:hover { border-color: var(--ml-gold); }
+  .bra-opt input { margin-top: 0.2rem; accent-color: var(--ml-gold); flex-shrink: 0; }
+  .bra-opt.bra-selected {
+    border-color: var(--ml-gold);
+    background: rgba(169, 140, 90, 0.06);
+    color: var(--ml-charcoal);
+  }
+  .bra-section-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ml-gold);
+    margin: 2.25rem 0 0.9rem;
+  }
+  .bra-section-label:first-of-type { margin-top: 0; }
+  .bra-gate input[type="text"],
+  .bra-gate input[type="email"] {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--ml-charcoal);
+    background: #ffffff;
+  }
+  .bra-gate input:focus {
+    outline: none;
+    border-color: var(--ml-gold);
+    box-shadow: 0 0 0 3px rgba(169, 140, 90, 0.15);
+  }
+  .bra-error {
+    color: #b02a37;
+    font-size: 0.85rem;
+    display: none;
+    margin-top: 0.75rem;
+  }
+  .bra-score-ring {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--ml-gold);
+    line-height: 1;
+  }
+  .bra-priority {
+    border-left: 3px solid var(--ml-gold);
+    background: #f8f9fa;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    margin-bottom: 0.75rem;
+  }
+</style>
+
+<!-- ══════════════════════════════════════════════════════════
+     THE TOOL
+     ══════════════════════════════════════════════════════════ -->
+<section id="bra-tool" class="py-16 md:py-20 bg-ml-light-bg scroll-mt-24">
+  <div class="container mx-auto px-6 max-w-3xl">
+
+    <form id="bra-form" novalidate>
+
+      <p class="bra-section-label">Provision 29 &middot; Scoping</p>
+
+      <fieldset class="bra-q" data-q="1">
+        <legend>1. Has the board formally reviewed and approved the criteria for what constitutes a material control for the current financial year?</legend>
+        <label class="bra-opt"><input type="radio" name="q1" value="2" required> Yes, approved and minuted</label>
+        <label class="bra-opt"><input type="radio" name="q1" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q1" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="2">
+        <legend>2. Does the population of material controls reconcile directly to the principal risks disclosed in the Strategic Report?</legend>
+        <label class="bra-opt"><input type="radio" name="q2" value="2" required> Yes, fully reconciled</label>
+        <label class="bra-opt"><input type="radio" name="q2" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q2" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="3">
+        <legend>3. Are non-financial reporting controls, including operational, compliance, and ESG/climate disclosure controls, inside the declaration scope?</legend>
+        <label class="bra-opt"><input type="radio" name="q3" value="2" required> Yes, explicitly in scope</label>
+        <label class="bra-opt"><input type="radio" name="q3" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q3" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="4">
+        <legend>4. Has the board agreed, before testing begins, what constitutes a material control failure?</legend>
+        <label class="bra-opt"><input type="radio" name="q4" value="2" required> Yes, thresholds agreed</label>
+        <label class="bra-opt"><input type="radio" name="q4" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q4" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <p class="bra-section-label">Evidence &amp; Assurance</p>
+
+      <fieldset class="bra-q" data-q="5">
+        <legend>5. Is there a unified assurance map drawing together first-line, second-line, and internal audit outputs for every material control?</legend>
+        <label class="bra-opt"><input type="radio" name="q5" value="2" required> Yes, maintained and board-visible</label>
+        <label class="bra-opt"><input type="radio" name="q5" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q5" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="6">
+        <legend>6. Is board-level risk reporting specific, timely, and decision-useful enough for directors to challenge management, rather than summary-level?</legend>
+        <label class="bra-opt"><input type="radio" name="q6" value="2" required> Yes, consistently</label>
+        <label class="bra-opt"><input type="radio" name="q6" value="1"> Sometimes, or improving</label>
+        <label class="bra-opt"><input type="radio" name="q6" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="7">
+        <legend>7. Has draft declaration wording been dry-run with the Audit Committee against a real evidence pack?</legend>
+        <label class="bra-opt"><input type="radio" name="q7" value="2" required> Yes, dry run complete</label>
+        <label class="bra-opt"><input type="radio" name="q7" value="1"> Planned for this year</label>
+        <label class="bra-opt"><input type="radio" name="q7" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <p class="bra-section-label">DORA &middot; Operational Resilience</p>
+
+      <fieldset class="bra-q" data-q="8">
+        <legend>8. Is the Register of Information complete and current, covering direct ICT providers, their subcontractors, and shadow IT?</legend>
+        <label class="bra-opt"><input type="radio" name="q8" value="2" required> Yes, complete and reviewed</label>
+        <label class="bra-opt"><input type="radio" name="q8" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q8" value="0"> No, not applicable, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="9">
+        <legend>9. Has the 4-hour serious-incident reporting workflow been documented and exercised under realistic conditions?</legend>
+        <label class="bra-opt"><input type="radio" name="q9" value="2" required> Yes, exercised</label>
+        <label class="bra-opt"><input type="radio" name="q9" value="1"> Documented, not yet exercised</label>
+        <label class="bra-opt"><input type="radio" name="q9" value="0"> No, not applicable, or not sure</label>
+      </fieldset>
+
+      <p class="bra-section-label">Climate &middot; PRA SS5/25</p>
+
+      <fieldset class="bra-q" data-q="10">
+        <legend>10. Does the board's risk appetite statement include quantitative climate metrics, with third-party climate models governed as material controls?</legend>
+        <label class="bra-opt"><input type="radio" name="q10" value="2" required> Yes, both</label>
+        <label class="bra-opt"><input type="radio" name="q10" value="1"> Metrics only, or in progress</label>
+        <label class="bra-opt"><input type="radio" name="q10" value="0"> No, not applicable, or not sure</label>
+      </fieldset>
+
+      <p class="bra-section-label">AI Governance</p>
+
+      <fieldset class="bra-q" data-q="11">
+        <legend>11. Is there a board-approved framework identifying which AI systems are high-risk, with a designated senior manager accountable for AI outcomes?</legend>
+        <label class="bra-opt"><input type="radio" name="q11" value="2" required> Yes, framework and owner in place</label>
+        <label class="bra-opt"><input type="radio" name="q11" value="1"> In progress or partially</label>
+        <label class="bra-opt"><input type="radio" name="q11" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <fieldset class="bra-q" data-q="12">
+        <legend>12. Could every director defend the control effectiveness declaration in a regulator interview tomorrow?</legend>
+        <label class="bra-opt"><input type="radio" name="q12" value="2" required> Yes, confidently</label>
+        <label class="bra-opt"><input type="radio" name="q12" value="1"> Some directors could</label>
+        <label class="bra-opt"><input type="radio" name="q12" value="0"> No, or not sure</label>
+      </fieldset>
+
+      <!-- ── Email gate ── -->
+      <div class="bra-gate bg-white border border-gray-200 rounded-lg p-6 mt-8">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-2"
+          style="color: var(--ml-gold); letter-spacing: 0.2em;">Your Report</p>
+        <h2 class="text-xl font-bold text-ml-charcoal mb-2">Where should we attribute your score?</h2>
+        <p class="text-sm text-ml-slate-grey leading-relaxed mb-5">
+          Your readiness score, three priority gaps, and recommended next step appear on
+          screen immediately. Responses are seen by the principal only; no mailing list,
+          no automated sequence.
+        </p>
+        <div class="grid md:grid-cols-2 gap-4 mb-4">
+          <input type="text" id="bra-name" name="name" placeholder="Name" autocomplete="name" required>
+          <input type="email" id="bra-email" name="email" placeholder="Work email" autocomplete="email" required>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4 mb-6">
+          <input type="text" id="bra-org" name="organisation" placeholder="Organisation" autocomplete="organization" required>
+          <input type="text" id="bra-role" name="role" placeholder="Role (optional)" autocomplete="organization-title">
+        </div>
+        <input type="checkbox" name="botcheck" id="bra-botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" id="bra-submit" class="btn-gold px-8 py-3 w-full" style="max-width: 24rem;">
+          Get my readiness score &rarr;
+        </button>
+        <p class="bra-error" id="bra-error">Please answer every question and complete the name, email, and organisation fields.</p>
+      </div>
+
+    </form>
+
+    <!-- ── Report (revealed after submission) ── -->
+    <div id="bra-report" class="hidden mt-10">
+      <div class="bg-white border border-gray-200 rounded-lg p-8">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-4"
+          style="color: var(--ml-gold); letter-spacing: 0.2em;">Board Risk Readiness Report</p>
+
+        <div class="flex flex-col md:flex-row md:items-center gap-6 mb-6">
+          <div>
+            <span class="bra-score-ring"><span id="bra-score">0</span><span class="text-2xl text-ml-slate-grey">/24</span></span>
+          </div>
+          <div>
+            <p class="text-lg font-bold text-ml-charcoal mb-1" id="bra-band">&nbsp;</p>
+            <p class="text-sm text-ml-slate-grey leading-relaxed" id="bra-band-desc">&nbsp;</p>
+          </div>
+        </div>
+
+        <h3 class="text-base font-bold text-ml-charcoal mb-3">Your three priority gaps</h3>
+        <div id="bra-priorities"></div>
+
+        <div class="mt-8 pt-6 border-t border-gray-200">
+          <h3 class="text-base font-bold text-ml-charcoal mb-2">Recommended next step</h3>
+          <p class="text-sm text-ml-slate-grey leading-relaxed mb-5" id="bra-next">&nbsp;</p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/provision-29/" class="btn-gold px-8 py-3 text-center">Provision 29 readiness &rarr;</a>
+            <a href="/contact/" class="btn-primary px-8 py-3 text-center">Discuss your result with the principal</a>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-4 text-center leading-relaxed">
+        Indicative self-assessment, not a formal governance opinion. A scored engagement
+        applies the full framework with evidence review.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     WHY THESE TWELVE QUESTIONS
+     ══════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="section-title text-2xl md:text-3xl mb-8 reveal"
+      style="font-family: var(--font-display); letter-spacing: 0.04em;">
+      Why these twelve questions
+    </h2>
+    <p class="text-ml-slate-grey leading-relaxed mb-5 reveal">
+      In 2027, FTSE 350 boards sign their first mandatory declarations that material internal
+      controls were effective. Provision 29, DORA, and PRA SS5/25 converge on that signature:
+      a material error in a DORA Register of Information, or an unexamined third-party climate
+      model, is a failure of a material compliance control, whichever team owns it day to day.
+      The twelve questions test the points where that convergence breaks boards in practice.
+    </p>
+    <p class="text-ml-slate-grey leading-relaxed reveal">
+      They are drawn from the gap assessment framework in our briefing
+      <a href="/insights/posts/uk-governance-compliance-2026/"
+        class="text-ml-gold hover:text-ml-gold-dark transition-colors font-semibold">UK Governance
+        Compliance in 2026</a>, written from twenty years of CRO and board-level practice across
+      PRA and FCA-supervised institutions. The full evidence base is in the
+      <a href="/white-paper/" class="text-ml-gold hover:text-ml-gold-dark transition-colors font-semibold">SGaaS
+        white paper</a>.
+    </p>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var PRIORITIES = {
+      q1: { title: "Materiality criteria", text: "Agree and minute the board's criteria for what constitutes a material control. Every other Provision 29 judgement rests on this; without it the control population cannot be defended." },
+      q2: { title: "Principal-risk reconciliation", text: "Reconcile the material control population to the principal risks disclosed in the Strategic Report. A mismatch between the two is the first inconsistency a regulator or investor will find." },
+      q3: { title: "Declaration scope", text: "Bring operational, compliance, and ESG/climate disclosure controls formally into declaration scope. Provision 29 extends beyond financial reporting; a scope confined to it is incomplete." },
+      q4: { title: "Failure thresholds", text: "Define what counts as a material control failure before testing begins, so year-end declaration wording reflects the tested state of controls rather than a negotiation about it." },
+      q5: { title: "Unified assurance map", text: "Build a single assurance map connecting first-line attestations, second-line monitoring, and internal audit findings for every material control. Fragmented assurance cannot support one signature." },
+      q6: { title: "Decision-useful reporting", text: "Rework board risk reporting until directors can challenge management from it. Summary-level dashboards leave the board unable to reach the independent conclusions the FRC expects." },
+      q7: { title: "Declaration dry run", text: "Run the declaration as a dry run with the Audit Committee against a real evidence pack. Boards that first see the wording in the reporting cycle discover their gaps in public." },
+      q8: { title: "Register of Information", text: "Complete the DORA Register of Information, including subcontractors and shadow IT. A material error in the register is a failure of a material compliance control under Provision 29." },
+      q9: { title: "Incident reporting workflow", text: "Exercise the 4-hour serious-incident reporting workflow under realistic conditions. A documented workflow that has never been run is a description, not a control." },
+      q10: { title: "Climate risk quantification", text: "Put quantitative climate metrics into the risk appetite statement and govern third-party climate models as material controls, as SS5/25 and Principle O of the 2024 Code require." },
+      q11: { title: "AI oversight framework", text: "Approve a framework identifying high-risk AI systems and designate a senior manager accountable for AI outcomes. An ungoverned AI system making material decisions is a control failure." },
+      q12: { title: "Director defensibility", text: "Prepare every director to defend the declaration in a regulator interview. Under DORA, regulators interview directors directly, and Saxon Woods narrowed the honest-belief defence." }
+    };
+    var ORDER = ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9", "q10", "q11", "q12"];
+    var BANDS = [
+      { min: 20, label: "Declaration-ready, subject to evidence", desc: "The architecture is substantially in place. The remaining risk is evidential: confirming that what is documented survives adversarial testing before the signature relies on it.", next: "Commission an independent dry run of the declaration against your evidence pack. At this maturity, the highest-value work is adversarial confirmation, not construction." },
+      { min: 13, label: "Developing", desc: "Foundations exist, but the evidence chain has gaps a sceptical reader would find. Most FTSE 350 boards preparing seriously for the first cycle sit in this band; the differentiator is whether the gaps close before year-end.", next: "A fixed-scope Provision 29 Readiness Diagnostic (4–8 weeks) prioritises the gaps against your balance sheet date and attaches a remediation route to each." },
+      { min: 6, label: "Exposed", desc: "Material gaps run across more than one mandate, and the convergence risk is live: a single failure in one domain can undermine the declaration across all three. Time, not intent, is now the constraint.", next: "Start with materiality scoping and the assurance map; they gate everything else. A diagnostic engagement sequences the remediation against the time remaining." },
+      { min: 0, label: "Critical exposure", desc: "On these answers the board could not currently evidence an effectiveness declaration, and directors carry the personal exposure that follows. This position is recoverable, but only on a decisive timetable.", next: "A direct conversation with the principal is the right first step: scope the shortest defensible route to the declaration before committing to any programme of work." }
+    ];
+
+    var form = document.getElementById("bra-form");
+    if (!form) return;
+
+    // Highlight selected option
+    form.addEventListener("change", function (e) {
+      if (e.target.type !== "radio") return;
+      var fs = e.target.closest("fieldset");
+      fs.querySelectorAll(".bra-opt").forEach(function (l) { l.classList.remove("bra-selected"); });
+      e.target.closest(".bra-opt").classList.add("bra-selected");
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var err = document.getElementById("bra-error");
+      var answers = {}, unanswered = false;
+      ORDER.forEach(function (q) {
+        var sel = form.querySelector('input[name="' + q + '"]:checked');
+        if (!sel) { unanswered = true; } else { answers[q] = parseInt(sel.value, 10); }
+      });
+      var name = document.getElementById("bra-name").value.trim();
+      var email = document.getElementById("bra-email").value.trim();
+      var org = document.getElementById("bra-org").value.trim();
+      if (unanswered || !name || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) || !org) {
+        err.style.display = "block";
+        return;
+      }
+      err.style.display = "none";
+
+      var score = ORDER.reduce(function (s, q) { return s + answers[q]; }, 0);
+      var band = BANDS.find(function (b) { return score >= b.min; });
+
+      // Three lowest-scoring questions, in framework order
+      var priorities = ORDER
+        .map(function (q) { return { q: q, v: answers[q] }; })
+        .sort(function (a, b) { return a.v - b.v; })
+        .slice(0, 3);
+
+      // Render report
+      document.getElementById("bra-score").textContent = score;
+      document.getElementById("bra-band").textContent = band.label;
+      document.getElementById("bra-band-desc").textContent = band.desc;
+      document.getElementById("bra-next").textContent = band.next;
+      document.getElementById("bra-priorities").innerHTML = priorities.map(function (p) {
+        var pr = PRIORITIES[p.q];
+        return '<div class="bra-priority"><p class="text-sm font-semibold text-ml-charcoal mb-1">' + pr.title +
+          '</p><p class="text-sm text-ml-slate-grey leading-relaxed">' + pr.text + "</p></div>";
+      }).join("");
+
+      // Submit to Web3Forms (non-blocking: the report shows regardless)
+      var payload = {
+        access_key: "aa5011de-b672-438e-a7fe-ea12c4f693ec",
+        subject: "Board Risk Readiness Assessment: " + org + " (" + score + "/24, " + band.label + ")",
+        from_name: "Marentis Labs Website",
+        name: name,
+        email: email,
+        organisation: org,
+        role: document.getElementById("bra-role").value.trim(),
+        score: score + "/24",
+        band: band.label,
+        answers: ORDER.map(function (q) { return q + "=" + answers[q]; }).join(", "),
+        priority_gaps: priorities.map(function (p) { return PRIORITIES[p.q].title; }).join("; "),
+        botcheck: document.getElementById("bra-botcheck").checked
+      };
+      try {
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        }).catch(function () { /* report already shown */ });
+      } catch (ignore) { }
+
+      form.classList.add("hidden");
+      var report = document.getElementById("bra-report");
+      report.classList.remove("hidden");
+      report.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  })();
+</script>

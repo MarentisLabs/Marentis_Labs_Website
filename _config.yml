@@ -20,6 +20,21 @@ exclude:
   - README.md
   - .github
   - vendor
+  # Dev/scratch files — kept in the repo, never shipped in the built site
+  - CLAUDE.md
+  - WEBSITE-AUDIT-2026-07.md
+  - PUBLISHING-ARTICLES.md
+  - "Privacy Notice.md"
+  - implement-web3forms.md
+  - white-paper-gate-implementation.html
+  - white-paper-gate-implementation.md
+  - white-paper-implementation-plan.html
+  - white-paper-implementation-plan.md
+  - marentislabs.com-Coverage-2026-03-30.xlsx
+  - Marentis_Labs_Brand_Identity_SGaaS.docx
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
 
 # Plugins (all available free on GitHub Pages)
 plugins:
