@@ -13,7 +13,7 @@ In 2027, FTSE 350 boards will sign the first mandatory declarations confirming t
 
 FRC Code Provision 29, PRA Supervisory Statement SS5/25, and the EU Digital Operational Resilience Act converge this year. Each raises the accountability bar independently. Together, they create a systemic trap. A single compliance failure in one domain can void the board's declaration across all three.
 
-The personal stakes have hardened. The Court of Appeal's 2025 ruling in *Saxon Woods Investments Ltd v Costa* weakened the "honest belief" defence for directors. The Economic Crime and Corporate Transparency Act 2023's "Failure to Prevent Fraud" offence is now fully operational. For PE-backed companies, governance quality determines exit valuation directly. Firms with premium governance controls command ARR multiples of 10x to 15x, compared with 5x to 7x for weakly governed equivalents.
+The personal stakes have hardened. The Court of Appeal's 2025 ruling in *Saxon Woods Investments Ltd v Costa* weakened the "honest belief" defence for directors. The Economic Crime and Corporate Transparency Act 2023's "Failure to Prevent Fraud" offence has been in force since 1 September 2025. For PE-backed companies, governance gaps are found and priced by the buyer's diligence team at the moment of least negotiating leverage; closing them before a sale process starts is the cheapest price defence available.
 
 This briefing, written from twenty years of CRO and board-level practice across PRA and FCA-supervised institutions, sets out what each mandate requires, where boards are most exposed, and what adequate preparation looks like.
 
@@ -33,7 +33,7 @@ One aspect of Provision 29 is non-negotiable. The board cannot delegate the task
 
 DORA became enforceable in January 2025. Under Article 5, the board must approve, monitor, and periodically review the ICT risk management framework, and must demonstrate sufficient knowledge to assess ICT risk at board level. Regulators will interview directors directly on their operational controls.
 
-The requirement most firms are not ready for is the 4-hour window for reporting serious ICT incidents after classification. Meeting that deadline requires around-the-clock detection, triage, and escalation workflows that most organisations currently lack. Early compliance data indicates that 43 per cent of UK financial services firms were still non-compliant with DORA in the months following the January 2025 enforcement date.
+The requirement most firms are not ready for is the 4-hour window for notifying major ICT incidents after classification. Meeting that deadline requires around-the-clock detection, triage, and escalation workflows that most organisations currently lack. A Censuswide survey of 200 UK security leaders, commissioned by Orange Cyberdefense as the regulation took effect in January 2025, found 43 per cent of UK financial services firms expected to miss the DORA deadline.
 
 Boards must also maintain a comprehensive Register of Information covering all ICT third-party providers and their subcontractors, including shadow IT (unapproved SaaS tools used by departments outside formal procurement). A cloud outage at a major provider is not a third-party problem. It is the board's problem.
 
@@ -67,7 +67,7 @@ Under Principle O of the 2024 Code, the governance of third-party climate models
 
 ### Failure mode 3: the AI governance vacuum
 
-Only 8 per cent of large companies currently disclose board-level oversight of AI. In 2026, that gap carries real consequences. The EU AI Act requires conformity assessments and documented human oversight for high-risk AI systems by August 2026. The FCA is expected to publish SM&CR guidance on senior manager accountability for AI-generated harm by December 2026. Legacy technology contracts were written for passive software; most contain no indemnity provisions for an AI agent's autonomous decisions.
+Board-level oversight of AI remains the exception. ISS-Corporate found only 8 per cent of Russell 3000 companies disclosed it in 2024, and even after a sharp rise, its March 2026 analysis puts large-company disclosure at roughly one in three. In 2026, that gap carries real consequences. The EU AI Act requires conformity assessments and documented human oversight for high-risk AI systems by August 2026. The FCA is expected to publish SM&CR guidance on senior manager accountability for AI-generated harm by December 2026. Legacy technology contracts were written for passive software; most contain no indemnity provisions for an AI agent's autonomous decisions.
 
 Under established principles of director oversight, boards can be held liable for failing to monitor material operational risks. An AI system making automated credit decisions, pricing outputs, or compliance assessments without documented board oversight is a control failure, not an IT problem.
 
@@ -82,7 +82,7 @@ Under established principles of director oversight, boards can be held liable fo
 
 ### Director liability: what changed in 2025
 
-The liability environment for individual directors hardened last year. The Court of Appeal's decision in *Saxon Woods Investments Ltd v Costa* overturned an established defence. A director who genuinely believed they were acting in the company's best interest, but who misled the board or caused the company to breach its contractual obligations, could not rely on that belief as protection. Transparency and due process are the legal standard now. Good intentions are not.
+The liability environment for individual directors hardened last year. The Court of Appeal's decision in *Saxon Woods Investments Ltd v Costa* overturned an established defence. A director who genuinely believed they were acting in the company's best interest, but who misled the board or caused the company to breach its contractual obligations, could not rely on that belief as protection. Transparency and due process are the legal standard now. Good intentions are not. The Supreme Court heard Costa's appeal in June 2026 and its judgment is awaited; until it rules, the Court of Appeal's objective standard is the law boards must plan against.
 
 The "Failure to Prevent Fraud" offence under the Economic Crime and Corporate Transparency Act 2023 is now fully operational. Large organisations can be criminally liable if an associated person commits fraud intended to benefit the organisation. For boards, this creates a direct link between internal control failure and criminal proceedings.
 
@@ -95,7 +95,7 @@ The "Failure to Prevent Fraud" offence under the Economic Crime and Corporate Tr
 
 ### The governance premium
 
-The commercial case for investing in governance is now quantifiable. Research from Federated Hermes shows that well-governed companies outperform poorly governed peers by an average of 24 basis points per month. For PE-backed businesses, governance quality determines exit valuation directly. Firms with premium governance controls command ARR multiples of 10x to 15x or above, compared with 5x to 7x for firms with weak or immature frameworks. Governance hardening in the 12 to 18 months before a planned exit generates an estimated 2 to 5 per cent increase in enterprise value, driven by reduced due diligence friction and the de-risking of regulatory contingencies.
+The commercial case for investing in governance is measurable. Research from Federated Hermes shows that well-governed companies outperform poorly governed peers by an average of 24 basis points per month. For PE-backed businesses, the mechanism is diligence: a buyer's team is paid to find governance gaps and convert each one into a price reduction at exclusivity, when the seller has least room to push back. Governance hardening in the 12 to 18 months before a planned exit is price defence, closing those gaps before they become numbers in someone else's negotiation.
 
 Weak governance does not merely reduce the valuation; it stops deals. In a selective market, buyers walk away from firms where control environments are undocumented, climate disclosures diverge from operational reality, or AI systems operate without board oversight. The 2026 declaration regime will make these deficiencies visible for the first time.
 
