@@ -4,6 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Analytics 4 — first-party statistical measurement (no advertising, no Google Signals) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function () {
+      var choice;
+      try { choice = localStorage.getItem('ml_cookie_consent'); } catch (e) {}
+      if (choice === 'essential' || choice === 'rejected') {
+        window['ga-disable-G-VB6Q21MBY5'] = true;
+        return;
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-VB6Q21MBY5', {
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VB6Q21MBY5';
+      document.head.appendChild(s);
+    })();
+  </script>
+
   <!-- SEO, Open Graph & Canonical handled by jekyll-seo-tag -->
 
   <!-- Favicon -->
@@ -45,21 +68,6 @@
   {% include cookie-consent.html %}
 
   <!-- ── Scripts ─────────────────────────────────────────────── -->
-  <!-- Google Analytics — loaded only after consent -->
-  <script>
-    if (localStorage.getItem('ml_cookie_consent') === 'accepted') {
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
-      j.src='https://www.googletagmanager.com/gtag/js?id=G-VB6Q21MBY5';
-      f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','G-VB6Q21MBY5');
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VB6Q21MBY5');
-    }
-  </script>
-
   <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

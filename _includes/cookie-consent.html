@@ -1,16 +1,20 @@
 <div id="cookie-consent-banner" role="dialog" aria-label="Cookie consent">
   <p>
-    We use analytics cookies to understand how visitors use this site.
+    We use analytics cookies to measure how visitors use this site.
     <a href="/cookies/">Cookies Policy</a> &middot; <a href="/privacy/">Privacy Notice</a>.
   </p>
-  <div class="flex gap-3 flex-shrink-0">
+  <div class="flex flex-wrap gap-3 flex-shrink-0">
     <button id="cookie-reject"
             class="text-sm px-4 py-2 rounded border border-gray-500 text-gray-300 hover:border-white hover:text-white transition">
-      Reject
+      Reject all
+    </button>
+    <button id="cookie-essential"
+            class="text-sm px-4 py-2 rounded border border-gray-500 text-gray-300 hover:border-white hover:text-white transition">
+      Essential only
     </button>
     <button id="cookie-accept"
-            class="btn-primary text-sm px-4 py-2 rounded">
-      Accept
+            class="text-sm px-4 py-2 rounded border border-gray-500 text-gray-300 hover:border-white hover:text-white transition">
+      Accept all
     </button>
   </div>
 </div>

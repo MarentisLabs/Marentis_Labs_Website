@@ -42,10 +42,12 @@
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  /* ── Cookie consent ──────────────────────────────────────── */
+  /* ── Cookie preferences ──────────────────────────────────── */
   const CONSENT_KEY = 'ml_cookie_consent';
+  const GA_ID = 'G-VB6Q21MBY5';
   const banner = document.getElementById('cookie-consent-banner');
   const acceptBtn = document.getElementById('cookie-accept');
+  const essentialBtn = document.getElementById('cookie-essential');
   const rejectBtn = document.getElementById('cookie-reject');
 
   function hideBanner() {
@@ -57,30 +59,46 @@
     }
   }
 
-  if (banner) {
-    // Check stored consent
-    if (localStorage.getItem(CONSENT_KEY)) {
-      hideBanner();
-    }
-
-    if (acceptBtn) {
-      acceptBtn.addEventListener('click', function () {
-        localStorage.setItem(CONSENT_KEY, 'accepted');
-        hideBanner();
-      });
-    }
-
-    if (rejectBtn) {
-      rejectBtn.addEventListener('click', function () {
-        localStorage.setItem(CONSENT_KEY, 'rejected');
-        hideBanner();
-        // Disable GA if present
-        if (window['ga-disable-G-VB6Q21MBY5']) {
-          window['ga-disable-G-VB6Q21MBY5'] = true;
-        }
-      });
-    }
+  // Stop analytics for the rest of this visit and remove any analytics cookies already set
+  function disableAnalytics() {
+    window['ga-disable-' + GA_ID] = true;
+    var root = location.hostname.replace(/^www\./, '');
+    document.cookie.split(';').forEach(function (entry) {
+      var name = entry.split('=')[0].trim();
+      if (name === '_ga' || name === '_gid' || name.indexOf('_ga_') === 0) {
+        ['', '; domain=' + location.hostname, '; domain=.' + root].forEach(function (scope) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + scope;
+        });
+      }
+    });
   }
+
+  function setPreference(value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+    if (value !== 'accepted') { disableAnalytics(); }
+    hideBanner();
+  }
+
+  if (banner) {
+    if (localStorage.getItem(CONSENT_KEY)) { hideBanner(); }
+    if (acceptBtn)    acceptBtn.addEventListener('click', function () { setPreference('accepted'); });
+    if (essentialBtn) essentialBtn.addEventListener('click', function () { setPreference('essential'); });
+    if (rejectBtn)    rejectBtn.addEventListener('click', function () { setPreference('rejected'); });
+  }
+
+  /* ── Analytics events (first-party, statistical) ─────────── */
+  function mlTrack(name, params) {
+    if (typeof window.gtag === 'function') { window.gtag('event', name, params || {}); }
+  }
+
+  var mlPath = window.location.pathname.replace(/\/+$/, '');
+  if (mlPath === '/contact/thank-you')     { mlTrack('generate_lead', { form: 'contact' }); }
+  if (mlPath === '/white-paper/thank-you') { mlTrack('white_paper_download', { asset: 'sgaas-white-paper' }); }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest ? e.target.closest('a[href*="calendar.proton.me"]') : null;
+    if (link) { mlTrack('book_meeting', { link_url: link.href }); }
+  });
 
   /* ── Active nav link ──────────────────────────────────────── */
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/';

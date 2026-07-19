@@ -409,6 +409,10 @@ permalink: /assessment/
       var report = document.getElementById("bra-report");
       report.classList.remove("hidden");
       report.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "assessment_complete", { score: score, band: band.label });
+      }
     });
   })();
 </script>
