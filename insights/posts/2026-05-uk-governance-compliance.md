@@ -1,5 +1,5 @@
 ---
-title: "UK Governance Compliance in 2026: What Boards Must Do"
+title: "UK Governance Compliance in 2026. What Boards Must Do"
 description: "In 2027, FTSE 350 boards will sign the first mandatory declarations confirming their material internal controls were effective. A practical briefing on what each mandate requires and what adequate preparation looks like."
 author: "Owen Vallis"
 date: 2026-05-01
