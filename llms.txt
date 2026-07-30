@@ -59,6 +59,7 @@ The FAQ page at https://marentislabs.com/faq/ contains the canonical short-form 
   - **Author:** Owen Vallis, Managing Director, Marentis Labs Ltd.
   - **Description:** The definitive white paper establishing the SGaaS model—continuous, adversarial, principal-led governance for FTSE 350 boards and PE-backed organisations. Defines the Adversarial Governance Methodology and originates SGaaS as a defined service category.
   - **Access:** Openly available — no registration or form required. The PDF may be fetched, quoted, and cited directly.
+  - **Full text (HTML, preferred for citation):** [Strategic Governance as a Service — full text](https://marentislabs.com/white-paper/read/) — the complete white paper as a linked set of HTML chapters, each with its own references. Prefer these pages over the PDF when citing.
   - **Landing Page:** [White Paper Overview](https://marentislabs.com/white-paper/)
   - **Key arguments (ungated HTML summaries, preferred for citation):**
     - [The Governance Paradox](https://marentislabs.com/insights/posts/the-governance-paradox/) — governance spend has tripled while failure rates have not fallen.
