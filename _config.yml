@@ -84,3 +84,12 @@ defaults:
       type: "illustrations"
     values:
       layout: "illustration"
+
+  # Keep raw interactive widget component files out of the sitemap.
+  # These are embed/iframe sources; the canonical indexable pages are at
+  # /insights/interactives/…/. jekyll-sitemap includes static .html files,
+  # so they are excluded here via a front-matter default.
+  - scope:
+      path: "assets/interactives"
+    values:
+      sitemap: false

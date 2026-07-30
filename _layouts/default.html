@@ -48,6 +48,9 @@
   <!-- Schema.org structured data -->
   {% include schema.html %}
 
+  <!-- Per-page noindex (utility pages such as thank-you set `noindex: true`) -->
+  {% if page.noindex %}<meta name="robots" content="noindex, follow" />{% endif %}
+
   <!-- Jekyll SEO tag -->
   {% seo %}
 </head>
