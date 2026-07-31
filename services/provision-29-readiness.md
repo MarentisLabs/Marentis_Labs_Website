@@ -18,6 +18,7 @@ illustration_org: "Listed UK Mid-Cap"
 illustration_sector: "Listed Companies"
 illustration_summary: "A newly appointed audit committee chair faces the Provision 29 internal controls declaration. The retainer builds the year of minuted independent challenge the board signs against."
 permalink: /provision-29/
+last_modified_at: 2026-07-31
 ---
 
 <div class="gaas-intro">

@@ -13,6 +13,7 @@ cta_label: "Request Red Team Proposal"
 cta_heading: "Subject a Decision to Structured Adversarial Challenge"
 cta_body: "An insurance policy against catastrophic error. Principal-led, four-week turnaround."
 permalink: /services/red-team-review/
+last_modified_at: 2026-07-31
 ---
 
 ## What the Red Team Review Is

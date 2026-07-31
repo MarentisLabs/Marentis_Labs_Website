@@ -18,6 +18,7 @@ illustration_org: "FCA-Regulated Insurer"
 illustration_sector: "Financial Services"
 illustration_summary: "Three legacy risk committees, a supervisory letter, and a 90-day window. A four-week Diagnostic maps the accountability gaps; an Embedded rebuild produces an architecture the board can defend."
 permalink: /services/embedded-gaas/
+last_modified_at: 2026-07-31
 ---
 
 <div class="gaas-intro">

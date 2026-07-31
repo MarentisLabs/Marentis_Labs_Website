@@ -104,7 +104,8 @@
       "headline": "The Definitive Framework for Strategic Governance as a Service",
       "description": "90+ pages of practitioner-authored governance frameworks for FTSE 350 boards, PE-backed organisations, and FCA-regulated entities. Defines the Adversarial Governance Methodology and originates SGaaS as a defined service category.",
       "url": "https://marentislabs.com/white-paper/",
-      "datePublished": "2025",
+      "datePublished": "2026-05-21",
+      "dateModified": "{{ page.last_modified_at | default: '2026-05-21' | date_to_xmlschema }}",
       "inLanguage": "en-GB",
       "author": {
         "@id": "https://marentislabs.com/#owen-vallis"
@@ -149,6 +150,20 @@
       "publisher": {
         "@id": "https://marentislabs.com/#organization"
       }
+    }
+    {% endif %}
+    {% if page.last_modified_at and page.layout != 'article' and page.schema_white_paper != true %},
+    {
+      "@type": "WebPage",
+      "@id": "https://marentislabs.com{{ page.url }}#webpage",
+      "url": "https://marentislabs.com{{ page.url }}",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | default: page.strapline | default: "" | jsonify }},
+      "datePublished": "{{ page.date | default: page.last_modified_at | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+      "isPartOf": { "@id": "https://marentislabs.com/#organization" },
+      "about": { "@id": "https://marentislabs.com/#strategic-gaas" },
+      "publisher": { "@id": "https://marentislabs.com/#organization" }
     }
     {% endif %}
   ]

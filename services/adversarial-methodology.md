@@ -12,6 +12,7 @@ cta_label: "Discuss the Methodology"
 cta_heading: "Bring the Adversarial Methodology to Your Board"
 cta_body: "Embedded within a retained engagement, or available standalone for a discrete strategic decision."
 permalink: /services/adversarial-methodology/
+last_modified_at: 2026-07-31
 ---
 
 ## The Methodology's Lineage

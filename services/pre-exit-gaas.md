@@ -18,6 +18,7 @@ illustration_org: "PE-Backed Business Services Group"
 illustration_sector: "Private Equity"
 illustration_summary: "Twelve to eighteen months before a planned sale, the engagement works backwards from a failed deal and removes the findings a buyer's diligence team would otherwise price against."
 permalink: /services/pre-exit-gaas/
+last_modified_at: 2026-07-31
 ---
 
 <div class="gaas-intro">
