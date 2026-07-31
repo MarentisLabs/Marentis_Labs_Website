@@ -166,6 +166,16 @@
       "publisher": { "@id": "https://marentislabs.com/#organization" }
     }
     {% endif %}
+    {% if page.layout == 'service' or page.layout == 'article' or page.layout == 'illustration' %},
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://marentislabs.com/" },
+        {% if page.layout == 'service' %}{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://marentislabs.com/services/" }{% elsif page.layout == 'article' %}{ "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://marentislabs.com/insights/" }{% else %}{ "@type": "ListItem", "position": 2, "name": "Illustrative Engagements", "item": "https://marentislabs.com/illustrative-engagements/" }{% endif %},
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "https://marentislabs.com{{ page.url }}" }
+      ]
+    }
+    {% endif %}
   ]
 }
 </script>
