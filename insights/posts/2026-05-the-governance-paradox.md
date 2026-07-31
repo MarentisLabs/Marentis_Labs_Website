@@ -61,4 +61,4 @@ The response is architectural. Adding a new framework, a new committee, or a new
 
 ---
 
-*Owen Vallis is the founder of Marentis Labs, the firm that originated Strategic Governance as a Service. He spent twenty years as a Group Chief Risk Officer across Credit Suisse, JP Morgan, SICO Bank, and Morgan Stanley, and holds active board roles in the public and charity sectors. [Schedule a confidential discussion](/contact/).*
+*Owen Vallis is the founder of Marentis Labs, the firm that originated Strategic Governance as a Service. He spent ten years as UK Head of Fiduciary Risk Management at Credit Suisse and served as Group Chief Risk Officer at SICO Bank, with over a decade as an Independent Non-Executive Director across the public and private sectors. [Schedule a confidential discussion](/contact/).*

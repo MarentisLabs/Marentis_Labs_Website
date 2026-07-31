@@ -15,7 +15,7 @@ FRC Code Provision 29, PRA Supervisory Statement SS5/25, and the EU Digital Oper
 
 The personal stakes have hardened. The Court of Appeal's 2025 ruling in *Saxon Woods Investments Ltd v Costa* weakened the "honest belief" defence for directors. The Economic Crime and Corporate Transparency Act 2023's "Failure to Prevent Fraud" offence has been in force since 1 September 2025. For PE-backed companies, governance gaps are found and priced by the buyer's diligence team at the moment of least negotiating leverage; closing them before a sale process starts is the cheapest price defence available.
 
-This briefing, written from twenty years of CRO and board-level practice across PRA and FCA-supervised institutions, sets out what each mandate requires, where boards are most exposed, and what adequate preparation looks like.
+This briefing, written from two decades of risk and board-level practice across PRA and FCA-supervised institutions, sets out what each mandate requires, where boards are most exposed, and what adequate preparation looks like.
 
 **One action:** Take the [Board Risk Readiness Assessment](/assessment/) to score your organisation across all three mandates.
 
@@ -183,4 +183,4 @@ The [Red Team Protocol™](/services/adversarial-methodology/) goes beyond stand
 
 ---
 
-*Owen Vallis is the founder of Marentis Labs Ltd and the originator of Strategic Governance as a Service. He has twenty years of CRO and board-level practice across PRA and FCA-supervised institutions, including Credit Suisse, where he managed fiduciary and prudential risk across a £50bn+ AUM book, and SICO Bank. [Schedule a confidential discussion](/contact/).*
+*Owen Vallis is the founder of Marentis Labs Ltd and the originator of Strategic Governance as a Service. He has two decades of risk and board-level practice across PRA and FCA-supervised institutions, including ten years as UK Head of Fiduciary Risk at Credit Suisse (managing fiduciary and prudential risk across a £50bn+ AUM book) and Group Chief Risk Officer at SICO Bank. [Schedule a confidential discussion](/contact/).*

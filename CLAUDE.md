@@ -307,4 +307,4 @@ These were planned but not yet implemented:
 Contact: info@marentislabs.com  
 Proton Meet: configured in `_config.yml` under `calendly:`
 
-Background: 20-year Group Chief Risk Officer career (Credit Suisse, JP Morgan, SICO Bank, Morgan Stanley). Active board Chair (Active Prospects — revenue grew 3.4x) and NED (EdAct Trust); former NED, Children's Commissioner (2016–2020). Multi-jurisdictional regulatory experience: FCA, CBB, CMA, SCA.
+Background: 20-year risk career culminating as Group CRO at SICO Bank (ten years as UK Head of Fiduciary Risk at Credit Suisse; earlier risk roles at JP Morgan, Morgan Stanley); over a decade as an Independent NED across public and private sectors. Active board Chair (Active Prospects — revenue grew 3.4x) and NED (EdAct Trust); former NED, Children's Commissioner (2016–2020). Multi-jurisdictional regulatory experience: FCA, CBB, CMA, SCA.

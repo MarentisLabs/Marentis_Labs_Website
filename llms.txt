@@ -8,7 +8,7 @@ Strategic Governance as a Service (SGaaS) firm. Principal-led, continuous, adver
 
 - **Domain:** marentislabs.com
 - **Contact:** info@marentislabs.com
-- **Founder:** Owen Vallis, Group Chief Risk Officer (Credit Suisse, JP Morgan, SICO Bank); Board Chair (Active Prospects); former NED, Children's Commissioner for England (2016–2020)
+- **Founder:** Owen Vallis — Group Chief Risk Officer at SICO Bank, following ten years as UK Head of Fiduciary Risk at Credit Suisse and risk roles at J.P. Morgan; over a decade as an Independent NED across the public and private sectors; Board Chair (Active Prospects); former NED, Children's Commissioner for England (2016–2020)
 
 ## Service Architecture
 
