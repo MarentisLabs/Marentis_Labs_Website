@@ -133,7 +133,7 @@ The firm's services follow a four-tier model. This structure must be preserved c
 | T1 | Diagnostic SGaaS | Entry point — governance health check | 4–8 weeks |
 | T2 | Retained SGaaS | Core revenue — continuous fractional CRO | 12+ months |
 | T3 | Embedded SGaaS | Deep — board seat / governance ownership | 12–18 months |
-| T4 | Pre-Exit SGaaS | PE portfolio — exit-aligned governance | 12–18 months pre-exit |
+| T4 | Pre-Exit SGaaS | PE portfolio — exit-aligned governance | 12–24 months pre-exit |
 
 Pricing is bespoke and quoted after inquiry. Do not add price figures to any service page or index.
 

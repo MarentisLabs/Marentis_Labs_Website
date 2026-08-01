@@ -2,11 +2,11 @@
 layout: service
 title: "Pre-Exit SGaaS"
 headline: "Pre-Exit SGaaS: Exit Value Defence"
-strapline: "Pre-VDD governance remediation that protects a portfolio company's headline valuation by removing, 12–18 months before sale, the governance and capital-discipline gaps a buyer's diligence team would use to chip the price."
+strapline: "Pre-VDD governance remediation that protects a portfolio company's headline valuation by removing, 12–24 months before sale, the governance and capital-discipline gaps a buyer's diligence team would use to chip the price."
 description: "Pre-Exit SGaaS from Marentis Labs: principal-led, Pre-VDD governance and capital-discipline remediation that defends the headline valuation of a PE portfolio company ahead of exit."
 tools: ["Governance Maturity Diagnostic (MRMM)", "Pre-Mortem Diagnostic", "Buyer-Perspective Red Team Protocol", "Buyer-Ready Data Room", "Board Assurance Ledger"]
-best_for: "PE portfolio companies 12–18 months from a planned exit, in regulated or high-scrutiny sectors, where a governance or capital-discipline gap could justify a material price chip in diligence."
-duration: "12–18 months; buyer-ready position complete 4–6 months before the process launches; accelerated variant available"
+best_for: "PE portfolio companies 12–24 months from a planned exit, in regulated or high-scrutiny sectors, where a governance or capital-discipline gap could justify a material price chip in diligence."
+duration: "12–24 months; buyer-ready position complete 4–6 months before the process launches; accelerated variant available"
 tier: "Tier 4: Pre-Exit SGaaS"
 
 cta_label: "Discuss Exit Preparation"
@@ -16,14 +16,14 @@ illustration_url: /illustrative-engagements/pre-exit-sgaas-pe-backed-business-se
 illustration_title: "Pre-Exit SGaaS: a PE-Backed Business Services Group"
 illustration_org: "PE-Backed Business Services Group"
 illustration_sector: "Private Equity"
-illustration_summary: "Twelve to eighteen months before a planned sale, the engagement works backwards from a failed deal and removes the findings a buyer's diligence team would otherwise price against."
+illustration_summary: "Twelve to twenty-four months before a planned sale, the engagement works backwards from a failed deal and removes the findings a buyer's diligence team would otherwise price against."
 permalink: /services/pre-exit-gaas/
 last_modified_at: 2026-07-31
 ---
 
 <div class="gaas-intro">
 <div class="gaas-intro-term">Strategic Governance as a Service (SGaaS)</div>
-<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit SGaaS is the PE-specific tier, principal-led governance remediation delivered across the 12–18 months before a planned exit, with a buyer-ready position complete four to six months before the process launches.</div>
+<div class="gaas-intro-def">A continuous, adversarial, principal-led governance function, delivered at board level on a retained basis, whose mandate is to challenge assumptions, stress-test decisions, and surface failure modes in governance architecture before they materialise as organisational loss. Marentis Labs delivers SGaaS through four tiers: Diagnostic, Retained, Embedded, and Pre-Exit. Pre-Exit SGaaS is the PE-specific tier, principal-led governance remediation delivered across the 12–24 months before a planned exit, with a buyer-ready position complete four to six months before the process launches.</div>
 </div>
 
 ## The Gap a Buyer Will Price Against
@@ -41,7 +41,7 @@ The Big 4 VDD model assesses what is broken and hands the report to the buyer. P
 | Dimension / Vector | Big 4 Vendor Due Diligence (Typical) | Marentis Pre-Exit SGaaS | Winner / Advantage |
 | :---- | :---- | :---- | :---- |
 | **Core Focus** | **Assessment.** A static, retrospective audit report listing what is currently broken, ultimately handed to the buyer. | **Remediation.** The active identification and closure of governance, risk, and cash-flow gaps *before* the process launches. | **Marentis.** Active value preservation over static risk reporting. |
-| **Timing** | Deployed weeks before or during the active sales process. | Deployed **12 to 18 months ahead of exit**, completing a tested, buyer-ready position before process launch. | **Marentis.** Early intervention allows time to fix the issues. |
+| **Timing** | Deployed weeks before or during the active sales process. | Deployed **12 to 24 months ahead of exit**, completing a tested, buyer-ready position before process launch. | **Marentis.** Early intervention allows time to fix the issues. |
 | **Diligence Impact** | Surfaces latent risk exposures; typically increases buy-side diligence friction. | Pre-emptively answers the vast majority of buy-side enquiries; actively defends the headline valuation. | **Marentis.** Eliminates the buyer's pretext for price-chipping under exclusivity. |
 | **Delivery Model** | Staffed by rotating teams of junior analysts and senior managers. | Delivered by **Owen Vallis** as Lead Engagement Partner; vetted transaction-support associates carry the commoditised execution. | **Marentis.** Direct board-facing authority backed by institutional execution capacity. |
 | **Pricing Alignment** | Charged on an open-ended, hourly consulting basis. | Structured as a fixed diagnostic, predictable monthly retainer, and an aligned **Transaction Success Fee**. | **Marentis.** Strict commercial alignment with the deal's closing outcome. |
@@ -51,7 +51,7 @@ The Big 4 VDD model assesses what is broken and hands the report to the buyer. P
 We frame each output around what a buyer will scrutinise and what it defends:
 
 - A **governance maturity diagnostic**, MRMM-scored at baseline and re-scored at close to evidence the remediation.
-- A **capex and bolt-on governance proof-book**, a documented audit of the project models, hurdle logic, and approval governance that authorised the PortCo's historical capex and bolt-on programme. By 12–18 months out the capital programme is largely locked, so the proof-book demonstrates that past growth investment was governed with discipline, protecting the credibility of the forward EBITDA run-rate the equity story rests on. It is a governance audit of how capital decisions were made, complementary to the accountants' financial quality-of-earnings work.
+- A **capex and bolt-on governance proof-book**, a documented audit of the project models, hurdle logic, and approval governance that authorised the PortCo's historical capex and bolt-on programme. By 12–24 months out the capital programme is largely locked, so the proof-book demonstrates that past growth investment was governed with discipline, protecting the credibility of the forward EBITDA run-rate the equity story rests on. It is a governance audit of how capital decisions were made, complementary to the accountants' financial quality-of-earnings work.
 - A **board composition review** assessing skills, independence, and tenure against what an incoming buyer expects.
 - A **risk framework uplift** covering appetite, controls, and reporting that withstand buy-side challenge.
 - A **regulatory readiness assessment** delivering sector-specific gap closure against the obligations a buyer inherits.
@@ -99,7 +99,7 @@ Where a deal is paused or aborted, the following can be available to clients:
 
 ## When Pre-Exit Applies
 
-- PE portfolio companies 12–18 months from a planned exit (sale, IPO, or secondary).
+- PE portfolio companies 12–24 months from a planned exit (sale, IPO, or secondary).
 - Where a governance or capital-discipline gap could create diligence friction, negotiation drag, or a material price chip during exclusivity.
 - In high-regulation, high-scrutiny sectors such as financial services and asset management, insurance and InsurTech, healthcare services, and enterprise data and SaaS.
 - Where the buyer will apply a rigorous governance diligence standard, such as a strategic acquirer with a regulated parent, sovereign or pension capital, or a sponsor with institutional governance requirements.
