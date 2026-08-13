@@ -1,5 +1,6 @@
 ---
-title: "The Governance Paradox: Why a $72 Billion Compliance Market Has Not Produced Better Governance"
+title: "The Governance Paradox"
+headline: "The Governance Paradox: Why a $72 Billion Compliance Market Has Not Produced Better Governance"
 description: "The global GRC market is worth $72 billion and growing at 13% a year. The failure rate has barely moved. The gap is structural, and no framework can fix it."
 author: "Owen Vallis"
 date: 2026-05-28

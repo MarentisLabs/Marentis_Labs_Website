@@ -23,7 +23,8 @@ layout: default
     {% endif %}
 
     <!-- Title & Description -->
-    <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight max-w-3xl">{{ page.title }}</h1>
+    <h1 class="text-3xl md:text-4xl font-black mb-4 leading-tight max-w-3xl">{{ page.headline | default: page.title }}
+    </h1>
     {% if page.description %}
     <p class="text-gray-300 text-lg mb-5 max-w-2xl leading-relaxed">{{ page.description }}</p>
     {% endif %}

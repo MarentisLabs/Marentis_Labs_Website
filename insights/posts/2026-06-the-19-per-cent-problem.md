@@ -1,6 +1,7 @@
 ---
-title: "The 19 Per Cent Problem. Where Governance Failures Actually Come From"
-description: "Four in five severe governance failures originate outside internal controls, in strategy and external risk. The $72 billion GRC market is built for the other 19%."
+title: "The 19 Per Cent Problem"
+headline: "The 19 Per Cent Problem. Where Governance Failures Actually Come From"
+description: "Four in five severe governance failures originate outside internal controls, in strategy and external risk. The $72bn GRC market is built for the other 19%."
 author: "Owen Vallis"
 date: 2026-06-01
 categories: [Governance, Risk Management, Strategy]

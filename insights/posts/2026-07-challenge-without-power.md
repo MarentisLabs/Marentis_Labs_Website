@@ -70,7 +70,7 @@ A [Diagnostic SGaaS engagement](/services/diagnostic-gaas/) maps where challenge
       How challenge becomes a control
     </h2>
     <p class="text-ml-slate-grey text-base leading-relaxed max-w-2xl mx-auto mb-8">
-      The white paper develops the structural argument in full, showing how the Red Team Protocol&trade; turns board challenge from an act of individual courage into a continuous, board-minuted mandate carrying the enforceable independence the arrangements at St James's Place and Metro Bank both lacked.
+      The white paper develops the structural argument in full, showing how the Red Team Protocol turns board challenge from an act of individual courage into a continuous, board-minuted mandate carrying the enforceable independence the arrangements at St James's Place and Metro Bank both lacked.
     </p>
     <div class="cta-buttons flex flex-wrap justify-center gap-4">
       <a href="/white-paper/" class="btn-gold px-10 py-4">Download the Paper &rarr;</a>

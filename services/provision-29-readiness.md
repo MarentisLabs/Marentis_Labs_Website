@@ -26,7 +26,7 @@ last_modified_at: 2026-07-31
 <div class="gaas-intro-def">Provision 29 requires the board to describe how it has monitored and reviewed the effectiveness of the company's risk management and internal control framework, and to declare in the annual report whether material internal controls were effective as at the balance sheet date. It applies to financial years beginning on or after 1 January 2026 and extends beyond financial reporting to operational, reporting, and compliance controls.</div>
 </div>
 
-The first Provision 29 declarations will be signed in 2027, on evidence a board can only build during 2026. For a December year-end, the balance sheet date the declaration speaks to is 31 December 2026. The declaration is a statement of fact about that date, and the evidence behind it accumulates across the year or does not exist at all.
+The first Provision 29 declarations will be signed in 2027, on evidence a board can only build during 2026. For a December year-end, the balance sheet date the declaration covers is 31 December 2026. The declaration is a statement of fact about that date, and the evidence behind it accumulates across the year or does not exist at all.
 
 ## The declaration is personal
 
@@ -58,7 +58,7 @@ The Provision 29 Readiness Diagnostic is delivered through [Diagnostic SGaaS](/s
 
 **Materiality scoping.** Review of the proposed material control population against principal risks, with the board's approval criteria documented to a standard the FRC's guidance anticipates.
 
-**Evidence chain review.** Assessment of the assurance map against the [Marentis Risk Maturity Model™](/services/adversarial-methodology/), identifying where evidence is missing, stale, or resting on description rather than testing, with a remediation route attached to every finding.
+**Evidence chain review.** Assessment of the assurance map against the [Marentis Risk Maturity Model™](/services/adversarial-methodology/), identifying where evidence is missing, stale, or descriptive with no testing behind it, and attaching a remediation route to every finding.
 
 **Declaration dry run.** Draft declaration wording presented to the Audit Committee with the evidence pack behind it, challenged through the [Red Team Protocol™](/services/adversarial-methodology/) before the real reporting cycle applies the same pressure.
 
@@ -86,7 +86,7 @@ No. Internal audit and external assurance provide inputs, but the FRC expects th
 
 ### What does the Marentis Labs diagnostic deliver?
 
-A fixed-scope, four-to-eight-week engagement covering materiality scoping, an evidence chain review against the Marentis Risk Maturity Model™, a declaration dry run with the Audit Committee, and a prioritised remediation roadmap. Every finding travels with its remediation route.
+A fixed-scope, four-to-eight-week engagement covering materiality scoping, an evidence chain review against the Marentis Risk Maturity Model, a declaration dry run with the Audit Committee, and a prioritised remediation roadmap. Every finding travels with its remediation route.
 
 ### How is the engagement priced?
 
@@ -126,7 +126,7 @@ Pricing is bespoke and quoted after an initial conversation, fixed for the scope
       "name": "What does the Marentis Labs Provision 29 Readiness Diagnostic deliver?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A fixed-scope, four-to-eight-week engagement covering materiality scoping, an evidence chain review against the Marentis Risk Maturity Model, a declaration dry run with the Audit Committee, and a prioritised remediation roadmap. Every finding travels with its remediation route. Boards wanting continuous support through the declaration cycle extend into Retained SGaaS."
+        "text": "A fixed-scope, four-to-eight-week engagement covering materiality scoping, an evidence chain review against the Marentis Risk Maturity Model™, a declaration dry run with the Audit Committee, and a prioritised remediation roadmap. Every finding travels with its remediation route. Boards wanting continuous support through the declaration cycle extend into Retained SGaaS."
       }
     },
     {

@@ -32,27 +32,31 @@ last_modified_at: 2026-07-31
 <div class="why-ml-body">SGaaS is principal-led by design. The principal is the engagement. They build the relationships, develop the institutional knowledge, and carry the authority to challenge effectively. The principal carries the analytical burden asynchronously, covering assumption mapping, document review, adversarial scenario construction, and coordination with the second and third lines. The board receives distilled, high-signal adversarial intelligence.</div>
 </div>
 
-## What Retained SGaaS Delivers
+## What Arrives, and When
 
-The Retained tier provides three categories of output, delivered on a continuous cycle across board cycles.
+Three outputs run on the retainer, each on its own cadence.
 
-**Governance Pulse Reports.** Periodic assessments of the governance environment, identifying emerging risks, shifting dynamics, and areas where the board's information may be incomplete or stale. These reports provide the continuous governance intelligence that bridges the gap between board meetings.
+**Governance Pulse Reports.** A written read of the governance environment between meetings, covering what has shifted since the last board pack, which risks are moving, and where the information reaching directors has gone stale. Delivered on a set rhythm, so the board is not relying on the meeting cycle to find out.
 
-**Board Challenge Memos.** Structured adversarial briefs prepared ahead of significant board decisions, delivered through the forced deliberation protocol. Before the memo is presented, each director independently submits an anonymous pre-deliberation assessment, recording their confidence in the decision's key assumptions and the risks they consider most material. The principal then presents the Challenge Memo alongside the aggregated director assessments, revealing where prior confidence aligns with the adversarial findings and where it diverges. This protocol ensures that directors engage cognitively with the decision before receiving the adversarial analysis, preventing the passive consumption that would undermine the decision hygiene the methodology depends on.
+**Board Challenge Memos.** A written adversarial brief ahead of each significant decision, setting out the assumptions the decision rests on, the evidence behind each, and the conditions under which each fails. Directors record their own position privately before the memo is circulated, so it lands against views each director has already committed to on paper. The mechanics of that sequence are set out on the [Adversarial Methodology](/services/adversarial-methodology/) page.
 
-**Pre-Mortem Diagnostics and Risk Simulation Labs.** Deployed at defined intervals or ahead of strategic inflections. The retained relationship ensures that these exercises are calibrated to the organisation's specific context, informed by cumulative institutional knowledge, and connected to the ongoing governance narrative rather than conducted as isolated events.
+**Pre-Mortem Diagnostics™ and Risk Simulation Labs™.** Booked at defined intervals and ahead of strategic inflections. Because the principal already holds the institutional context, these run without the scoping period a cold engagement needs.
 
-## How Retained SGaaS Integrates
+## Working Alongside Your Existing Functions
 
-The SGaaS principal operates **alongside** the CRO, head of internal audit, and compliance leadership. The principal attends governance committee meetings as an observer with a defined challenge mandate. They use access to board papers, risk reports, and audit findings to assess whether the governance architecture is producing the outcomes those functions are designed to deliver. The relationship is **collaborative in tone and adversarial in function**.
+The principal sits outside the reporting lines of the CRO, internal audit and compliance, and reads the same material they do. Board papers, risk reports, audit findings, committee minutes. The principal attends governance committee meetings as an observer, under a challenge mandate defined at the start of the engagement so the remit is settled before the first disagreement.
 
-## Why Retained Rather Than Episodic Advisory
+Nothing here duplicates the second and third lines. Those functions report on whether controls operate. The principal tests whether the architecture around them is producing the outcomes the board is relying on. In tone the relationship is collaborative; in function it is adversarial.
 
-The retainer model is integral to the governance proposition. It eliminates the episodic engagement problem that characterises project-based advisory, accumulates institutional memory over quarters and years, and aligns the commercial incentive with sustained governance improvement rather than with discrete project deliverables.
+## What the Board Holds at Year End
 
-## Regulatory Alignment
+A retained year leaves a documented trail: the Pulse Reports, the Challenge Memos and the pre-deliberation records behind each material decision, plus the minuted committee exchanges they prompted.
 
-For senior managers operating under SM&CR or equivalent personal accountability regimes, Retained SGaaS provides documented, continuous, independent governance challenge, the evidence of "reasonable steps" that strengthens the personal defence. For boards facing Provision 29's declaration requirement, it provides the ongoing evidence base to support annual statements on control effectiveness.
+That trail is what the regulatory asks draw on. An audit committee chair signing a [Provision 29](/provision-29/) declaration needs evidence the board tested control effectiveness through the year, not a statement assembled in February. A senior manager under SM&CR arguing reasonable steps needs a dated record of independent challenge they can point to. Both are built across twelve months or they are not built at all.
+
+## Why a Retainer
+
+A project ends when the report lands, and the institutional knowledge leaves with the team that wrote it. A retainer keeps it in the building. The principal who read last quarter's board pack reads this one and notices what changed, and the commercial incentive sits on whether governance is better in three years, not on how many deliverables were shipped this quarter.
 
 ## Commercial Structure
 

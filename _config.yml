@@ -23,6 +23,8 @@ exclude:
   # Dev/scratch files — kept in the repo, never shipped in the built site
   - CLAUDE.md
   - WEBSITE-AUDIT-2026-07.md
+  - WEBSITE-AUDIT-2026-08.md
+  - WEBSITE-AUDIT-2026-08-ACTIONS.md
   - PUBLISHING-ARTICLES.md
   - "Privacy Notice.md"
   - implement-web3forms.md
@@ -44,14 +46,18 @@ plugins:
 # SEO defaults
 author:
   name: "Owen Vallis"
-  twitter: ""
+  twitter: "marentislabs"
 
-# Social (add handles when available)
+# Social
 twitter:
-  username: ""
+  username: "marentislabs"
   card: "summary_large_image"
 linkedin: ""
-image: "/assets/images/marentis-labs-social-card.png"
+
+# NOTE: jekyll-seo-tag reads the social image from `page.image` ONLY — a
+# site-level `image:` key here is silently ignored. The site-wide default is
+# therefore set in the `defaults:` block below, where any page can override it
+# with its own `image:` in front matter.
 
 # Build settings
 markdown: kramdown
@@ -64,6 +70,20 @@ collections:
     permalink: /illustrative-engagements/:name/
 
 defaults:
+  # Site-wide social sharing card (1200x630). jekyll-seo-tag resolves og:image
+  # and twitter:image from `page.image`, so it has to be set as a default here
+  # rather than as a top-level `image:` key. Setting it also restores
+  # twitter:card to summary_large_image — without an image the plugin forces
+  # the card back to "summary". Any page may override with its own `image:`.
+  - scope:
+      path: ""
+    values:
+      image:
+        path: "/assets/images/marentis-labs-social-card.png"
+        width: 1200
+        height: 630
+        alt: "Marentis Labs — Strategic Governance as a Service. Adversarial by Design."
+
   - scope:
       path: ""
       type: "pages"

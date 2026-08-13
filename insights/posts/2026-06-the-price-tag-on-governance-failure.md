@@ -1,6 +1,7 @@
 ---
-title: "The Price Tag on Governance Failure: What Derivative Lawsuit Settlements Reveal About the Cost of Absent Challenge"
-description: "Derivative lawsuit settlements put a court-supervised price on absent boardroom challenge. Six failure modes, one shared structural feature, and a cost that runs far beyond the settlement figure."
+title: "The Price Tag on Governance Failure"
+headline: "The Price Tag on Governance Failure: What Derivative Lawsuit Settlements Reveal About the Cost of Absent Challenge"
+description: "Derivative lawsuit settlements put a court-supervised price on absent boardroom challenge. Six failure modes, and a cost far beyond the settlement figure."
 author: "Owen Vallis"
 date: 2026-06-15
 categories: [Governance, Risk Management, Board Performance]
@@ -44,7 +45,7 @@ Across all six categories, a board can almost always evidence approval. Evidence
 
 Most boards do not sit beneath a controlling shareholder who can overrule them, as SpaceX's new investors now do. That removes the easy excuse. There is no dual-class structure to blame for the gap, only the question of whether the board has closed it.
 
-Answering that question properly takes more than a show of hands in the room. It takes a structured, evidence-based read of where challenge is built into the governance architecture and where a consequential decision can still pass unexamined. That is the work of a [Tier 1 Diagnostic](/services/diagnostic-gaas/). The Marentis Risk Maturity Model scores six dimensions of governance and risk maturity, from board composition and risk culture through to monitoring and regulatory alignment, and returns a current-state assessment with a prioritised view of where the absent-challenge exposure actually sits. It is a fixed-fee engagement, measured in weeks, and it gives a board the evidence to act on the gap while acting is still cheap.
+Answering that question properly takes more than a show of hands in the room. It takes a structured, evidence-based read of where challenge is built into the governance architecture and where a consequential decision can still pass unexamined. That is the work of a [Tier 1 Diagnostic](/services/diagnostic-gaas/). The Marentis Risk Maturity Model™ scores six dimensions of governance and risk maturity, from board composition and risk culture through to monitoring and regulatory alignment, and returns a current-state assessment with a prioritised view of where the absent-challenge exposure actually sits. It is a fixed-fee engagement, measured in weeks, and it gives a board the evidence to act on the gap while acting is still cheap.
 
 ## More governance, same failures
 
@@ -52,7 +53,7 @@ The instinctive response to a governance failure is more governance. More polici
 
 That is the argument of our [white paper on Strategic Governance as a Service](/white-paper/). Governance failures are failures of challenge, continuity and independence, not of documentation. They share three structural defects: engagement that is episodic when the risk is continuous, decision-making that rewards consensus over dissent, and the absence of any party whose explicit job is to challenge the board.
 
-SGaaS supplies them by design. The Red Team Protocol institutionalises challenge that no consensus can quietly switch off. The Risk Simulation Lab stress-tests how a board behaves under crisis conditions before the crisis arrives. The Pre-Mortem Diagnostic forces a failure-first interrogation before significant capital is committed. Across more than 200 studies, roughly 90 per cent find that stronger governance lowers the cost of capital, which puts adversarial challenge on the return side of the ledger long before it prevents a loss.
+SGaaS supplies them by design. The Red Team Protocol™ institutionalises challenge that no consensus can quietly switch off. The Risk Simulation Lab™ stress-tests how a board behaves under crisis conditions before the crisis arrives. The Pre-Mortem Diagnostic™ forces a failure-first interrogation before significant capital is committed. Across more than 200 studies, roughly 90 per cent find that stronger governance lowers the cost of capital, which puts adversarial challenge on the return side of the ledger long before it prevents a loss.
 
 The full argument, with the failure case studies, the evidence base and the SGaaS delivery architecture, is set out in [the white paper](/white-paper/).
 

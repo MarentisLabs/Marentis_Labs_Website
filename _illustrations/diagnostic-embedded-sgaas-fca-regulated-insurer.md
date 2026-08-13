@@ -15,7 +15,7 @@ This is the standard inheritance of growth by acquisition. Each governance arran
 
 ## How the engagement works
 
-The engagement opens as a four-week Diagnostic. The Marentis Risk Maturity Model sets the baseline across its six dimensions, drawing on the committee terms of reference, a year of risk papers, the appetite documentation and structured executive interviews. A Red Team Review then tests the board's risk papers the way a supervisor would read them: what the papers assert, what they evidence, and where the gap between the two sits.
+The engagement opens as a four-week Diagnostic. The Marentis Risk Maturity Model™ sets the baseline across its six dimensions, drawing on the committee terms of reference, a year of risk papers, the appetite documentation and structured executive interviews. A Red Team Review then tests the board's risk papers the way a supervisor would read them: what the papers assert, what they evidence, and where the gap between the two sits.
 
 The diagnostic gives the board two things inside the supervisory window: a candid map of the accountability gaps, and a redesign the board can commit to with credible timelines. The response to the supervisor is then a board-approved architecture with a delivery plan attached rather than a promise to look into it.
 

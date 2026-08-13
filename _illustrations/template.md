@@ -14,7 +14,7 @@ Open with "Picture a..." and describe a constructed, typical situation. Present 
 
 ## How the engagement works
 
-Walk through how the tier and methodology apply to the situation, in present tense. Name the tools (Marentis Risk Maturity Model, Red Team Review, Pre-Mortem Diagnostic) and what each produces for the board.
+Walk through how the tier and methodology apply to the situation, in present tense. Name the tools (Marentis Risk Maturity Model™, Red Team Review, Pre-Mortem Diagnostic™) and what each produces for the board.
 
 Hard rules: the regulator never closes, accepts, or approves anything in response to the work (a supervisory letter may appear as scenario setup only). No transaction outcomes: no deal completes, no buyer finds nothing. No new statistics; reuse only figures already published on this site, clearly labelled as examples.
 

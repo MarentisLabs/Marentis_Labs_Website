@@ -1,6 +1,7 @@
 ---
-title: "The Recovery Gap: Why Governance Failure Costs Far More Than the Write-Down"
-description: "Two years after a severe crisis, affected firms recover to about 103% of pre-crisis value while the market reaches 115%. The twelve-point gap does not close, and it is the line item boards almost never price."
+title: "The Recovery Gap"
+headline: "The Recovery Gap: Why Governance Failure Costs Far More Than the Write-Down"
+description: "Two years after a severe crisis, affected firms recover to about 103% of pre-crisis value while the market reaches 115%. That twelve-point gap does not close."
 author: "Owen Vallis"
 date: 2026-06-04
 categories: [Governance, Risk Management, Board Performance]

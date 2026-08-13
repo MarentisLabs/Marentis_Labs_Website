@@ -28,38 +28,36 @@ last_modified_at: 2026-07-31
 
 <div class="why-ml-block" style="margin-bottom: 1.5rem;">
 <div class="why-ml-kicker">Why Marentis Labs</div>
-<div class="why-ml-quote">"A board that has embedded a continuous, independent, adversarial governance function demonstrates a level of oversight commitment that strengthens its position in any future Caremark analysis."</div>
-<div class="why-ml-body">The Embedded tier preserves the SGaaS principal's independence from fiduciary liability by design. The principal does not take a formal directorial appointment, a deliberate architectural choice. Under corporate law in mature jurisdictions, fiduciary duties are holistic, collective, and non-delegable; a director cannot ring-fence liability to an adversarial function without assuming full responsibility for the board's strategic decisions. Formal appointment would compromise the very independence that makes the function valuable.</div>
+<div class="why-ml-quote">"The moment the challenger joins the board, they own the decision they were hired to question."</div>
+<div class="why-ml-body">The principal takes no directorial appointment. Fiduciary duties sit with the board collectively and cannot be carved up, so a principal who accepted a seat would carry responsibility for the strategy they were retained to attack. Holding the role by contract keeps the challenge independent and keeps the liability where the law puts it.</div>
 </div>
 
-## What Embedded SGaaS Provides
+## What You Get on Top of Retained
 
-The Embedded tier provides **everything in the Retained tier, plus permanent board-level presence**. The SGaaS principal attends board and committee meetings with a defined adversarial mandate, providing real-time challenge during board deliberations, contributing to agenda-setting so that governance-critical issues reach the agenda, and serving as a standing adversarial voice in the room.
+Everything in the Retained tier continues. Embedded adds a seat in the room.
 
-## The Two Operating Structures
+The principal is present for board and committee meetings, so challenge arrives while the decision is still open and can still be changed by it. Agenda input comes with the seat: items the principal judges governance-critical go on the agenda, which is the practical difference between raising a concern and being scheduled to raise it.
 
-Embedded SGaaS operates through one of two structures, both of which cleanly separate the SGaaS principal from directorial liability while preserving the access, authority, and permanence that make the tier effective.
+## Choosing the Contractual Form
 
-**Independent Board Observer with contractual challenge authority.** The SGaaS principal holds a permanent, contracted observer role with board and committee access, the right to speak, the right to table challenge papers, and the right to require management response to findings. The principal does not vote and owes no fiduciary duties to the company. This is the default structure for Embedded engagements.
+Two forms are available. Both are contractual appointments, and neither carries a vote or a directorship.
 
-**Mandated Advisor to the Risk or Audit Committee.** The principal serves as a standing advisor to the relevant board committee, with a defined reporting line to the committee chair and, through the committee, to the full board. This structure provides institutional standing and a formal governance channel without creating direct fiduciary exposure.
+**Independent Board Observer.** The standard form. The contract grants standing attendance at board and committee meetings, the right to speak, the right to table challenge papers in the pack, and a right to a management response to findings on the record. Written into the engagement agreement at signature, so the authority does not depend on goodwill surviving a disagreement.
 
-In both structures, decision rights stay with the board. The principal provides the adversarial intelligence that the fiduciaries need to discharge their duties under frameworks such as the Caremark doctrine or the UK Corporate Governance Code.
+**Mandated Advisor to the Risk or Audit Committee.** For boards that want the function anchored to a committee. The principal reports to the committee chair and reaches the full board through the committee, which suits organisations where the audit or risk committee already carries the governance workload.
 
-## Who Embedded Serves
+Whichever form applies, the board decides. What changes is the quality of the material in front of it when it does, and the record of challenge behind frameworks such as Caremark or the UK Corporate Governance Code.
 
-The Embedded tier serves organisations where the governance challenge is significant enough to require a permanent, structurally embedded function with defined access and contractual challenge authority. Typical contexts include:
+## When Embedded Is the Right Tier
 
-- Organisations navigating **major transformation**, including merger integration, business model pivot, and regulatory remediation.
-- Firms with **heightened regulatory scrutiny** requiring demonstrable, continuous, board-level governance.
-- Complex organisations where the **governance architecture spans multiple entities, jurisdictions, or regulatory regimes**.
+Embedded suits three situations. A transformation is under way and the governance architecture is being rebuilt while it runs, as in merger integration, a business model pivot, or regulatory remediation. Supervisory attention has increased and the board needs continuous challenge it can evidence. Or the structure spans several entities, jurisdictions or regulatory regimes, and no single committee sees the whole picture.
 
 ## Commercial Structure
 
-Embedded SGaaS is delivered on a **multi-year retainer**, reflecting the depth of integration, the premium value of board-level presence, and the principal's investment in deep institutional knowledge.
+A multi-year retainer. The term is long because the access takes time to be worth having. A principal needs a full governance cycle inside the organisation before the challenge is calibrated to how this board actually decides.
 
-## The Progression Logic
+## Getting Here
 
-The natural progression for most organisations is **Diagnostic → Retained → Embedded**. The Diagnostic builds the institutional knowledge that establishes the trust on which Retained engagement rests; the Retained tier deepens the relationship and demonstrates the value of continuous challenge, creating the conditions under which Embedded becomes a natural evolution.
+Most boards arrive through **Diagnostic → Retained → Embedded**. The Diagnostic establishes what the architecture actually looks like, the retained year builds the working relationship and the institutional context, and Embedded formalises the access that relationship has already made useful. Going straight to Embedded is possible and occasionally right, though it front-loads a scoping period the earlier tiers would have absorbed.
 
-For PE portfolio companies on a defined exit path, an Embedded engagement transitions to **Pre-Exit SGaaS (T4)** as the exit timeline shortens, with the continuity of engagement that pre-existing institutional knowledge provides.
+PE portfolio companies on a defined exit path move from Embedded to **[Pre-Exit SGaaS](/services/pre-exit-gaas/)** as the sale window approaches, carrying the accumulated context into the diligence preparation.

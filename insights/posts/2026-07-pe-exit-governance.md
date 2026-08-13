@@ -1,6 +1,7 @@
 ---
-title: "PE Exit Governance Is Not the Same as Ongoing Governance: The Difference Shows Up at Valuation"
-description: "Hold-period governance is built for the sponsor. The standard an institutional buyer applies in diligence is tougher, and the gap shows up at valuation. Why the 12 to 24 months before a sale is the window to close it."
+title: "PE Exit Governance and the Valuation Gap"
+headline: "PE Exit Governance Is Not the Same as Ongoing Governance: The Difference Shows Up at Valuation"
+description: "Hold-period governance is built for the sponsor. An institutional buyer applies a tougher standard in diligence, and the gap shows up at valuation."
 author: "Owen Vallis"
 date: 2026-07-24
 categories: [Pre-Exit, Governance, Portfolio Strategy]

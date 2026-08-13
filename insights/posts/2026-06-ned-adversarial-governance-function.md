@@ -1,6 +1,7 @@
 ---
-title: "A NED Cannot Be an Adversarial Governance Function. The Structural Reason Boards Confuse the Two"
-description: "A capable NED cohort is not a governance function. The substitution is structural, and it leaves boards exposed in exactly the way governance failures have been exposed for twenty years."
+title: "A NED Is Not an Adversarial Governance Function"
+headline: "A NED Cannot Be an Adversarial Governance Function. The Structural Reason Boards Confuse the Two"
+description: "A capable NED cohort is not a governance function. The substitution is structural, and it leaves boards exposed in the way failures have for twenty years."
 author: "Owen Vallis"
 date: 2026-06-01
 categories: [Governance, Board Performance, Risk Management]

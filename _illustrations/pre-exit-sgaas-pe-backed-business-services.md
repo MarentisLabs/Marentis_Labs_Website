@@ -15,11 +15,11 @@ None of this threatens the business. All of it hands a buyer's diligence team qu
 
 ## How the engagement works
 
-The engagement begins with the Pre-Mortem Diagnostic applied to the exit itself: assume the deal has been chipped or has fallen over in diligence, then work backwards through every governance and capital-discipline failure that could have caused it. Each failure becomes a remediation item, ranked by deal impact.
+The engagement begins with the Pre-Mortem Diagnostic™ applied to the exit itself: assume the deal has been chipped or has fallen over in diligence, then work backwards through every governance and capital-discipline failure that could have caused it. Each failure becomes a remediation item, ranked by deal impact.
 
 The remediation phase then works through the inventory: delegation authority documented and board-approved, management information rebuilt to evidence the equity story, board composition and remuneration governance brought to the standard a buyer expects, and regulatory obligations mapped with gaps closed. The principal owns the board-facing work throughout; execution support handles the documentation load so the finance team can keep running the business.
 
-In the final phase, the Red Team Protocol runs a shadow diligence exercise: the data room and the equity story are attacked with the questions a buy-side team and its advisers will actually ask. Whatever fails is fixed before the process launches, and the board receives a Board Assurance Ledger mapping every identified exposure to its completed remediation evidence, so directors can answer buyer questions from a position of knowledge.
+In the final phase, the Red Team Protocol™ runs a shadow diligence exercise: the data room and the equity story are attacked with the questions a buy-side team and its advisers will actually ask. Whatever fails is fixed before the process launches, and the board receives a Board Assurance Ledger mapping every identified exposure to its completed remediation evidence, so directors can answer buyer questions from a position of knowledge.
 
 ## The position this leaves the board in
 

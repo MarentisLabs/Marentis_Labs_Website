@@ -15,61 +15,52 @@ permalink: /services/adversarial-methodology/
 last_modified_at: 2026-07-31
 ---
 
-## The Methodology's Lineage
+## The Short Version
 
-The methodology runs through Karl Popper's account of how reliable knowledge is produced. No theory, however well-supported, can be proven correct by accumulated confirming evidence; it can only be provisionally corroborated, held open to further testing. The criterion of rigour is the disciplined search for evidence that would refute it.
+You cannot prove an M&A valuation or a market-entry thesis correct in advance. The future it depends on has not happened yet. What you can examine now is the evidence underneath it: how strong the proxies are, whether the reasoning was disciplined or worked backwards from a preferred answer, and which known decision biases are in play. Each of the three tools does that job at a different point in the governance cycle.
 
-Applied to governance, this means the three tools below challenge the assumption that a strategy is sound, that a governance framework is working, or that a board decision is correct, and seek the conditions under which each would fail. A board that only gathers confirming evidence ends up comfortable, because nothing it hears contradicts it. Resilience comes from the attempt at refutation.
-
-An epistemological distinction matters. Technical systems can be tested empirically. Strategic assumptions cannot be broken empirically before the fact. An M&A valuation, a market-entry thesis, or a technology investment case depends on judgements about a future that has not yet arrived. What can be tested is the quality of the evidence supporting the judgement: whether the proxies are weak or strong, whether the reasoning is motivated or disciplined, and whether the cognitive biases documented by Kahneman are operating on the decision. The Adversarial Methodology applies Popperian falsification to governance by systematically dismantling the evidentiary basis on which those futures rest.
+The intellectual case, and its grounding in Popper on falsification and Kahneman on decision hygiene, is set out in [the methodology chapter of the white paper](/white-paper/read/the-adversarial-governance-methodology/). This page covers what each tool involves, how long it takes, and what the board is handed at the end.
 
 ## The Three Tools
 
-### The Red Team Protocol (continuous)
+### The Red Team Protocol™ (continuous)
 
-A structured adversarial assessment of strategic plans, governance frameworks, and board decisions. The SGaaS principal, operating independently of management, systematically identifies the assumptions on which a decision, strategy, or governance architecture depends, and subjects their evidentiary basis to falsification.
+**Cadence:** continuous within a retainer, or four weeks as a standalone engagement.
+**Addresses:** absence of institutionalised challenge.
 
-In practice, a Red Team Protocol engagement proceeds through a defined three-phase sequence:
+Applied to a strategic plan, a governance framework, or a decision heading for approval. The principal works from the board papers and the underlying analysis, identifies what the decision is actually resting on, and tests how well the evidence holds each assumption up.
 
-**Phase 1: Asynchronous analysis.** The principal maps the decision architecture, establishing what has been decided, by whom, on what evidence, with what assumptions, and with what alternatives considered or dismissed. From that map come the adversarial scenarios, setting out the conditions under which key assumptions fail, evidence proves incomplete, or a dismissed alternative turns out to have been right. All of this work happens between meetings, so the board sees the distilled output and not the working.
+It runs in three phases. The analytical work happens between meetings. Directors then commit their own view privately before they see any of it. Only then does the challenge material come back, alongside a map of where the board's prior confidence and the findings agree and where they part company.
 
-**Phase 2: Forced independent deliberation.** Before the principal reveals the Challenge Memo, each director independently submits a structured pre-deliberation assessment, recording their confidence in the key assumptions, their view of the two or three most material risks, and the conditions under which they would change their position. The principal collects these anonymously and aggregates the results. This step is the mechanism through which the Red Team Protocol operationalises Kahneman, Sibony, and Sunstein's Mediating Assessments Protocol at board level. Independent, evidence-based judgement must precede group synthesis.
+The standalone version, its deliverables and the four-week schedule are set out on the [Red Team Review](/services/red-team-review/) page.
 
-**Phase 3: Adversarial disclosure and structured debate.** The principal then presents the Challenge Memo alongside the aggregated pre-deliberation data, revealing where directors' prior confidence aligns with the adversarial findings and where it diverges. The board then debates the decision holding three things a standard board pack does not carry: its own independently committed positions, a structured adversarial assessment of the evidentiary basis, and a map of where the two diverge. The board retains the authority to decide. What the Red Team Protocol changes is what the board knows about its own reasoning before it exercises that authority.
+### The Risk Simulation Lab™ (periodic)
 
-The Red Team Protocol primarily addresses the structural defect of **absence of institutionalised challenge**.
+**Cadence:** quarterly or half-yearly within a retainer, or a bespoke 90-day build as a standalone engagement.
+**Addresses:** consensus dependency.
 
-### The Risk Simulation Lab (periodic)
+A live exercise in which the board and executive work a crisis scenario built for this organisation, using its real escalation routes, committee structure and reporting lines.
 
-A scenario-based stress test of governance and leadership behaviour under crisis conditions. The principal designs and facilitates simulated crises calibrated to the organisation's specific risk profile, governance architecture, and strategic context.
+The scenarios are chosen to break the story the organisation tells about itself. The growth plan stalls, the load-bearing assumption turns out to be wrong, a regulator moves, or the reputational hit arrives from a direction nobody was watching.
 
-The Lab deliberately violates the organisation's preferred narratives, presenting scenarios in which the growth strategy fails, the key assumption proves wrong, the regulatory environment shifts, or the reputational crisis arrives from an unexpected direction. By forcing participants to navigate conditions that challenge their mental models, the Lab reveals the assumptions on which governance depends but which remain invisible under normal operating conditions.
+What the principal is recording throughout is behaviour. Who escalated, how quickly, on what authority, and what the board was told at each stage. No document review produces that evidence.
 
-The output is observed evidence of how governance actually functions under pressure, which no document review can produce. A risk register records what the organisation thinks might go wrong. The Lab records what the organisation does when it goes wrong.
+### The Pre-Mortem Diagnostic™ (event-driven)
 
-The Risk Simulation Lab primarily addresses the structural defect of **consensus dependency**.
+**Cadence:** event-driven, a two to three week workshop, run before the commitment is made.
+**Addresses:** episodic engagement.
 
-### The Pre-Mortem Diagnostic (event-driven)
+Booked ahead of a major capital commitment, a strategic shift, or a structural change. The session opens with the room being told the decision has already failed, twelve months from now, and asked to account for how.
 
-Applied to governance decisions before major capital commitments, strategic shifts, or structural changes. The principal facilitates a series of structured sessions in which participants are told: *"It is twelve months from now. This decision has failed catastrophically. What happened?"*
+Participants write their answers alone before anyone speaks, which is the point. The principal then aggregates the responses and looks for the clusters, the disagreements, and the failure modes that nobody named individually but that show up once the answers sit side by side.
 
-Participants work independently before group discussion, a direct application of Kahneman, Sibony, and Sunstein's decision hygiene principle. The principal aggregates and structures the responses, identifying clusters of concern, areas of divergence, and failure modes that no single participant identified but that emerge from the collective analysis.
+The board receives a failure-mode map. It sets out the ways this decision could break, ranked by how many people arrived at each one independently and weighted for plausibility. The decision still belongs to the board, which now makes it knowing what it is carrying.
 
-The output is a structured failure-mode map, a documented catalogue of the ways in which the decision might fail, weighted by frequency of identification and assessed for plausibility. The map tells the board what it is risking, with the benefit of the documented improvement in causal reasoning that prospective hindsight provides. The decision stays with the board.
+## Two Rules That Govern All Three
 
-The Pre-Mortem Diagnostic primarily addresses the structural defect of **episodic engagement**, making risk engagement a prerequisite of significant decisions.
+**The reading happens on our side.** Assumption mapping, document review, scenario construction and the conversations with the second and third lines are the principal's work, done between meetings. A non-executive with a day a month cannot absorb that volume, and asking them to is how challenge quietly becomes a formality. What reaches the board is short.
 
-## The Integrated Methodology
-
-The three tools are designed to operate as an integrated system. In a typical Retained engagement:
-
-- The **Red Team Protocol** operates continuously, providing ongoing adversarial intelligence on the organisation's governance architecture, strategic assumptions, and decision quality.
-- The **Risk Simulation Lab** is deployed at defined intervals, typically quarterly or semi-annually, or ahead of significant strategic inflections.
-- The **Pre-Mortem Diagnostic** is deployed as decisions approach, ahead of major capital commitments, strategic shifts, and structural reorganisations.
-
-Two operational principles run through all three. First, the **SGaaS principal carries the analytical burden**. The principal conducts assumption mapping, document review, adversarial scenario construction, and coordination with the second and third lines asynchronously, alongside the organisation's existing governance rhythm. Part-time directors receive distilled, high-signal adversarial intelligence.
-
-Second, **directors engage with that intelligence actively**. Forced independent deliberation, in the form of anonymous pre-deliberation assessments of confidence and risk, precedes every structured challenge output, ensuring that the board engages cognitively with the decision before receiving the adversarial analysis.
+**Directors commit before they read.** Every structured output is preceded by an anonymous assessment in which each director records their own confidence and their own view of the material risks. It takes a few minutes and it changes what the material can do, because a position already written down is harder to abandon quietly than one still forming in the room.
 
 ## Deployment Across the SGaaS Tiers
 

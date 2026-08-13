@@ -51,7 +51,7 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
           adversarial challenge function for the board, stress-testing every
           framework, examining every assumption, and pressure-testing every control
           before a regulator, an acquirer, or a crisis does it first. A board that
-          has been genuinely challenged is a board far harder to surprise, to
+          has been challenged is a board far harder to surprise, to
           deceive, and to catch unprepared.
         </p>
       </div>
@@ -134,14 +134,14 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
           strategic risk management to the work of stress-testing corporate strategy
           and investment decisions. He built that perspective at the centre of Tier 1
           global finance, across Credit Suisse, J.P. Morgan, and Morgan Stanley. As the
-          first Group Chief Risk Officer for SICO Bank, he built the holistic risk
+          first Group Chief Risk Officer for SICO Bank, he built the group risk
           management function from inception and reported directly to the Board.
         </p>
         <p class="mb-4">
-          Direct board experience sharpens that institutional depth. Owen has served as
-          a Non-Executive Director on the Audit and Risk Committee of a government
-          statutory body reporting to Parliament, and as Chairman of Active Prospects,
-          where revenue tripled during his tenure.
+          Direct board experience sharpens that institutional depth. Owen served two terms
+          as a Non-Executive Member of the Audit and Risk Committee at the Children’s
+          Commissioner for England, an arm’s-length body reporting to Parliament, and
+          chairs Active Prospects, where revenue grew 3.4x during his tenure.
         </p>
         <p>
           Owen has sat on both sides of the boardroom table, accountable to a board as a
@@ -254,8 +254,9 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
         </div>
         <div class="fab-kicker">Past Board Positions</div>
         <div class="fab-item">
-          <div class="fab-institution">Children's Commissioner</div>
-          <div class="fab-detail">NED, Audit &amp; Risk Committee &middot; Statutory body &middot; 2016–2020</div>
+          <div class="fab-institution">Children’s Commissioner for England</div>
+          <div class="fab-detail">Non-Executive Member, Audit &amp; Risk Committee &middot; Arm’s-length body &middot; 2016–2020
+          </div>
         </div>
       </div>
       <div class="fab-col">
@@ -294,8 +295,8 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
   <div class="container mx-auto px-6 max-w-5xl reveal">
     <div class="why-ml-block">
       <div class="why-ml-kicker">Why Marentis Labs</div>
-      <div class="why-ml-quote">"Big 4 firms provide governance through project teams. We provide it through the
-        principal. That distinction matters when a regulatory examiner walks into your boardroom."</div>
+      <div class="why-ml-quote">“Big 4 firms provide governance through project teams. We provide it through the
+        principal. That distinction matters when a regulatory examiner walks into your boardroom.”</div>
       <div class="why-ml-body">Most boards weigh two options when they need governance counsel. One is the
         expensive full-time hire. The other is the generic Big 4 engagement delivered through rotating project teams.
         Marentis Labs offers a third. Continuous, hands-on governance counsel from a principal who has sat on both sides
@@ -313,8 +314,7 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
 
     <div class="space-y-6">
 
-      {% assign roles = site.data.credentials.executive %}
-      {% for role in roles %}
+      {% for role in site.data.credentials.executive %}
       <div class="credential-badge py-2 reveal">
         <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
           <p class="font-bold text-ml-charcoal">{{ role.firm }}</p>
@@ -324,53 +324,6 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
       </div>
       {% endfor %}
 
-      <!-- Fallback if data file not yet populated -->
-      {% unless site.data.credentials %}
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">SICO Bank</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Group Chief Risk Officer</p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          First Group CRO across a $6bn AUM institution spanning three jurisdictions.
-          Risk Framework overhaul, regulatory capital strategy, and board-level
-          risk governance from inception.
-        </p>
-      </div>
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">Credit Suisse</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Head of Fiduciary Risk, UK</p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Governance and risk oversight of £50bn+ AUM across equities, fixed income, multi-asset, CLO funds,
-          Infrastructure funds and real estate.
-          Regulatory engagement on fund governance, capital management strategies and fiduciary risk requirements.
-        </p>
-      </div>
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">JP Morgan</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Vice President, Asset Management</p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Risk architecture for a $245bn institutional client platform migration.
-          Institutional clients across all asset classes.
-          Delivered without material client loss or regulatory incident.
-        </p>
-      </div>
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">Morgan Stanley</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Advisory Role</p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Early-career experience establishing patterns of regulatory engagement
-          and complex institutional problem-solving.
-        </p>
-      </div>
-      {% endunless %}
-
     </div>
 
     <!-- Board experience -->
@@ -378,42 +331,15 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
       style="font-family: var(--font-display); font-weight: 600; letter-spacing: 0.04em;">Board &amp; Governance
       Experience</h2>
     <div class="space-y-6">
+      {% for role in site.data.credentials.board %}
       <div class="credential-badge py-2 reveal">
         <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">Active Prospects</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Chairman</p>
+          <p class="font-bold text-ml-charcoal">{{ role.firm }}</p>
+          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">{{ role.title }}</p>
         </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Chaired the board through a 3.4x revenue turnaround over five years, from £6.5m to £22m+.
-          Restructured the committee architecture, professionalised board governance, and established
-          oversight practice now ranked among the sector's top tier. Number 8 in the Great Place to Work 2026 rankings
-          for large organisations
-          <a href="https://www.greatplacetowork.co.uk/uks-best-workplaces?size=large">(greatplacetowork.co.uk)</a>
-        </p>
+        <p class="text-sm text-ml-slate-grey leading-relaxed">{{ role.summary }}</p>
       </div>
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">Children's Commissioner</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Non-Executive Advisor, Audit &amp; Risk
-            Committee</p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Served 2016–2020 as NED on the Audit and Risk Committee of a statutory
-          body reporting to Parliament. Governance guidance on audit, risk, internal
-          controls, and parliamentary oversight expectations.
-        </p>
-      </div>
-      <div class="credential-badge py-2 reveal">
-        <div class="flex flex-col md:flex-row md:items-baseline md:gap-4 mb-1">
-          <p class="font-bold text-ml-charcoal">EdAct Trust</p>
-          <p class="text-xs text-ml-gold font-semibold uppercase tracking-wide">Non-Executive Director - Trust Member
-          </p>
-        </div>
-        <p class="text-sm text-ml-slate-grey leading-relaxed">
-          Governance and strategic guidance across an educational trust
-          managing multiple school settings.
-        </p>
-      </div>
+      {% endfor %}
     </div>
 
     <!-- Regulatory experience -->
@@ -476,30 +402,12 @@ description: "Owen Vallis, Founder of Marentis Labs. A 20-year risk career culmi
   <div class="container mx-auto px-6 max-w-5xl">
     <h2 class="text-3xl font-bold text-ml-charcoal mb-6 reveal">Compliance Policies</h2>
     <div class="grid sm:grid-cols-3 gap-4">
-      {% for policy in site.data.policies %}
+      {% for policy in site.data.credentials.policies %}
       <a href="{{ policy.url }}" class="service-card bg-white p-4 rounded-lg block reveal">
         <p class="text-sm font-semibold text-ml-charcoal">{{ policy.name }}</p>
         <p class="text-xs text-ml-gold mt-1">View document &rarr;</p>
       </a>
       {% endfor %}
-      {% unless site.data.policies %}
-      <a href="/modern-slavery/" class="service-card bg-white p-4 rounded-lg block reveal">
-        <p class="text-sm font-semibold text-ml-charcoal">Modern Slavery Statement</p>
-        <p class="text-xs text-ml-gold mt-1">View document &rarr;</p>
-      </a>
-      <a href="/privacy/" class="service-card bg-white p-4 rounded-lg block reveal">
-        <p class="text-sm font-semibold text-ml-charcoal">Privacy Notice</p>
-        <p class="text-xs text-ml-gold mt-1">View document &rarr;</p>
-      </a>
-      <a href="/cookies/" class="service-card bg-white p-4 rounded-lg block reveal">
-        <p class="text-sm font-semibold text-ml-charcoal">Cookies Policy</p>
-        <p class="text-xs text-ml-gold mt-1">View document &rarr;</p>
-      </a>
-      <a href="/carbon_reduction_plan/" class="service-card bg-white p-4 rounded-lg block reveal">
-        <p class="text-sm font-semibold text-ml-charcoal">Carbon Reduction Plan</p>
-        <p class="text-xs text-ml-gold mt-1">View document &rarr;</p>
-      </a>
-      {% endunless %}
     </div>
   </div>
 </section>

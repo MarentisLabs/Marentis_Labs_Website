@@ -26,9 +26,14 @@ permissions:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
+# Allow only one concurrent deployment. Queued runs between the in-progress
+# run and the latest are skipped, but an in-progress DEPLOYMENT is never
+# cancelled: cancelling mid-deploy leaves the Pages deployment stuck
+# "in progress", and every later deploy-pages run then blocks waiting on it
+# until it times out. This must stay false.
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -51,6 +56,10 @@ jobs:
       #   npx tailwindcss@3 -i ./assets/css/input.css -o ./assets/css/style.css --minify
       # from the repo root, then commit the updated style.css.
 
+      # 2b. Negotiate Pages settings (base path, custom domain) before build.
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       # 3. Build Jekyll site
       # insights/articles/ (pre-rendered Quarto output, committed to repo) is
       # copied by Jekyll natively — no separate merge step required.
@@ -71,6 +80,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    timeout-minutes: 15
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

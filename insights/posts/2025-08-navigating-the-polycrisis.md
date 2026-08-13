@@ -1,6 +1,7 @@
 ---
-title: "Navigating the Polycrisis: A C-Suite Framework for Geopolitical Risk Strategy"
-description: "Geopolitical risk has moved from a background concern to a board-level governance obligation. A practical framework for C-suite leaders who need to act, not just monitor."
+title: "Navigating the Polycrisis"
+headline: "Navigating the Polycrisis: A C-Suite Framework for Geopolitical Risk Strategy"
+description: "Geopolitical risk has moved from a background concern to a board-level governance obligation. A practical framework for C-suite leaders who have to act on it."
 author: "Owen Vallis"
 date: 2025-08-01
 categories: [Risk Management, Portfolio Strategy]
@@ -57,7 +58,7 @@ A board-level communication protocol for geopolitical scenarios should specify: 
 
 ### Step 5: Make Geopolitical Governance a Board-Level Agenda Item
 
-The most practical governance change most boards could make is to elevate geopolitical risk from the risk committee agenda to the main board agenda, not as a standing item that receives a quarterly update, but as a periodic deep-dive that stress-tests the strategic plan against specific geopolitical scenarios.
+The most practical governance change most boards could make is to move geopolitical risk from the risk committee agenda to the main board agenda, scheduled as a periodic session that stress-tests the strategic plan against specific geopolitical scenarios.
 
 A board that spends 90 minutes twice a year on a structured geopolitical stress-test, with specific scenarios, specific interaction effects, and specific decision authority pre-assignments, is materially better prepared than one that reviews a geopolitical risk register quarterly.
 

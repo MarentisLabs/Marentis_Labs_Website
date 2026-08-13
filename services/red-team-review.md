@@ -18,23 +18,19 @@ last_modified_at: 2026-07-31
 
 ## What the Red Team Review Is
 
-The Red Team Review is the **standalone application of the Red Team Protocol**, the continuous adversarial tool at the core of SGaaS, applied to a single strategic decision, investment case, or governance question. The methodology and intellectual foundation are identical to those used within Retained and Embedded engagements; the difference is scope. The Review concentrates the protocol on one decision rather than deploying it continuously across the governance cycle.
+The Red Team Review is the **standalone application of the Red Team Protocol™**, the continuous adversarial tool at the core of SGaaS, applied to a single strategic decision, investment case, or governance question. The methodology and intellectual foundation are identical to those used within Retained and Embedded engagements; the difference is scope. The Review concentrates the protocol on one decision rather than deploying it continuously across the governance cycle.
 
-## Why the Red Team Protocol Exists
+## Why It Has to Come From Outside
 
-Conventional planning is prone to optimism bias. Teams develop strategic plans, investment cases, and M&A rationales with genuine conviction, and that conviction systematically blinds them to the assumptions they have stopped questioning. Internal challenge functions inherit the chain-of-authority constraints that suppress dissent in the first place. Candour cannot be willed into existence by the same leaders whose authority creates the social cost of dissenting.
+Asking an internal team to attack the plan they built puts them in an impossible position. They report to the people whose judgement is under examination, and the cost of being the one who says so is real and lands on them personally. An external principal has no such exposure. Challenge is the contracted deliverable, so producing it carries no career risk, and the absence of that risk is what makes the output worth reading.
 
-The Red Team Protocol **externalises** the challenge function. The principal sits outside the chain of authority being questioned. Dissent becomes the principal's contracted output, carrying none of the social cost an insider would bear.
+## How the Four Weeks Run
 
-## The Three-Phase Methodology
+**Analysis.** The principal works through the board papers, the model, the diligence material and whatever else the case rests on, then sets out what the decision assumes and how well the evidence supports each assumption. This is desk work, done without occupying the deal team.
 
-**Phase 1: Asynchronous analysis.** The principal maps the decision architecture, establishing what has been decided, by whom, on what evidence, with what assumptions, and with what alternatives considered or dismissed. The principal then constructs adversarial scenarios, identifying the conditions under which the key assumptions fail, the evidence is incomplete, or the dismissed alternatives prove correct. The principal conducts this analytical work asynchronously; the board receives its distilled output.
+**Private positions.** Before any findings circulate, each director records their confidence in the key assumptions, the risks they consider most material, and what would change their mind. These reach the principal directly and stay anonymous in the aggregate.
 
-**Phase 2: Forced independent deliberation.** Before the principal reveals the Challenge Memo, each director independently submits a structured pre-deliberation assessment, recording their confidence in the key assumptions, their view of the most material risks, and the conditions under which they would change their position. The principal collects these anonymously and aggregates the results.
-
-**Phase 3: Adversarial disclosure and structured debate.** The principal then presents the Challenge Memo alongside the aggregated pre-deliberation data, revealing where directors' prior confidence aligns with the adversarial findings and where it diverges. The board debates the decision with three inputs no conventional governance process provides: their own independently committed positions, a structured adversarial assessment of the evidentiary basis, and a map of the divergence between the two.
-
-The board retains the authority to decide. The Red Team Protocol ensures that the decision is made with adversarial intelligence, cognitive self-awareness, and structured debate.
+**The session.** The Challenge Memo goes out with the aggregated positions alongside it, and the board works through both in a facilitated discussion. Sometimes the two line up, which is itself worth knowing before a large commitment. More often they diverge on something specific, and that gap is what the session is for.
 
 ## What the Review Delivers
 
@@ -43,16 +39,11 @@ The board retains the authority to decide. The Red Team Protocol ensures that th
 - A facilitated **structured debate session** that operationalises the third phase of the protocol.
 - A **prioritised list of remediation actions**, identifying what would need to change in the decision, the evidence base, or the supporting analysis to materially reduce the documented fragility.
 
-## Within the SGaaS Architecture
+## If You Are Not on a Retainer
 
-The Red Team Protocol is deployed across the four SGaaS tiers on different cadences:
+The Review is the lowest-commitment way to test whether this is worth doing. One decision, four weeks, a fixed scope, and an output the board can judge on its merits. Boards that find it useful usually move to [Retained SGaaS](/services/retained-gaas/), where the same protocol runs continuously across the governance cycle. Boards that stop here have still spent four weeks learning something about a live commitment.
 
-- **Diagnostic SGaaS (T1).** Used as the primary instrument for the architecture assessment.
-- **Retained SGaaS (T2).** Operated continuously, generating Board Challenge Memos ahead of significant decisions throughout the governance cycle.
-- **Embedded SGaaS (T3).** Applied with direct board access, with the principal sitting as Independent Board Observer or Mandated Advisor.
-- **Pre-Exit SGaaS (T4).** Applied from the buyer's perspective, surfacing governance gaps before the buyer's diligence team does.
-
-The standalone Red Team Review is the most efficient entry point for organisations not yet on a retainer. The Review frequently leads to a longer-term SGaaS engagement once the value of structured adversarial challenge has been demonstrated against a single decision.
+The cadence at which the protocol runs inside each tier is set out on the [Adversarial Methodology](/services/adversarial-methodology/) page.
 
 ## When to Commission a Red Team Review
 

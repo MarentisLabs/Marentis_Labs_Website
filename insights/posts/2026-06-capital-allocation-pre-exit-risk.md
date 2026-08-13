@@ -91,7 +91,7 @@ The second is stress-testing. When did the board last audit its treasury policy 
 
 The third is challenge. Does an independent voice interrogate these models before capital is committed, or does the first hard challenge come from the buyer's team in diligence?
 
-These are the same questions our [Pre-Mortem Diagnostic](/services/adversarial-methodology/) asks. The difference is timing and cost. An acquirer asks them once, under deal pressure, when a gap has already become a negotiating lever. A pre-mortem asks them at the point where the answer can still be fixed quietly.
+These are the same questions our [Pre-Mortem Diagnostic™](/services/adversarial-methodology/) asks. The difference is timing and cost. An acquirer asks them once, under deal pressure, when a gap has already become a negotiating lever. A pre-mortem asks them at the point where the answer can still be fixed quietly.
 
 ## Why the exit window makes this urgent
 

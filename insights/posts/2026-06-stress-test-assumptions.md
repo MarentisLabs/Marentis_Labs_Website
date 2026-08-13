@@ -1,6 +1,7 @@
 ---
-title: "Stress Tests Are Only as Good as the Governance of Their Assumptions"
-description: "Boards sign off the capital number a stress test produces and take its assumptions on trust. The discretion that sets the number sits in the inputs, and that is the half of the test most boards never govern."
+title: "The Governance of Stress-Test Assumptions"
+headline: "Stress Tests Are Only as Good as the Governance of Their Assumptions"
+description: "Boards sign off the capital number a stress test produces and take its assumptions on trust. The discretion that sets the number sits in those inputs."
 author: "Owen Vallis"
 date: 2026-06-26
 categories: [Governance, Risk Management, Capital]
@@ -59,7 +60,7 @@ The last one is the test. If the honest answer is "the team that built the scena
 
 A stress test is an argument about the future expressed as a capital number. The number inherits every assumption in the argument, and every assumption is a choice someone made. Governing the number means governing the choices, and that needs someone whose job is to challenge them, independent of the people who made them.
 
-That is the Red Team Protocol applied to stress testing. The bank already does the quantitative work, and does it well. The job here is to challenge whether the board's oversight of the assumptions is adequate, before the supervisor or events do it instead.
+That is the Red Team Protocol™ applied to stress testing. The bank already does the quantitative work, and does it well. The job here is to challenge whether the board's oversight of the assumptions is adequate, before the supervisor or events do it instead.
 
 If your risk committee met tomorrow, could it answer the fifth question with a name that is not on the modelling team?
 
